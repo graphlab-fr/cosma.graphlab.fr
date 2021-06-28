@@ -1,0 +1,18 @@
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/"/>
+
+<title>{{ .Title }} | {{ .Site.Title }}</title>
+<meta property="og:title" content="{{ .Title }}"/>
+<meta property="og:site_name" content="{{ .Site.Title }}"/>
+<meta name="DC.Title" content="{{ .Title }} | {{ .Site.Title }}"/>
+
+<meta name="description" content="{{ .Site.Params.Description }}"/>
+<meta property="og:description" content="{{ .Site.Params.Description }}"/>
+<meta name="DC.description" content="{{ .Site.Params.Description }}"/>
+
+<meta property="article:tag" content="{{ delimit .Site.Params.Keywords "," }}"/>
+<meta property="article:tag" content="{{ delimit .Site.Params.Keywords "," }}"/>
+
+<meta name="author" content="{{ delimit .Site.Params.Authors "," }}"/>
+<meta name="copyright" content="Tous droits réservés aux auteurs"/>
+<meta name="DC.rights" content="Tous droits réservés aux auteurs"/>

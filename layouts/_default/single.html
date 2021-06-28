@@ -1,0 +1,11 @@
+{{ partial "header.html" . }}
+
+    <div class="article-meta">
+        <h1 class="title-section">{{ .Title }}</h1>
+    </div>
+
+    {{ .Content }}
+
+    {{ partial "zapper.html" . }}
+
+{{ partial "footer.html" . }}

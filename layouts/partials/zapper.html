@@ -1,0 +1,19 @@
+<div class="zapper || row">
+    {{ if not (eq .Params.prev false)  }}
+    <div class="zapper-next || col-sm-5">
+        {{ if .NextInSection }}
+        <a href="{{ .NextInSection.RelPermalink }}">Suivant :
+            <span>{{ .NextInSection.Title }}</span></a>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    {{ if not (eq .Params.next false)  }}
+    <div class="zapper-prev || col-sm-5">
+        {{ if .PrevInSection }}
+        <a href="{{ .PrevInSection.RelPermalink }}">Précédent :
+            <span>{{ .PrevInSection.Title }}</span></a>
+        {{ end }}
+    </div>
+    {{ end }}
+</div>

@@ -1,0 +1,28 @@
+baseURL: https://cosma.netlify.app/
+languageCode: fr-FR
+title: Cosma
+theme: xmin
+
+params:
+  description: |
+    Cosma est un logiciel de visualisation de graphe documentaire.
+    Il permet d’enregistrer et représenter des fichiers Markdown interreliés
+    sous la forme d’un réseau interactif dans un navigateur web.
+  keywords:
+    - graphe documentaire
+    - fiche Markdown
+  authors:
+    - Arthur Perret
+    - Guillaume Brioudes
+
+menu:
+  main:
+    - name: Accueil
+      url: ""
+      weight: 1
+    - name: À propos
+      url: "a-propos/"
+      weight: 2
+    - name: Documentation
+      url: "https://hyperotlet.github.io/cosma/fr.html"
+      weight: 3
