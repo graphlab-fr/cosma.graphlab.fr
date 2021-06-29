@@ -20,9 +20,6 @@ menu:
     - name: Accueil
       url: ""
       weight: 1
-    - name: À propos
-      url: "a-propos/"
-      weight: 2
     - name: Documentation
       url: "https://hyperotlet.github.io/cosma/fr.html"
       weight: 3

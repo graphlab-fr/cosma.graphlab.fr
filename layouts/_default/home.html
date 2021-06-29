@@ -1,16 +1,15 @@
 {{ partial "header.html" . }}
 
-<h1>Cosma</h1>
+<main class="wrapper">
 
-{{ .Content }}
+    <h1>{{ .Site.Title }}</h1>
 
+    {{ .Content }}
 
-{{ $pages := .Pages }}
-{{ $pages = .Site.RegularPages }}
-{{ range (where $pages "Section" "!=" "") }}
-<li>
-    <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
-</li>
-{{ end }}
+    {{ partial "posts-list.html" . }}
+
+    {{ partial "records.html" . }}
+
+</main>
 
 {{ partial "footer.html" . }}

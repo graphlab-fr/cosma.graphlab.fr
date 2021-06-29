@@ -1,11 +1,19 @@
 {{ partial "header.html" . }}
 
+    <main class="wrapper">
+
     <div class="article-meta">
         <h1 class="title-section">{{ .Title }}</h1>
+        <div class="record-id">
+            <span>date :</span>
+            <span>{{ .Date.Format "2006-01-02" }}</span>
+        </div>
     </div>
 
     {{ .Content }}
 
     {{ partial "zapper.html" . }}
+
+</main>
 
 {{ partial "footer.html" . }}
