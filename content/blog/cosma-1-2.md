@@ -2,6 +2,7 @@
 title: Cosma v1.2
 date: 2021-06-10
 draft: false
+download: "https://github.com/hyperotlet/cosma/archive/refs/tags/1.2.0.zip"
 github: "https://github.com/hyperotlet/cosma/releases/tag/1.2.0"
 zenodo: "https://zenodo.org/record/4923581#.YNsD2i0itQI"
 ---

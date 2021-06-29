@@ -1,0 +1,17 @@
+<table>
+
+    <tbody>
+
+        {{ $pages := .Pages }}
+        {{ $pages = .Site.RegularPages }}
+        {{ range (where $pages "Section" "blog") }}
+        <tr>
+            <td>{{ .Title }}</td>
+            <td><a href="{{ .Params.download }}">Télécharger</a></td>
+            <td><a href="{{ .RelPermalink }}">Notes de versions</a></td>
+        </tr>
+        {{ end }}
+
+    </tbody>
+
+</table>
