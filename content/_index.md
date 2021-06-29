@@ -2,13 +2,15 @@
 title: Accueil
 ---
 
-Slogan
+De la fiche au graphe
 
 {{< button class="btn-primary" >}}Télécharger{{< /button >}}
 
 {{< button class="btn-secondary" >}}Documentation{{< /button >}}
 
-Plateformes supportées
+Compatible Windows, Mac et Linux
+
+Requiert [Node.js](https://nodejs.org/fr/download/) version 12 ou supérieure
 
 Capture d'écran principale
 
