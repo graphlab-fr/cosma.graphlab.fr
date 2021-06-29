@@ -41,12 +41,24 @@ body {
   margin: 0 auto;
 }
 
+.home {
+	text-align: center;
+}
+
 a:hover {
 	background-color: #f9ce5a;
 }
 a, a:visited {
 	color: inherit;
 }
+
+.download-platforms,
+.download-prerequisites {
+	font-size: 1.2rem;
+	color: grey;
+}
+
+/* People */
 
 .people-role,
 .release-links {
@@ -104,7 +116,6 @@ a, a:visited {
 .menu {
 	margin: 0;
 	padding: 1em 0;
-/* 	background-color: var(--cosma-blue); */
 }
 .menu li { display: inline-block; }
 .article-meta, .menu a {
@@ -128,7 +139,7 @@ pre {
   overflow-x: auto;
 }
 code {
-	background: #f9f9f9;
+	background: #f3f4f6;
 	border-radius: 5px;
 	font-family: var(--mono);
 }
