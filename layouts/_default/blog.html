@@ -3,12 +3,13 @@
     <main class="wrapper">
 
 			<h1 class="title-section">{{ .Title }}</h1>
-			<p>{{ .Date.Format "2006-01-02" }}</p>
 
     {{ .Content }}
+    
+		{{ partial "posts-list.html" . }}
 
-    {{ partial "zapper.html" . }}
 
 </main>
 
 {{ partial "footer.html" . }}
+

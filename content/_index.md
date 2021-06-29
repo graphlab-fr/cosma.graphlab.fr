@@ -2,4 +2,22 @@
 title: Accueil
 ---
 
-Texte page d'accueil dans le fichier `/content/_index.md`
+Slogan
+
+{{< button class="btn-primary" >}}Télécharger{{< /button >}}
+
+{{< button class="btn-secondary" >}}Documentation{{< /button >}}
+
+Plateformes supportées
+
+Capture d'écran principale
+
+Points importants (capture d'écran, description, lien vers plus d'info)
+
+Types d'usages
+
+Fonctionnalités (symbole, nom, description)
+
+{{< button class="btn-primary" >}}Télécharger{{< /button >}}
+
+[Vous cherchez une version antérieure ?](/blog)

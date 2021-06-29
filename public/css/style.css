@@ -12,7 +12,7 @@
 	/* typography */
 	--sans: sans-serif;
 	--serif: "Georgia", serif;
-	--mono: "Courier New", Courier, monospace;
+	--mono: monospace;
 	--condensed: 'Arial Condensed', sans-serif;
 	/* global size */
 	font-size: 62.5%;
@@ -33,7 +33,6 @@ body {
 	padding: 0;
 	font-family: var(--sans);
 	font-size: 1.4rem;
-	line-height: 1.5;
 }
 
 .wrapper {
@@ -41,71 +40,26 @@ body {
   margin: 0 auto;
 }
 
-a:hover {
-	background-color: #f9ce5a;
-}
-a, a:visited {
-	color: inherit;
-}
-
-.people-role,
-.release-links {
-	color: grey;
-	font-size: 1.2rem;
-}
-.people-role::before,
-.release-links::before {
-	content: '— ';
+article.record {
+	border-top: 1px gray solid;
+	border-bottom: 1px gray solid;
+	margin: 2rem 0;
 }
 
-/* Buttons */
+article.record .record-title { text-align: center; }
 
-.btn {
-	display: inline-block;
-	font-weight: 400;
+/* HOME */
+
+h1 {
 	text-align: center;
-	white-space: nowrap;
-	vertical-align: middle;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	border: 1px solid transparent;
-	padding: .5rem 1rem;
-	font-size: 1.25rem;
-	line-height: 1.5;
-	border-radius: .3rem;
 }
-.btn-primary {
-	color: #fff;
-	background-color: #007bff;
-	border-color: #007bff;
-}
-.btn-primary:hover {
-	color: #fff;
-	background-color: #0069d9;
-	border-color: #0062cc;
-}
-.btn-secondary {
-	color: #fff;
-	background-color: #6c757d;
-	border-color: #6c757d;
-}
-.btn-secondary:hover {
-	color: #fff;
-	background-color: #5a6268;
-	border-color: #545b62;
-}
+
 
 /** Old
 ------------------------------------------------------------*/
 
 /* header and footer areas */
-.menu {
-	margin: 0;
-	padding: 1em 0;
-/* 	background-color: var(--cosma-blue); */
-}
+.menu { padding: 0; }
 .menu li { display: inline-block; }
 .article-meta, .menu a {
   text-decoration: none;
@@ -127,11 +81,7 @@ pre {
   padding: 1em;
   overflow-x: auto;
 }
-code {
-	background: #f9f9f9;
-	border-radius: 5px;
-	font-family: var(--mono);
-}
+code { background: #f9f9f9; }
 pre code { background: none; }
 
 /* misc elements */

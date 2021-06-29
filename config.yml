@@ -17,9 +17,34 @@ params:
 
 menu:
   main:
-    - name: Accueil
-      url: ""
+    - name: Télécharger
+      url: "telecharger/"
       weight: 1
+    - name: Blog
+      url: "blog/"
+      weight: 2
     - name: Documentation
       url: "https://hyperotlet.github.io/cosma/fr.html"
       weight: 3
+    - name: À propos
+      url: "a-propos/"
+      weight: 4
+  footer:
+    - name: FAQ
+      url: "https://hyperotlet.github.io/cosma/fr.html#faq"
+      weight: 1
+    - name: GitHub
+      url: "https://github.com/hyperotlet/cosma"
+      weight: 2
+    - name: Licence
+      url: "https://github.com/hyperotlet/cosma/blob/master/LICENSE"
+      weight: 3
+    - name: Releases
+      url: "https://github.com/hyperotlet/cosma/releases"
+      weight: 4
+    - name: Issues
+      url: "https://github.com/hyperotlet/cosma/releases"
+      weight: 5
+    - name: Contact
+      url: "contact/"
+      weight: 6

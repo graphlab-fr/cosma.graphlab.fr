@@ -1,0 +1,7 @@
+{{ $pages := .Pages }}
+{{ $pages = .Site.RegularPages }}
+{{ range (where $pages "Section" "people") }}
+<h3 class="people-name">{{ .Params.Name | markdownify }} <span class="people-role">{{ .Params.Role | markdownify }}</span></h3>
+<p class="people-bio">{{ .Params.Bio | markdownify }}</p>
+{{ .Content }}
+{{ end }}

@@ -1,5 +1,9 @@
   <footer>
-  Généré avec <a href="https://gohugo.io/">Hugo</a>
+    <ul class="menu">
+        {{ range .Site.Menus.footer }}
+        <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+        {{ end }}
+    </ul>
   </footer>
 
   </body>
