@@ -1,5 +1,5 @@
 ---
-title: À propos
+title: À propos de Cosma
 layout: about
 ---
 
@@ -25,3 +25,6 @@ Troisièmement, **des enrichissements documentaires (métadonnées) et sémantiq
 
 Quatrièmement, Cosma est un logiciel modulaire, interopérable et portable mais surtout, **c'est un logiciel libre** : le code est public, son développement est documenté, il est accessible et réutilisable gratuitement sous licence MIT. Le travail peut ainsi être évalué, archivé et continué par d'autres.
 
+## Citer le logiciel
+
+Arthur Perret, Guillaume Brioudes, Clément Borel, & Olivier Le Deuff. (2021). Cosma. Zenodo. <https://doi.org/10.5281/zenodo.4734377>
