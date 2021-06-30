@@ -1,8 +1,48 @@
 {{ partial "header.html" . }}
 
 <main class="wrapper home">
-    
-    <img src="/img/logo-cosma.svg">
+	<img id="home-logo" src="/img/logo-cosma.svg">
+	<p id="home-tagline">De la fiche au graphe</p>
+	<div id="home-main-screenshot-buttons">
+		<img id="home-main-screenshot" src="/img/screenshot-cosma.png" alt="Capture d'écran d'un cosmoscope fabriqué avec Cosma">
+		<div id="home-buttons-text">
+			<div id="home-buttons">
+				<button type="button" class="btn btn-primary"><a href="/telecharger">Télécharger</a></button>
+				<button type="button" class="btn btn-secondary"><a href="https://hyperotlet.github.io/cosma/fr.html">Documentation</a></button>
+			</div>
+			<div>
+				<p>Compatible Windows, Mac et Linux</p>
+				<p>Requiert <a href="https://nodejs.org/fr/download/">Node.js</a> version 12 ou supérieure</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="feature">
+		<div>
+			<h2>Les logiciels s'envolent, les données restent</h2>
+			<p>Cosma fonctionne simplement en lisant un répertoire de fichiers au format texte, sans interférer avec vos habitudes de stockage, de versionnement et d'édition. </p>
+		</div>
+		<img src="/img/placeholder.svg">
+	</div>
+
+	<div class="feature">
+		<img src="/img/placeholder.svg">
+		<div>
+			<h2>Placeholder</h2>
+			<p>Une collection de textes. Une interface d'exploration. Une archive des données. Et tout ça dans un seul fichier HTML.</p>
+		</div>
+	</div>
+
+<!-- 
+Points importants (capture d'écran, description, lien vers plus d'info)
+
+Types d'usages
+
+Fonctionnalités (symbole, nom, description)
+
+<button type="button" class="btn btn-primary"><a href="/telecharger">Télécharger</a></button>
+<p><a href="/blog">Vous cherchez une version antérieure ?</a></p>
+ -->
     
     {{ .Content }}
 

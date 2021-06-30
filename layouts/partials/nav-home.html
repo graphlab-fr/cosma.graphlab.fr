@@ -1,6 +1,6 @@
 <nav>
     <ul class="menu">
-        <li id="nav-logo"><a href="{{ .Site.BaseURL }}"><img src="/img/logo-cosma.svg"></a></li>
+        <li><a href="{{ .Site.BaseURL }}">Accueil</a></li>
         {{ range .Site.Menus.main }}
         <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
         {{ end }}

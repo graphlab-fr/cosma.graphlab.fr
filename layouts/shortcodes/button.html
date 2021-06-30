@@ -1,1 +1,1 @@
-<button type="button" class="btn {{.Get "class"}}">{{ .Inner }}</button>
+<button type="button" class="btn {{.Get "class"}}">{{ .Inner | markdownify }}</button>
