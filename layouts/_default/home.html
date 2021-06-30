@@ -2,36 +2,51 @@
 
 <main class="wrapper home">
 	<img id="home-logo" src="/img/logo-cosma.svg">
-	<p id="home-tagline">De la fiche au graphe</p>
+	<p id="tagline-primary">{{ .Site.Params.Tagline.Primary }}</p>
 	<div id="home-main-screenshot-buttons">
 		<img id="home-main-screenshot" src="/img/screenshot-cosma.png" alt="Capture d'écran d'un cosmoscope fabriqué avec Cosma">
 		<div id="home-buttons-text">
+			<p class="tagline-secondary">{{ .Site.Params.Tagline.Secondary }}</p>
 			<div id="home-buttons">
 				<button type="button" class="btn btn-primary"><a href="/telecharger">Télécharger</a></button>
 				<button type="button" class="btn btn-secondary"><a href="https://hyperotlet.github.io/cosma/fr.html">Documentation</a></button>
 			</div>
-			<div>
-				<p>Compatible Windows, Mac et Linux</p>
+			<div id="availability">
+				<p>Compatible avec Windows, Mac et Linux</p>
 				<p>Requiert <a href="https://nodejs.org/fr/download/">Node.js</a> version 12 ou supérieure</p>
 			</div>
 		</div>
 	</div>
-	
-	{{ partial "feature-list.html" . }}
-	
-<!-- 
-Points importants (capture d'écran, description, lien vers plus d'info)
+	<div class="feature">
+		<div>
+			<h2>Les logiciels s’envolent, les données restent</h2>
+			<p>Obtenez une vision globale de votre graphe de connaissance, sans interférer avec vos habitudes de stockage, de versionnement et d'édition.</p>
+		</div>
+	</div>
+	<p class="tagline-secondary">Le cosmoscope :<br> 1 fichier, 3 usages</p>
+	{{ range $.Site.Data.features }}
+	<div class="feature">
+		<div>
+			<h2>{{ .title | markdownify }}</h2>
+			<p>{{ .description | markdownify }}</p>
+			{{ if .imgs }}
+			<div class="imgs">
+				<div class="img1">
+					<img src="{{ .imgs.img1 }}">
+				</div>
+				<div class="img2">
+					<img src="{{ .imgs.img2 }}">
+				</div>
+			</div>
+			{{ end }}
+		</div>
+		{{ if .img }}<img src="{{ .img }}">{{ end }}
+	</div>
+	{{ end }}
 
-Types d'usages
-
-Fonctionnalités (symbole, nom, description)
-
-<button type="button" class="btn btn-primary"><a href="/telecharger">Télécharger</a></button>
-<p><a href="/blog">Vous cherchez une version antérieure ?</a></p>
- -->
-    
-    {{ .Content }}
-
+	<button type="button" class="btn btn-primary"><a href="/telecharger">Télécharger Cosma</a></button>
+	<p><a href="/blog">Vous cherchez une version antérieure ?</a></p>
+	{{ .Content }}
 </main>
 
 {{ partial "footer.html" . }}

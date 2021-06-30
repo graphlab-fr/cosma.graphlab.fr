@@ -1,15 +1,17 @@
 {{ partial "header.html" . }}
-
-    <main class="wrapper">
-
-			<h1 class="title-section">{{ .Title }}</h1>
-
-            {{ .Content }}
-
-            <h2>Tableau des versions</h2>
-
-            {{ partial "versions-table.html" . }}
-
-</main>
-
+	<main class="wrapper download">
+<!-- 		<h1 class="title-section">{{ .Title }}</h1> -->
+		<div id="download-buttons-text">
+			<div id="download-buttons">
+				<button type="button" class="btn btn-primary"><a href="/telecharger">Télécharger</a></button>
+				<button type="button" class="btn btn-secondary"><a href="https://hyperotlet.github.io/cosma/fr.html">Documentation</a></button>
+			</div>
+			<div id="availability">
+				<p>Compatible avec Windows, Mac et Linux</p>
+				<p>Requiert <a href="https://nodejs.org/fr/download/">Node.js</a> version 12 ou supérieure</p>
+			</div>
+		{{ .Content }}
+		<h2>Tableau des versions</h2>
+		{{ partial "versions-table.html" . }}
+	</main>
 {{ partial "footer.html" . }}

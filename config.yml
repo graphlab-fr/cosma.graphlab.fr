@@ -4,6 +4,9 @@ title: Cosma
 theme: xmin
 
 params:
+  tagline:
+    primary: De la fiche au graphe
+    secondary: Un outil de visualisation et de partage pour les travailleurs de la connaissance
   description: |
     Cosma est un logiciel de visualisation de graphe documentaire.
     Il permet d’enregistrer et représenter des fichiers Markdown interreliés

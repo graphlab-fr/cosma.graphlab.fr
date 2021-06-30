@@ -1,0 +1,14 @@
+- title: "Une bibliothèque autonome"
+  description: "À partir d'un répertoire de fichiers Markdown, Cosma génère une collection de fiches au format HTML, rassemblées dans un fichier unique : le **cosmoscope**."
+  img: /img/read.png
+- title: "Une interface exploratoire"
+  description: "Parcourez vos connaissances en utilisant toute la palette heuristique du cosmoscope : moteur de recherche, types de fiches, types de liens, index, mots-clés, mode focus, vues sauvegardées, rétroliens…"
+  img: /img/explore.png
+- title: "Un coffre à données"
+  description: "Chaque cosmoscope généré par Cosma contient un instantané au format JSON de vos fiches, de leurs relations et des références citées : des données structurées réutilisables par d'autres logiciels, de Gephi à Zotero."
+  img: /img/data.png
+- title: "Zettlr + Cosma"
+  description: "Zettlr est un partenaire idéal pour Cosma. Rédigez avec l'un des meilleurs outils d'écriture académique, et utilisez Cosma pour franchir une nouvelle dimension. Besoin d'un autre éditeur ? Cosma continue à fonctionner de manière autonome."
+  imgs:
+    img1: /img/zettlr.png
+    img2: /img/screenshot-cosma.png

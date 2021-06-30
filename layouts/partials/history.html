@@ -1,0 +1,4 @@
+<h2>Historique</h2>
+{{ range .Site.Params.history }}
+<p>{{ .Date }} : {{ .Description | markdownify }}</p>
+{{ end }}

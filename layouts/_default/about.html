@@ -1,13 +1,16 @@
 {{ partial "header.html" . }}
-
-    <main class="wrapper">
-
-			<h1 class="title-section">{{ .Title }}</h1>
-
+	<main class="wrapper about">
+		<h1 class="title-section">{{ .Title }}</h1>
     {{ .Content }}
-
-		{{ partial "people-list.html" . }}
-
+    <h2>Équipe</h2>
+		{{ range $.Site.Data.people }}
+		<a href="{{ .link }}"><h3 class="people-name">{{ .name }}</a> <span class="people-role">{{ .role }}</span></h3>
+		<p class="people-bio">{{ .bio | markdownify }}</p>
+		{{ end }}
+		<h2>Historique</h2>
+		{{ range $.Site.Data.history }}
+		<p><strong>{{ .date }} :</strong> {{ .description | markdownify }}</p>
+		{{ end }}
 
 </main>
 
