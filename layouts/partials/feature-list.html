@@ -1,0 +1,11 @@
+{{ $pages := .Pages }}
+{{ $pages = .Site.RegularPages }}
+{{ range (where $pages "Section" "features") }}
+<div class="feature">
+	<div>
+		<h2>{{ .Params.Title | markdownify }}</h2>
+		<p>{{ .Params.Description | markdownify }}</p>
+	</div>
+	<img src="{{ .Params.Img | markdownify }}">
+</div>
+{{ end }}
