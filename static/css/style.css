@@ -125,6 +125,9 @@ footer a {
 	margin: 5rem auto;
 	text-align: left;
 }
+.feature:nth-child(2n+1) {
+  flex-direction: row-reverse; 
+}
 .feature p {
 	font-size: 1.8rem;
 	flex-grow: 1;
