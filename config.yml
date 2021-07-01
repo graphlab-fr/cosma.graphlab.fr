@@ -7,13 +7,17 @@ params:
   tagline:
     primary: De la fiche au graphe
     secondary: Un outil de visualisation et de partage pour les travailleurs de la connaissance
-  description: |
-    Cosma est un logiciel de visualisation de graphe documentaire.
-    Il permet d’enregistrer et représenter des fichiers Markdown interreliés
-    sous la forme d’un réseau interactif dans un navigateur web.
+  description:  "Cosma est un logiciel de visualisation de graphe documentaire. Il permet d’enregistrer et représenter des fichiers Markdown interreliés sous la forme d’un réseau interactif dans un navigateur web."
   keywords:
-    - graphe documentaire
-    - fiche Markdown
+    - graphe
+    - document
+    - donnée
+    - corpus
+    - visualisation
+    - publication
+    - web
+    - Markdown
+    - Zettelkasten
   authors:
     - Arthur Perret
     - Guillaume Brioudes
