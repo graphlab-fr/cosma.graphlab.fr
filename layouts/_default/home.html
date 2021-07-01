@@ -1,10 +1,7 @@
-{{ partial "header.html" . }}
-
-<main class="wrapper home">
+{{ partial "head.html" . }}
+<header>
 	<img id="home-logo" src="/img/logo-cosma.svg">
 	<p id="tagline-primary">{{ .Site.Params.Tagline.Primary }}</p>
-	<div id="home-main-screenshot-buttons">
-		<img id="home-main-screenshot" src="/img/screenshot-cosma.png" alt="Capture d'écran d'un cosmoscope fabriqué avec Cosma">
 		<div id="home-buttons-text">
 			<p class="tagline-secondary">{{ .Site.Params.Tagline.Secondary }}</p>
 			<div id="home-buttons">
@@ -16,36 +13,41 @@
 				<p>Requiert <a href="https://nodejs.org/fr/download/">Node.js</a> version 12 ou supérieure</p>
 			</div>
 		</div>
-	</div>
-	<div class="feature">
-		<div>
-			<h2>Les logiciels s’envolent, les données restent</h2>
-			<p>Obtenez une vision globale de votre graphe de connaissance, sans interférer avec vos habitudes de stockage, de versionnement et d'édition.</p>
-		</div>
-	</div>
-	<p class="tagline-secondary">Le cosmoscope :<br> 1 fichier, 3 usages</p>
-	{{ range $.Site.Data.features }}
-	<div class="feature">
-		<div>
-			<h2>{{ .title | markdownify }}</h2>
-			<p>{{ .description | markdownify }}</p>
-			{{ if .imgs }}
-			<div class="imgs">
-				<div class="img1">
-					<img src="{{ .imgs.img1 }}">
+</header>
+<main class="wrapper home">
+	<section id="landing">
+		<img id="home-main-screenshot" src="/img/screenshot-cosma.png" alt="Capture d'écran d'un cosmoscope fabriqué avec Cosma">
+	</section>
+	<section id="deux">
+		<p>Les logiciels s’envolent, les données restent</p>
+		<p>Obtenez une vision globale de votre graphe de connaissance, sans interférer avec vos habitudes de stockage, de versionnement et d'édition.</p>
+		<p>Le cosmoscope : 1 fichier, 3 usages</p>
+	</section>
+	<section id="features">
+		{{ range $.Site.Data.features }}
+		<div class="feature">
+			<div>
+				<h2>{{ .title | markdownify }}</h2>
+				<p>{{ .description | markdownify }}</p>
+				{{ if .imgs }}
+				<div class="imgs">
+					<div class="img1">
+						<img src="{{ .imgs.img1 }}">
+					</div>
+					<div class="img2">
+						<img src="{{ .imgs.img2 }}">
+					</div>
 				</div>
-				<div class="img2">
-					<img src="{{ .imgs.img2 }}">
-				</div>
+				{{ end }}
 			</div>
-			{{ end }}
+			{{ if .img }}<img src="{{ .img }}">{{ end }}
 		</div>
-		{{ if .img }}<img src="{{ .img }}">{{ end }}
-	</div>
-	{{ end }}
-
-	<button type="button" class="btn btn-primary"><a href="/telecharger">Télécharger Cosma</a></button>
-	<p><a href="/blog">Vous cherchez une version antérieure ?</a></p>
+		{{ end }}
+	</section>
+	<section id="cta">
+		<button type="button" class="btn btn-primary"><a href="/telecharger">Télécharger Cosma</a></button>
+		<p><a href="/blog">Vous cherchez une version antérieure ?</a></p>
+	</section>
 	{{ .Content }}
 </main>
 

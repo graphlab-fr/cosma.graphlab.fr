@@ -1,10 +1,10 @@
-- title: "Une bibliothèque autonome"
+- title: "Visualiser"
   description: "À partir d'un répertoire de fichiers Markdown, Cosma génère une collection de fiches au format HTML, rassemblées dans un fichier unique : le **cosmoscope**."
   img: /img/visualize.png
-- title: "Une interface exploratoire"
+- title: "Explorer"
   description: "Parcourez vos connaissances en utilisant toute la palette heuristique du cosmoscope : moteur de recherche, types de fiches, types de liens, index, mots-clés, mode focus, vues sauvegardées, rétroliens…"
   img: /img/explore.png
-- title: "Un coffre à données"
+- title: "Partager"
   description: "Chaque cosmoscope généré par Cosma contient un instantané au format JSON de vos fiches, de leurs relations et des références citées : des données structurées réutilisables par d'autres logiciels, de Gephi à Zotero."
   img: /img/share.png
 - title: "Zettlr + Cosma"
