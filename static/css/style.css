@@ -155,24 +155,41 @@ section#deux {
 .feature:nth-child(2n+1) {
   flex-direction: row-reverse; 
 }
-.feature p {
+.feature-text {
+	max-width: 400px;
+}
+.feature-text p {
 	font-size: 1.8rem;
 	flex-grow: 1;
 }
-.feature > img {
+.feature img {
 	margin: 0 2rem;
-	flex-grow: 2;
 	max-width: 50vw;
 }
 
-.feature .imgs {
-	display: flex;
-	flex-flow: row nowrap;
+.zettlr {
+	max-width: 100%;
+	margin: 0;
+	padding: 20rem 10rem;
+	background: var(--cosma-blue);
+	color: #fcfbfa;
 }
-.feature .imgs {
-	flex: 0 0 auto;
+.zettlr .feature-text {
+	max-width: 100%;
 }
-.feature .imgs img {
+
+img {
+	height: auto;
+/* 	width: 100%; */
+}
+
+#deux p {
+	font-weight: 300;
+	color: #fcfbfa;
+}
+
+#cta {
+	margin: 10rem 0;
 }
 
 /* Telechargement */
@@ -315,4 +332,19 @@ th, td {
 }
 thead, tfoot, tr:nth-child(even) {
 	background: #eee;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 900px) {
+	.feature {
+		display: block;
+	}
+	.feature > div,
+	.feature > img {
+		max-width: 100%;
+	}
+	.feature > img {
+		margin: 0;
+	}
 }

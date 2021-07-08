@@ -21,28 +21,25 @@
 	<section id="deux">
 		<p>Les logiciels s’envolent, les données restent</p>
 		<p>Obtenez une vision globale de votre graphe de connaissance, sans interférer avec vos habitudes de stockage, de versionnement et d'édition.</p>
-		<p>Le cosmoscope : 1 fichier, 3 usages</p>
 	</section>
 	<section id="features">
 		{{ range $.Site.Data.features }}
 		<div class="feature">
-			<div>
+			<div class="feature-text">
 				<h2>{{ .title | markdownify }}</h2>
 				<p>{{ .description | markdownify }}</p>
-				{{ if .imgs }}
-				<div class="imgs">
-					<div class="img1">
-						<img src="{{ .imgs.img1 }}">
-					</div>
-					<div class="img2">
-						<img src="{{ .imgs.img2 }}">
-					</div>
-				</div>
-				{{ end }}
 			</div>
-			{{ if .img }}<img src="{{ .img }}">{{ end }}
+			<img src="{{ .img }}">
 		</div>
 		{{ end }}
+		<div class="feature zettlr">
+			<div class="feature-text">
+				<h2>Zettlr + Cosma</h2>
+				<p><a href="https://zettlr.com">Zettlr</a> est un partenaire idéal pour Cosma. Rédigez avec l'un des meilleurs outils d'écriture académique, et utilisez Cosma pour franchir une nouvelle dimension. Besoin d'un autre éditeur ? Cosma continue à fonctionner de manière autonome.</p>
+			</div>
+<!-- 			<img src="/img/screenshot-cosma.png"> -->
+<!-- 			<img src="/img/zettlr.png"> -->
+		</div>
 	</section>
 	<section id="cta">
 		<button type="button" class="btn btn-primary"><a href="/telecharger">Télécharger Cosma</a></button>

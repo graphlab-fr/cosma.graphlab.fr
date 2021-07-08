@@ -7,8 +7,3 @@
 - title: "Partager"
   description: "Chaque cosmoscope généré par Cosma contient un instantané au format JSON de vos fiches, de leurs relations et des références citées : des données structurées réutilisables par d'autres logiciels, de Gephi à Zotero."
   img: /img/share.png
-- title: "Zettlr + Cosma"
-  description: "Zettlr est un partenaire idéal pour Cosma. Rédigez avec l'un des meilleurs outils d'écriture académique, et utilisez Cosma pour franchir une nouvelle dimension. Besoin d'un autre éditeur ? Cosma continue à fonctionner de manière autonome."
-  imgs:
-    img1: /img/zettlr.png
-    img2: /img/screenshot-cosma.png
