@@ -6,7 +6,17 @@
     <description>Recent content in Accueil on Cosma</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
-    <lastBuildDate>Sun, 09 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cosma.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cosma.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cosma v1.2</title>
+      <link>https://cosma.netlify.app/blog/cosma-1-2/</link>
+      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cosma.netlify.app/blog/cosma-1-2/</guid>
+      <description>Cette mise à jour inclut des améliorations de l&amp;rsquo;expérience utilisateur au niveau du cosmoscope.
+ Ajout de raccourcis clavier :  F : mode focus S : rechercher R : réinitialiser le niveau de zoom Echap : fermer la fiche Espace : relancer l&amp;rsquo;algorithme de dessin du graphe   Ajout d&amp;rsquo;un bouton dans Paramètres du graphe qui permet d&amp;rsquo;activer ou de désactiver la mise en évidence d&amp;rsquo;un nœud et de ses connexions au survol.</description>
+    </item>
+    
     <item>
       <title>Cosma v1.1</title>
       <link>https://cosma.netlify.app/blog/cosma-1-1/</link>
@@ -17,22 +27,22 @@
     </item>
     
     <item>
-      <title>Cosma v1.2</title>
-      <link>https://cosma.netlify.app/blog/cosma-1-2/</link>
-      <pubDate>Sun, 09 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://cosma.netlify.app/blog/cosma-1-2/</guid>
-      <description>Cette mise à jour inclut des améliorations de l&amp;rsquo;expérience utilisateur au niveau du cosmoscope.
- Ajout de raccourcis clavier :  F : mode focus S : rechercher R : réinitialiser le niveau de zoom Echap : fermer la fiche Espace : relancer l&amp;rsquo;algorithme de dessin du graphe   Ajout d&amp;rsquo;un bouton dans Paramètres du graphe qui permet d&amp;rsquo;activer ou de désactiver la mise en évidence d&amp;rsquo;un nœud et de ses connexions au survol.</description>
-    </item>
-    
-    <item>
       <title>Cosma v1.0</title>
       <link>https://cosma.netlify.app/blog/cosma-1/</link>
       <pubDate>Mon, 03 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://cosma.netlify.app/blog/cosma-1/</guid>
       <description>Publication initiale.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://cosma.netlify.app/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://cosma.netlify.app/contact/</guid>
+      <description>GitHub Issues
+Formulaire de contact (protégé des bots)</description>
     </item>
     
     <item>
@@ -50,20 +60,19 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://cosma.netlify.app/telecharger/</guid>
-      <description>Bouton : lien de téléchargement
-Bouton : lien vers la documentation</description>
+      <description></description>
     </item>
     
     <item>
-      <title>À propos</title>
+      <title>À propos de Cosma</title>
       <link>https://cosma.netlify.app/a-propos/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://cosma.netlify.app/a-propos/</guid>
-      <description>Équipe  Arthur Perret (porteur du projet) Guillaume Brioudes (développeur) Clément Borel (chercheur) Olivier Le Deuff (chercheur)  Historique Août 2020 Prototypage d’un « Lexicographe » avec l’interface de l’Otletosphère.
-Décembre 2020 Début du développement de Cosma avec un nouveau cahier des charges.
-Avril 2021 Finalisation de la première version de Cosma.
-Bibliothèques utilisées Pour améliorer la maintenabilité et la lisibilité du code source, l’équipe de développement a recouru aux bibliothèques suivantes.</description>
+      <description>Cosma est un logiciel de visualisation de graphe documentaire. Il permet de représenter des notes interreliées sous la forme d’un réseau interactif dans une interface web.
+Dans le vaste champ des outils qui servent à penser (tools for thought), Cosma se démarque par trois originalités :
+D&amp;rsquo;abord, Cosma n&amp;rsquo;est pas lui-même un logiciel de prise de notes. Il est pensé pour fonctionner en complémentarité avec ces logiciels.
+Ensuite, Cosma repose sur des normes d&amp;rsquo;écriture interopérables, ouvertes et standardisées.</description>
     </item>
     
   </channel>

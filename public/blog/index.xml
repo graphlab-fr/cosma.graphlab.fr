@@ -6,7 +6,17 @@
     <description>Recent content in Blog on Cosma</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
-    <lastBuildDate>Sun, 09 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cosma.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cosma.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cosma v1.2</title>
+      <link>https://cosma.netlify.app/blog/cosma-1-2/</link>
+      <pubDate>Thu, 10 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cosma.netlify.app/blog/cosma-1-2/</guid>
+      <description>Cette mise à jour inclut des améliorations de l&amp;rsquo;expérience utilisateur au niveau du cosmoscope.
+ Ajout de raccourcis clavier :  F : mode focus S : rechercher R : réinitialiser le niveau de zoom Echap : fermer la fiche Espace : relancer l&amp;rsquo;algorithme de dessin du graphe   Ajout d&amp;rsquo;un bouton dans Paramètres du graphe qui permet d&amp;rsquo;activer ou de désactiver la mise en évidence d&amp;rsquo;un nœud et de ses connexions au survol.</description>
+    </item>
+    
     <item>
       <title>Cosma v1.1</title>
       <link>https://cosma.netlify.app/blog/cosma-1-1/</link>
@@ -14,16 +24,6 @@
       
       <guid>https://cosma.netlify.app/blog/cosma-1-1/</guid>
       <description> Affichage du contexte au survol des liens et rétroliens (dans les sections correspondantes en fin de fiche). Ajout de la possibilité de masquer/afficher les étiquettes et les liens dans le graphe via des boutons situés dans la zone de paramétrage du graphe.  </description>
-    </item>
-    
-    <item>
-      <title>Cosma v1.2</title>
-      <link>https://cosma.netlify.app/blog/cosma-1-2/</link>
-      <pubDate>Sun, 09 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://cosma.netlify.app/blog/cosma-1-2/</guid>
-      <description>Cette mise à jour inclut des améliorations de l&amp;rsquo;expérience utilisateur au niveau du cosmoscope.
- Ajout de raccourcis clavier :  F : mode focus S : rechercher R : réinitialiser le niveau de zoom Echap : fermer la fiche Espace : relancer l&amp;rsquo;algorithme de dessin du graphe   Ajout d&amp;rsquo;un bouton dans Paramètres du graphe qui permet d&amp;rsquo;activer ou de désactiver la mise en évidence d&amp;rsquo;un nœud et de ses connexions au survol.</description>
     </item>
     
     <item>

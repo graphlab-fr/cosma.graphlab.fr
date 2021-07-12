@@ -4,29 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
-<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/"/>
+    <link rel="schema.DC" href="https://purl.org/dc/elements/1.1/"/>
+<link rel="schema.DCTERMS" href="https://purl.org/dc/terms/"/>
 
-<title>À propos | Cosma</title>
-<meta property="og:title" content="À propos"/>
+<title>À propos de Cosma | Cosma</title>
+<meta property="og:title" content="À propos de Cosma"/>
 <meta property="og:site_name" content="Cosma"/>
-<meta name="DC.Title" content="À propos | Cosma"/>
+<meta name="DC.Title" content="À propos de Cosma | Cosma"/>
 
-<meta name="description" content="Cosma est un logiciel de visualisation de graphe documentaire.
-Il permet d’enregistrer et représenter des fichiers Markdown interreliés
-sous la forme d’un réseau interactif dans un navigateur web.
-"/>
-<meta property="og:description" content="Cosma est un logiciel de visualisation de graphe documentaire.
-Il permet d’enregistrer et représenter des fichiers Markdown interreliés
-sous la forme d’un réseau interactif dans un navigateur web.
-"/>
-<meta name="DC.description" content="Cosma est un logiciel de visualisation de graphe documentaire.
-Il permet d’enregistrer et représenter des fichiers Markdown interreliés
-sous la forme d’un réseau interactif dans un navigateur web.
-"/>
+<meta name="description" content="Cosma est un logiciel de visualisation de graphe documentaire. Il permet d’enregistrer et représenter des fichiers Markdown interreliés sous la forme d’un réseau interactif dans un navigateur web."/>
+<meta property="og:description" content="Cosma est un logiciel de visualisation de graphe documentaire. Il permet d’enregistrer et représenter des fichiers Markdown interreliés sous la forme d’un réseau interactif dans un navigateur web."/>
+<meta name="DC.description" content="Cosma est un logiciel de visualisation de graphe documentaire. Il permet d’enregistrer et représenter des fichiers Markdown interreliés sous la forme d’un réseau interactif dans un navigateur web."/>
 
-<meta property="article:tag" content="graphe documentaire,fiche Markdown"/>
-<meta property="article:tag" content="graphe documentaire,fiche Markdown"/>
+<meta property="article:tag" content="graphe,document,donnée,corpus,visualisation,publication,web,Markdown,Zettelkasten"/>
+<meta property="article:tag" content="graphe,document,donnée,corpus,visualisation,publication,web,Markdown,Zettelkasten"/>
 
 <meta name="author" content="Arthur Perret,Guillaume Brioudes"/>
 <meta name="copyright" content="Tous droits réservés aux auteurs"/>
@@ -37,8 +28,7 @@ sous la forme d’un réseau interactif dans un navigateur web.
 
   <body>
     
-<header>
-  <nav>
+	<nav>
     <ul class="menu">
         <li><a href="https://cosma.netlify.app/">Accueil</a></li>
         
@@ -46,73 +36,72 @@ sous la forme d’un réseau interactif dans un navigateur web.
         
         <li><a href="/blog/">Blog</a></li>
         
-        <li><a href="https://hyperotlet.github.io/cosma/fr.html">Documentation</a></li>
+        <li><a href="https://graphlab-fr.github.io/cosma/fr.html">Documentation</a></li>
         
         <li><a href="/a-propos/">À propos</a></li>
         
-        <li><a href="/contact/">Contact</a></li>
-        
     </ul>
 </nav>
-</header>
 
-    <main class="wrapper">
+	<main class="wrapper about">
+		<h1 class="title-section">À propos de Cosma</h1>
+    <p>Cosma est un logiciel de visualisation de graphe documentaire. Il permet de représenter des notes interreliées sous la forme d’un réseau interactif dans une interface web.</p>
+<p>Dans le vaste champ des outils qui servent à penser (<em>tools for thought</em>), Cosma se démarque par <strong>trois originalités</strong> :</p>
+<p>D&rsquo;abord, <strong>Cosma n&rsquo;est pas lui-même un logiciel de prise de notes</strong>. Il est pensé pour fonctionner en complémentarité avec ces logiciels.</p>
+<p>Ensuite, <strong>Cosma repose sur des normes d&rsquo;écriture interopérables, ouvertes et standardisées</strong>. Ceci permet de créer des données plus riches, pérennes, ainsi que de changer librement d&rsquo;outil à tout moment.</p>
+<p>Enfin, <strong>Cosma permet de partager simultanément les données et les outils pour les explorer</strong>. La plupart des outils de visualisation concentrent leurs fonctionnalités dans une application à interface graphique, à partir de laquelle il est possible d&rsquo;exporter des données structurées ou des images statiques. Cosma inverse cette logique : la partie application, surnommée <strong>cosmographe</strong>, est un simple formulaire de création, et c&rsquo;est l&rsquo;export, un fichier HTML surnommé <strong>cosmoscope</strong>, qui constitue la véritable interface de visualisation. Ce fichier autonome contient un graphe interactif, des outils de navigation interne (index, moteur de recherche, filtres) et le texte intégral des fiches ; il inclut aussi les données sources au format JSON et peut être utilisé hors connexion.</p>
+<hr>
+<p><strong>Cosma est conçu pour laisser un degré élevé de contrôle à ses utilisateurs.</strong></p>
+<p>Premièrement, le logiciel fonctionne avec un répertoire de fichiers au format texte qu&rsquo;il se contente de lire : utiliser ou désinstaller le logiciel n&rsquo;altérera pas vos fichiers et vous permet donc de mettre en œuvre les pratiques de stockage, de versionnement et d&rsquo;édition de votre choix. De cette manière, <strong>si le logiciel s&rsquo;envole les données restent</strong>.</p>
+<p>Deuxièmement, <strong>de nombreux éléments d&rsquo;interface sont personnalisables</strong> : algorithme de dessin de réseau, couleurs des nœuds, tracé des liens, raccourcis vers des vues particulières, etc.</p>
+<p>Troisièmement, <strong>des enrichissements documentaires (métadonnées) et sémantiques (qualification des liens) sont possibles</strong> et se font par des mécanismes génériques : l&rsquo;utilisateur est libre d&rsquo;appliquer les typologies et ontologies de son choix.</p>
+<p>Quatrièmement, Cosma est un logiciel modulaire, interopérable et portable mais surtout, <strong>c&rsquo;est un logiciel libre</strong> : le code est public, son développement est documenté, il est accessible et réutilisable gratuitement sous licence MIT. Le travail peut ainsi être évalué, archivé et continué par d&rsquo;autres.</p>
+<h2 id="citer-le-logiciel">Citer le logiciel</h2>
+<p>Arthur Perret, Guillaume Brioudes, Clément Borel, &amp; Olivier Le Deuff. (2021). Cosma. Zenodo. <a href="https://doi.org/10.5281/zenodo.4734377">https://doi.org/10.5281/zenodo.4734377</a></p>
 
-			<h1 class="title-section">À propos</h1>
-			<p>0001-01-01</p>
-
-    <h2 id="équipe">Équipe</h2>
-<ul>
-<li>Arthur Perret (porteur du projet)</li>
-<li>Guillaume Brioudes (développeur)</li>
-<li>Clément Borel (chercheur)</li>
-<li>Olivier Le Deuff (chercheur)</li>
-</ul>
-<h2 id="historique">Historique</h2>
-<p><strong>Août 2020</strong>
-Prototypage d’un « Lexicographe » avec l’interface de l’Otletosphère.</p>
-<p><strong>Décembre 2020</strong>
-Début du développement de Cosma avec un nouveau cahier des charges.</p>
-<p><strong>Avril 2021</strong>
-Finalisation de la première version de Cosma.</p>
-<h2 id="bibliothèques-utilisées">Bibliothèques utilisées</h2>
-<p>Pour améliorer la maintenabilité et la lisibilité du code source, l’équipe de développement a recouru aux bibliothèques suivantes.</p>
-<ul>
-<li>D3.js v4.13.0 (BSD 3-Clause) : Génération du graphe</li>
-<li>Nunjucks v3.2.3 (BSD 2-Clause) : Génération du template du Cosmoscope</li>
-<li>Js-yaml v3.14.0 (MIT License) : Lecture du fichier de configuration et écriture des YAML Front Matter</li>
-<li>Js-yaml-front-matter v4.1.0 (MIT License) : Lecture des YAML Front Matter des fichiers Markdown</li>
-<li>Markdown-it v12.0.2 (MIT License) : Conversion Markdown → HTML</li>
-<li>Markdown-it-attrs v4.0.0 (MIT License) : Traitement des hyperliens Markdown au sein des fiches</li>
-<li>Citeproc-js v2.4.59 (CPAL et AGPL) : Conversion des clés de citation</li>
-<li>Minify-html v0.4.3 (MIT License) : Allègement du Cosmoscope</li>
-<li>Fuse.js v6.4.6 (Apache License 2.0) : Moteur de recherche</li>
-<li>Moment v2.29.1 (MIT License) : Gestion de l’horodatage</li>
-</ul>
-
-
-    <div class="zapper || row">
-    
-    <div class="zapper-next || col-sm-5">
-        
-        <a href="/telecharger/">Suivant :
-            <span>Télécharger</span></a>
-        
-    </div>
-    
-
-    
-    <div class="zapper-prev || col-sm-5">
-        
-    </div>
-    
-</div>
+    <h2>Équipe</h2>
+		
+		<a href="https://www.arthurperret.fr"><h3 class="people-name">Arthur Perret</a> <span class="people-role">Porteur du projet</span></h3>
+		<p class="people-bio">Ancien étudiant à l&rsquo;ENSSIB, Arthur Perret travaille notamment sur les pratiques historiques de la documentation et la graphie des données. Depuis le 6 novembre 2017, il est doctorant à l&rsquo;Université Bordeaux Montaigne et étudie l’héritage épistémologique de Paul Otlet dans le cadre d&rsquo;une thèse co-dirigée par Olivier Le Deuff et Bertrand Müller. Il est actuellement ATER à l’IUT Bordeaux Montaigne.</p>
+		
+		<a href="https://myllaume.fr"><h3 class="people-name">Guillaume Brioudes</a> <span class="people-role">Développeur</span></h3>
+		<p class="people-bio">Développeur de plusieurs projets de représentation de la connaissance et étudiant en master Document numérique et humanités digitales (DNHD) à l’université Bordeaux Montaigne, Guillaume Brioudes contribue au programme de recherche ANR HyperOtlet depuis avril 2020. Il travaille actuellement sur un mémoire de recherche sur la documentation et l’architecture des logiciels open source.</p>
+		
+		<a href=""><h3 class="people-name">Clément Borel</a> <span class="people-role">Chercheur</span></h3>
+		<p class="people-bio">Maître de conférences en sciences de l’information et de la communication à l&rsquo;Université Bordeaux Montaigne et chef du département Information-Communication de l’IUT Bordeaux Montaigne, Clément Borel étudie le traitement massif des corpus de textes pour enrichir leur lecture : relations hypertexte, data visualisation, etc.</p>
+		
+		<a href="http://www.guidedesegares.info"><h3 class="people-name">Olivier Le Deuff</a> <span class="people-role">Chercheur</span></h3>
+		<p class="people-bio">Maître de conférences en sciences de l’information et de la communication depuis 2011 à l’Université Bordeaux Montaigne, ancien professeur-documentaliste et ancien ingénieur pédagogique, Olivier Le Deuff étudie les cultures numériques, les cultures informationnelles, l’histoire et l’épistémologie des pratiques informationnelles et documentaires. Ses recherches portent également sur les humanités digitales. Habilité à diriger des recherches, il travaille à une réingénierie des pratiques documentaires du web. Il coordonne l&rsquo;équipe bordelaise du programme de recherche ANR HyperOtlet.</p>
+		
+		<h2>Historique</h2>
+		
+		<p><strong>Août 2020 :</strong> Prototypage d’un « Lexicographe » avec l’interface de l’<a href="https://hyperotlet.huma-num.fr/otletosphere/">Otletosphère</a>.</p>
+		
+		<p><strong>Décembre 2020 :</strong> Début du développement de Cosma avec un nouveau cahier des charges.</p>
+		
+		<p><strong>Avril 2021 :</strong> Finalisation de la première version de Cosma.</p>
+		
 
 </main>
 
   <footer>
-  Généré avec <a href="https://gohugo.io/">Hugo</a>
+    <ul class="menu">
+        
+        <li><a href="https://graphlab-fr.github.io/cosma/fr.html#faq">FAQ</a></li>
+        
+        <li><a href="https://github.com/graphlab-fr/cosma">GitHub</a></li>
+        
+        <li><a href="https://github.com/graphlab-fr/cosma/blob/master/LICENSE">Licence</a></li>
+        
+        <li><a href="https://github.com/graphlab-fr/cosma/releases">Releases</a></li>
+        
+        <li><a href="https://github.com/graphlab-fr/cosma/releases">Issues</a></li>
+        
+        <li><a href="/contact/">Contact</a></li>
+        
+    </ul>
   </footer>
 
   </body>
 </html>
+

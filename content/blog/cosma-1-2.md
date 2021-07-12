@@ -2,8 +2,8 @@
 title: Cosma v1.2
 date: 2021-06-10
 draft: false
-download: "https://github.com/hyperotlet/cosma/archive/refs/tags/1.2.0.zip"
-github: "https://github.com/hyperotlet/cosma/releases/tag/1.2.0"
+download: "https://github.com/graphlab-fr/cosma/archive/refs/tags/1.2.0.zip"
+github: "https://github.com/graphlab-fr/cosma/releases/tag/1.2.0"
 zenodo: "https://zenodo.org/record/4923581#.YNsD2i0itQI"
 ---
 
@@ -20,4 +20,4 @@ Cette mise à jour inclut des améliorations de l'expérience utilisateur au niv
 - Les boutons liés aux mots-clés et aux vues fonctionnent désormais comme des boutons on/off : cliquer une première fois modifie l'affichage, cliquer à nouveau rétablit l'affichage initial.
 - L'utilisation de l'API de D3.js accroît considérablement les performances et la réactivité du cosmocope.
 
-Une documentation est désormais disponible à l'adresse suivante : <https://hyperotlet.github.io/cosma/>
+Une documentation est désormais disponible à l'adresse suivante : <https://graphlab-fr.github.io/cosma/>

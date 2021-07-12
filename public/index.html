@@ -1,33 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr-FR">
   <head>
-	<meta name="generator" content="Hugo 0.81.0" />
+	<meta name="generator" content="Hugo 0.84.3" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"/>
-<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/"/>
+    <link rel="schema.DC" href="https://purl.org/dc/elements/1.1/"/>
+<link rel="schema.DCTERMS" href="https://purl.org/dc/terms/"/>
 
 <title>Accueil | Cosma</title>
 <meta property="og:title" content="Accueil"/>
 <meta property="og:site_name" content="Cosma"/>
 <meta name="DC.Title" content="Accueil | Cosma"/>
 
-<meta name="description" content="Cosma est un logiciel de visualisation de graphe documentaire.
-Il permet d’enregistrer et représenter des fichiers Markdown interreliés
-sous la forme d’un réseau interactif dans un navigateur web.
-"/>
-<meta property="og:description" content="Cosma est un logiciel de visualisation de graphe documentaire.
-Il permet d’enregistrer et représenter des fichiers Markdown interreliés
-sous la forme d’un réseau interactif dans un navigateur web.
-"/>
-<meta name="DC.description" content="Cosma est un logiciel de visualisation de graphe documentaire.
-Il permet d’enregistrer et représenter des fichiers Markdown interreliés
-sous la forme d’un réseau interactif dans un navigateur web.
-"/>
+<meta name="description" content="Cosma est un logiciel de visualisation de graphe documentaire. Il permet d’enregistrer et représenter des fichiers Markdown interreliés sous la forme d’un réseau interactif dans un navigateur web."/>
+<meta property="og:description" content="Cosma est un logiciel de visualisation de graphe documentaire. Il permet d’enregistrer et représenter des fichiers Markdown interreliés sous la forme d’un réseau interactif dans un navigateur web."/>
+<meta name="DC.description" content="Cosma est un logiciel de visualisation de graphe documentaire. Il permet d’enregistrer et représenter des fichiers Markdown interreliés sous la forme d’un réseau interactif dans un navigateur web."/>
 
-<meta property="article:tag" content="graphe documentaire,fiche Markdown"/>
-<meta property="article:tag" content="graphe documentaire,fiche Markdown"/>
+<meta property="article:tag" content="graphe,document,donnée,corpus,visualisation,publication,web,Markdown,Zettelkasten"/>
+<meta property="article:tag" content="graphe,document,donnée,corpus,visualisation,publication,web,Markdown,Zettelkasten"/>
 
 <meta name="author" content="Arthur Perret,Guillaume Brioudes"/>
 <meta name="copyright" content="Tous droits réservés aux auteurs"/>
@@ -38,8 +29,7 @@ sous la forme d’un réseau interactif dans un navigateur web.
 
   <body>
     
-<header>
-  <nav>
+	<nav>
     <ul class="menu">
         <li><a href="https://cosma.netlify.app/">Accueil</a></li>
         
@@ -47,58 +37,94 @@ sous la forme d’un réseau interactif dans un navigateur web.
         
         <li><a href="/blog/">Blog</a></li>
         
-        <li><a href="https://hyperotlet.github.io/cosma/fr.html">Documentation</a></li>
+        <li><a href="https://graphlab-fr.github.io/cosma/fr.html">Documentation</a></li>
         
         <li><a href="/a-propos/">À propos</a></li>
+        
+    </ul>
+</nav>
+
+<header>
+	<img id="home-logo" src="/img/logo-cosma.svg">
+	<p id="tagline-primary">de la fiche au graphe...</p>
+		<div id="home-buttons-text">
+			<p class="tagline-secondary">Un outil de visualisation et de partage pour les travailleurs de la connaissance</p>
+			<div id="home-buttons">
+				<button type="button" class="btn btn-primary"><a href="/telecharger">Télécharger</a></button>
+				<button type="button" class="btn btn-secondary"><a href="https://graphlab-fr.github.io/cosma/fr.html">Documentation</a></button>
+			</div>
+			<div id="availability">
+				<p>Compatible avec Windows, Mac et Linux</p>
+				<p>Requiert <a href="https://nodejs.org/fr/download/">Node.js</a> version 12 ou supérieure</p>
+			</div>
+		</div>
+</header>
+<main class="wrapper home">
+	<section id="landing">
+		<img id="home-main-screenshot" src="/img/screenshot-cosma.png" alt="Capture d'écran d'un cosmoscope fabriqué avec Cosma">
+	</section>
+	<section id="deux">
+		<p>Les logiciels s’envolent, les données restent</p>
+		<p>Obtenez une vision globale de votre graphe de connaissance, sans interférer avec vos habitudes de stockage, de versionnement et d'édition.</p>
+	</section>
+	<section id="features">
+		
+		<div class="feature">
+			<div class="feature-text">
+				<h2>Visualiser</h2>
+				<p>À partir d&rsquo;un répertoire de fichiers Markdown, Cosma génère une collection de fiches au format HTML, rassemblées dans un fichier unique : le <strong>cosmoscope</strong>.</p>
+			</div>
+			<img src="/img/visualize.png">
+		</div>
+		
+		<div class="feature">
+			<div class="feature-text">
+				<h2>Explorer</h2>
+				<p>Parcourez vos connaissances en utilisant toute la palette heuristique du cosmoscope : moteur de recherche, types de fiches, types de liens, index, mots-clés, mode focus, vues sauvegardées, rétroliens…</p>
+			</div>
+			<img src="/img/explore.png">
+		</div>
+		
+		<div class="feature">
+			<div class="feature-text">
+				<h2>Partager</h2>
+				<p>Chaque cosmoscope généré par Cosma contient un instantané au format JSON de vos fiches, de leurs relations et des références citées : des données structurées réutilisables par d&rsquo;autres logiciels, de Gephi à Zotero.</p>
+			</div>
+			<img src="/img/share.png">
+		</div>
+		
+		<div class="feature zettlr">
+			<div class="feature-text">
+				<h2>Zettlr + Cosma</h2>
+				<p><a href="https://zettlr.com">Zettlr</a> est un partenaire idéal pour Cosma. Rédigez avec l'un des meilleurs outils d'écriture académique, et utilisez Cosma pour franchir une nouvelle dimension. Besoin d'un autre éditeur ? Cosma continue à fonctionner de manière autonome.</p>
+			</div>
+
+
+		</div>
+	</section>
+	<section id="cta">
+		<button type="button" class="btn btn-primary"><a href="/telecharger">Télécharger Cosma</a></button>
+		<p><a href="/blog">Vous cherchez une version antérieure ?</a></p>
+	</section>
+	
+</main>
+
+  <footer>
+    <ul class="menu">
+        
+        <li><a href="https://graphlab-fr.github.io/cosma/fr.html#faq">FAQ</a></li>
+        
+        <li><a href="https://github.com/graphlab-fr/cosma">GitHub</a></li>
+        
+        <li><a href="https://github.com/graphlab-fr/cosma/blob/master/LICENSE">Licence</a></li>
+        
+        <li><a href="https://github.com/graphlab-fr/cosma/releases">Releases</a></li>
+        
+        <li><a href="https://github.com/graphlab-fr/cosma/releases">Issues</a></li>
         
         <li><a href="/contact/">Contact</a></li>
         
     </ul>
-</nav>
-</header>
-
-<main class="wrapper">
-
-    <h1>Cosma</h1>
-
-    <p>navigation pages
-logo
-nom
-slogan
-bouton de téléchargement
-bouton d&rsquo;accès à la doc
-plateformes supportées
-capture d&rsquo;écran principale</p>
-<p>points importants</p>
-<ul>
-<li>capture d&rsquo;écran</li>
-<li>description</li>
-<li>lien vers plus d&rsquo;info</li>
-</ul>
-<p>types d&rsquo;usages</p>
-<p>Fonctionnalités</p>
-<ul>
-<li>symbole</li>
-<li>nom</li>
-<li>description</li>
-</ul>
-<p>re-bouton téléchargement
-en-dessous : lien anciennes versions (liens vers les GitHub Releases correspondantes)</p>
-<p>pied de page</p>
-<ul>
-<li>logos (HyperOtlet)</li>
-<li>lien GitHub</li>
-<li>licence</li>
-<li>releases</li>
-<li>faq</li>
-<li>contact</li>
-</ul>
-
-
-</main>
-
-  <footer>
-  Généré avec <a href="https://gohugo.io/">Hugo</a>
   </footer>
 
   </body>
