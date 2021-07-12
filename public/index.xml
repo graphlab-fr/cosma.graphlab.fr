@@ -6,7 +6,17 @@
     <description>Recent content in Accueil on Cosma</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr-FR</language>
-    <lastBuildDate>Thu, 10 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cosma.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 12 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://cosma.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cosma v1.3</title>
+      <link>https://cosma.netlify.app/blog/cosma-1-3/</link>
+      <pubDate>Mon, 12 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://cosma.netlify.app/blog/cosma-1-3/</guid>
+      <description>Cette mise à jour ajoute le traitement des données bibliographiques, ainsi que des améliorations d&amp;rsquo;interface.
+ Le focus centre la vue sur le nœud sélectionné. Ajout du traitement automatique des citations (citation processing) rédigées au format Pandoc Markdown. Exemple : [@goody1979, 34] dans le fichier source en Markdown sera transformé en (Goody 1979, p. 34) en HTML, avec la référence complète en bas de la fiche. Les données bibliographiques utilisées dans les fiches sont incluses dans le cosmoscope.</description>
+    </item>
+    
     <item>
       <title>Cosma v1.2</title>
       <link>https://cosma.netlify.app/blog/cosma-1-2/</link>
