@@ -7,11 +7,17 @@ Cosma est un logiciel de visualisation de graphe documentaire. Il permet de repr
 
 Dans le vaste champ des outils qui servent à penser (*tools for thought*), Cosma se démarque par **trois originalités** :
 
-D'abord, **Cosma n'est pas lui-même un logiciel de prise de notes**. Il est pensé pour fonctionner en complémentarité avec ces logiciels.
+D'abord, **Cosma n'est pas lui-même un logiciel de prise de notes**. Il est pensé pour fonctionner en complémentarité avec ces logiciels. Nous nous sommes inspirés ici du fonctionnement de logiciels comme [Deckset](https://www.deckset.com), qui applique ce principe aux présentations.
 
-Ensuite, **Cosma repose sur des normes d'écriture interopérables, ouvertes et standardisées**. Ceci permet de créer des données plus riches, pérennes, ainsi que de changer librement d'outil à tout moment.
+Ensuite, **Cosma repose sur des normes d'écriture interopérables, ouvertes et standardisées**. Ceci accroît la pérennité des données, facilite l'utilisation combinée avec des outils qui partagent ces normes (comme [Zettlr](https://www.zettlr.com)), tout en laissant la possibilité de changer d'outil à tout moment.
 
-Enfin, **Cosma permet de partager simultanément les données et les outils pour les explorer**. La plupart des outils de visualisation concentrent leurs fonctionnalités dans une application à interface graphique, à partir de laquelle il est possible d'exporter des données structurées ou des images statiques. Cosma inverse cette logique : la partie application, surnommée **cosmographe**, est un simple formulaire de création, et c'est l'export, un fichier HTML surnommé **cosmoscope**, qui constitue la véritable interface de visualisation. Ce fichier autonome contient un graphe interactif, des outils de navigation interne (index, moteur de recherche, filtres) et le texte intégral des fiches ; il inclut aussi les données sources au format JSON et peut être utilisé hors connexion.
+Enfin, **Cosma permet de partager simultanément les données et les outils pour les explorer**.
+
+La plupart des outils de visualisation concentrent leurs fonctionnalités dans une application à interface graphique, à partir de laquelle il est possible d'exporter des données structurées ou des images statiques.
+
+Cosma inverse cette logique : la partie application, surnommée **cosmographe**, est un simple formulaire de création, et c'est l'export, un fichier HTML surnommé **cosmoscope**, qui constitue la véritable interface de visualisation. Ce fichier autonome contient un graphe interactif, des outils de navigation interne (index, moteur de recherche, filtres) et le texte intégral des fiches ; il inclut aussi les données sources au format JSON et peut être utilisé hors connexion.
+
+Ainsi, **en partageant un cosmoscope vous ne transmettez pas seulement des données mais des capacités heuristiques**.
 
 ***
 

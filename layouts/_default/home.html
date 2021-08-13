@@ -2,25 +2,25 @@
 <header>
 	<img id="home-logo" src="/img/logo-cosma.svg">
 	<p id="tagline-primary">{{ .Site.Params.Tagline.Primary }}</p>
-		<div id="home-buttons-text">
-			<p class="tagline-secondary">{{ .Site.Params.Tagline.Secondary }}</p>
-			<div id="home-buttons">
-				<button type="button" class="btn btn-primary"><a href="/telecharger">Télécharger</a></button>
-				<button type="button" class="btn btn-secondary"><a href="https://graphlab-fr.github.io/cosma/fr.html">Documentation</a></button>
-			</div>
-			<div id="availability">
-				<p>Compatible avec Windows, Mac et Linux</p>
-				<p>Requiert <a href="https://nodejs.org/fr/download/">Node.js</a> version 15 ou supérieure</p>
-			</div>
+	<div id="home-buttons-text">
+		<p class="tagline-secondary">{{ .Site.Params.Tagline.Secondary }}</p>
+		<div id="home-buttons">
+			<button type="button" class="btn btn-primary"><a href="/telecharger">Télécharger</a></button>
+			<button type="button" class="btn btn-secondary"><a href="https://graphlab-fr.github.io/cosma/fr.html">Documentation</a></button>
 		</div>
+		<div id="availability">
+			<p>Compatible avec Windows, Mac et Linux</p>
+			<p>Requiert <a href="https://nodejs.org/fr/download/">Node.js</a> version 15 ou supérieure</p>
+		</div>
+	</div>
 </header>
 <main class="wrapper home">
-	<section id="landing">
+	<section id="first">
 		<img id="home-main-screenshot" src="/img/screenshot-cosma.png" alt="Capture d'écran d'un cosmoscope fabriqué avec Cosma">
 	</section>
-	<section id="deux">
-		<p>Les logiciels s’envolent, les données restent</p>
-		<p>Obtenez une vision globale de votre graphe de connaissance, sans interférer avec vos habitudes de stockage, de versionnement et d'édition.</p>
+	<section id="second">
+		<p>Notez vos idées avec votre éditeur Markdown préféré, et explorez-les dans Cosma.</p>
+		<p>Les logiciels s’envolent, les données restent. Cosma vous apporte une vision globale de votre graphe de connaissances, sans interférer avec vos habitudes de stockage, de versionnement et d'édition.</p>
 	</section>
 	<section id="features">
 		{{ range $.Site.Data.features }}
@@ -29,17 +29,22 @@
 				<h2>{{ .title | markdownify }}</h2>
 				<p>{{ .description | markdownify }}</p>
 			</div>
-			<img src="{{ .img }}">
+			<div class="feature-img">
+				<img src="{{ .img }}">
+			</div>
 		</div>
 		{{ end }}
+<!-- 
 		<div class="feature zettlr">
 			<div class="feature-text">
 				<h2>Zettlr + Cosma</h2>
-				<p><a href="https://zettlr.com">Zettlr</a> est un partenaire idéal pour Cosma. Rédigez avec l'un des meilleurs outils d'écriture académique, et utilisez Cosma pour franchir une nouvelle dimension. Besoin d'un autre éditeur ? Cosma continue à fonctionner de manière autonome.</p>
+				<p><a href="https://zettlr.com">Zettlr</a> est un partenaire idéal pour Cosma. Rédigez avec l'un des meilleurs outils d'écriture académique, et utilisez Cosma pour franchir une nouvelle dimension.</p>
+				<p>Besoin d'un autre éditeur ? Cosma continue à fonctionner de manière autonome.</p>
 			</div>
-<!-- 			<img src="/img/screenshot-cosma.png"> -->
-<!-- 			<img src="/img/zettlr.png"> -->
+<!~~ 			<img src="/img/screenshot-cosma.png"> ~~>
+<!~~ 			<img src="/img/zettlr.png"> ~~>
 		</div>
+ -->
 	</section>
 	<section id="cta">
 		<button type="button" class="btn btn-primary"><a href="/telecharger">Télécharger Cosma</a></button>

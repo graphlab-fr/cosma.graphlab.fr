@@ -7,7 +7,7 @@ params:
   tagline:
     primary: de la fiche au graphe...
     secondary: Un outil de visualisation et de partage pour les travailleurs de la connaissance
-  description:  "Cosma est un logiciel de visualisation de graphe documentaire. Il permet d’enregistrer et représenter des fichiers Markdown interreliés sous la forme d’un réseau interactif dans un navigateur web."
+  description:  "Cosma est un logiciel de visualisation de graphe documentaire. Il permet de représenter des fichiers Markdown interreliés sous la forme d’un réseau interactif dans un navigateur web."
   keywords:
     - graphe
     - document
@@ -37,21 +37,15 @@ menu:
       url: "a-propos/"
       weight: 4
   footer:
-    - name: FAQ
-      url: "https://graphlab-fr.github.io/cosma/fr.html#faq"
-      weight: 1
-    - name: GitHub
+    - name: Dépôt GitHub
       url: "https://github.com/graphlab-fr/cosma"
-      weight: 2
+      weight: 1
     - name: Licence
       url: "https://github.com/graphlab-fr/cosma/blob/master/LICENSE"
-      weight: 3
+      weight: 2
     - name: Releases
       url: "https://github.com/graphlab-fr/cosma/releases"
-      weight: 4
+      weight: 3
     - name: Issues
       url: "https://github.com/graphlab-fr/cosma/releases"
-      weight: 5
-    - name: Contact
-      url: "contact/"
-      weight: 6
+      weight: 4

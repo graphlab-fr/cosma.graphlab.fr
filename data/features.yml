@@ -1,9 +1,18 @@
 - title: "Visualiser"
-  description: "À partir d'un répertoire de fichiers Markdown, Cosma génère une collection de fiches au format HTML, rassemblées dans un fichier unique : le **cosmoscope**."
+  description: |
+    À partir d'un répertoire de fichiers rédigés en Markdown, Cosma génère une collection de fiches au format HTML, rassemblées dans un fichier unique : le **cosmoscope**.
+    
+    [Zettlr](https://zettlr.com) est un partenaire idéal pour Cosma. Besoin d'un autre éditeur de texte ? Cosma continue à fonctionner de manière indépendante et embarque un formulaire qui vous permet de créer rapidement des fiches au bon format, quel que soit l'éditeur.
   img: /img/visualize.png
 - title: "Explorer"
-  description: "Parcourez vos connaissances en utilisant toute la palette heuristique du cosmoscope : moteur de recherche, types de fiches, types de liens, index, mots-clés, mode focus, vues sauvegardées, rétroliens…"
+  description: |
+    Parcourez vos connaissances en utilisant toute la palette heuristique du cosmoscope : moteur de recherche, types de fiches, types de liens, index, mots-clés, mode focus, vues sauvegardées, liens et rétroliens en contexte, traitement automatique des citations…
+    
+    Adaptez l'outil à vos besoins : définissez vos propres types de fiches et de liens ; modifiez les paramètres de l'algorithme du graphe ; personnalisez l'apparence du cosmoscope en CSS.
   img: /img/explore.png
 - title: "Partager"
-  description: "Chaque cosmoscope généré par Cosma contient un instantané au format JSON de vos fiches, de leurs relations et des références citées : des données structurées réutilisables par d'autres logiciels, de Gephi à Zotero."
+  description: |
+    Partagez un cosmoscope par mail, sur votre site personnel, via un service tiers… Chaque personne qui l'ouvrira aura accès aux mêmes données et outils que vous.
+    
+    Chaque cosmoscope contient aussi un instantané au format JSON de vos fiches, de leurs relations et des références bibliographiques citées : des données structurées réutilisables dans d'autres logiciels, de Gephi à Zotero.
   img: /img/share.png

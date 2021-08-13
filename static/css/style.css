@@ -12,6 +12,7 @@
 	--border-light-color: #f3f3f3;
 	--brown: #857e75;
 	--light-brown: #e7dfd3;
+	--off-white: #f9f7f4;
 	/* typography */
 	--sans: sans-serif;
 	--serif: "Georgia", serif;
@@ -38,7 +39,7 @@ body {
 	font-family: var(--sans);
 	font-size: 1.4rem;
 	line-height: 1.5;
-	background-color: #f9f7f4;
+	background-color: var(--off-white);
 	color: rgb(51, 51, 51);
 }
 
@@ -125,7 +126,7 @@ footer a {
 	margin: 0.5rem 0;
 }
 
-section#landing {
+section#first {
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
@@ -133,9 +134,9 @@ section#landing {
 	margin-bottom: 2rem;
 }
 
-section#deux {
+section#second {
 	background-color: var(--cosma-blue);
-	padding: 24rem 20vw 16rem 20vw;
+	padding: 24rem 16vw 16rem 16vw;
 	font-size: 2.4rem;
 	color: var(--light-brown);
 	position: relative;
@@ -143,27 +144,60 @@ section#deux {
 	z-index: -1;
 }
 
+section#features {
+
+}
+
 .feature {
-	max-width: 75vw;
+	width: 100vw;
+	height: 85vh;
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
 	justify-content: space-evenly;
-	margin: 10rem auto;
+	margin: 0 auto;
 	text-align: left;
+	border-bottom: 1px solid var(--light-brown);
 }
-.feature:nth-child(2n+1) {
-  flex-direction: row-reverse; 
+.feature:nth-child(2n) {
+  flex-direction: row-reverse;
+/*   background-color: red; */
 }
 .feature-text {
-	max-width: 400px;
+	width: 50%;
+}
+.feature-img {
+	width: 50%;
+}
+.feature-text, .feature-img {
+	height: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+.feature-text > * {
+	width: 70%;
+	margin: 0 auto;
+}
+.feature-text h2 {
+	font-size: 3rem;
+	font-weight: 300;
+	margin-bottom: 2rem;
 }
 .feature-text p {
 	font-size: 1.8rem;
-	flex-grow: 1;
+	margin-bottom: 1.8rem;
 }
-.feature img {
-	margin: 0 2rem;
+.feature-text > *:nth-child(n+4) {
+	color: #b8b2a8;
+}
+.feature-img {
+/* 	background-color: var(--cosma-blue); */
+}
+.feature-img img {
+	margin: 0;
 	max-width: 50vw;
 }
 
@@ -183,9 +217,13 @@ img {
 /* 	width: 100%; */
 }
 
-#deux p {
+#second p {
 	font-weight: 300;
 	color: #fcfbfa;
+}
+
+#second p:first-child {
+	font-size: 4rem;
 }
 
 #cta {
@@ -222,6 +260,18 @@ a, a:visited {
 }
 
 /* A propos */
+
+.about p:first-of-type {
+	font-size: 2.8rem;
+	font-weight: 300;
+	margin-bottom: 5rem;
+}
+.about p {
+	font-size: 1.7rem;
+}
+.about hr {
+	margin: 5rem 0;
+}
 
 .people-role,
 .release-links {
