@@ -387,14 +387,33 @@ thead, tfoot, tr:nth-child(even) {
 /* Responsive */
 
 @media screen and (max-width: 900px) {
-	.feature {
-		display: block;
+	#home-logo {
+		max-width: 80%;	
 	}
-	.feature > div,
-	.feature > img {
+	#tagline-primary {
+		font-size: 4rem;
+		left: 12rem;
+		top: -4.5rem;
+	}
+	section#second {
+		padding: 24rem 5vw 16rem 5vw
+	}
+	.feature {
+		display: inline-block;
+		padding: 5rem 0;
+		border-bottom: 1px solid var(--border-color);
+		height: auto;
+	}
+	#features div:first-of-type {
+		padding-top: 0;
+	}
+	.feature-text,
+	.feature-img {
+		width: 100%;
+		height: auto;
+	}
+	.feature-img img {
 		max-width: 100%;
 	}
-	.feature > img {
-		margin: 0;
-	}
+	
 }
