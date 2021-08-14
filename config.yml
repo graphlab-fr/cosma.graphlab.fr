@@ -8,6 +8,10 @@ outputs:
   - RSS
   section:
   - HTML
+outputFormats:
+  RSS:
+    mediatype: "application/rss"
+    baseName: "feed"
 params:
   tagline:
     primary: de la fiche au graphe...
