@@ -246,6 +246,9 @@ img {
 
 /* Liens */
 
+a {
+	word-break: break-word;
+}
 a:hover {
 	background-color: var(--light-brown);
 }
@@ -387,16 +390,44 @@ thead, tfoot, tr:nth-child(even) {
 /* Responsive */
 
 @media screen and (max-width: 900px) {
+	.blog, .about {
+		padding: 0 5vw;
+	}
 	#home-logo {
-		max-width: 80%;	
+		max-width: 80%;
 	}
 	#tagline-primary {
-		font-size: 4rem;
-		left: 12rem;
-		top: -4.5rem;
+		font-size: 3rem;
+		left: 3rem;
+		top: -2rem;
+	}
+	p.tagline-secondary {	
+		padding: 0 2vw;	
+		font-size: 2.2rem;
+	}
+	header .btn, .home .btn, .download .btn {
+		font-size: 1.6rem;
+	}
+	section#first {
+		background-color: var(--cosma-blue);
+		margin: 0;
+		padding: 2rem 0 0 0;
 	}
 	section#second {
-		padding: 24rem 5vw 16rem 5vw
+		padding: 2rem 5vw;
+		top: 0;
+	}
+	#second p {
+		font-size: 1.8rem;
+		font-weight: normal;
+		color: #fcfbfa;
+		text-align: left;
+	}
+	#second p:first-child {
+		font-size: 2rem;
+		font-weight: 300;
+		text-align: center;
+		padding-bottom: 2rem;
 	}
 	.feature {
 		display: inline-block;
@@ -404,16 +435,19 @@ thead, tfoot, tr:nth-child(even) {
 		border-bottom: 1px solid var(--border-color);
 		height: auto;
 	}
-	#features div:first-of-type {
-		padding-top: 0;
-	}
 	.feature-text,
 	.feature-img {
 		width: 100%;
 		height: auto;
 	}
+	.feature-text > * {
+		width: 100%;
+		padding: 0 5vw;
+	}
 	.feature-img img {
 		max-width: 100%;
 	}
-	
+	.about p:first-of-type {
+		font-size: 2.4rem;
+	}
 }
