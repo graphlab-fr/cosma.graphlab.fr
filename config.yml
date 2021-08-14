@@ -2,7 +2,12 @@ baseURL: https://cosma.graphlab.fr/
 languageCode: fr-FR
 title: Cosma
 theme: xmin
-
+outputs:
+  home:
+  - HTML
+  - RSS
+  section:
+  - HTML
 params:
   tagline:
     primary: de la fiche au graphe...
