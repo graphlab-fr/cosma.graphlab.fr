@@ -46,15 +46,18 @@ menu:
       url: "a-propos/"
       weight: 4
   footer:
+    - name: Flux RSS
+      url: "https://cosma.graphlab.fr/feed.xml"
+      weight: 1
     - name: Dépôt GitHub
       url: "https://github.com/graphlab-fr/cosma"
-      weight: 1
+      weight: 2
     - name: Licence
       url: "https://github.com/graphlab-fr/cosma/blob/master/LICENSE"
-      weight: 2
+      weight: 3
     - name: Releases
       url: "https://github.com/graphlab-fr/cosma/releases"
-      weight: 3
+      weight: 4
     - name: Issues
       url: "https://github.com/graphlab-fr/cosma/releases"
-      weight: 4
+      weight: 5
