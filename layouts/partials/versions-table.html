@@ -2,13 +2,12 @@
 
     <tbody>
 
-        {{ $pages := .Pages }}
-        {{ $pages = .Site.RegularPages }}
-        {{ range (where $pages "Section" "blog") }}
+        {{ range $.Site.Data.versions }}
         <tr>
-            <td>{{ .Title }}</td>
-            <td><a href="{{ .Params.download }}">Télécharger</a></td>
-            <td><a href="{{ .RelPermalink }}">Notes de version</a></td>
+            <td>Cosma {{ .tag }}</td>
+            <td><a href="{{ .downloadMac }}">Télécharger pour macOS</a></td>
+            <td><a href="{{ .downloadWin }}">Télécharger pour Windows</a></td>
+            <td><a href="/blog/{{ .notes }}">Notes de version</a></td>
         </tr>
         {{ end }}
 

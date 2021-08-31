@@ -1,16 +1,16 @@
 - name: Arthur Perret
-  role: Porteur du projet
+  role: Recherche-conception
   link: "https://www.arthurperret.fr"
-  bio: "Ancien étudiant à l'ENSSIB, Arthur Perret travaille sur les données, documents et dispositifs impliqués dans les processus d’écriture, de documentation et d’édition. Depuis novembre 2017, il est doctorant à l'Université Bordeaux Montaigne et étudie l’héritage épistémologique de Paul Otlet dans le cadre d'une thèse co-dirigée par Olivier Le Deuff et Bertrand Müller. Il est actuellement ATER à l’IUT Bordeaux Montaigne."
+  bio: "Diplômé en information scientifique et technique ainsi qu’en édition numérique, Arthur Perret est doctorant en sciences de l'information et de la communication au sein du laboratoire MICA (Université Bordeaux Montaigne). Ses recherches sont consacrées aux données, documents et dispositifs impliqués dans les processus d’écriture, de documentation et d’édition. Sa thèse, co-dirigée par Olivier Le Deuff et Bertrand Müller, porte sur l’héritage épistémologique de Paul Otlet. Il est actuellement ATER à l’IUT Bordeaux Montaigne."
 - name: Guillaume Brioudes
-  role: Développeur
+  role: Développement
   link: "https://myllaume.fr"
   bio: "Développeur de plusieurs projets de représentation de la connaissance et étudiant en master Document numérique et humanités digitales (DNHD) à l’université Bordeaux Montaigne, Guillaume Brioudes contribue au programme de recherche ANR HyperOtlet depuis avril 2020. Il travaille actuellement sur un mémoire de recherche sur la documentation et l’architecture des logiciels open source."
 - name: Clément Borel
-  role: Chercheur
-  link: ""
-  bio: "Maître de conférences en sciences de l’information et de la communication à l'Université Bordeaux Montaigne et chef du département Information-Communication de l’IUT Bordeaux Montaigne, Clément Borel étudie le traitement massif des corpus de textes pour enrichir leur lecture : relations hypertexte, data visualisation, etc."
+  role: Recherche-conception
+  link: "https://mica.u-bordeaux-montaigne.fr/borel-clement/"
+  bio: "Maître de conférences en sciences de l’information et de la communication à l'Université Bordeaux Montaigne et chef du département Information-Communication de l’IUT Bordeaux Montaigne, Clément Borel travaille sur la navigation dans les grands corpus textuels, les outils sémantiques au service du livre numérique et de la lecture critique, ainsi que la navigation sémantique dans les corpus d’images. Sa thèse, soutenue en 2014, était consacrée à la modélisation et à la visualisation des liens transtextuels dans le livre numérique."
 - name: Olivier Le Deuff
-  role: Chercheur
+  role: Recherche-conception
   link: "http://www.guidedesegares.info"
   bio: "Maître de conférences en sciences de l’information et de la communication depuis 2011 à l’Université Bordeaux Montaigne, ancien professeur-documentaliste et ancien ingénieur pédagogique, Olivier Le Deuff étudie les cultures numériques, les cultures informationnelles, l’histoire et l’épistémologie des pratiques informationnelles et documentaires. Ses recherches portent également sur les humanités digitales. Habilité à diriger des recherches, il travaille à une réingénierie des pratiques documentaires du web. Il coordonne l'équipe bordelaise du programme de recherche ANR HyperOtlet."

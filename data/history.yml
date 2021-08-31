@@ -4,5 +4,5 @@
   description: "Début du développement de Cosma avec un nouveau cahier des charges."
 - date: Avril 2021
   description: "Finalisation de la première version de Cosma."
-- date: Actuellement (août 2021)
-  description: "Développement d'une application Electron pour proposer cosmographe et cosmoscope dans une interface graphique unique et multi-plateformes."
+- date: Août 2021
+  description: "Développement d'une application autonome avec interface graphique."
