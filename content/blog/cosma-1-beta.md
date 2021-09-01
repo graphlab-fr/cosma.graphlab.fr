@@ -10,9 +10,9 @@ zenodo: "à venir"
 
 Après le développement d'une première version utilisable en ligne de commande, Cosma fait peau neuve et devient une application autonome, à interface graphique, disponible sur macOS et Windows.
 
-🚧 **Attention : cette version est une bêta non documentée et comportant quelques bugs.** 🚧
+🚧 **Attention : ceci est une bêta partiellement documentée et comportant quelques bugs.** 🚧
 
-[La documentation de la version alpha](https://graphlab-fr.github.io/cosma-cli/fr.html) est toujours valable en ce qui concerne le cœur de l'application, à savoir l'utilisation du cosmoscope. Une documentation actualisée pour la bêta sera mise en ligne prochainement.
+[La documentation utilisateur est à jour et en ligne.](https://graphlab-fr.github.io/cosma/fr.html) La documentation de développement sera mise à jour et publiée prochainement.
 
 Les bugs feront l'objet de correctifs qui seront rassemblés dans une version ultérieure. Une liste des bugs connus est mise à jour périodiquement ci-dessous :
 
