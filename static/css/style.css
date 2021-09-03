@@ -157,11 +157,13 @@ section#features {
 	justify-content: space-evenly;
 	margin: 0 auto;
 	text-align: left;
-	border-bottom: 1px solid var(--light-brown);
 }
 .feature:nth-child(2n) {
   flex-direction: row-reverse;
 /*   background-color: red; */
+}
+.feature:nth-child(n+2):nth-child(-n+3) {
+	height: auto;
 }
 .feature-text {
 	width: 50%;
