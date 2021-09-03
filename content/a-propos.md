@@ -41,8 +41,10 @@ Néanmoins, des efforts importants ont été entrepris dès le prototype pour co
 
 ## Citer le logiciel dans une bibliographie
 
-La version actuelle de Cosma est encore en bêta. Elle sera citable via DOI prochainement.
+La version actuelle de Cosma peut être citée dans une bibliographie de la manière suivante :
+
+> Arthur Perret, Guillaume Brioudes, Clément Borel, & Olivier Le Deuff. (2021). Cosma (1.0). Zenodo. <https://doi.org/10.5281/zenodo.5412315>
 
 La première version de Cosma, rétroactivement libellée alpha, est archivée sur Zenodo. Elle peut être citée dans une bibliographie de la manière suivante :
 
-Arthur Perret, Guillaume Brioudes, Clément Borel, & Olivier Le Deuff. (2021). Cosma (alpha). Zenodo. <https://doi.org/10.5281/zenodo.4734377>
+> Arthur Perret, Guillaume Brioudes, Clément Borel, & Olivier Le Deuff. (2021). Cosma (alpha). Zenodo. <https://doi.org/10.5281/zenodo.4734377>
