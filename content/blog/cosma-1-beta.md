@@ -5,7 +5,6 @@ draft: false
 downloadMac: "https://github.com/graphlab-fr/cosma/releases/download/1.0-beta/Cosma.app.zip"
 downloadWin: "https://github.com/graphlab-fr/cosma/releases/download/1.0-beta/Cosma.exe"
 github: "https://github.com/graphlab-fr/cosma/releases/tag/1.0-beta"
-zenodo: "à venir"
 ---
 
 Après le développement d'une première version utilisable en ligne de commande, Cosma fait peau neuve et devient une application autonome, à interface graphique, disponible sur macOS et Windows.

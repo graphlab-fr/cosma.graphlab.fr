@@ -3,5 +3,5 @@
   github: "https://github.com/graphlab-fr/cosma/releases/tag/1.0"
   downloadMac: "https://github.com/graphlab-fr/cosma/releases/download/1.0/Cosma.app.zip"
   downloadWin: "https://github.com/graphlab-fr/cosma/releases/download/1.0/Cosma-win32-x64.zip"
-  zenodo: "n/a"
+  zenodo: "https://zenodo.org/record/5412315#.YTIGBS0isUF"
   notes: cosma-1-0
