@@ -39,7 +39,7 @@ Cette méthode nécessite de jongler manuellement entre les fichiers de configur
 Localisez le répertoire contenant les fichiers nécessaire au bon fonctionnement de l'application Cosma (désigné ci-après « répertoire support »). Cela dépend du système d'exploitation :
 
 - sur macOS : `votre nom d'utilisateur/Library/Application Support/cosma` ;
-- sur Windows : <!-- à compléter --> ;
+- sur Windows : `C:/Users/login/AppData/Roaming/cosma` ;
 
 Dans ce répertoire se trouve notamment un fichier `config.json`. C'est là que Cosma enregistre et récupère la configuration.
 
