@@ -62,5 +62,5 @@ menu:
       url: "https://github.com/graphlab-fr/cosma/releases"
       weight: 4
     - name: Issues
-      url: "https://github.com/graphlab-fr/cosma/releases"
+      url: "https://github.com/graphlab-fr/cosma/issues"
       weight: 5
