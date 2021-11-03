@@ -232,18 +232,41 @@ img {
 	margin: 10rem 0;
 }
 
+/* Article */
+
+article p,
+article ol,
+article ul {
+	font-size: 1.7rem;
+}
+
+/* Aside */
+
+aside ul {
+	font-size: 1.5rem;
+	padding-left: 1.5rem;
+}
+
 /* Telechargement */
 
-.download {
+.download > div {
 	text-align: center;
 }
 .download h2,
 .about h2,
+.faq h2,
 #download-buttons-text {
 	margin-top: 5rem;
 }
 .download table {
 	margin-bottom: 3rem;
+	width: 100%;
+}
+
+/* Blog */
+
+.blog hr {
+	margin: 3rem 0;
 }
 
 /* Liens */
@@ -266,13 +289,10 @@ a, a:visited {
 
 /* A propos */
 
-.about > p:first-of-type {
+.about article > p:first-of-type {
 	font-size: 2.8rem;
 	font-weight: 300;
 	margin-bottom: 5rem;
-}
-.about p {
-	font-size: 1.7rem;
 }
 .about hr {
 	margin: 5rem 0;
@@ -404,7 +424,7 @@ thead, tfoot, tr:nth-child(even) {
 /* Responsive */
 
 @media screen and (max-width: 900px) {
-	.blog, .about {
+	.blog, .about, .download, .faq {
 		padding: 0 5vw;
 	}
 	#home-logo {

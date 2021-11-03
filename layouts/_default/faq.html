@@ -1,7 +1,12 @@
 {{ partial "head.html" . }}
 	<main class="wrapper faq">
+		<article>
 		<h1 class="title-section">{{ .Title }}</h1>
+    <aside>
+        {{ .TableOfContents }}
+    </aside>
     {{ .Content }}
+    </article>
 	</main>
 
 {{ partial "footer.html" . }}

@@ -13,11 +13,29 @@ Explication : Windows et macOS requièrent que le code d'une application soit «
 
 Nous ne fournissons actuellement pas l'application pour Linux mais nous espérons pouvoir le faire prochainement. Rien ne s'y oppose techniquement puisque Cosma est une application développée pour plusieurs plateformes simultanément à partir d'une seule base de code grâce au *framework* Electron. Nous manquons simplement d'accès à des machines Linux pour réaliser des tests, qui n'étaient pas indispensables pour l'alpha et qui le sont désormais pour la nouvelle version.
 
+Si vous souhaitez tester une version Linux de Cosma, contactez-nous !
+
 ## Quand j'essaie de créer une fiche, l'application me renvoie une erreur incompréhensible.
 
 Vous n'avez probablement pas renseigné de répertoire de fiches dans Préférences. Le répertoire peut être vide mais il faut en renseigner un pour que Cosma sache où créer des fiches.
 
-Une prochaine mise à jour améliorera l'expérience utilisateur sur ce point.
+[Un ticket a été ouvert](https://github.com/graphlab-fr/cosma/issues/6) et une prochaine mise à jour améliorera l'expérience utilisateur sur ce point.
+
+## J'ai créé une fiche avec le même nom qu'une fiche existante, et l'ancienne a disparu !
+
+[Un ticket a été ouvert](https://github.com/graphlab-fr/cosma/issues/5), ce problème sera réglé en priorité dès la prochaine mise à jour.
+
+N'oubliez pas de sauvegarder vos données, que ce soit en faisant des copies à intervalle régulier ou bien en utilisant un système de gestion des versions comme [git](https://git-scm.com).
+
+## Est-ce que je peux ne pas utiliser d'identifiants uniques et relier plutôt mes fiches via leurs titres ?
+
+Non, c'est un élément du [format de données requis par Cosma](https://graphlab-fr.github.io/cosma/fr.html#format-de-donnees) qui nous tient à cœur.
+
+Nous mentionnons régulièrement cette question (voir la page [À propos](/a-propos) du site, [le billet de lancement](https://www.arthurperret.fr/cosma-de-la-fiche-au-graphe.html) et [certains tweets](https://twitter.com/arthurperret/status/1434985852434882561)) : utiliser des identifiants uniques offre une meilleure garantie de pérennité des données, car on diminue le risque de liens morts sans dépendre d'une fonctionnalité de maintenance automatisée.
+
+### Oui mais les liens hypertexte à 14 chiffres, c'est lourd…
+
+Cosma inclut la possibilité d'alléger visuellement les liens tels qu'ils se présentent dans le cosmoscope : vous pouvez choisir de remplacer les identifiants à 14 chiffres par une chaîne de caractères arbitraire. Dans [la démo](/demo.html), nous avons choisi de les remplacer par une simple flèche (→) mais vous pourriez utiliser une manicule (☞) ou tout autre chaîne de caractères Unicode. Dans Cosma, cliquez sur Préférences et saisissez le ou les caractères de substitution dans Symbole de lien.
 
 ## Est-ce qu'il est possible de gérer plusieurs répertoires avec différents cosmoscopes ?
 

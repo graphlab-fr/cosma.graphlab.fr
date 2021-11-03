@@ -1,21 +1,22 @@
 {{ partial "head.html" . }}
 	<main class="wrapper about">
-		<h1 class="title-section">{{ .Title }}</h1>
-    {{ .Content }}
-    <h2>Présentation de l'équipe</h2>
-		<div class="hyperotlet">
-			<img class="logo" src="/img/hyperotlet.png">
-			<p>Cosma est développé dans le cadre du programme ANR <a href="https://hyperotlet.hypotheses.org/le-projet">HyperOtlet</a> (ANR-17-CE38-0011).</p>
-		</div>
-		{{ range $.Site.Data.people }}
-		<a href="{{ .link }}"><h3 class="people-name">{{ .name }}</a> <span class="people-role">{{ .role }}</span></h3>
-		<p class="people-bio">{{ .bio | markdownify }}</p>
-		{{ end }}
-		<h2>Historique du projet</h2>
-		{{ range $.Site.Data.history }}
-		<p><strong>{{ .date }} :</strong> {{ .description | markdownify }}</p>
-		{{ end }}
-
+		<article>
+			<h1 class="title-section">{{ .Title }}</h1>
+			{{ .Content }}
+			<h2>Présentation de l'équipe</h2>
+			<div class="hyperotlet">
+				<img class="logo" src="/img/hyperotlet.png">
+				<p>Cosma est développé dans le cadre du programme ANR <a href="https://hyperotlet.hypotheses.org/le-projet">HyperOtlet</a> (ANR-17-CE38-0011).</p>
+			</div>
+			{{ range $.Site.Data.people }}
+			<a href="{{ .link }}"><h3 class="people-name">{{ .name }}</a> <span class="people-role">{{ .role }}</span></h3>
+			<p class="people-bio">{{ .bio | markdownify }}</p>
+			{{ end }}
+			<h2>Historique du projet</h2>
+			{{ range $.Site.Data.history }}
+			<p><strong>{{ .date }} :</strong> {{ .description | markdownify }}</p>
+			{{ end }}
+		</article>
 </main>
 
 {{ partial "footer.html" . }}
