@@ -11,7 +11,7 @@ Après le développement d'une première version utilisable en ligne de commande
 
 🚧 **Attention : ceci est une bêta partiellement documentée et comportant quelques bugs.** 🚧
 
-[La documentation utilisateur est à jour et en ligne.](https://graphlab-fr.github.io/cosma/fr.html) La documentation de développement sera mise à jour et publiée prochainement.
+[La documentation utilisateur est à jour et en ligne.](https://cosma.graphlab.fr/docs/) La documentation de développement sera mise à jour et publiée prochainement.
 
 Les bugs feront l'objet de correctifs qui seront rassemblés dans une version ultérieure. Une liste des bugs connus est mise à jour périodiquement ci-dessous :
 
