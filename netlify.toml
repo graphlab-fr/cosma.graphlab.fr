@@ -7,5 +7,5 @@
 
 [[redirects]]
   from = "/docs"
-  to = "https://graphlab-fr.github.io/cosma/fr.html"
+  to = "https://graphlab-fr.github.io/cosma/"
   status = 301
