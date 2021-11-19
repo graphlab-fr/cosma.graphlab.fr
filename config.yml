@@ -40,7 +40,7 @@ menu:
       url: "blog/"
       weight: 2
     - name: Documentation
-      url: "https://graphlab-fr.github.io/cosma/fr.html"
+      url: "docs/"
       weight: 3
     - name: FAQ
       url: "faq/"
