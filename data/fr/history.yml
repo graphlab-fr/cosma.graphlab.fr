@@ -3,6 +3,6 @@
 - date: Décembre 2020
   description: "Début du développement de Cosma avec un nouveau cahier des charges."
 - date: Avril 2021
-  description: "Finalisation de la première version de Cosma."
-- date: Août 2021
-  description: "Développement d'une application autonome avec interface graphique."
+  description: "Publication d'une première version de Cosma utilisable en ligne de commande."
+- date: Septembre 2021
+  description: "Publication d'une version de Cosma avec interface graphique, labellisée 1.0."

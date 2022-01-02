@@ -5,24 +5,25 @@
 	<div id="home-buttons-text">
 		<p class="tagline-secondary">{{ .Site.Params.Tagline.Secondary }}</p>
 		<div id="home-buttons">
-			<button type="button" class="btn btn-primary"><a href="https://github.com/graphlab-fr/cosma/releases/latest">Télécharger</a></button>
-		  <button type="button" class="btn btn-secondary"><a href="/demo.html">Essayer la démo</a></button>
+			<button type="button" class="btn btn-primary"><a href="https://github.com/graphlab-fr/cosma/releases/latest">{{ i18n "download" }}</a></button>
+		  <button type="button" class="btn btn-secondary"><a href="/demo.html">{{ i18n "demo" }}</a></button>
 		</div>
 		<div id="availability">
-			<p>Disponible pour macOS et Windows</p>
+			<p>{{ i18n "availability" }}</p>
 		</div>
 	</div>
 </header>
 <main class="wrapper home">
 	<section id="first">
-		<img id="home-main-screenshot" src="/img/screenshot-cosma.png" alt="Capture d'écran d'un cosmoscope fabriqué avec Cosma">
+		<img id="home-main-screenshot" src="/img/screenshot-cosma.png" alt="Screenshot Cosma">
 	</section>
 	<section id="second">
-		<p>Notez vos idées avec votre éditeur Markdown préféré, et explorez-les dans Cosma.</p>
-		<p>Les logiciels s’envolent, les données restent. Cosma vous apporte une vision globale de votre graphe de connaissances, sans interférer avec vos habitudes de stockage, de versionnement et d'édition.</p>
+		<p>{{ i18n "pitch1" }}</p>
+		<p>{{ i18n "pitch2" }}</p>
 	</section>
 	<section id="features">
-		{{ range $.Site.Data.features }}
+		{{ $data := index .Site.Data .Site.Language.Lang }}
+		{{ range $data.features }}
 		<div class="feature">
 			<div class="feature-text">
 				<h2>{{ .title | markdownify }}</h2>
@@ -47,11 +48,11 @@
 	</section>
 	<section id="cta">
 		<div id="home-buttons">
-			<button type="button" class="btn btn-primary"><a href="https://github.com/graphlab-fr/cosma/releases/latest">Télécharger</a></button>
+			<button type="button" class="btn btn-primary"><a href="https://github.com/graphlab-fr/cosma/releases/latest">{{ i18n "download" }}</a></button>
 			<button type="button" class="btn btn-secondary"><a href="/docs">Documentation</a></button>
 		</div>
 		<div id="availability">
-			<p>Disponible pour macOS et Windows</p>
+			<p>{{ i18n "availability" }}</p>
 		</div>
 	</section>
 	{{ .Content }}

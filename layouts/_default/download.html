@@ -2,16 +2,16 @@
 	<main class="wrapper download">
 		<div id="download-buttons-text">
 			<div id="download-buttons">
-				<button type="button" class="btn btn-primary"><a href="https://github.com/graphlab-fr/cosma/releases/latest">Télécharger Cosma</a></button>
+				<button type="button" class="btn btn-primary"><a href="https://github.com/graphlab-fr/cosma/releases/latest">{{ i18n "download" }}</a></button>
 				<button type="button" class="btn btn-secondary"><a href="/docs">Documentation</a></button>
 			</div>
 			<div id="availability">
-				<p>Disponible pour macOS et Windows</p>
+				<p>{{ i18n "availability" }}</p>
 			</div>
 		</div>
 		<article>
 		{{ .Content }}
-		<h2>Liste des versions</h2>
+		<h2>{{ i18n "releaseList" }}</h2>
 		{{ partial "versions-table.html" . }}
 		</article>
 	</main>

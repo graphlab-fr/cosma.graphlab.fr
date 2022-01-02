@@ -1,6 +1,5 @@
 <nav>
     <ul class="menu">
-        <li><a href="{{ .Site.BaseURL }}">Accueil</a></li>
         {{ range .Site.Menus.main }}
         <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
         {{ end }}

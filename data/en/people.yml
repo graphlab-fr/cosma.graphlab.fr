@@ -1,0 +1,16 @@
+- name: Arthur Perret
+  role: Design & research
+  link: "https://www.arthurperret.fr"
+  bio: "Arthur has a background in scientific and technical information as well as in digital publishing. He is a doctoral student in information and communication sciences at the MICA laboratory (Bordeaux Montaigne University). He studes the data, documents and devices involved in the processes of writing, documentation and publishing. His dissertation, co-directed by Olivier Le Deuff and Bertrand Müller, focuses on the epistemological legacy of Paul Otlet. He currently teaches at IUT Bordeaux Montaigne."
+- name: Guillaume Brioudes
+  role: Development
+  link: "https://myllaume.fr"
+  bio: "Guillaume is the developer of several knowledge representation projects and a masters' student in Digital Humanities at Bordeaux Montaigne University. He contributes to the ANR HyperOtlet research programme since April 2020. He is currently working on a masters' thesis on the documentation and architecture of open source software."
+- name: Clément Borel
+  role: Design & research
+  link: "https://mica.u-bordeaux-montaigne.fr/borel-clement/"
+  bio: "Clément is a lecturer in Information and Communication Sciences at Bordeaux Montaigne University. He currently serves as head of the Information-Communication Department at IUT Bordeaux Montaigne. He studies navigation in large textual corpora, semantic tools for digital books and critical reading, and semantic navigation in image corpora. He defended a PhD dissertation (2014) on the modeling and visualization of transtextual links in digital books."
+- name: Olivier Le Deuff
+  role: Design & research
+  link: "http://www.guidedesegares.info"
+  bio: "Olivier is a lecturer in information and communication sciences at Bordeaux Montaigne University, a former high school documentation teacher and educational engineer. He studies digital cultures, information cultures, and the history and epistemology of information and documentary practices. His research also focuses on digital humanities. He supervises several doctoral students and coordinates the Bordeaux team of the ANR HyperOtlet research programme."

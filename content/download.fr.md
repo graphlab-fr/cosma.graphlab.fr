@@ -1,6 +1,7 @@
 ---
 title: Télécharger
-layout: telecharger
+layout: download
+slug: telecharger
 ---
 
 ## Restez informés des mises à jour de Cosma

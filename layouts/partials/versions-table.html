@@ -2,12 +2,12 @@
 
     <tbody>
 
-        {{ range $.Site.Data.versions }}
+		{{ range $.Site.Data.versions }}
         <tr>
             <td>Cosma {{ .tag }}</td>
-            <td><a href="{{ .downloadMac }}">Télécharger pour macOS</a></td>
-            <td><a href="{{ .downloadWin }}">Télécharger pour Windows</a></td>
-            <td><a href="/blog/{{ .notes }}">Notes de version</a></td>
+            <td><a href="{{ .downloadMac }}">macOS</a></td>
+            <td><a href="{{ .downloadWin }}">Windows</a></td>
+            <td><a href="/blog/{{ .notes }}">{{ i18n "releaseNotes" }}</a></td>
         </tr>
         {{ end }}
 

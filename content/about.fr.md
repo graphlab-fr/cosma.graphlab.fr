@@ -1,6 +1,7 @@
 ---
 title: À propos de Cosma
 layout: about
+slug: a-propos
 ---
 
 Cosma est un logiciel de visualisation de graphe documentaire. Il permet de représenter des notes interreliées sous la forme d’un réseau interactif dans une interface web.

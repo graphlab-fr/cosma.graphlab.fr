@@ -1,5 +1,4 @@
 baseURL: https://cosma.graphlab.fr/
-languageCode: fr-FR
 title: Cosma
 theme: xmin
 outputs:
@@ -30,43 +29,107 @@ params:
   authors:
     - Arthur Perret
     - Guillaume Brioudes
-
-menu:
-  main:
-    - name: Télécharger
-      url: "telecharger/"
-      weight: 1
-    - name: Blog
-      url: "blog/"
-      weight: 2
-    - name: Documentation
-      url: "docs/"
-      weight: 3
-    - name: FAQ
-      url: "faq/"
-      weight: 4
-    - name: À propos
-      url: "a-propos/"
-      weight: 5
-  footer:
-    - name: Flux RSS
-      url: "https://cosma.graphlab.fr/feed.xml"
-      weight: 1
-    - name: Dépôt GitHub
-      url: "https://github.com/graphlab-fr/cosma"
-      weight: 2
-    - name: Licence
-      url: "https://github.com/graphlab-fr/cosma/blob/master/LICENSE"
-      weight: 3
-    - name: Releases
-      url: "https://github.com/graphlab-fr/cosma/releases"
-      weight: 4
-    - name: Issues
-      url: "https://github.com/graphlab-fr/cosma/issues"
-      weight: 5
-
 markup:
   tableOfContents:
     startLevel: 2
     endLevel: 2
     ordered: false
+defaultContentLanguage: fr
+languages:
+  fr:
+    weight: 1
+    menu:
+      main:
+        - name: Accueil
+          url: /
+          weight: 1
+        - name: Télécharger
+          url: "telecharger/"
+          weight: 2
+        - name: Blog
+          url: "blog/"
+          weight: 3
+        - name: Documentation
+          url: "docs/"
+          weight: 4
+        - name: FAQ
+          url: "faq/"
+          weight: 5
+        - name: À propos
+          url: "a-propos/"
+          weight: 6
+        - name: English
+          url: "en/"
+          weight: 7
+      footer:
+        - name: Flux RSS
+          url: "https://cosma.graphlab.fr/feed.xml"
+          weight: 1
+        - name: Dépôt GitHub
+          url: "https://github.com/graphlab-fr/cosma"
+          weight: 2
+        - name: Licence
+          url: "https://github.com/graphlab-fr/cosma/blob/master/LICENSE"
+          weight: 3
+        - name: Versions
+          url: "https://github.com/graphlab-fr/cosma/releases"
+          weight: 4
+        - name: Tickets
+          url: "https://github.com/graphlab-fr/cosma/issues"
+          weight: 5
+  en:
+    weight: 2
+    params:
+      tagline:
+        primary: from record to graph...
+        secondary: A visualization and sharing tool for knowledge workers
+      description: "Cosma is a document graph visualization tool. It modelizes interlinked Markdown files as an interactive network in a web interface."
+      keywords:
+        - graph
+        - document
+        - data
+        - corpus
+        - visualization
+        - publishing
+        - Web
+        - Markdown
+        - Zettelkasten
+    menu:
+      main:
+        - name: Home
+          url: "en/"
+          weight: 1
+        - name: Download
+          url: "en/download/"
+          weight: 2
+        - name: Blog
+          url: "en/blog/"
+          weight: 3
+        - name: Documentation
+          url: "docs/"
+          weight: 4
+        - name: FAQ
+          url: "en/faq/"
+          weight: 5
+        - name: About
+          url: "en/about/"
+          weight: 6
+        - name: Français
+          url: /
+          weight: 7
+      footer:
+        - name: RSS Feed
+          url: "https://cosma.graphlab.fr/feed.xml"
+          weight: 1
+        - name: GitHub Repository
+          url: "https://github.com/graphlab-fr/cosma"
+          weight: 2
+        - name: License
+          url: "https://github.com/graphlab-fr/cosma/blob/master/LICENSE"
+          weight: 3
+        - name: Releases
+          url: "https://github.com/graphlab-fr/cosma/releases"
+          weight: 4
+        - name: Issues
+          url: "https://github.com/graphlab-fr/cosma/issues"
+          weight: 5
