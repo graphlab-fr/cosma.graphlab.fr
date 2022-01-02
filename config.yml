@@ -119,7 +119,7 @@ languages:
           weight: 7
       footer:
         - name: RSS Feed
-          url: "https://cosma.graphlab.fr/feed.xml"
+          url: "https://cosma.graphlab.fr/en/feed.xml"
           weight: 1
         - name: GitHub Repository
           url: "https://github.com/graphlab-fr/cosma"
