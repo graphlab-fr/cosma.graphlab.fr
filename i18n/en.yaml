@@ -1,10 +1,20 @@
-download: Download
-demo: Try the demo
-availability: Available for macOS and Windows
-pitch1: "Take notes with your favorite Markdown editor, and explore them with Cosma."
-pitch2: "Software comes and goes, but data should last. Cosma brings you a global view of your knowledge graph, without interfering with your storage, editing and versioning practices."
-releaseList: Releases list
-releaseNotes: Release notes
-hyperOtlet: "Cosma was developed initially as part of the HyperOtlet research programme (grant number ANR-17-CE38-0011)."
-team: Team
-projectHistory: Project history
+download:
+  other: Download
+demo:
+  other: Try the demo
+availability:
+  other: Available for macOS and Windows
+pitch1:
+  other: "Take notes with your favorite Markdown editor, and explore them with Cosma."
+pitch2:
+  other: "Software comes and goes, but data should last. Cosma brings you a global view of your knowledge graph, without interfering with your storage, editing and versioning practices."
+releaseList:
+  other: Releases list
+releaseNotes:
+  other: Release notes
+hyperOtlet:
+  other: "Cosma was developed initially as part of the HyperOtlet research programme (grant number ANR-17-CE38-0011)."
+team:
+  other: Team
+projectHistory:
+  other: Project history
