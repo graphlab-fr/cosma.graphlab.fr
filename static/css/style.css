@@ -269,6 +269,14 @@ aside ul {
 	margin: 3rem 0;
 }
 
+/* Documentation */
+
+.docs > div {
+	text-align: center;
+}
+#docs-buttons-text {
+	margin: 5rem 0;
+}
 /* Liens */
 
 a {
@@ -343,6 +351,13 @@ a, a:visited {
 	background-color: var(--cosma-blue);
 	border-color: var(--cosma-blue);
 }
+a.btn {
+	text-decoration: none;
+}
+a.btn,
+a.btn:visited {
+	color: #fff;
+}
 .btn-primary:hover {
 	color: #fff;
 	background-color: var(--cosma-blue-dark);
@@ -360,7 +375,8 @@ a, a:visited {
 }
 header .btn,
 .home .btn,
-.download .btn {
+.download .btn,
+.docs .btn {
 	font-size: 1.8rem;
 	padding: 1rem 2rem;
 	vertical-align: baseline;

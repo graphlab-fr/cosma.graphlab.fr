@@ -58,7 +58,7 @@ languages:
         - name: À propos
           url: "a-propos/"
           weight: 6
-        - name: English
+        - name: 🇬🇧 English
           url: "en/"
           weight: 7
       footer:
@@ -106,7 +106,7 @@ languages:
           url: "en/blog/"
           weight: 3
         - name: Documentation
-          url: "docs/"
+          url: "en/docs/"
           weight: 4
         - name: FAQ
           url: "en/faq/"
@@ -114,7 +114,7 @@ languages:
         - name: About
           url: "en/about/"
           weight: 6
-        - name: Français
+        - name: 🇫🇷 Français
           url: /
           weight: 7
       footer:

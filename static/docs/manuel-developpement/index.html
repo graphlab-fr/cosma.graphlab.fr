@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset=utf-8>
+	<title>Cosma — Manuel de développement</title>
+
+	<meta name="description" content="">
+	<meta name="author" content="Arthur Perret, Guillaume Brioudes">
+
+	<style>
+        :root {
+	--sans: "Helvetica Neue", Helvetica, sans-serif;
+	--serif: "Georgia", 'Garamond', 'Time New Roman', 'Times', serif;
+	--mono: Menlo, Monaco, Consolas, "Courier New", monospace;
+	--code-background-color: #f5f5f5;
+	--code-border-color: #ccc;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+	line-height: 1.5;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: var(--serif);
+  counter-reset: hFirst;
+
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-gap: 0 1%;
+  grid-template-areas: "header headernav"
+                       "main   aside"
+                       "footer footer";
+  /* font-size: 1rem; */
+}
+
+header {
+  grid-area: header;
+}
+
+nav.nav-lang {
+  grid-area: headernav;
+  font-family: var(--sans);
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+}
+
+.nav-lang ul {
+  display: flex;
+  justify-content: space-between;
+  list-style:none;
+  padding: 0;
+}
+
+.toc {
+	font-size: 0.875em;
+  font-family: var(--sans);
+}
+
+.toc > ul > li {
+	position: relative;
+	padding-bottom: 0.75em;
+}
+
+footer {
+  grid-area: footer;
+}
+
+img {
+  max-width: 100%;
+}
+
+header, h1, h2, h3 {
+	font-family: var(--sans);
+}
+
+h1:not(.title-site), h2, h3 {
+	line-height: 1.2;
+	padding-bottom: 0.2em;
+	border-bottom: 1px solid black;
+  font-size: 1.2em;
+}
+
+h1:not(.title-site) {
+  counter-increment: hFirst;
+  counter-reset: hSecond;
+}
+h1:not(.title-site)::before {
+  content: counter(hFirst);
+  position: relative;
+  left: -30px;
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
+h2 {
+  counter-increment: hSecond;
+  counter-reset: hThird;
+}
+h2::before {
+  content: counter(hFirst)'.'counter(hSecond);
+  position: relative;
+  left: -30px;
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
+h3 {
+  counter-increment: hThird;
+  counter-reset: hFourth;
+}
+h3::before {
+  content: counter(hFirst)'.'counter(hSecond)'.'counter(hThird);
+  position: relative;
+  left: -30px;
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
+.astuce, .tip, .note, .important {
+  position: relative;
+  background: rgb(225, 225, 225);
+  padding: 30px 10px 3px 10px;
+  border-radius: 5px;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.astuce::before,
+.tip::before,
+.note::before,
+.important::before {
+  content: attr(class);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 12px;
+  font-family: var(--mono);
+}
+/* .astuce p, .tip p, .note p {
+	font-size: 0.9rem;
+}
+.astuce::before,
+.tip::before,
+.note::before,
+.important::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 12px;
+  font-family: var(--mono);
+}*/
+
+.astuce, .tip, .note { background: rgb(225, 225, 225); }
+.important { background: rgb(239,178,178); }
+    </style>
+</head>
+
+<body>
+    <header>
+	<article>
+		<h1 class="title-site">Cosma — Manuel de développement</h1>
+	</article>
+
+</header>
+
+<nav class="nav-lang">
+	<ul>
+		
+		<li>Français</li>
+		<li><a href="https://cosma.graphlab.fr/en/docs/">English</a></li>
+		<li><a href="https://cosma.graphlab.fr">cosma.graphlab.fr ↦</a></li>
+		
+
+		
+	</ul>
+</nav>
+
+    <main>
+        <p>Cette documentation est destinée aux développeurs souhaitant participer ou reprendre le projet (code source) Cosma. Nous vous recommandons vivement de lire la documentation des utilisateurs pour bien saisir l'ensemble des usages en jeu dans le code source présenté ci-dessous.</p>
+<p>Cosma repose sur l'environnement de développement NodeJS et les <strong>technologies du Web</strong> (HTML, CSS). Il est intégralement développé en JavaScript (ES2019). Une bonne connaissance de ces langages est requise pour modifier le cœur de Cosma ou son interface en ligne de commande Cosma-cli.<br>
+Modifier l'interface graphique nécessite en plus de maîtriser le <em>framework</em> <a href="https://www.electronjs.org/">ElectronJS</a>.</p>
+<h1 id="code-source" tabindex="-1">Code source</h1>
+<p>Les principales fonctionnalités de Cosma sont programmées dans le <a href="https://github.com/graphlab-fr/cosma-core">dépôt Cosma-core</a>.</p>
+<ul>
+<li>La lecture et le traitement d'un répertoire de fichier Mardown ;</li>
+<li>La génération de données d'un graphe (nœuds et liens) format JSON ;</li>
+<li>L'intégration des données (JSON), styles (CSS) et scripts (JavaScript) dans un <em>template</em> de fichier HTML ;</li>
+</ul>
+<p>Ces fonctionnalités peuvent être utilisées via deux interfaces, stockées dans deux autres dépôts où est intégré (via <a href="https://git-scm.com/book/fr/v2/Utilitaires-Git-Sous-modules">Git modules</a>) le Cosma-core.</p>
+<ul>
+<li>Interface graphique (GUI), basée sur le <em>framework</em> <a href="https://www.electronjs.org/">Electron,</a> stockée dans le dépôt <a href="https://github.com/graphlab-fr/cosma">Cosma</a></li>
+<li>Interface en ligne de commande (CLI) stockée dans le dépôt <a href="https://github.com/graphlab-fr/cosma-cli">Cosma-cli</a></li>
+</ul>
+<h1 id="architecture-du-logiciel" tabindex="-1">Architecture du logiciel</h1>
+<h2 id="vue-g%C3%A9n%C3%A9rale" tabindex="-1">Vue générale</h2>
+<p>Cosma est principalement implémenté en JavaScript. Le logiciel repose sur deux systèmes distincts, le cosmographe et le cosmoscope, programmées dans le <a href="https://github.com/graphlab-fr/cosma-core">dépôt Cosma-core</a>.</p>
+<p>Le <strong>cosmographe</strong> repose sur l'environnement Node.js. Il s'agit d'une série d'objets (<code>/cosma-core/models</code>) listés ci-dessous constituant l'API (interface de programmation) de Cosma. Elle permet d'appeler les principales fonctionnalités comme la création de fiche ou la génération de cosmoscopes. Cette API est manipulée par les deux interfaces que sont Cosma-Gui et Cosma-Cli pour rendre le même comoscope.</p>
+<ul>
+<li><code>Config.js</code> : vérifier et actualiser le fichier de configuration ;</li>
+<li><code>Record.js</code> :  générer des fichiers Markdown et leur entête ;</li>
+<li><code>Graph.js</code> : lire un répertoire pour en extraire les fichiers Markdown et analyser leur contenu (Markdown, métadonnées YAML et liens style wiki) afin de générer des données JSON ;</li>
+<li><code>Template.js</code> : assembler HTML (<code>/cosma-core/template.njk</code> et <code>/cosma-core/icons/**.svg</code>), CSS (<code>/cosma-core/**.css</code> et depuis <code>Graph.js</code>), JavaScript (<code>/cosma-core/scripts/**.js</code> et <code>/cosma-core/libs/**.js</code>) et données JSON (depuis <code>Graph.js</code>) pour rendre un cosmoscope ;</li>
+<li><code>Lang.js</code> : traduire les éléments d'interface depuis le fichier multilingue <code>/cosma-core/lang.yml</code>.</li>
+</ul>
+<p>Le <strong>cosmoscope</strong> est un fichier <code>.html</code> intégrant les éléments listés ci-dessous et généré via <code>Template.js</code>. Il peut être rendu sur navigateur web, que ce soit Chromium pour afficher le comoscope dans l'application ElectronJS, ou un autre navigateur choisi par un utilisateur pour lire un comoscope.</p>
+<ul>
+<li>métadonnées (titre, auteur, description, mots-clés issus de la configuration) ;</li>
+<li>styles (CSS) issus de <code>/cosma-core</code> et de la configuration (types de fiches, de liens, couleur de surbrillance…)</li>
+<li>scripts et bibliothèques JavaScript (outils de visualisation et de navigation) ;</li>
+<li>des index (mots-clés, titre de fiche, vues) ;</li>
+<li>les fiches.</li>
+</ul>
+<h2 id="interfaces-des-classes" tabindex="-1">Interfaces des classes</h2>
+<p>L'objet <code>Config.js</code> (<code>/cosma-core/models/config.js</code>) est connecté à tous les autres objets de Cosma-core. Il permet de retrouver le fichier où est inscrite la configuration (<code>Config.getFilePath()</code>) en fonction de l'envrionnement (ElectronJS ou pas) et de le rendre (<code>Config.get()</code>).</p>
+<p>En reposant sur cette première classe</p>
+<h1 id="terminologie" tabindex="-1">Terminologie</h1>
+<p>Les fichiers Markdown interprétés par Cosma sont qualifiés ici de « fiches » plutôt que de « notes », en référence à la tradition de la fiche érudite et à l'histoire de la documentation. L'acception documentaire de « fiche » n'a pas de traduction directe en anglais (sinon <em>index card</em>). En revanche, elle est conceptuellement proche du mot « <em>record</em> » issu du <a href="https://fr.wikipedia.org/wiki/Records_management"><em>records management</em></a>. Le code de Cosma emploie donc le mot record pour désigner une fiche.</p>
+<h1 id="traduction" tabindex="-1">Traduction</h1>
+<p>Pour ajouter une entrée de traduction au logiciel, il faut ajouter son code (norme <a href="https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1">ISO 639-1</a>) à la variable <code>validLangages</code> de la classe Config (<code>/cosma-core/models/config</code>) tel que ci-dessous.</p>
+<pre><code class="language-js">static validLangages = {
+	...
+	es: &quot;Español&quot;
+};
+</code></pre>
+<p>Vous pouvez ensuite compléter le fichier <code>/cosma-core/lang.yml</code> en ajoutant ce drapeau comme dernier enfant d'une arboresence tel que ci-dessous :</p>
+<pre><code class="language-yaml">dialog:
+  btn:
+    cancel:
+      fr: Annuler
+      en: Cancel
+      es: Cancelar
+</code></pre>
+<p>Vous pouvez appeler l'objet traduit via le module <code>/cosma-core/models/lang.js</code> tel que ci-dessous. Selon le langue configurée par l'utilisateur, c'est l'entrée correspondante qui sera appelée.</p>
+<pre><code class="language-js">const lang = require('./cosma-core/models/lang');
+
+lang.getFor(lang.i.dialog.btn.cancel)
+</code></pre>
+<p>Vous pouvez également insérer des chaînes à compléter tel que ci-dessous.</p>
+<pre><code class="language-yaml">dialog:
+  btn:
+    file_filter:
+      fr: Fichiers $1 envoyé vers $2
+      en: $1 file send to $2
+      es: Archivo $1 enviado a $2
+</code></pre>
+<p>Pour chaque <code>$n</code>, vous pouvez insérer depuis un tableau une valeur de remplacement.</p>
+<pre><code class="language-js">const lang = require('../cosma-core/models/lang');
+
+lang.getWith(
+    lang.i.dialog.btn.file_filter,
+    [
+        fileExtension.toUpperCase(), // $1
+        fileTarget // $2
+    ]
+)
+</code></pre>
+
+    </main>
+
+    <aside>
+    <nav>
+        <nav class="toc" >
+        <ol><li><a href="#vue-g%C3%A9n%C3%A9rale">Vue générale</a></li><li><a href="#interfaces-des-classes">Interfaces des classes</a></li></ol>
+      </nav>
+    </nav>
+</aside>
+
+    <footer>
+    <p>Cosma is free software.</p>
+</footer>
+</body>
+
+</html>

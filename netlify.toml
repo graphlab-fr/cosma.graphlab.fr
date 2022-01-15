@@ -5,7 +5,3 @@
 [build.environment]
   HUGO_VERSION = "0.72.0"
 
-[[redirects]]
-  from = "/docs"
-  to = "https://graphlab-fr.github.io/cosma-docs/"
-  status = 301

@@ -4,7 +4,7 @@ layout: about
 slug: about
 ---
 
-Cosma is a document graph visualization tool. It modelizes interlinked Markdown files as an interactive network in a web interface.
+Cosma is a document graph visualization tool. It modelizes interlinked Markdown files and renders them as an interactive network in a web interface.
 
 ## A unique tool
 

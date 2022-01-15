@@ -18,3 +18,7 @@ team:
   other: Team
 projectHistory:
   other: Project history
+userManual:
+  other: User manual
+developerManual:
+  other: Developer manual

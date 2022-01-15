@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset=utf-8>
+	<title>Cosma developer manual</title>
+
+	<meta name="description" content="">
+	<meta name="author" content="Arthur Perret, Guillaume Brioudes">
+
+	<style>
+        :root {
+	--sans: "Helvetica Neue", Helvetica, sans-serif;
+	--serif: "Georgia", 'Garamond', 'Time New Roman', 'Times', serif;
+	--mono: Menlo, Monaco, Consolas, "Courier New", monospace;
+	--code-background-color: #f5f5f5;
+	--code-border-color: #ccc;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+	line-height: 1.5;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: var(--serif);
+  counter-reset: hFirst;
+
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-gap: 0 1%;
+  grid-template-areas: "header headernav"
+                       "main   aside"
+                       "footer footer";
+  /* font-size: 1rem; */
+}
+
+header {
+  grid-area: header;
+}
+
+nav.nav-lang {
+  grid-area: headernav;
+  font-family: var(--sans);
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+}
+
+.nav-lang ul {
+  display: flex;
+  justify-content: space-between;
+  list-style:none;
+  padding: 0;
+}
+
+.toc {
+	font-size: 0.875em;
+  font-family: var(--sans);
+}
+
+.toc > ul > li {
+	position: relative;
+	padding-bottom: 0.75em;
+}
+
+footer {
+  grid-area: footer;
+}
+
+img {
+  max-width: 100%;
+}
+
+header, h1, h2, h3 {
+	font-family: var(--sans);
+}
+
+h1:not(.title-site), h2, h3 {
+	line-height: 1.2;
+	padding-bottom: 0.2em;
+	border-bottom: 1px solid black;
+  font-size: 1.2em;
+}
+
+h1:not(.title-site) {
+  counter-increment: hFirst;
+  counter-reset: hSecond;
+}
+h1:not(.title-site)::before {
+  content: counter(hFirst);
+  position: relative;
+  left: -30px;
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
+h2 {
+  counter-increment: hSecond;
+  counter-reset: hThird;
+}
+h2::before {
+  content: counter(hFirst)'.'counter(hSecond);
+  position: relative;
+  left: -30px;
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
+h3 {
+  counter-increment: hThird;
+  counter-reset: hFourth;
+}
+h3::before {
+  content: counter(hFirst)'.'counter(hSecond)'.'counter(hThird);
+  position: relative;
+  left: -30px;
+  font-weight: normal;
+  font-size: 0.8em;
+}
+
+.astuce, .tip, .note, .important {
+  position: relative;
+  background: rgb(225, 225, 225);
+  padding: 30px 10px 3px 10px;
+  border-radius: 5px;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.astuce::before,
+.tip::before,
+.note::before,
+.important::before {
+  content: attr(class);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 12px;
+  font-family: var(--mono);
+}
+/* .astuce p, .tip p, .note p {
+	font-size: 0.9rem;
+}
+.astuce::before,
+.tip::before,
+.note::before,
+.important::before {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 12px;
+  font-family: var(--mono);
+}*/
+
+.astuce, .tip, .note { background: rgb(225, 225, 225); }
+.important { background: rgb(239,178,178); }
+    </style>
+</head>
+
+<body>
+    <header>
+	<article>
+		<h1 class="title-site">Cosma developer manual</h1>
+	</article>
+
+</header>
+
+<nav class="nav-lang">
+	<ul>
+		
+
+		
+		<li>English</li>
+		<li><a href="https://cosma.graphlab.fr/docs/">Français</a></li>
+		<li><a href="https://cosma.graphlab.fr">cosma.graphlab.fr ↦</a></li>
+		
+	</ul>
+</nav>
+
+    <main>
+        <p>🚧 Under construction 🚧</p>
+
+    </main>
+
+    <aside>
+    <nav>
+        
+    </nav>
+</aside>
+
+    <footer>
+    <p>Cosma is free software.</p>
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+{{ partial "head.html" . }}
+	<main class="wrapper docs">
+		<div id="docs-buttons-text">
+			<div id="docs-buttons">
+				<a class="btn btn-primary" role="button" href="user-manual/">{{ i18n "userManual" }}</a>
+				<a class="btn btn-secondary" role="button" href="developer-manual/">{{ i18n "developerManual" }}</a></button>
+			</div>
+		</div>
+		<article>
+		{{ .Content }}
+		</article>
+	</main>
+{{ partial "footer.html" . }}
