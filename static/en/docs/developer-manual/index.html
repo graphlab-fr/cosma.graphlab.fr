@@ -16,114 +16,122 @@
 	--code-border-color: #ccc;
 }
 
-* { box-sizing: border-box; }
+/* LAYOUT */
 
+* {
+	box-sizing: border-box;
+}
 body {
   margin: 0;
-  padding: 0;
+  padding: 0 1em;
 	line-height: 1.5;
   max-width: 1000px;
   margin: 0 auto;
   font-family: var(--serif);
-  counter-reset: hFirst;
-
   display: grid;
   grid-template-columns: 70% 30%;
   grid-gap: 0 1%;
   grid-template-areas: "header headernav"
                        "main   aside"
                        "footer footer";
-  /* font-size: 1rem; */
 }
-
 header {
   grid-area: header;
 }
-
 nav.nav-lang {
   grid-area: headernav;
   font-family: var(--sans);
 }
-
-main {
-  grid-area: main;
-}
-
-aside {
-  grid-area: aside;
-}
-
 .nav-lang ul {
   display: flex;
   justify-content: space-between;
   list-style:none;
   padding: 0;
+  margin-top: 1.8em;
+}
+main {
+  grid-area: main;
+  padding-bottom: 5vh;
 }
 
-.toc {
-	font-size: 0.875em;
-  font-family: var(--sans);
-}
+/* HEADINGS */
 
-.toc > ul > li {
-	position: relative;
-	padding-bottom: 0.75em;
-}
-
-footer {
-  grid-area: footer;
-}
-
-img {
-  max-width: 100%;
-}
-
-header, h1, h2, h3 {
+header, h1, h2, h3, h4 {
 	font-family: var(--sans);
 }
-
-h1:not(.title-site), h2, h3 {
+h2, h3, h4 {
 	line-height: 1.2;
 	padding-bottom: 0.2em;
 	border-bottom: 1px solid black;
   font-size: 1.2em;
 }
-
-h1:not(.title-site) {
-  counter-increment: hFirst;
-  counter-reset: hSecond;
+main h2 {
+	font-size: 1.3em;
+	margin: 3.5rem 0 0.5rem 0;
 }
-h1:not(.title-site)::before {
-  content: counter(hFirst);
-  position: relative;
-  left: -30px;
-  font-weight: normal;
-  font-size: 0.8em;
+main > h2:first-child {
+	margin-top: 0;
 }
-
-h2 {
-  counter-increment: hSecond;
-  counter-reset: hThird;
+main h3 {
+  font-size: 1.2em;
+  margin: 3rem 0 0.3rem 0;
 }
-h2::before {
-  content: counter(hFirst)'.'counter(hSecond);
-  position: relative;
-  left: -30px;
-  font-weight: normal;
-  font-size: 0.8em;
+main h4 {
+  font-size: 1em;
+  margin: 2.5rem 0 0 0;
 }
 
-h3 {
-  counter-increment: hThird;
-  counter-reset: hFourth;
+/* LINKS */
+
+a {
+	color: #0056b3;
+	text-decoration: none;
 }
-h3::before {
-  content: counter(hFirst)'.'counter(hSecond)'.'counter(hThird);
-  position: relative;
-  left: -30px;
-  font-weight: normal;
-  font-size: 0.8em;
+a:hover {
+	color: #00448f;
+	text-decoration: underline;
 }
+:target { animation: highlight 3s ease; }
+@keyframes highlight {
+  0% { background-color: #ffa; }
+  100% { background-color: #ffffff; }
+}
+
+/* LISTS */
+
+ul, ol {
+	padding-left: 1rem;
+}
+dt {
+  font-family: var(--sans);
+  font-weight: bold;
+  float: left;
+  padding: 0 0.5rem 0 0;
+}
+dd {
+  padding: 0;
+  margin: 1rem 0 1rem 2rem;
+}
+
+/* MEDIA */
+
+img {
+  max-width: 100%;
+}
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: var(--accent-color) 1px solid;
+  padding: 15px 10px;
+}
+figcaption {
+  font-size: 0.8rem;
+  font-style: italic;
+  padding: 1rem 0 0 0;
+}
+
+/* ADMONITIONS */
 
 .astuce, .tip, .note, .important {
   position: relative;
@@ -133,7 +141,6 @@ h3::before {
   margin: 1.5rem 0;
   font-size: 0.9rem;
 }
-
 .astuce::before,
 .tip::before,
 .note::before,
@@ -145,22 +152,75 @@ h3::before {
   font-size: 12px;
   font-family: var(--mono);
 }
-/* .astuce p, .tip p, .note p {
-	font-size: 0.9rem;
+.astuce, .tip, .note {
+	background: rgb(225, 225, 225);
 }
-.astuce::before,
-.tip::before,
-.note::before,
-.important::before {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  font-size: 12px;
-  font-family: var(--mono);
-}*/
+.important {
+	background: rgb(239,178,178);
+}
 
-.astuce, .tip, .note { background: rgb(225, 225, 225); }
-.important { background: rgb(239,178,178); }
+/* CODE */
+
+code, pre {
+	font-family: var(--mono);
+}
+code {
+  display: inline-block;
+  font-size: 90%;
+}
+p code,
+ul code,
+ol code,
+dl code,
+table code {
+  background-color: var(--code-background-color);
+  border: 1px solid var(--code-border-color);
+  border-radius: 4px;
+  padding: 0 0.2em;
+}
+pre {
+  background-color: var(--code-background-color);
+  border: 1px solid var(--code-border-color);
+  border-radius: 4px;
+  padding-left: 0.5em;
+  margin: 1em 0;
+  overflow-x: auto;
+}
+
+/* ASIDE (TOC) */
+
+aside {
+  grid-area: aside;
+	position: sticky;
+	height: 80vh;
+	top: 2em;
+	padding-left: 3em;
+	font-size: 0.875em;
+  font-family: var(--sans);
+}
+aside ul {
+	list-style-type: none;
+}
+aside > nav > ul > li {
+	position: relative;
+	padding-bottom: 0.75em;
+}
+aside .toggle {
+	cursor: pointer;
+	position: absolute;
+	left: -28px;
+	top: -2px;
+	padding: 2px 10px;
+	color: #0056b3;
+}
+
+/* FOOTER */
+
+footer {
+  grid-area: footer;
+}
+
+
     </style>
 </head>
 
@@ -189,15 +249,36 @@ h3::before {
 
     </main>
 
-    <aside>
-    <nav>
-        
-    </nav>
+    <aside id="toc">
+	
 </aside>
 
-    <footer>
-    <p>Cosma is free software.</p>
-</footer>
+    <script>    
+(function() {
+  document.querySelectorAll('#toc > nav > ul > li').forEach( function(li) {
+    if (li.children.length > 1) {
+      var toggle = document.createElement('span');
+      toggle.className = 'toggle';
+      toggle.innerHTML = '▸';
+      toggle.onclick = function() {
+        var sublist = li.getElementsByTagName('ul')[0];
+        if (sublist) {
+          if (sublist.style.display === 'none') {
+            sublist.style.display = 'block'
+            toggle.innerHTML = '▾';
+          } else {
+            sublist.style.display = 'none';
+            toggle.innerHTML = '▸';
+          }
+        }
+      };
+      li.appendChild(toggle);
+      toggle.click();
+    }
+  });
+})();
+</script>
+
 </body>
 
 </html>
