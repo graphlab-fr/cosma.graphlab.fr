@@ -6,11 +6,22 @@
   HUGO_VERSION = "0.72.0"
 
 [[redirects]]
-  from = "/docs/fr"
-  to = "/docs"
+  from = "/docs/en/cosma-user-manual.html"
+  to = "/en/docs/user-manual"
   status = 301
 
 [[redirects]]
-  from = "/docs/en"
-  to = "en/docs"
+  from = "/docs/en/cosma-developer-manual.html"
+  to = "/en/docs/developer-manual"
   status = 301
+
+[[redirects]]
+  from = "/docs/fr/cosma-manuel-d-utilisation.html"
+  to = "/docs/manuel-utilisation"
+  status = 301
+
+[[redirects]]
+  from = "/docs/fr/cosma-manuel-de-developpement.html"
+  to = "/docs/manuel-developpement"
+  status = 301
+
