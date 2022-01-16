@@ -5,7 +5,8 @@
 	<title>Cosma — Manuel d’utilisation</title>
 
 	<meta name="description" content="">
-	<meta name="author" content="Arthur Perret, Guillaume Brioudes">
+	<meta name="author" content=Arthur Perret,Guillaume Brioudes">
+	<meta name="last_edit" content="Sun, 16 Jan 2022 15:09:55 GMT">
 
 	<style>
         :root {
@@ -235,16 +236,20 @@ footer {
 <nav class="nav-lang">
 	<ul>
 		
-		<li>Français</li>
-		<li><a href="https://cosma.graphlab.fr/en/docs/">English</a></li>
+		<li><a href="../en/cosma-user-manual.html">🇬🇧 EN</a></li>
+		
+		<li><a href="../fr/cosma-manuel-d&#39;utilisation.html">🇫🇷 FR</a></li>
+		
 		<li><a href="https://cosma.graphlab.fr">cosma.graphlab.fr ↦</a></li>
-		
-
-		
 	</ul>
 </nav>
 
     <main>
+        
+        <p>Dernière mise à jour : 16 janvier 2022</p>
+        
+        
+
         <h2 id="presentation" tabindex="-1">Présentation</h2>
 <p>Cosma est un logiciel de visualisation de graphe documentaire. Il permet de représenter des notes interreliées sous la forme d’un réseau interactif dans une interface web. Le logiciel est conçu pour fonctionner avec des fichiers texte en Markdown et s’adapte aussi bien à une petite collection (centaine de documents) qu’à une vaste documentation (jusqu'à plusieurs milliers de documents).</p>
 <p>Cosma est développé dans le cadre du programme de recherche ANR <a href="https://hyperotlet.hypotheses.org/">HyperOtlet</a>.</p>
@@ -583,21 +588,34 @@ CHRISTIN, Anne-Marie, 1995. L’image écrite, ou, La déraison graphique.
 <h2 id="cosma-cli" tabindex="-1">Cosma CLI</h2>
 <p>En plus de l'interface graphique de Cosma (&quot;GUI&quot;), nous proposons une interface en ligne de commande (&quot;CLI&quot;). Cette dernière vous permet, comme avec l'interface graphique, de générer des cosmoscopes. La différence est que la génération, la création de fiches et la configuration se font avec des lignes de commandes.</p>
 <h3 id="telechargement-et-installation" tabindex="-1">Téléchargement et installation</h3>
-<p>Vous pouvez télécharger cette interface de Cosma sur le <a href="https://github.com/graphlab-fr/cosma-cli">dépôt Cosma-Cli</a>. Après avoir décompresser le répertoire, vous pouvez le placer où vous le souhaitez.</p>
-<p>Elle requière l'installation préalable de <a href="https://nodejs.org/">NodeJS</a>, version 16 minimum.</p>
+<p>Vous devez installer <a href="https://nodejs.org/">NodeJS</a>, version 15 minimum.</p>
+<p>Entrer la commande suivante dans votre terminal pour installer Cosma CLI.</p>
+<pre><code>npm i @graphlab-fr/cosma -g
+</code></pre>
+<h3 id="configuration-1" tabindex="-1">Configuration</h3>
+<p>La configuration est contenus dans un fichier YAML <code>config.yml</code> à la racine du répertoire de l'application. Il est généré par Cosma-Cli avec les paramètres par défaut si un fichier du même nom n'existe pas.</p>
+<p>Pour accéder au fichier de configuration et l'éditer, rendez-vous dans le répertoire</p>
+<ul>
+<li>windows : <code>%USERPROFILE%\AppData\Roaming\npm\node_modules\@graphlab-fr\cosma</code></li>
+<li>macOS, linux : <code>/usr/local/lib/node_modules\@graphlab-fr\cosma</code></li>
+</ul>
+<p>La configuration par défaut vous sert de modèle. Elle comporte les mêmes paramètres que l'interface graphique de Cosma. Un paramètre qui n'est pas inscrit dans le fichier a une valeur par défaut.</p>
+<div class="important">
+<p>Ne supprimez pas les types &quot;undefined&quot; qui servent à définir l'apparence par défaut des éléments.</p>
+</div>
 <h3 id="commandes" tabindex="-1">Commandes</h3>
 <p>Pour entrer les commandes suivantes, vous devez ouvrir un terminal à la racine du dépôt de Cosma-cli que vous avez décompressé.</p>
 <p>Générer un fichier de configuration modèle :</p>
-<pre><code>node app config
-node app c
+<pre><code>cosma config
+cosma c
 </code></pre>
 <p>Créer une fiche (mode formulaire) :</p>
-<pre><code>node app record
-node app r
+<pre><code>cosma record
+cosma r
 </code></pre>
 <p>Créer une fiche (mode <em>one-liner</em>) :</p>
-<pre><code>node app autorecord &lt;titre&gt; &lt;type&gt; &lt;mots-clés&gt;
-node app a &lt;titre&gt; &lt;type&gt; &lt;mots-clés&gt;
+<pre><code>cosma autorecord &lt;titre&gt; &lt;type&gt; &lt;mots-clés&gt;
+cosma a &lt;titre&gt; &lt;type&gt; &lt;mots-clés&gt;
 </code></pre>
 <ul>
 <li><code>&lt;titre&gt;</code> correspond au titre de la fiche, qui est aussi le nom du fichier généré ;</li>
@@ -605,8 +623,8 @@ node app a &lt;titre&gt; &lt;type&gt; &lt;mots-clés&gt;
 <li><code>&lt;mots-clés&gt;</code> (facultatif) est une liste de mots-clés séparés par des virgules (sans espaces).</li>
 </ul>
 <p>Créer une série de fiches :</p>
-<pre><code>node app batchrecord &lt;path&gt;
-node app b &lt;path&gt;
+<pre><code>cosma batchrecord &lt;path&gt;
+cosma b &lt;path&gt;
 </code></pre>
 <p>Seuls les fichiers JSON sont pris en charge, pour le moment. Votre fichier (pointé par le <code>&lt;path&gt;</code>) doit être formaté comme l'exemple ci-dessous. Les identifiants des fiches générés sont des horodatages arrangés. Ils indiquent l'année, le mois, le jour, mais les heures, minutes et secondes dépassent les horaire normaux (ex : 25 heures, 64 minutes et 95 secondes).</p>
 <pre><code class="language-json">[
@@ -620,53 +638,47 @@ node app b &lt;path&gt;
 ]
 </code></pre>
 <p>Créer un cosmoscope :</p>
-<pre><code>node app modelize
-node app m
+<pre><code>cosma modelize
+cosma m
 </code></pre>
 <p>Avec citations :</p>
-<pre><code>node app modelize --citeproc
-node app modelize -c
+<pre><code>cosma modelize --citeproc
+cosma modelize -c
 </code></pre>
 <p>En mode publication :</p>
-<pre><code>node app modelize --publish
-node app m -p
+<pre><code>cosma modelize --publish
+cosma m -p
 </code></pre>
 <p>En incluant la feuille de style CSS personnalisée</p>
-<pre><code>node app modelize --load_css_custom
-node app m -css
+<pre><code>cosma modelize --load_css_custom
+cosma m -css
 </code></pre>
 <p>Vous pouvez combiner les différentes options d'export comme suit :</p>
-<pre><code>node app modelize --publish --citeproc --load_css_custom
-node app m -p -c -css
+<pre><code>cosma modelize --publish --citeproc --load_css_custom
+cosma m -p -c -css
 </code></pre>
-<h3 id="configuration-1" tabindex="-1">Configuration</h3>
-<p>La configuration est un fichier YAML <code>config.yml</code> à la racine du répertoire. Il est généré par Cosma-Cli avec les paramètres par défaut si un fichier du même nom n'existe pas.</p>
-<p>La configuration par défaut vous sert de modèle. Elle comporte les mêmes paramètres que l'interface graphique de Cosma. Un paramètre qui n'est pas inscrit dans le fichier a une valeur par défaut.</p>
-<div class="important">
-<p>Ne supprimez pas les types &quot;undefined&quot; qui servent à définir l'apparence par défaut des éléments.</p>
-</div>
-<p>Vous pouvez réécrire les paramètres de ce fichier de configuration directement dans votre commande pour générer un cosmoscope.</p>
+<p>Vous pouvez réécrire les paramètres de ce fichier de configuration &quot;à la volée&quot; (uniquement pour cette commande) directement dans la commande pour générer un cosmoscope.</p>
 <p>Réécrire le chemin du répertoire des fiches</p>
-<pre><code>node app modelize --files_origin:&quot;D:\fiches&quot;
-node app m -f:&quot;D:\fiches&quot;
+<pre><code>cosma modelize --files_origin:&quot;D:\fiches&quot;
+cosma m -f:&quot;D:\fiches&quot;
 </code></pre>
 <p>Réécrire le chemin d'export du cosmoscope</p>
-<pre><code>node app modelize --export_target:&quot;C:\desktop&quot;
-node app m -e:&quot;C:\desktop&quot;
+<pre><code>cosma modelize --export_target:&quot;C:\desktop&quot;
+cosma m -e:&quot;C:\desktop&quot;
 </code></pre>
 <p>Réécrire la langue utilisée</p>
-<pre><code>node app modelize --lang:&quot;en&quot;
-node app m -l:&quot;en&quot;
+<pre><code>cosma modelize --lang:&quot;en&quot;
+cosma m -l:&quot;en&quot;
 </code></pre>
 <p>Réécrire l'enregistrement de l'historique</p>
-<pre><code>node app modelize --history:false
-node app m -h:false
+<pre><code>cosma modelize --history:false
+cosma m -h:false
 </code></pre>
 <p>Enregistrer dans la configuration les paramètres réécrits</p>
-<pre><code>node app modelize --save
-node app m -s
+<pre><code>cosma modelize --save
+cosma m -s
 
-node app m -l:&quot;en&quot; -s
+cosma m -l:&quot;en&quot; -s
 </code></pre>
 <h2 id="credits" tabindex="-1">Crédits</h2>
 <h3 id="equipe" tabindex="-1">Équipe</h3>
@@ -694,9 +706,19 @@ node app m -l:&quot;en&quot; -s
 
     <aside id="toc">
 	<nav class="toc" >
-        <ul><li><a href="#presentation">Présentation</a><ul><li><a href="#specificites-de-cosma">Spécificités de Cosma</a></li><li><a href="#un-degre-eleve-de-controle-utilisateur">Un degré élevé de contrôle utilisateur</a></li><li><a href="#un-logiciel-experimental">Un logiciel expérimental</a></li></ul></li><li><a href="#installation">Installation</a></li><li><a href="#creer-du-contenu">Créer du contenu</a><ul><li><a href="#creer-une-fiche">Créer une fiche</a></li><li><a href="#format-de-donnees">Format de données</a></li></ul></li><li><a href="#creer-un-cosmoscope">Créer un cosmoscope</a></li><li><a href="#historique">Historique</a></li><li><a href="#utilisation-du-cosmoscope">Utilisation du cosmoscope</a><ul><li><a href="#description-generale-de-linterface">Description générale de l'interface</a></li><li><a href="#graphe">Graphe</a></li><li><a href="#fiches">Fiches</a></li><li><a href="#mode-focus">Mode focus</a></li><li><a href="#moteur-de-recherche">Moteur de recherche</a></li><li><a href="#filtrer-laffichage-par-types">Filtrer l'affichage par types</a></li><li><a href="#mots-cles">Mots-clés</a></li><li><a href="#index">Index</a></li><li><a href="#vues">Vues</a></li></ul></li><li><a href="#partager-un-cosmoscope">Partager un cosmoscope</a></li><li><a href="#configuration">Configuration</a><ul><li><a href="#general">Général</a></li><li><a href="#types-de-fiches">Types de fiches</a></li><li><a href="#types-de-liens">Types de liens</a></li><li><a href="#graphe-1">Graphe</a></li><li><a href="#metadonnees-1">Métadonnées</a></li><li><a href="#bibliographie">Bibliographie</a></li><li><a href="#vues-1">Vues</a></li><li><a href="#avance">Avancé</a></li></ul></li><li><a href="#cosma-cli">Cosma CLI</a><ul><li><a href="#telechargement-et-installation">Téléchargement et installation</a></li><li><a href="#commandes">Commandes</a></li><li><a href="#configuration-1">Configuration</a></li></ul></li><li><a href="#credits">Crédits</a><ul><li><a href="#equipe">Équipe</a></li><li><a href="#bibliotheques-utilisees">Bibliothèques utilisées</a></li></ul></li></ul>
+        <ul><li><a href="#presentation">Présentation</a><ul><li><a href="#specificites-de-cosma">Spécificités de Cosma</a></li><li><a href="#un-degre-eleve-de-controle-utilisateur">Un degré élevé de contrôle utilisateur</a></li><li><a href="#un-logiciel-experimental">Un logiciel expérimental</a></li></ul></li><li><a href="#installation">Installation</a></li><li><a href="#creer-du-contenu">Créer du contenu</a><ul><li><a href="#creer-une-fiche">Créer une fiche</a></li><li><a href="#format-de-donnees">Format de données</a></li></ul></li><li><a href="#creer-un-cosmoscope">Créer un cosmoscope</a></li><li><a href="#historique">Historique</a></li><li><a href="#utilisation-du-cosmoscope">Utilisation du cosmoscope</a><ul><li><a href="#description-generale-de-linterface">Description générale de l'interface</a></li><li><a href="#graphe">Graphe</a></li><li><a href="#fiches">Fiches</a></li><li><a href="#mode-focus">Mode focus</a></li><li><a href="#moteur-de-recherche">Moteur de recherche</a></li><li><a href="#filtrer-laffichage-par-types">Filtrer l'affichage par types</a></li><li><a href="#mots-cles">Mots-clés</a></li><li><a href="#index">Index</a></li><li><a href="#vues">Vues</a></li></ul></li><li><a href="#partager-un-cosmoscope">Partager un cosmoscope</a></li><li><a href="#configuration">Configuration</a><ul><li><a href="#general">Général</a></li><li><a href="#types-de-fiches">Types de fiches</a></li><li><a href="#types-de-liens">Types de liens</a></li><li><a href="#graphe-1">Graphe</a></li><li><a href="#metadonnees-1">Métadonnées</a></li><li><a href="#bibliographie">Bibliographie</a></li><li><a href="#vues-1">Vues</a></li><li><a href="#avance">Avancé</a></li></ul></li><li><a href="#cosma-cli">Cosma CLI</a><ul><li><a href="#telechargement-et-installation">Téléchargement et installation</a></li><li><a href="#configuration-1">Configuration</a></li><li><a href="#commandes">Commandes</a></li></ul></li><li><a href="#credits">Crédits</a><ul><li><a href="#equipe">Équipe</a></li><li><a href="#bibliotheques-utilisees">Bibliothèques utilisées</a></li></ul></li></ul>
       </nav>
 </aside>
+
+    <footer>
+    
+    
+    <p>
+        Cosma is free software, under <a href="https://opensource.org/licenses/GPL-3.0">GPL-3.0-or-later</a> license.<br/>
+        Cette documentation a été fabriquée avec le génial <a href="https://www.11ty.dev/">11ty</a>.
+    </p>
+    
+</footer>
 
     <script>    
 (function() {

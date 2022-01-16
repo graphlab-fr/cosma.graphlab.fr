@@ -5,3 +5,12 @@
 [build.environment]
   HUGO_VERSION = "0.72.0"
 
+[[redirects]]
+  from = "/docs/fr"
+  to = "/docs"
+  status = 301
+
+[[redirects]]
+  from = "/docs/en"
+  to = "en/docs"
+  status = 301
