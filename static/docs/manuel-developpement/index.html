@@ -6,7 +6,7 @@
 
 	<meta name="description" content="">
 	<meta name="author" content=Arthur Perret,Guillaume Brioudes">
-	<meta name="last_edit" content="Sun, 16 Jan 2022 15:10:07 GMT">
+	<meta name="last_edit" content="Mon, 17 Jan 2022 18:30:45 GMT">
 
 	<style>
         :root {
@@ -79,7 +79,7 @@ main h3 {
 }
 main h4 {
   font-size: 1em;
-  margin: 2.5rem 0 0 0;
+  margin: 2rem 0 0 0;
 }
 
 /* LINKS */
@@ -108,6 +108,7 @@ dt {
   font-weight: bold;
   float: left;
   padding: 0 0.5rem 0 0;
+  line-height: 1.4;
 }
 dd {
   padding: 0;
@@ -236,9 +237,9 @@ footer {
 <nav class="nav-lang">
 	<ul>
 		
-		<li><a href="../en/cosma-developer-manual.html">🇬🇧 EN</a></li>
+		<li><a href="../cosma-developer-manual.html">🇬🇧 EN</a></li>
 		
-		<li><a href="../fr/cosma-manuel-de-developpement.html">🇫🇷 FR</a></li>
+		<li><a href="../cosma-manuel-de-developpement.html">🇫🇷 FR</a></li>
 		
 		<li><a href="https://cosma.graphlab.fr">cosma.graphlab.fr ↦</a></li>
 	</ul>
@@ -246,57 +247,57 @@ footer {
 
     <main>
         
-        <p>Dernière mise à jour : 16 janvier 2022</p>
+        <p>Dernière mise à jour : 17 janvier 2022</p>
         
         
 
         <p>Cette documentation est destinée aux développeurs souhaitant participer ou reprendre le projet (code source) Cosma. Nous vous recommandons vivement de lire la documentation des utilisateurs pour bien saisir l'ensemble des usages en jeu dans le code source présenté ci-dessous.</p>
 <p>Cosma repose sur l'environnement de développement NodeJS et les <strong>technologies du Web</strong> (HTML, CSS). Il est intégralement développé en JavaScript (ES2019). Une bonne connaissance de ces langages est requise pour modifier le cœur de Cosma ou son interface en ligne de commande Cosma-cli.<br>
 Modifier l'interface graphique nécessite en plus de maîtriser le <em>framework</em> <a href="https://www.electronjs.org/">ElectronJS</a>.</p>
-<h1 id="code-source" tabindex="-1">Code source</h1>
+<h2 id="code-source" tabindex="-1">Code source</h2>
 <p>Les principales fonctionnalités de Cosma sont programmées dans le <a href="https://github.com/graphlab-fr/cosma-core">dépôt Cosma-core</a>.</p>
 <ul>
 <li>La lecture et le traitement d'un répertoire de fichier Mardown ;</li>
-<li>La génération de données d'un graphe (nœuds et liens) format JSON ;</li>
-<li>L'intégration des données (JSON), styles (CSS) et scripts (JavaScript) dans un <em>template</em> de fichier HTML ;</li>
+<li>La génération de données d'un graphe (nœuds et liens) format JSON ;</li>
+<li>L'intégration des données (JSON), styles (CSS) et scripts (JavaScript) dans un <em>template</em> de fichier HTML ;</li>
 </ul>
 <p>Ces fonctionnalités peuvent être utilisées via deux interfaces, stockées dans deux autres dépôts où est intégré (via <a href="https://git-scm.com/book/fr/v2/Utilitaires-Git-Sous-modules">Git modules</a>) le Cosma-core.</p>
 <ul>
 <li>Interface graphique (GUI), basée sur le <em>framework</em> <a href="https://www.electronjs.org/">Electron,</a> stockée dans le dépôt <a href="https://github.com/graphlab-fr/cosma">Cosma</a></li>
 <li>Interface en ligne de commande (CLI) stockée dans le dépôt <a href="https://github.com/graphlab-fr/cosma-cli">Cosma-cli</a></li>
 </ul>
-<h1 id="architecture-du-logiciel" tabindex="-1">Architecture du logiciel</h1>
-<h2 id="vue-generale" tabindex="-1">Vue générale</h2>
+<h2 id="architecture-du-logiciel" tabindex="-1">Architecture du logiciel</h2>
+<h3 id="vue-generale" tabindex="-1">Vue générale</h3>
 <p>Cosma est principalement implémenté en JavaScript. Le logiciel repose sur deux systèmes distincts, le cosmographe et le cosmoscope, programmées dans le <a href="https://github.com/graphlab-fr/cosma-core">dépôt Cosma-core</a>.</p>
 <p>Le <strong>cosmographe</strong> repose sur l'environnement Node.js. Il s'agit d'une série d'objets (<code>/cosma-core/models</code>) listés ci-dessous constituant l'API (interface de programmation) de Cosma. Elle permet d'appeler les principales fonctionnalités comme la création de fiche ou la génération de cosmoscopes. Cette API est manipulée par les deux interfaces que sont Cosma-Gui et Cosma-Cli pour rendre le même comoscope.</p>
 <ul>
-<li><code>Config.js</code> : vérifier et actualiser le fichier de configuration ;</li>
-<li><code>Record.js</code> :  générer des fichiers Markdown et leur entête ;</li>
-<li><code>Graph.js</code> : lire un répertoire pour en extraire les fichiers Markdown et analyser leur contenu (Markdown, métadonnées YAML et liens style wiki) afin de générer des données JSON ;</li>
-<li><code>Template.js</code> : assembler HTML (<code>/cosma-core/template.njk</code> et <code>/cosma-core/icons/**.svg</code>), CSS (<code>/cosma-core/**.css</code> et depuis <code>Graph.js</code>), JavaScript (<code>/cosma-core/scripts/**.js</code> et <code>/cosma-core/libs/**.js</code>) et données JSON (depuis <code>Graph.js</code>) pour rendre un cosmoscope ;</li>
-<li><code>Lang.js</code> : traduire les éléments d'interface depuis le fichier multilingue <code>/cosma-core/lang.yml</code>.</li>
+<li><code>Config.js</code> : vérifier et actualiser le fichier de configuration ;</li>
+<li><code>Record.js</code> :  générer des fichiers Markdown et leur entête ;</li>
+<li><code>Graph.js</code> : lire un répertoire pour en extraire les fichiers Markdown et analyser leur contenu (Markdown, métadonnées YAML et liens style wiki) afin de générer des données JSON ;</li>
+<li><code>Template.js</code> : assembler HTML (<code>/cosma-core/template.njk</code> et <code>/cosma-core/icons/**.svg</code>), CSS (<code>/cosma-core/**.css</code> et depuis <code>Graph.js</code>), JavaScript (<code>/cosma-core/scripts/**.js</code> et <code>/cosma-core/libs/**.js</code>) et données JSON (depuis <code>Graph.js</code>) pour rendre un cosmoscope ;</li>
+<li><code>Lang.js</code> : traduire les éléments d'interface depuis le fichier multilingue <code>/cosma-core/lang.yml</code>.</li>
 </ul>
 <p>Le <strong>cosmoscope</strong> est un fichier <code>.html</code> intégrant les éléments listés ci-dessous et généré via <code>Template.js</code>. Il peut être rendu sur navigateur web, que ce soit Chromium pour afficher le comoscope dans l'application ElectronJS, ou un autre navigateur choisi par un utilisateur pour lire un comoscope.</p>
 <ul>
-<li>métadonnées (titre, auteur, description, mots-clés issus de la configuration) ;</li>
+<li>métadonnées (titre, auteur, description, mots-clés issus de la configuration) ;</li>
 <li>styles (CSS) issus de <code>/cosma-core</code> et de la configuration (types de fiches, de liens, couleur de surbrillance…)</li>
-<li>scripts et bibliothèques JavaScript (outils de visualisation et de navigation) ;</li>
-<li>des index (mots-clés, titre de fiche, vues) ;</li>
+<li>scripts et bibliothèques JavaScript (outils de visualisation et de navigation) ;</li>
+<li>des index (mots-clés, titre de fiche, vues) ;</li>
 <li>les fiches.</li>
 </ul>
-<h2 id="interfaces-des-classes" tabindex="-1">Interfaces des classes</h2>
+<h3 id="interfaces-des-classes" tabindex="-1">Interfaces des classes</h3>
 <p>L'objet <code>Config.js</code> (<code>/cosma-core/models/config.js</code>) est connecté à tous les autres objets de Cosma-core. Il permet de retrouver le fichier où est inscrite la configuration (<code>Config.getFilePath()</code>) en fonction de l'envrionnement (ElectronJS ou pas) et de le rendre (<code>Config.get()</code>).</p>
 <p>En reposant sur cette première classe</p>
-<h1 id="terminologie" tabindex="-1">Terminologie</h1>
-<p>Les fichiers Markdown interprétés par Cosma sont qualifiés ici de « fiches » plutôt que de « notes », en référence à la tradition de la fiche érudite et à l'histoire de la documentation. L'acception documentaire de « fiche » n'a pas de traduction directe en anglais (sinon <em>index card</em>). En revanche, elle est conceptuellement proche du mot « <em>record</em> » issu du <a href="https://fr.wikipedia.org/wiki/Records_management"><em>records management</em></a>. Le code de Cosma emploie donc le mot record pour désigner une fiche.</p>
-<h1 id="traduction" tabindex="-1">Traduction</h1>
+<h2 id="terminologie" tabindex="-1">Terminologie</h2>
+<p>Les fichiers Markdown interprétés par Cosma sont qualifiés ici de « fiches » plutôt que de « notes », en référence à la tradition de la fiche érudite et à l'histoire de la documentation. L'acception documentaire de « fiche » n'a pas de traduction directe en anglais (sinon <em>index card</em>). En revanche, elle est conceptuellement proche du mot « <em>record</em> » issu du <a href="https://fr.wikipedia.org/wiki/Records_management"><em>records management</em></a>. Le code de Cosma emploie donc le mot record pour désigner une fiche.</p>
+<h2 id="traduction" tabindex="-1">Traduction</h2>
 <p>Pour ajouter une entrée de traduction au logiciel, il faut ajouter son code (norme <a href="https://fr.wikipedia.org/wiki/Liste_des_codes_ISO_639-1">ISO 639-1</a>) à la variable <code>validLangages</code> de la classe Config (<code>/cosma-core/models/config</code>) tel que ci-dessous.</p>
 <pre><code class="language-js">static validLangages = {
 	...
 	es: &quot;Español&quot;
 };
 </code></pre>
-<p>Vous pouvez ensuite compléter le fichier <code>/cosma-core/lang.yml</code> en ajoutant ce drapeau comme dernier enfant d'une arboresence tel que ci-dessous :</p>
+<p>Vous pouvez ensuite compléter le fichier <code>/cosma-core/lang.yml</code> en ajoutant ce drapeau comme dernier enfant d'une arboresence tel que ci-dessous :</p>
 <pre><code class="language-yaml">dialog:
   btn:
     cancel:
@@ -333,7 +334,7 @@ lang.getWith(
 
     <aside id="toc">
 	<nav class="toc" >
-        <ul><li><a href="#vue-generale">Vue générale</a></li><li><a href="#interfaces-des-classes">Interfaces des classes</a></li></ul>
+        <ul><li><a href="#code-source">Code source</a></li><li><a href="#architecture-du-logiciel">Architecture du logiciel</a><ul><li><a href="#vue-generale">Vue générale</a></li><li><a href="#interfaces-des-classes">Interfaces des classes</a></li></ul></li><li><a href="#terminologie">Terminologie</a></li><li><a href="#traduction">Traduction</a></li></ul>
       </nav>
 </aside>
 
@@ -341,8 +342,8 @@ lang.getWith(
     
     
     <p>
-        Cosma is free software, under <a href="https://opensource.org/licenses/GPL-3.0">GPL-3.0-or-later</a> license.<br/>
-        Cette documentation a été fabriquée avec le génial <a href="https://www.11ty.dev/">11ty</a>.
+        Cosma est un logiciel libre, diffusé sous licence <a href="https://opensource.org/licenses/GPL-3.0">GPL-3.0-or-later</a>.<br/>
+        Cette documentation a été fabriquée avec <a href="https://www.11ty.dev/">11ty</a>.
     </p>
     
 </footer>
