@@ -6,7 +6,7 @@
 
 	<meta name="description" content="">
 	<meta name="author" content=Arthur Perret,Guillaume Brioudes">
-	<meta name="last_edit" content="Mon, 17 Jan 2022 18:29:03 GMT">
+	<meta name="last_edit" content="Tue, 18 Jan 2022 15:54:19 GMT">
 
 	<style>
         :root {
@@ -97,6 +97,18 @@ a:hover {
   0% { background-color: #ffa; }
   100% { background-color: #ffffff; }
 }
+
+/* TABLES */
+
+table {
+	border-collapse: collapse;
+	margin: 2rem 0;
+	text-align: left;
+	width: 100%;
+}
+
+tr { border: 1px solid gray; }
+th, td { border: 1px solid gray; padding: 0.5rem; }
 
 /* LISTS */
 
@@ -221,8 +233,6 @@ aside .toggle {
 footer {
   grid-area: footer;
 }
-
-
     </style>
 </head>
 
@@ -237,9 +247,9 @@ footer {
 <nav class="nav-lang">
 	<ul>
 		
-		<li><a href="../cosma-user-manual.html">🇬🇧 EN</a></li>
-		
 		<li><a href="../cosma-manuel-d-utilisation.html">🇫🇷 FR</a></li>
+		
+		<li><a href="../cosma-user-manual.html">🇬🇧 EN</a></li>
 		
 		<li><a href="https://cosma.graphlab.fr">cosma.graphlab.fr ↦</a></li>
 	</ul>
@@ -247,7 +257,7 @@ footer {
 
     <main>
         
-        <p>Dernière mise à jour : 17 janvier 2022</p>
+        <p>Dernière mise à jour : 18 janvier 2022</p>
         
         
 
@@ -348,7 +358,7 @@ tags:
 <dd>Obligatoire.</dd>
 <dd>Identifiant unique de la fiche. Par défaut, Cosma génère des identifiants à 14 chiffres par horodatage (année, mois, jour, heures, minutes et secondes) sur le modèle de certains logiciels de prise de notes type Zettelkasten comme <a href="https://zettelkasten.de/the-archive/">The Archive</a> ou <a href="https://www.zettlr.com">Zettlr</a>.</dd>
 <dt><code>type</code></dt>
-<dd>Type de la fiche. Facultatif. Un seul type peut être assigné à une fiche. Si le champ <code>type</code> n'est pas spécifié ou bien que sa valeur ne correspond à l'un des types enregistrés dans la configuration sous le paramètre <code>record_types</code>, Cosma interprètera le type de la fiche comme non défini (<code>undefined</code>).</dd>
+<dd>Type de la fiche. Facultatif. Un seul type peut être assigné à une fiche. Si le champ <code>type</code> n'est pas spécifié ou bien que sa valeur ne correspond à l'un des types enregistrés dans la configuration, Cosma interprètera le type de la fiche comme non défini (<code>undefined</code>).</dd>
 <dt><code>tags</code></dt>
 <dd>Mots-clés de la fiche. Facultatif. La valeur doit être une liste. Une fiche peut disposer d'autant de mot-clés que vous souhaitez.</dd>
 </dl>
@@ -511,10 +521,12 @@ GOODY, Jack, 1979. La Raison graphique : la domestication de la pensée sauvag
 <p>Pour améliorer la lisibilité des fiches dans le cosmoscope, Cosma inclut une option pour personnaliser le texte des liens. Dans Préférences › Symbole de lien, saisissez un ou plusieurs caractères Unicode (lettres, chiffres, symboles…). Exemple : ☞. Cette chaîne de caractères remplace l'identifiant entre crochets dans le rendu HTML des fiches.</p>
 </div>
 <p>En bas de chaque fiche se trouve une liste des liens sortants et des liens entrants (ou rétroliens). Les liens et rétroliens sont contextualisés : au survol, une infobulle s'affiche, montrant le paragraphe qui entoure ce lien dans la fiche correspondante.</p>
+<div class="note">
+<p>Les liens et rétroliens contextualisés font partie des fonctionnalités les plus utiles des systèmes hypertextuels. C'est une fonctionnalité notoirement absente du Web. En revanche, de nombreuses applications de prise de notes interreliées traitent les liens comme un élément de première importance, et cela inclut les rétroliens contextualisés. Cependant, lorsque ces notes sont partagées sur le Web, cette fonctionnalité n'est pas toujours incluse, ou alors elle fait partie d'un service de publication payant. Avec Cosma, les rétroliens contextualisés font partie du logiciel, que vous soyez l'auteur d'un cosmoscope travaillant sur sa machine, ou quelqu'un qui explore un cosmoscope sur le Web.</p>
+</div>
 <h3 id="mode-focus" tabindex="-1">Mode focus</h3>
 <p>Le bouton Activer le focus (raccourci : touche <code>F</code>) situé en bas à gauche du graphe permet de restreindre l'affichage au nœud sélectionné : en mode focus, seules les connexions directes à la fiche sélectionnée sont affichées dans l'interface. Le mode focus ne fonctionne que si vous avez sélectionné une fiche.</p>
-<p>Une fois le mode focus activé, vous zoomez automatiquement sur le nœud sélectionné.</p>
-<p>Le curseur qui apparaît sous le bouton Activer le focus permet de faire varier la distance d'affichage, jusqu'au maximum indiqué dans Préférences › Niveau maximum de focus.</p>
+<p>Le curseur qui apparaît sous le bouton Activer le focus permet de faire varier la distance d'affichage, jusqu'au maximum indiqué dans Préférences › Niveau maximum de focus. Une valeur de 1 signifie que seules les connexions immédiates seront affichées en mode Focus. Une valeur de 2 signifie que vous pouvez étendre le focus aux connexions des connexions, et ainsi de suite.</p>
 <div class="astuce">
 <p>Le curseur du niveau de focus est contrôlable via les flèches du clavier. Vous pouvez enchaîner les raccourcis : <code>F</code> pour activer le focus, puis les flèches pour augmenter le niveau de focus.</p>
 </div>
@@ -571,7 +583,7 @@ GOODY, Jack, 1979. La Raison graphique : la domestication de la pensée sauvag
 </dl>
 <h3 id="types-de-fiches" tabindex="-1">Types de fiches</h3>
 <p>Cette section permet de définir différents types de fiches. Pour chaque type de fiche, renseignez un nom et une couleur.</p>
-<p>Ajoutez <code>type: nom</code> à l'en-tête en YAML d'une fiche pour lui attribuer ce type et ainsi attribuer une couleur au nœud correspondant à la fiche. Un seul type peut être assigné à une fiche. Si le champ <code>type</code> n'est pas spécifié ou bien que sa valeur ne correspond à l'un des types enregistrés dans la configuration sous le paramètre <code>record_types</code>, Cosma interprètera le type de la fiche comme non défini (<code>undefined</code>).</p>
+<p>Ajoutez <code>type: nom</code> à l'en-tête en YAML d'une fiche pour lui attribuer ce type. Un seul type peut être assigné à une fiche. Si le champ <code>type</code> n'est pas spécifié ou bien que sa valeur ne correspond à l'un des types enregistrés dans la configuration, Cosma interprètera le type de la fiche comme non défini (<code>undefined</code>).</p>
 <div class="note">
 <p>Le type &quot;undefined&quot; (couleur par défaut des nœuds) peut être modifié, mais ne peut être retiré.</p>
 </div>
@@ -689,21 +701,33 @@ cosma c
 <pre><code>cosma record
 cosma r
 </code></pre>
+<p>Cette commande permet de créer une fiche en mode formulaire. Elle demande successivement un titre, un type et un ou plusieurs mots clés. Seul le titre est obligatoire.</p>
 <h4 id="creer-une-fiche-(mode-one-liner)" tabindex="-1">Créer une fiche (mode <em>one-liner</em>)</h4>
 <pre><code>cosma autorecord &lt;titre&gt; &lt;type&gt; &lt;mots-clés&gt;
 cosma a &lt;titre&gt; &lt;type&gt; &lt;mots-clés&gt;
 </code></pre>
+<p>Cette commande vous permet de créer une fiche en une seule commande.</p>
 <p>Dans la commande ci-dessus :</p>
-<ul>
-<li><code>&lt;titre&gt;</code> correspond au titre de la fiche, qui est aussi le nom du fichier généré ;</li>
-<li><code>&lt;type&gt;</code> (facultatif) correspond à l’un des types définis dans la configuration (« undefined » par défaut) ;</li>
-<li><code>&lt;mots-clés&gt;</code> (facultatif) est une liste de mots-clés séparés par des virgules (sans espaces).</li>
-</ul>
+<dl>
+<dt><code>&lt;titre&gt;</code></dt>
+<dd>Obligatoire.</dd>
+<dd>Le titre de la fiche.</dd>
+<dt><code>&lt;type&gt;</code></dt>
+<dd>Facultatif.</dd>
+<dd>L’un des types définis dans la configuration (<code>undefined</code> par défaut).</dd>
+<dt><code>&lt;mots-clés&gt;</code></dt>
+<dd>Facultatif.</dd>
+<dd>Une liste de mots-clés séparés par des virgules (sans espaces). Exemple : <code>mot-clé1,mot-clé2</code>.</dd>
+</dl>
 <h4 id="creer-un-lot-de-fiches" tabindex="-1">Créer un lot de fiches</h4>
 <pre><code>cosma batchrecord &lt;path&gt;
 cosma b &lt;path&gt;
 </code></pre>
-<p>Dans la commande ci-dessus, <code>&lt;path&gt;</code> correspond à l'emplacement d'un fichier au format JSON décrivant les fiches à créer. Le fichier doit être structuré de la manière suivante :</p>
+<p>Cette commande permet de créer plusieurs fiches d'un coup.</p>
+<dl>
+<dt><code>&lt;path&gt;</code></dt>
+<dd>Emplacement d'un fichier au format JSON décrivant les fiches à créer. Le fichier doit être structuré de la manière suivante :</dd>
+</dl>
 <pre><code class="language-json">[
   {
     &quot;title&quot;: &quot;Titre de la fiche&quot;,
@@ -726,7 +750,7 @@ cosma b &lt;path&gt;
 cosma m
 </code></pre>
 <h3 id="options" tabindex="-1">Options</h3>
-<p>Différentes options peuvent être ajoutées à la commande de création de cosmoscope.</p>
+<p>Différentes options peuvent être ajoutées à la commande <code>modelize</code>.</p>
 <p>Comme les commandes, les options existent en version longue et version courte, qui sont fonctionnellement identiques, la version courte servant simplement à gagner du temps en raccourcissant la commande.</p>
 <p>Les options servent également à réécrire à la volée les paramètres de la configuration pour une commande précise.</p>
 <h4 id="creer-un-cosmoscope-avec-citations-(cli)" tabindex="-1">Créer un cosmoscope avec citations (CLI)</h4>
@@ -779,7 +803,7 @@ cosma m -s
 <li><a href="http://www.guidedesegares.info/">Olivier Le Deuff</a> (chercheur)</li>
 </ul>
 <h3 id="bibliotheques-utilisees" tabindex="-1">Bibliothèques utilisées</h3>
-<p>Pour améliorer la maintenabilité et la lisibilité du code source, l’équipe de développement a recouru aux bibliothèques suivantes.</p>
+<p>Pour améliorer la maintenabilité et la lisibilité du code source, l’équipe de développement a recouru aux bibliothèques suivantes :</p>
 <ul>
 <li><a href="https://d3js.org/">D3.js</a> v4.13.0 (BSD 3-Clause) : Génération du graphe</li>
 <li><a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> v3.2.3 (BSD 2-Clause) : Génération du template du cosmoscope</li>
