@@ -233,6 +233,35 @@ aside .toggle {
 footer {
   grid-area: footer;
 }
+
+/* DARK MODE */
+/* Inspiré par Bradley Taunt */
+/* https://tdarb.org/lazy-dev-dark-mode/ */
+
+@media (prefers-color-scheme: dark) {
+  body {
+  	background: #2d2d2d;
+  	filter:invert(1);
+  }
+  a,
+  img,
+  pre,
+  *:not(pre) > code {
+  	filter:invert(1);
+  }
+  aside .toggle {
+  	color: #5e421b;
+  }
+  a {
+  	color: #B2CCE8;
+  }
+  .astuce, .tip, .note {
+  	background: #b4b4b4;
+  }
+  .important {
+  	background: #67f3f4;
+  }
+}
     </style>
 </head>
 
