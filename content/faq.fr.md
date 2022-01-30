@@ -11,19 +11,19 @@ Explication : Windows et macOS requièrent que le code d'une application soit «
 
 ## L'alpha était compatible avec Linux, est-ce que c'est le cas pour la nouvelle version ?
 
-Nous ne fournissons actuellement pas l'application pour Linux mais nous espérons pouvoir le faire prochainement. Rien ne s'y oppose techniquement puisque Cosma est une application développée pour plusieurs plateformes simultanément à partir d'une seule base de code grâce au *framework* Electron. Nous manquons simplement d'accès à des machines Linux pour réaliser des tests, qui n'étaient pas indispensables pour l'alpha et qui le sont désormais pour la nouvelle version.
+Une version ligne de commande est disponible pour toutes les plateformes. Plus d'information [ici](/blog/cosma-cli-1-0/).
 
-Si vous souhaitez tester une version Linux de Cosma, contactez-nous !
+Nous ne fournissons actuellement pas l'application GUI pour Linux mais nous espérons pouvoir le faire prochainement. Rien ne s'y oppose techniquement puisque Cosma est une application développée pour plusieurs plateformes simultanément à partir d'une seule base de code grâce au *framework* Electron. Nous avons depuis peu accès à des machines Linux pour réaliser des tests, qui n'étaient pas indispensables pour l'alpha et qui le sont désormais pour la nouvelle version.
 
 ## Quand j'essaie de créer une fiche, l'application me renvoie une erreur incompréhensible.
 
 Vous n'avez probablement pas renseigné de répertoire de fiches dans Préférences. Le répertoire peut être vide mais il faut en renseigner un pour que Cosma sache où créer des fiches.
 
-[Un ticket a été ouvert](https://github.com/graphlab-fr/cosma/issues/6) et une prochaine mise à jour améliorera l'expérience utilisateur sur ce point.
+Le problème est corrigé en version 1.1.
 
 ## J'ai créé une fiche avec le même nom qu'une fiche existante, et l'ancienne a disparu !
 
-[Un ticket a été ouvert](https://github.com/graphlab-fr/cosma/issues/5), ce problème sera réglé en priorité dès la prochaine mise à jour.
+Ce bug nous a été signalé après la sortie de la version 1.0. [Téléchargez la version 1.1](https://github.com/graphlab-fr/cosma/releases/latest), qui résout le problème.
 
 N'oubliez pas de sauvegarder vos données, que ce soit en faisant des copies à intervalle régulier ou bien en utilisant un système de gestion des versions comme [git](https://git-scm.com).
 

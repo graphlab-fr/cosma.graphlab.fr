@@ -11,17 +11,19 @@ Explanation: Windows and macOS require that the code of an application be “sig
 
 ## The alpha was available for Linux, what about version 1.0?
 
-We do not currently provide the application for Linux but we hope to do so soon. Cosma is an Electron-based application, meaning it can be developed for several platforms simultaneously from a single code base. Right now, we just don't have Linux machines to test Cosma on. If this is something you'd like to help us with, please get in touch!
+A command line version is available for all platforms. More information [here](/en/blog/cosma-cli-1-0/).
+
+We do not currently provide the application for Linux but we hope to do so soon. Cosma is an Electron-based application, meaning it can be developed for several platforms simultaneously from a single code base. We recently got access to Linux machines to test Cosma on. If this is something you'd like to help us with, please get in touch!
 
 ## I tried creating a record but the application responds with a cryptic error.
 
 You probably did not set a records directory in Preferences. Cosma needs to know where to create records.
 
-[An issue has been opened on GitHub](https://github.com/graphlab-fr/cosma/issues/6). An upcoming update will improve the user experience on this point.
+The issue is solved in version 1.1.
 
 ## I created a record with the same name as an existing one, and the old one is gone!
 
-[An issue has been opened on GitHub](https://github.com/graphlab-fr/cosma/issues/5). This will be fixed in the upcoming update.
+This bug was reported to us after the release of version 1.0. [Download version 1.1](https://github.com/graphlab-fr/cosma/releases/latest), which solves the problem.
 
 Don't forget to backup your data, either by making copies at regular intervals or by using a version control system such as [git](https://git-scm.com).
 
