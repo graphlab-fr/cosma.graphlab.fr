@@ -2,7 +2,7 @@
 title: Cosma CLI v1.0
 date: 2022-01-30
 draft: false
-github: "https://github.com/graphlab-fr/cosma-cli/releases/tag/1.0"
+github: "https://github.com/graphlab-fr/cosma-cli/releases/tag/1.0.0"
 zenodo: "https://zenodo.org/record/5920616"
 ---
 
