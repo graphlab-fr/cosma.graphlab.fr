@@ -1,7 +1,14 @@
+- tag: "1.1"
+  date: 2022-01-30
+  github: "https://github.com/graphlab-fr/cosma/releases/tag/1.1"
+  downloadMac: "https://github.com/graphlab-fr/cosma/releases/download/1.1/Cosma.app.zip"
+  downloadWin: "https://github.com/graphlab-fr/cosma/releases/download/1.1/Cosma-win32-x64.zip"
+  zenodo: "https://zenodo.org/record/5920616"
+  notes: cosma-1-1
 - tag: "1.0"
   date: 2021-09-03
   github: "https://github.com/graphlab-fr/cosma/releases/tag/1.0"
   downloadMac: "https://github.com/graphlab-fr/cosma/releases/download/1.0/Cosma.app.zip"
   downloadWin: "https://github.com/graphlab-fr/cosma/releases/download/1.0/Cosma-win32-x64.zip"
-  zenodo: "https://zenodo.org/record/5412315#.YTIGBS0isUF"
+  zenodo: "https://zenodo.org/record/5920616"
   notes: cosma-1-0

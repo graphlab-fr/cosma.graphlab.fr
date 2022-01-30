@@ -1,12 +1,40 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset=utf-8>
+	<meta charset=utf-8 />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 	<title>Cosma — User manual</title>
 
-	<meta name="description" content="">
-	<meta name="author" content=Arthur Perret,Guillaume Brioudes">
-	<meta name="last_edit" content="Tue, 18 Jan 2022 15:55:29 GMT">
+	<meta name="description" content="Manual allowing to understand all the functionalities of the Cosma software Cosma software, for its graphic and command line interfaces. interfaces." />
+	<meta name="author" content="Arthur Perret,Guillaume Brioudes" />
+	<meta name="copyright" content="GPL-3.0-or-later"/>
+	<meta name="last_edit" content="2022-01-30" />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Cosma — User manual" />
+	<meta property="og:description" content="Manual allowing to understand all the functionalities of the Cosma software Cosma software, for its graphic and command line interfaces. interfaces." />
+	<meta property="og:site_name" content="cosma-docs" />
+
+	<meta itemprop="name" content="cosma-docs" />
+	<meta itemprop="description" content="Manual allowing to understand all the functionalities of the Cosma software Cosma software, for its graphic and command line interfaces. interfaces." />
+
+	<link rel="schema.DC" href="https://purl.org/dc/elements/1.1/" />
+	<link rel="schema.DCTERMS" href="https://purl.org/dc/terms/" />  
+
+	<meta property="DC.title" content="Cosma — User manual" />
+	<meta property="DC.contributor" content="Arthur Perret,Guillaume Brioudes" />
+	<meta property="DC.date" content="2022-01-30" />
+	<meta property="DC.language" content="en" />
+	<meta property="DC.description" lang="en" content="Manual allowing to understand all the functionalities of the Cosma software Cosma software, for its graphic and command line interfaces. interfaces." />
+	<meta property="DC.rights" content="GPL-3.0-or-later" />
+
+	<meta name="twitter:site" content="@arthurperret" />
+	<meta name="twitter:creator" content="@arthurperret" />
+	<meta name="twitter:title" content="Cosma — User manual" />
+	<meta name="twitter:description" content="Manual allowing to understand all the functionalities of the Cosma software Cosma software, for its graphic and command line interfaces. interfaces." />
+	<meta name="twitter:card"  content="summary" />
+	<meta name="twitter:image" content="https://cosma.graphlab.fr/img/cosma-icone.png" />
 
 	<style>
         :root {
@@ -276,9 +304,9 @@ footer {
 <nav class="nav-lang">
 	<ul>
 		
-		<li><a href="../cosma-manuel-d-utilisation.html">🇫🇷 FR</a></li>
-		
 		<li><a href="../cosma-user-manual.html">🇬🇧 EN</a></li>
+		
+		<li><a href="../cosma-manuel-d-utilisation.html">🇫🇷 FR</a></li>
 		
 		<li><a href="https://cosma.graphlab.fr">cosma.graphlab.fr ↦</a></li>
 	</ul>
@@ -287,14 +315,14 @@ footer {
     <main>
         
         
-        <p>Last update : January 18, 2022</p>
+        <p>Last update : January 30, 2022</p>
         
 
         <h2 id="about-cosma" tabindex="-1">About Cosma</h2>
 <p>Cosma is a document graph visualization tool. It renders interlinked plain text files as an interactive network in a web interface. It can be used to explore and share collections of various sizes, from a few dozen up to several thousands of documents.</p>
 <p>Cosma was developed initially as part of the <a href="https://hyperotlet.hypotheses.org/">HyperOtlet</a> research programme (grant number ANR-17-CE38-0011).</p>
 <h3 id="a-unique-tool" tabindex="-1">A unique tool</h3>
-<p>Among tools for thought, Cosma stands out on <strong>three key aspects</strong>:</p>
+<p>Among tools for thought, Cosma stands out with <strong>three key aspects</strong>:</p>
 <p>First, <strong>Cosma is not a note-taking app</strong>. It is designed to work in conjunction with these programs. This is inspired by software such as <a href="https://www.deckset.com">Deckset</a>, which applies this principle to presentations (write in your favorite editor, visualize elsewhere).</p>
 <p>Secondly, <strong>Cosma is based on interoperable, open and standardised writing conventions</strong>. This allows you to use other tools that share these standards (such as <a href="https://www.zettlr.com">Zettlr</a>) and to switch tools more freely. Overall, it increases the durability of your data.</p>
 <p>Finally, <strong>Cosma allows you to simultaneously share your data and the tools to explore it</strong>. What does this mean? Most visualization tools are packed with great functionality, but they only export static images, or structured data that requires software to make any use of. Cosma reverses this logic: what you see in the main window is actually a standalone HTML file, meaning you can share it and thus transmit not just your data, but a fully interactive representation of it.</p>
@@ -310,7 +338,7 @@ footer {
 <p>Currently, there is no dedicated funding to this project. But Cosma is already in use in a few research projects and graduate programs. This encourages us to keep developing it, and to work on securing more funding in the coming years.</p>
 <p>Cosma is archived on Zenodo and can be referenced in scientific literature:</p>
 <blockquote>
-<p>Arthur Perret, Guillaume Brioudes, Clément Borel, &amp; Olivier Le Deuff. (2021). Cosma (1.0). Zenodo. <a href="https://doi.org/10.5281/zenodo.5412315">https://doi.org/10.5281/zenodo.5412315</a></p>
+<p>Arthur Perret, Guillaume Brioudes, Clément Borel, &amp; Olivier Le Deuff. (2021). Cosma (1.0). Zenodo. <a href="https://doi.org/10.5281/zenodo.5920616">https://doi.org/10.5281/zenodo.5920616</a></p>
 </blockquote>
 <h2 id="installing" tabindex="-1">Installing</h2>
 <p>Cosma is available in two versions: a graphical user interface (GUI) application and a command line interface (CLI) application. Information about the CLI version is detailed <a href="#cosma-cli">in the dedicated section</a>.</p>
@@ -391,7 +419,7 @@ tags:
 <dd>Record type. Only one type can be assigned to a record. If the <code>type</code> field is not specified or its value does not match one of the types declared in the configuration, Cosma will interpret the type of the record as <code>undefined</code>.</dd>
 <dt><code>tags</code></dt>
 <dd>Optional.</dd>
-<dd>Keywords assigned to the record. The value must be a list. A record can have as many keywords as you wish.</dd>
+<dd>Keywords assigned to the record. The value must be a list. A record can have as many keywords as you wish. You can use <code>keywords</code> instead of <code>tags</code>, for compatibility with Pandoc. If a record has a <code>tags</code> field and a <code>keywords</code> field, only the keywords declared in the <code>tags</code> field are interpreted by Cosma.</dd>
 </dl>
 <p>In accordance with the YAML specification, the list of keywords can be written in <em>block</em> mode:</p>
 <pre><code class="language-yaml">tags:
@@ -724,7 +752,10 @@ To find out which selectors to use for which declaration, you can:</p>
 <p>The <code>undefined</code> record and link types are required for the application to work, do not remove them.</p>
 </div>
 <h3 id="commands" tabindex="-1">Commands</h3>
-<p>Cosma CLI commands have a long form and a short form. They have the same behaviour. The short form is there to save time should you wish it.</p>
+<p>You can display the list of commands with the following command. You can also display the options available for a specific command.</p>
+<pre><code>cosma --help
+cosma modelize --help
+</code></pre>
 <h4 id="generate-a-configuration-file" tabindex="-1">Generate a configuration file</h4>
 <pre><code>cosma config
 cosma c
@@ -751,7 +782,7 @@ cosma a &lt;titre&gt; &lt;type&gt; &lt;keywords&gt;
 <dd>A comma-separated list of keywords (no spaces). Example: <code>keyword1,keyword2</code>.</dd>
 </dl>
 <h4 id="create-records-(batch-mode)" tabindex="-1">Create records (batch mode)</h4>
-<pre><code>cosma batchrecord &lt;path&gt;
+<pre><code>cosma batch &lt;path&gt;
 cosma b &lt;path&gt;
 </code></pre>
 <p>This command allows you to create multiple records in one command.</p>
@@ -781,6 +812,9 @@ cosma b &lt;path&gt;
 <pre><code>cosma modelize
 cosma m
 </code></pre>
+<p>The following command allows you to generate a Cosmoscope without having entered a source directory. This is an example export containing explanations on how to use the software.</p>
+<pre><code>cosma modelize --sample
+</code></pre>
 <h3 id="options" tabindex="-1">Options</h3>
 <p>Various options can be added to the <code>modelize</code> command.</p>
 <p>Like commands, options have a long and a short form, which are functionally identical, the short form is simply there to save time if needed.</p>
@@ -789,46 +823,17 @@ cosma m
 <pre><code>cosma modelize --citeproc
 cosma m -c
 </code></pre>
-<h4 id="create-a-cosmoscope-to-share-(publish-mode)" tabindex="-1">Create a cosmoscope to share (publish mode)</h4>
-<pre><code>cosma modelize --publish
-cosma m -p
-</code></pre>
-<p>This adds metadata set in the configuration to the “About” panel of the cosmoscope, and corresponding <code>meta</code> tags in the source code. This is functionally similar to exporting via File › Share in the GUI version of Cosma.</p>
 <h4 id="include-a-custom-css-stylesheet" tabindex="-1">Include a custom CSS stylesheet</h4>
-<pre><code>cosma modelize --load_css_custom
+<pre><code>cosma modelize --custom_css
 cosma m -css
 </code></pre>
 <p>This option applies the custom CSS stylesheet specified in the configuration.</p>
 <p>::: tip<br>
 You can combine the different export options as follows:</p>
-<pre><code>cosma modelize --publish --citeproc --load_css_custom
-cosma m -p -c -css
+<pre><code>cosma modelize --citeproc --custom_css
+cosma m -c -css
 </code></pre>
 <p>:::</p>
-<h4 id="specify-a-records-directory-path" tabindex="-1">Specify a records directory path</h4>
-<pre><code>cosma modelize --files_origin:&quot;D:\fiches&quot;
-cosma m -f:&quot;D:\fiches&quot;
-</code></pre>
-<h4 id="specify-a-cosmoscope-export-path" tabindex="-1">Specify a cosmoscope export path</h4>
-<pre><code>cosma modelize --export_target:&quot;C:\desktop&quot;
-cosma m -e:&quot;C:\desktop&quot;
-</code></pre>
-<h4 id="specify-a-language" tabindex="-1">Specify a language</h4>
-<pre><code>cosma modelize --lang:&quot;en&quot;
-cosma m -l:&quot;en&quot;
-</code></pre>
-<h4 id="specify-if-the-cosmoscope-should-be-saved-in-the-history" tabindex="-1">Specify if the cosmoscope should be saved in the history</h4>
-<pre><code>cosma modelize --history:false
-cosma m -h:false
-</code></pre>
-<h4 id="rewrite-the-configuration-with-the-options-used" tabindex="-1">Rewrite the configuration with the options used</h4>
-<pre><code>cosma modelize --save
-cosma m -s
-</code></pre>
-<p>This option rewrites the values of the various parameters in the configuration with the values used in the command.</p>
-<p>Example :</p>
-<pre><code>cosma m -l:&quot;en&quot; -s
-</code></pre>
 <h2 id="credits" tabindex="-1">Credits</h2>
 <h3 id="team" tabindex="-1">Team</h3>
 <ul>

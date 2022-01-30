@@ -6,13 +6,16 @@
 				<a class="btn btn-secondary" role="button" href="../docs">Documentation</a></button>
 			</div>
 			<div id="availability">
-				<p>{{ i18n "availability" }}</p>
+				<p>{{ i18n "availability" | markdownify }}</p>
 			</div>
 		</div>
 		<article>
 		{{ .Content }}
 		<h2>{{ i18n "releaseList" }}</h2>
+		<h3>GUI</h3>
 		{{ partial "versions-table.html" . }}
+		<h3>CLI</h3>
+		{{ partial "versions-cli-table.html" . }}
 		</article>
 	</main>
 {{ partial "footer.html" . }}

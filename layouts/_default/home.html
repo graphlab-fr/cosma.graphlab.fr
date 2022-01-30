@@ -9,7 +9,7 @@
 		  <a class="btn btn-secondary" role="button" href="/demo.html">{{ i18n "demo" }}</a></button>
 		</div>
 		<div id="availability">
-			<p>{{ i18n "availability" }}</p>
+			<p>{{ i18n "availability" | markdownify }}</p>
 		</div>
 	</div>
 </header>
@@ -52,7 +52,7 @@
 		  <a class="btn btn-secondary" role="button" href="docs">Documentation</a></button>
 		</div>
 		<div id="availability">
-			<p>{{ i18n "availability" }}</p>
+			<p>{{ i18n "availability" | markdownify }}</p>
 		</div>
 	</section>
 	{{ .Content }}

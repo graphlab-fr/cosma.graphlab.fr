@@ -1,12 +1,40 @@
 <!doctype html>
 <html lang="fr">
 <head>
-	<meta charset=utf-8>
+	<meta charset=utf-8 />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 	<title>Cosma — Manuel d’utilisation</title>
 
-	<meta name="description" content="">
-	<meta name="author" content=Arthur Perret,Guillaume Brioudes">
-	<meta name="last_edit" content="Tue, 18 Jan 2022 15:54:19 GMT">
+	<meta name="description" content="Manuel permettant de comprendre toutes les fonctionnalités du logiciel Cosma, pour ses interfaces graphique et en ligne de commande." />
+	<meta name="author" content="Arthur Perret,Guillaume Brioudes" />
+	<meta name="copyright" content="GPL-3.0-or-later"/>
+	<meta name="last_edit" content="2022-01-30" />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Cosma — Manuel d’utilisation" />
+	<meta property="og:description" content="Manuel permettant de comprendre toutes les fonctionnalités du logiciel Cosma, pour ses interfaces graphique et en ligne de commande." />
+	<meta property="og:site_name" content="cosma-docs" />
+
+	<meta itemprop="name" content="cosma-docs" />
+	<meta itemprop="description" content="Manuel permettant de comprendre toutes les fonctionnalités du logiciel Cosma, pour ses interfaces graphique et en ligne de commande." />
+
+	<link rel="schema.DC" href="https://purl.org/dc/elements/1.1/" />
+	<link rel="schema.DCTERMS" href="https://purl.org/dc/terms/" />  
+
+	<meta property="DC.title" content="Cosma — Manuel d’utilisation" />
+	<meta property="DC.contributor" content="Arthur Perret,Guillaume Brioudes" />
+	<meta property="DC.date" content="2022-01-30" />
+	<meta property="DC.language" content="fr" />
+	<meta property="DC.description" lang="fr" content="Manuel permettant de comprendre toutes les fonctionnalités du logiciel Cosma, pour ses interfaces graphique et en ligne de commande." />
+	<meta property="DC.rights" content="GPL-3.0-or-later" />
+
+	<meta name="twitter:site" content="@arthurperret" />
+	<meta name="twitter:creator" content="@arthurperret" />
+	<meta name="twitter:title" content="Cosma — Manuel d’utilisation" />
+	<meta name="twitter:description" content="Manuel permettant de comprendre toutes les fonctionnalités du logiciel Cosma, pour ses interfaces graphique et en ligne de commande." />
+	<meta name="twitter:card"  content="summary" />
+	<meta name="twitter:image" content="https://cosma.graphlab.fr/img/cosma-icone.png" />
 
 	<style>
         :root {
@@ -276,9 +304,9 @@ footer {
 <nav class="nav-lang">
 	<ul>
 		
-		<li><a href="../cosma-manuel-d-utilisation.html">🇫🇷 FR</a></li>
-		
 		<li><a href="../cosma-user-manual.html">🇬🇧 EN</a></li>
+		
+		<li><a href="../cosma-manuel-d-utilisation.html">🇫🇷 FR</a></li>
 		
 		<li><a href="https://cosma.graphlab.fr">cosma.graphlab.fr ↦</a></li>
 	</ul>
@@ -286,7 +314,7 @@ footer {
 
     <main>
         
-        <p>Dernière mise à jour : 18 janvier 2022</p>
+        <p>Dernière mise à jour : 30 janvier 2022</p>
         
         
 
@@ -310,11 +338,11 @@ footer {
 <p>Néanmoins, des efforts importants ont été entrepris dès le prototype pour concevoir soigneusement les différents aspects de l'outil, qu'il s'agisse de la visualisation de données ou de l'interaction humain-machine, notamment grâce à la participation de chercheurs spécialistes de ces domaines. Et Cosma est au cœur d'une dynamique de recherche que nous espérons inscrire dans la durée.</p>
 <p>La version actuelle de Cosma peut être citée dans une bibliographie de la manière suivante :</p>
 <blockquote>
-<p>Arthur Perret, Guillaume Brioudes, Clément Borel, &amp; Olivier Le Deuff. (2021). Cosma (1.0). Zenodo. <a href="https://doi.org/10.5281/zenodo.5412315">https://doi.org/10.5281/zenodo.5412315</a></p>
+<p>Arthur Perret, Guillaume Brioudes, Clément Borel, &amp; Olivier Le Deuff. (2021). Cosma (1.0). Zenodo. <a href="https://doi.org/10.5281/zenodo.5920616">https://doi.org/10.5281/zenodo.5920616</a></p>
 </blockquote>
 <h2 id="installation" tabindex="-1">Installation</h2>
 <p>Cosma est disponible en deux versions : une application à interface graphique (<em>graphical user interface</em>, GUI) et une application exécutable en ligne de commande (<em>command line interface</em>, CLI). Les informations concernant la version CLI sont détaillées <a href="#cosma-cli">dans une section dédiée</a>.</p>
-<p>La version GUI de Cosma est disponible pour macOS et Windows. <a href="https://github.com/graphlab-fr/cosma/releases/latest">Visitez la page Releases pour obtenir la dernière version du logiciel.</a> L'application n'est pas signée avec un certificat de sécurité, vous devez disposer des privilèges administrateurs sur votre session pour pouvoir l'exécuter.</p>
+<p>La version GUI de Cosma est disponible pour macOS et Windows. <a href="https://github.com/graphlab-fr/cosma/releases/latest">Visitez la page Releases pour obtenir la dernière version du logiciel</a>. L'application n'est pas signée avec un certificat de sécurité, vous devez disposer des privilèges administrateurs sur votre session pour pouvoir l'exécuter.</p>
 <dl>
 <dt>Sur macOS</dt>
 <dd>Téléchargez puis décompressez le fichier <code>Cosma.app.zip</code> et placez le le fichier <code>Cosma.app</code> dans <code>~/Applications</code>. Au premier lancement, faites clic droit › Ouvrir sur l'application pour l'exécuter.</dd>
@@ -388,8 +416,8 @@ tags:
 <dd>Identifiant unique de la fiche. Par défaut, Cosma génère des identifiants à 14 chiffres par horodatage (année, mois, jour, heures, minutes et secondes) sur le modèle de certains logiciels de prise de notes type Zettelkasten comme <a href="https://zettelkasten.de/the-archive/">The Archive</a> ou <a href="https://www.zettlr.com">Zettlr</a>.</dd>
 <dt><code>type</code></dt>
 <dd>Type de la fiche. Facultatif. Un seul type peut être assigné à une fiche. Si le champ <code>type</code> n'est pas spécifié ou bien que sa valeur ne correspond à l'un des types enregistrés dans la configuration, Cosma interprètera le type de la fiche comme non défini (<code>undefined</code>).</dd>
-<dt><code>tags</code></dt>
-<dd>Mots-clés de la fiche. Facultatif. La valeur doit être une liste. Une fiche peut disposer d'autant de mot-clés que vous souhaitez.</dd>
+<dt><code>tags</code> (ou <code>keywords</code>)</dt>
+<dd>Mots-clés de la fiche. Facultatif. La valeur doit être une liste. Une fiche peut disposer d'autant de mot-clés que vous souhaitez. Vous pouvez utiliser <code>keywords</code> au lieu de <code>tags</code>, dans une logique de compatibilité avec Pandoc. Si une fiche comporte un champ <code>tags</code> et un champ <code>keywords</code>, seuls les mots-clés déclarés dans le champ <code>tags</code> sont interprétés par Cosma.</dd>
 </dl>
 <p>Conformément à la spécification YAML, la liste des mots-clés peut être inscrite en mode <em>block</em> :</p>
 <pre><code class="language-yaml">tags:
@@ -721,7 +749,10 @@ GOODY, Jack, 1979. La Raison graphique : la domestication de la pensée sauvag
 <p>Les types de fiches et de liens « undefined » sont requis pour le fonctionnement de l'application, ne les supprimez pas.</p>
 </div>
 <h3 id="commandes" tabindex="-1">Commandes</h3>
-<p>La plupart des commandes de Cosma CLI existent en deux versions : une version longue et une version courte. Les deux versions ont le même comportement. La version courte sert simplement à gagner du temps.</p>
+<p>Vous pouvez afficher la liste des commandes avec la commande suivante. Vous pouvez également afficher les options disponibles pour une commande précise.</p>
+<pre><code>cosma --help
+cosma modelize --help
+</code></pre>
 <h4 id="generer-un-fichier-de-configuration" tabindex="-1">Générer un fichier de configuration</h4>
 <pre><code>cosma config
 cosma c
@@ -749,7 +780,7 @@ cosma a &lt;titre&gt; &lt;type&gt; &lt;mots-clés&gt;
 <dd>Une liste de mots-clés séparés par des virgules (sans espaces). Exemple : <code>mot-clé1,mot-clé2</code>.</dd>
 </dl>
 <h4 id="creer-un-lot-de-fiches" tabindex="-1">Créer un lot de fiches</h4>
-<pre><code>cosma batchrecord &lt;path&gt;
+<pre><code>cosma batch &lt;path&gt;
 cosma b &lt;path&gt;
 </code></pre>
 <p>Cette commande permet de créer plusieurs fiches d'un coup.</p>
@@ -778,6 +809,9 @@ cosma b &lt;path&gt;
 <pre><code>cosma modelize
 cosma m
 </code></pre>
+<p>La commande suivante vous permet de générer un Cosmoscope sans avoir entré de répertoire de fiches source. Il s'agit d'un export d'exemple contenant des explications sur l'utilisation du logiciel.</p>
+<pre><code>cosma modelize --sample
+</code></pre>
 <h3 id="options" tabindex="-1">Options</h3>
 <p>Différentes options peuvent être ajoutées à la commande <code>modelize</code>.</p>
 <p>Comme les commandes, les options existent en version longue et version courte, qui sont fonctionnellement identiques, la version courte servant simplement à gagner du temps en raccourcissant la commande.</p>
@@ -786,43 +820,16 @@ cosma m
 <pre><code>cosma modelize --citeproc
 cosma m -c
 </code></pre>
-<h4 id="creer-un-cosmoscope-a-partager-(mode-publication)" tabindex="-1">Créer un cosmoscope à partager (mode publication)</h4>
-<pre><code>cosma modelize --publish
-cosma m -p
-</code></pre>
 <h4 id="inclure-une-feuille-de-style-css-personnalisee" tabindex="-1">Inclure une feuille de style CSS personnalisée</h4>
-<pre><code>cosma modelize --load_css_custom
+<pre><code>cosma modelize --custom_css
 cosma m -css
 </code></pre>
 <div class="astuce">
 <p>Vous pouvez combiner les différentes options d'export comme suit :</p>
-<pre><code>cosma modelize --publish --citeproc --load_css_custom
-cosma m -p -c -css
+<pre><code>cosma modelize --citeproc --custom_css
+cosma m -c -css
 </code></pre>
 </div>
-<h4 id="reecrire-le-chemin-du-repertoire-des-fiches" tabindex="-1">Réécrire le chemin du répertoire des fiches</h4>
-<pre><code>cosma modelize --files_origin:&quot;D:\fiches&quot;
-cosma m -f:&quot;D:\fiches&quot;
-</code></pre>
-<h4 id="reecrire-le-chemin-dexport-du-cosmoscope" tabindex="-1">Réécrire le chemin d'export du cosmoscope</h4>
-<pre><code>cosma modelize --export_target:&quot;C:\desktop&quot;
-cosma m -e:&quot;C:\desktop&quot;
-</code></pre>
-<h4 id="reecrire-la-langue-utilisee" tabindex="-1">Réécrire la langue utilisée</h4>
-<pre><code>cosma modelize --lang:&quot;en&quot;
-cosma m -l:&quot;en&quot;
-</code></pre>
-<h4 id="reecrire-lenregistrement-de-lhistorique" tabindex="-1">Réécrire l'enregistrement de l'historique</h4>
-<pre><code>cosma modelize --history:false
-cosma m -h:false
-</code></pre>
-<h4 id="enregistrer-dans-la-configuration-les-parametres-reecrits" tabindex="-1">Enregistrer dans la configuration les paramètres réécrits</h4>
-<pre><code>cosma modelize --save
-cosma m -s
-</code></pre>
-<p>Exemple :</p>
-<pre><code>cosma m -l:&quot;en&quot; -s
-</code></pre>
 <h2 id="credits" tabindex="-1">Crédits</h2>
 <h3 id="equipe" tabindex="-1">Équipe</h3>
 <ul>
