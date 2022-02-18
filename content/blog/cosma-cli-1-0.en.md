@@ -12,7 +12,7 @@ Cosma is now available again in its command-line interface (CLI) version. This C
 npm i @graphlab-en/cosma -g
 ```
 
-The documentation has been updated: <https://cosma.graphlab.fr/en/docs/manuel-utilisation/#cosma-cli>
+The documentation has been updated: <https://cosma.graphlab.fr/en/docs/user-manual/#cosma-cli>
 
 The following changes have been made since the alpha:
 
