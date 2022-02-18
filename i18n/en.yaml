@@ -6,7 +6,7 @@ availability:
   other: |
     Available for macOS and Windows.
     
-    On Linux? Download [the command line version](https://cosma.graphlab.fr/en/docs/manuel-utilisation/#cosma-cli).
+    On Linux? Download [the command line version](https://cosma.graphlab.fr/en/docs/user-manual/#cosma-cli).
 pitch1:
   other: "Take notes with your favorite Markdown editor, and explore them with Cosma."
 pitch2:
