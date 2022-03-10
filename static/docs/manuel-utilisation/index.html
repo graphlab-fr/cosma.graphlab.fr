@@ -9,7 +9,7 @@
 	<meta name="description" content="Manuel permettant de comprendre toutes les fonctionnalités du logiciel Cosma, pour ses interfaces graphique et en ligne de commande." />
 	<meta name="author" content="Arthur Perret,Guillaume Brioudes" />
 	<meta name="copyright" content="GPL-3.0-or-later"/>
-	<meta name="last_edit" content="2022-02-09" />
+	<meta name="last_edit" content="2022-02-24" />
 
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Cosma — Manuel d’utilisation" />
@@ -24,7 +24,7 @@
 
 	<meta property="DC.title" content="Cosma — Manuel d’utilisation" />
 	<meta property="DC.contributor" content="Arthur Perret,Guillaume Brioudes" />
-	<meta property="DC.date" content="2022-02-09" />
+	<meta property="DC.date" content="2022-02-24" />
 	<meta property="DC.language" content="fr" />
 	<meta property="DC.description" lang="fr" content="Manuel permettant de comprendre toutes les fonctionnalités du logiciel Cosma, pour ses interfaces graphique et en ligne de commande." />
 	<meta property="DC.rights" content="GPL-3.0-or-later" />
@@ -304,9 +304,9 @@ footer {
 <nav class="nav-lang">
 	<ul>
 		
-		<li><a href="../cosma-manuel-d-utilisation.html">🇫🇷 FR</a></li>
+		<li><a href="">🇫🇷 FR</a></li>
 		
-		<li><a href="../cosma-user-manual.html">🇬🇧 EN</a></li>
+		<li><a href="../../en/docs/user-manual/index.html">🇬🇧 EN</a></li>
 		
 		<li><a href="https://cosma.graphlab.fr">cosma.graphlab.fr ↦</a></li>
 	</ul>
@@ -314,7 +314,7 @@ footer {
 
     <main>
         
-        <p>Dernière mise à jour : 9 février 2022</p>
+        <p>Dernière mise à jour : 24 février 2022</p>
         
         
 
@@ -440,7 +440,11 @@ tags:
 <p>Le <a href="https://www.arthurperret.fr/tutomd/">tutoriel CommonMark traduit en français</a> permet d'apprendre les bases de Markdown en 10 minutes.</p>
 <p>Si vous souhaitez découvrir l'utilisation conjointe de Markdown et Pandoc, vous pouvez consulter le cours en ligne <a href="https://infolit.be/md/">Markdown et vous</a>.</p>
 </div>
-<p>Cosma génère un rendu des fichiers Markdown en HTML. Par conséquent, les fichiers Markdown peuvent également inclure du code HTML, ainsi que des images vectorielles en SVG.</p>
+<p>Cosma génère un rendu des fichiers Markdown en HTML. Par conséquent, les fichiers Markdown peuvent également inclure du code HTML, ainsi que des images vectorielles en SVG. Cosma supporte également l'<a href="https://www.npmjs.com/package/markdown-it-attrs">ajout d'attributs via des accolades</a>, comme présenté ci-dessous.</p>
+<pre><code class="language-markdown">&lt;div class=&quot;red&quot;&gt;Ce paragraphe sera en rouge&lt;/div&gt;
+
+Ce paragraphe sera en rouge{.red}
+</code></pre>
 <p>Des images <em>bitmap</em> peuvent être incluses dans le rendu via la syntaxe Markdown. Exemple :</p>
 <pre><code class="language-markdown">![Texte alternatif](image.jpg)
 </code></pre>
@@ -821,12 +825,12 @@ cosma m
 cosma m -c
 </code></pre>
 <h4 id="inclure-une-feuille-de-style-css-personnalisee" tabindex="-1">Inclure une feuille de style CSS personnalisée</h4>
-<pre><code>cosma modelize --custom_css
+<pre><code>cosma modelize --custom-css
 cosma m -css
 </code></pre>
 <div class="astuce">
 <p>Vous pouvez combiner les différentes options d'export comme suit :</p>
-<pre><code>cosma modelize --citeproc --custom_css
+<pre><code>cosma modelize --citeproc --custom-css
 cosma m -c -css
 </code></pre>
 </div>
@@ -851,12 +855,66 @@ cosma m -c -css
 <li><a href="https://fusejs.io/">Fuse.js</a> v6.4.6 (Apache License 2.0) : Moteur de recherche</li>
 <li><a href="https://momentjs.com/">Moment</a> v2.29.1 (MIT License) : Gestion de l'horodatage</li>
 </ul>
+<h2 id="versions" tabindex="-1">Versions</h2>
+<h3 id="gui" tabindex="-1">GUI</h3>
+<h4 id="gui-12" tabindex="-1">GUI 1.2</h4>
+<p>Cette mise à jour ajoute quelques fonctionnalités de lecture et d'écriture des fiches :</p>
+<ul>
+<li>Le répertoire de fiches est désormais lu de manière récursive. Ceci permet de prendre en compte toutes les fiches, quel que soit leur emplacement dans une éventuelle structure de sous-répertoires.</li>
+<li>Les éléments HTML insérés dans le corps des fiches sont désormais reconnus et interprétés.</li>
+</ul>
+<p>Des bugs ont également été résolus :</p>
+<ul>
+<li>Les infobulles de contexte ne sont plus vides lorsque le lien est qualifié (ticket #15).</li>
+<li>Le fonctionnement des vues enregistrées est rétabli (ticket #16).</li>
+<li>Le réglage de l'attraction verticale et horizontale n'est plus inversé (ticket #18).</li>
+</ul>
+<h4 id="gui-11" tabindex="-1">GUI 1.1</h4>
+<p>Cette mise à jour ajoute la possibilité de changer de langue (anglais ou français), résout des bugs et améliore l'interface, notamment au niveau de la configuration.</p>
+<ul>
+<li>L'application est traduite en anglais, il est possible de changer de langue dans Préférences.</li>
+<li>Créer une fiche sans spécifier de répertoire ne cause plus d'erreur mais renvoie un message informatif (ticket #6).</li>
+<li>Créer une fiche avec un titre déjà utilisé n'écrase plus silencieusement la fiche existante mais demande une confirmation (ticket #5).</li>
+<li>Il est possible d'utiliser <code>keywords</code> au lieu de <code>tags</code> dans l'en-tête YAML des fiches (ticket #3).</li>
+<li>Il n'est plus nécessaire de déclarer un type de fiche dans la configuration avant de pouvoir l'assigner à une nouvelle fiche.</li>
+<li>La fenêtre Préférences a été réorganisée en sections.</li>
+<li>La lisibilité des rapports d'erreur a été améliorée.</li>
+<li>L'option <code>minify</code> permettant de réduire la taille des exports, non fonctionnelle en v1.0, a été supprimée.</li>
+<li>L'application est distribuée avec sa documentation, accessible via Aide › Manuel ou bien en cliquant sur le bouton Aide en bas à gauche dans le cosmoscope.</li>
+<li>Le code source a été réorganisé pour permettre le développement simultané d'une version exécutable en ligne de commande (<a href="https://github.com/graphlab-fr/cosma-cli">cosma-cli</a>) à partir de la même base de code (<a href="https://github.com/graphlab-fr/cosma-core">cosma-core</a>).</li>
+<li>Mise à jour de Electron v13 vers v15.</li>
+</ul>
+<h4 id="gui-10" tabindex="-1">GUI 1.0</h4>
+<p>Version initiale.</p>
+<h4 id="cli-11" tabindex="-1">CLI 1.1</h4>
+<p>Cette mise à jour ajoute quelques fonctionnalités de lecture et d'écriture des fiches :</p>
+<ul>
+<li>Le répertoire de fiches est désormais lu de manière récursive. Ceci permet de prendre en compte toutes les fiches, quel que soit leur emplacement dans une éventuelle structure de sous-répertoires.</li>
+<li>Les éléments HTML insérés dans le corps des fiches sont désormais reconnus et interprétés.</li>
+</ul>
+<p>Des bugs ont également été résolus :</p>
+<ul>
+<li>Les infobulles de contexte ne sont plus vides lorsque le lien est qualifié (ticket #15).</li>
+<li>Le fonctionnement des vues enregistrées est rétabli (ticket #16).</li>
+<li>Le réglage de l'attraction verticale et horizontale n'est plus inversé (ticket #18).</li>
+<li>L'option <code>--custom-css</code> (ou <code>-css</code>) est de nouveau reconnue (ticket #19).</li>
+</ul>
+<h4 id="cli-10" tabindex="-1">CLI 1.0</h4>
+<p>Les modifications suivantes ont été faites depuis la version alpha :</p>
+<ul>
+<li>Le code source a été réorganisé pour permettre le développement simultané des versions GUI et CLI à partir de la même base de code (<a href="https://github.com/graphlab-fr/cosma-core">cosma-core</a>).</li>
+<li>Le fichier de configuration <code>config.yml</code> a été réorganisé. Le logiciel n'est pas rétrocompatible : si vous aviez un fichier <code>config.yml</code> datant de l'alpha, il sera nécessaire de re-créer un fichier <code>config.yml</code> conforme via la commande <code>cosma config</code> puis le modifier. L'emplacement du fichier dépend désormais du chemin d'installation de Cosma CLI. Sur Windows : <code>%USERPROFILE%\AppData\Roaming\npm\node_modules\@graphlab-fr\cosma\config.yml</code>. Sur macOS et Linux : <code>/usr/local/lib/node_modules/@graphlab-fr/cosma/config.yml</code>.</li>
+<li>Une nouvelle commande <code>cosma batch</code> permet de créer des fiches par lots. Elle est documentée <a href="https://cosma.graphlab.fr/docs/manuel-utilisation/#creer-un-lot-de-fiches">ici</a>.</li>
+<li>L'option <code>minify</code> permettant de réduire la taille des exports, non fonctionnelle en v1.0, a été supprimée.</li>
+</ul>
+<h4 id="cli-10-alpha" tabindex="-1">CLI 1.0-alpha</h4>
+<p>Prototype initial.</p>
 
     </main>
 
     <aside id="toc">
 	<nav class="toc" >
-        <ul><li><a href="#presentation">Présentation</a><ul><li><a href="#specificites-de-cosma">Spécificités de Cosma</a></li><li><a href="#un-degre-eleve-de-controle-utilisateur">Un degré élevé de contrôle utilisateur</a></li><li><a href="#un-logiciel-experimental">Un logiciel expérimental</a></li></ul></li><li><a href="#installation">Installation</a></li><li><a href="#creer-du-contenu">Créer du contenu</a><ul><li><a href="#creer-une-fiche">Créer une fiche</a></li><li><a href="#format-de-donnees">Format de données</a></li></ul></li><li><a href="#creer-un-cosmoscope">Créer un cosmoscope</a></li><li><a href="#citations-et-bibliographies">Citations et bibliographies</a><ul><li><a href="#fichiers-requis">Fichiers requis</a></li><li><a href="#syntaxe-de-citation">Syntaxe de citation</a></li><li><a href="#creer-un-cosmoscope-avec-citations">Créer un cosmoscope avec citations</a></li></ul></li><li><a href="#historique">Historique</a></li><li><a href="#utilisation-du-cosmoscope">Utilisation du cosmoscope</a><ul><li><a href="#description-generale-de-linterface">Description générale de l'interface</a></li><li><a href="#graphe">Graphe</a></li><li><a href="#fiches">Fiches</a></li><li><a href="#mode-focus">Mode focus</a></li><li><a href="#moteur-de-recherche">Moteur de recherche</a></li><li><a href="#filtrer-laffichage-par-types">Filtrer l'affichage par types</a></li><li><a href="#mots-cles">Mots-clés</a></li><li><a href="#index">Index</a></li><li><a href="#vues">Vues</a></li></ul></li><li><a href="#partager-un-cosmoscope">Partager un cosmoscope</a></li><li><a href="#configuration">Configuration</a><ul><li><a href="#general">Général</a></li><li><a href="#types-de-fiches">Types de fiches</a></li><li><a href="#types-de-liens">Types de liens</a></li><li><a href="#graphe-1">Graphe</a></li><li><a href="#metadonnees-1">Métadonnées</a></li><li><a href="#bibliographie">Bibliographie</a></li><li><a href="#vues-1">Vues</a></li><li><a href="#avance">Avancé</a></li></ul></li><li><a href="#cosma-cli">Cosma CLI</a><ul><li><a href="#installation-(cli)">Installation (CLI)</a></li><li><a href="#configuration-(cli)">Configuration (CLI)</a></li><li><a href="#commandes">Commandes</a></li><li><a href="#options">Options</a></li></ul></li><li><a href="#credits">Crédits</a><ul><li><a href="#equipe">Équipe</a></li><li><a href="#bibliotheques-utilisees">Bibliothèques utilisées</a></li></ul></li></ul>
+        <ul><li><a href="#presentation">Présentation</a><ul><li><a href="#specificites-de-cosma">Spécificités de Cosma</a></li><li><a href="#un-degre-eleve-de-controle-utilisateur">Un degré élevé de contrôle utilisateur</a></li><li><a href="#un-logiciel-experimental">Un logiciel expérimental</a></li></ul></li><li><a href="#installation">Installation</a></li><li><a href="#creer-du-contenu">Créer du contenu</a><ul><li><a href="#creer-une-fiche">Créer une fiche</a></li><li><a href="#format-de-donnees">Format de données</a></li></ul></li><li><a href="#creer-un-cosmoscope">Créer un cosmoscope</a></li><li><a href="#citations-et-bibliographies">Citations et bibliographies</a><ul><li><a href="#fichiers-requis">Fichiers requis</a></li><li><a href="#syntaxe-de-citation">Syntaxe de citation</a></li><li><a href="#creer-un-cosmoscope-avec-citations">Créer un cosmoscope avec citations</a></li></ul></li><li><a href="#historique">Historique</a></li><li><a href="#utilisation-du-cosmoscope">Utilisation du cosmoscope</a><ul><li><a href="#description-generale-de-linterface">Description générale de l'interface</a></li><li><a href="#graphe">Graphe</a></li><li><a href="#fiches">Fiches</a></li><li><a href="#mode-focus">Mode focus</a></li><li><a href="#moteur-de-recherche">Moteur de recherche</a></li><li><a href="#filtrer-laffichage-par-types">Filtrer l'affichage par types</a></li><li><a href="#mots-cles">Mots-clés</a></li><li><a href="#index">Index</a></li><li><a href="#vues">Vues</a></li></ul></li><li><a href="#partager-un-cosmoscope">Partager un cosmoscope</a></li><li><a href="#configuration">Configuration</a><ul><li><a href="#general">Général</a></li><li><a href="#types-de-fiches">Types de fiches</a></li><li><a href="#types-de-liens">Types de liens</a></li><li><a href="#graphe-1">Graphe</a></li><li><a href="#metadonnees-1">Métadonnées</a></li><li><a href="#bibliographie">Bibliographie</a></li><li><a href="#vues-1">Vues</a></li><li><a href="#avance">Avancé</a></li></ul></li><li><a href="#cosma-cli">Cosma CLI</a><ul><li><a href="#installation-(cli)">Installation (CLI)</a></li><li><a href="#configuration-(cli)">Configuration (CLI)</a></li><li><a href="#commandes">Commandes</a></li><li><a href="#options">Options</a></li></ul></li><li><a href="#credits">Crédits</a><ul><li><a href="#equipe">Équipe</a></li><li><a href="#bibliotheques-utilisees">Bibliothèques utilisées</a></li></ul></li><li><a href="#versions">Versions</a><ul><li><a href="#gui">GUI</a></li></ul></li></ul>
       </nav>
 </aside>
 

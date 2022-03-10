@@ -9,7 +9,7 @@
 	<meta name="description" content="Manual allowing to understand all the functionalities of the Cosma software Cosma software, for its graphic and command line interfaces. interfaces." />
 	<meta name="author" content="Arthur Perret,Guillaume Brioudes" />
 	<meta name="copyright" content="GPL-3.0-or-later"/>
-	<meta name="last_edit" content="2022-02-09" />
+	<meta name="last_edit" content="2022-03-10" />
 
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Cosma — User manual" />
@@ -24,7 +24,7 @@
 
 	<meta property="DC.title" content="Cosma — User manual" />
 	<meta property="DC.contributor" content="Arthur Perret,Guillaume Brioudes" />
-	<meta property="DC.date" content="2022-02-09" />
+	<meta property="DC.date" content="2022-03-10" />
 	<meta property="DC.language" content="en" />
 	<meta property="DC.description" lang="en" content="Manual allowing to understand all the functionalities of the Cosma software Cosma software, for its graphic and command line interfaces. interfaces." />
 	<meta property="DC.rights" content="GPL-3.0-or-later" />
@@ -304,9 +304,9 @@ footer {
 <nav class="nav-lang">
 	<ul>
 		
-		<li><a href="../cosma-manuel-d-utilisation.html">🇫🇷 FR</a></li>
+		<li><a href="">🇫🇷 FR</a></li>
 		
-		<li><a href="../cosma-user-manual.html">🇬🇧 EN</a></li>
+		<li><a href="../../en/docs/user-manual/index.html">🇬🇧 EN</a></li>
 		
 		<li><a href="https://cosma.graphlab.fr">cosma.graphlab.fr ↦</a></li>
 	</ul>
@@ -315,7 +315,7 @@ footer {
     <main>
         
         
-        <p>Last update : February 9, 2022</p>
+        <p>Last update : March 10, 2022</p>
         
 
         <h2 id="about-cosma" tabindex="-1">About Cosma</h2>
@@ -438,11 +438,15 @@ tags:
 </div>
 <h4 id="content" tabindex="-1">Content</h4>
 <p>Cosma interprets files as being written in <a href="https://spec.commonmark.org/0.30/">CommonMark</a>, a strictly defined version of Markdown, a popular lightweight markup language.</p>
-<p>::: tip<br>
-The <a href="https://commonmark.org/help/">CommonMark tutorial</a> teaches you the basics of Markdown in 10 minutes.</p>
-<p>If you want to learn how to use Markdown and Pandoc together, check out this online lesson: <a href="https://programminghistorian.org/en/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown">Sustainable Authorship in Plain Text using Pandoc and Markdown</a>.<br>
-:::</p>
-<p>Cosma renders Markdown files into HTML. Therefore, Markdown files can also include HTML code, as well as vector images in SVG.</p>
+<div class="tip">
+<p>The <a href="https://commonmark.org/help/">CommonMark tutorial</a> teaches you the basics of Markdown in 10 minutes.</p>
+<p>If you want to learn how to use Markdown and Pandoc together, check out this online lesson: <a href="https://programminghistorian.org/en/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown">Sustainable Authorship in Plain Text using Pandoc and Markdown</a>.</p>
+</div>
+<p>Cosma renders Markdown files into HTML. Therefore, Markdown files can also include HTML code, as well as vector images in SVG. Cosma also supports <a href="https://www.npmjs.com/package/markdown-it-attrs">adding attributes by brackets</a>, as shown below.</p>
+<pre><code class="language-markdown">&lt;div class=&quot;red&quot;&gt;This paragraph will be red&lt;/div&gt;
+
+This paragraph will be red{.red}
+</code></pre>
 <p>Bitmap images can also be rendered using the Markdown syntax. Example:</p>
 <pre><code class="language-markdown">![Alternative text](image.jpg)
 </code></pre>
@@ -460,18 +464,18 @@ The <a href="https://commonmark.org/help/">CommonMark tutorial</a> teaches you t
 
 Person D wrote against [[opponent:20201209111625]] person C.
 </code></pre>
-<p>::: tip<br>
-To improve the readability of records in the cosmoscope, Cosma includes an option to customise the text of the links. Under Preferences › Link symbol, enter one or more Unicode characters (letters, numbers, symbols…). Example: ☞. This string replaces the identifier and square brackets in the HTML rendering of the records.<br>
-:::</p>
+<div class="tip">
+<p>To improve the readability of records in the cosmoscope, Cosma includes an option to customise the text of the links. Under Preferences › Link symbol, enter one or more Unicode characters (letters, numbers, symbols…). Example: ☞. This string replaces the identifier and square brackets in the HTML rendering of the records.</p>
+</div>
 <h4 id="unique-identifiers" tabindex="-1">Unique identifiers</h4>
 <p>To be correctly interpreted by Cosma, each record must have a unique identifier. This identifier serves as a target for links between records.</p>
 <p>By default, Cosma generates 14-digit identifiers in the form of a timestamp (year, month, day, hours, minutes and seconds). This is inspired by Zettelkasten note-taking applications such as <a href="https://zettelkasten.de/the-archive/">The Archive</a> and <a href="https://www.zettlr.com">Zettlr</a>.</p>
 <div class="note">
 <p>Many interrelated note-taking applications use file names as targets for links between files. They maintain links automatically when file names are changed. By choosing to use unique identifiers instead, we have designed Cosma with a more traditional, stricter, WWW-like approach. We believe this is the easiest way to avoid <a href="https://en.wikipedia.org/wiki/Link_rot">link rot</a> in a sustainable way. Avoiding the reliance on automatic link maintenance is especially important if you wish to make your data less dependent on specific applications.</p>
 </div>
-<p>::: tip<br>
-Links based on unique identifiers have disadvantages, mainly in terms of user experience: they are cumbersome to write and to read, especially when the identifier is a long series of numbers. In Preferences › Link symbol, you can define a string of characters (as small and visually distinct as the manicle ☞), which Cosma will display instead of the identifiers as the text of links in the cosmoscope.<br>
-:::</p>
+<div class="tip">
+<p>Links based on unique identifiers have disadvantages, mainly in terms of user experience: they are cumbersome to write and to read, especially when the identifier is a long series of numbers. In Preferences › Link symbol, you can define a string of characters (as small and visually distinct as the manicle ☞), which Cosma will display instead of the identifiers as the text of links in the cosmoscope.</p>
+</div>
 <h2 id="creating-a-cosmoscope" tabindex="-1">Creating a cosmoscope</h2>
 <p>Click on New cosmoscope (<code>Cmd/Ctrl + R</code>) to generate a new cosmoscope. It will automatically appear in the main window.</p>
 <p>Cosma automatically creates an error report that describes any problems encountered during the generation of a cosmoscope. Click on File › History (<code>Cmd/Ctrl + H</code>) and select an entry to view the associated error report.</p>
@@ -505,9 +509,9 @@ Links based on unique identifiers have disadvantages, mainly in terms of user ex
   },
 ]
 </code></pre>
-<p>::: tip<br>
-You can use the bibliographic reference manager <a href="https://www.zotero.org/">Zotero</a> with the <a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a> extension to create unique citation keys for each reference and have an automatically updated export of your library that Cosma can use.<br>
-:::</p>
+<div class="tip">
+<p>You can use the bibliographic reference manager <a href="https://www.zotero.org/">Zotero</a> with the <a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a> extension to create unique citation keys for each reference and have an automatically updated export of your library that Cosma can use.</p>
+</div>
 <h3 id="citation-syntax" tabindex="-1">Citation syntax</h3>
 <p>To cite a reference in a record, include the citation key for that reference using the <a href="https://pandoc.org/MANUAL.html#citation-syntax">Pandoc citation syntax</a>.</p>
 <p>Example:</p>
@@ -561,23 +565,23 @@ GOODY, Jack, 1977. The Domestication of the Savage Mind.
 <p>Hovering over a node temporarily highlights it and its connections. Clicking on a node highlights it and its connections and opens the corresponding record.</p>
 <p>You can zoom in and out of the graph freely with a mouse or touchpad, by double-clicking on the graph background or with the dedicated buttons at the bottom left. Press <code>C</code> to zoom in on a selected node (whose record is open). The Reset button (shortcut: <code>R</code>) resets the zoom.</p>
 <p>Nodes are organised in space by a force simulation algorithm. A coloured bar at the top of the Menu indicates the state of the drawing process (active or finished). Click on this bar (shortcut: <code>Space</code>) to start an additional simulation cycle. This does not reset the graph but re-runs the algorithm on the existing graph, improving its layout.</p>
-<p>::: tip<br>
-If you have a particularly tangled graph, pressing <code>Space</code> a few times will progressively untangle it.<br>
-:::</p>
+<div class="tip">
+<p>If you have a particularly tangled graph, pressing <code>Space</code> a few times will progressively untangle it.</p>
+</div>
 <p>The graph is not fixed: nodes can be moved by click and drag. However, the nodes and links remain permanently subject to the simulation, so it is not possible to arrange them manually. Modifying the records may change the arrangement of the nodes in space.</p>
 <p>The way the graph is displayed can be changed temporarily via the controls under Graph settings in the Menu. To change the display permanently, change the default values of the corresponding settings in Preferences › Graph.</p>
-<p>::: tip<br>
-Change the strength and maximum distance between nodes to adapt the display to your screen resolution and size. Add vertical/horizontal attraction to tighten the graph and bring isolated nodes closer to the center.<br>
-:::</p>
+<div class="tip">
+<p>Change the strength and maximum distance between nodes to adapt the display to your screen resolution and size. Add vertical/horizontal attraction to tighten the graph and bring isolated nodes closer to the center.</p>
+</div>
 <p>The graph can be displayed on all types of screens but is not optimised for mobile devices: touch does not give access to certain interactions such as hovering, and small screens greatly limit the usefulness of the graph.</p>
 <h3 id="records" tabindex="-1">Records</h3>
 <p>Records can be opened by clicking on a node, an index entry, a search engine suggestion, or a link in the body or footer of a record. Opening a record displays its contents in the right side panel.</p>
 <p>In Cosma, you can go forward or backward with the Previous / Next buttons located in the left side panel. In a web browser, you can do the same via the browser's Previous / Next functions. Opening a record adds the corresponding identifier at the end of the URL. This allows you to copy direct links to records.</p>
 <p>Clicking on the “Close” button closes the right side panel and deselects the corresponding node in the graph.</p>
 <p>The links in the records are clickable. In a browser, you can open these links in a new tab via a right click. The title of the link (displayed in a tooltip after 1-2 seconds of hovering) is the title of the corresponding card.</p>
-<p>::: tip<br>
-To improve the readability of the records in the cosmoscope, Cosma includes an option to customise the text of the links. In Preferences › Link symbol, enter one or more Unicode characters (letters, numbers, symbols...). Example: ☞. This string replaces the identifier in square brackets in the HTML rendering of the records.<br>
-:::</p>
+<div class="tip">
+<p>To improve the readability of the records in the cosmoscope, Cosma includes an option to customise the text of the links. In Preferences › Link symbol, enter one or more Unicode characters (letters, numbers, symbols...). Example: ☞. This string replaces the identifier in square brackets in the HTML rendering of the records.</p>
+</div>
 <p>At the bottom of each record is a list of outgoing and incoming links (or backlinks). The links and backlinks are contextualised: when hovering over them, a tooltip is displayed, showing the paragraph that surrounds this link in the corresponding record.</p>
 <div class="note">
 <p>This is one the most useful features in hypertext systems. It is famously absent from the Web. Many interrelated note-taking applications treat links as “first-class citizens”, and this includes contextualised backlinks. However, when these notes are shared on the Web, this feature is not always included, or it is only inclued in a paid plan. With Cosma, contextualised backlinks are part of the package, whether you're the author of a cosmoscope working locally, or someone exploring a cosmoscope on the Web.</p>
@@ -585,9 +589,9 @@ To improve the readability of the records in the cosmoscope, Cosma includes an o
 <h3 id="focus-mode" tabindex="-1">Focus mode</h3>
 <p>Activate Focus mode (shortcut: <code>F</code>) by ticking the “Focus” box at the bottom left of the graph. In Focus mode, only direct connections to the selected node are displayed in the interface. Focus mode only works if you have selected a record.</p>
 <p>You can increase the maximum distance displayed in Focus mode with the slider located beneath the Focus button. The slider's maximum value can be set in Preferences › Maximum focus level. A value of 1 means only the immediate connections will be displayed when in Focus mode. A value of 2 means you can extend the focus two connections of connections, and so on.</p>
-<p>::: tip<br>
-The focus level slider can be controlled with the arrow keys. You can combine shortcuts: <code>F</code> to activate Focus mode, then arrow keys to increase and decrease the focus level.<br>
-:::</p>
+<div class="tip">
+<p>The focus level slider can be controlled with the arrow keys. You can combine shortcuts: <code>F</code> to activate Focus mode, then arrow keys to increase and decrease the focus level.</p>
+</div>
 <h3 id="search-bar" tabindex="-1">Search bar</h3>
 <p>The text field at the top of the Menu allows you to search record titles. It suggests a list of records whose title is closest to what you type in the search bar (using fuzzy search). Clicking on a suggestion selects the corresponding node in the graph and opens the corresponding record in the right side panel.</p>
 <div class="important">
@@ -659,9 +663,9 @@ The focus level slider can be controlled with the arrow keys. You can combine sh
 <div class="note">
 <p>The colour and stroke type of the <code>undefined</code> type can be changed, but the type cannot be removed.</p>
 </div>
-<p>::: tip<br>
-The graphic settings of the links affect their readability in the graph. For example, if you set undefined links to grey dotted lines and a special link type to black solid lines, the special links will be more visible in the graph.<br>
-:::</p>
+<div class="tip">
+<p>The graphic settings of the links affect their readability in the graph. For example, if you set undefined links to grey dotted lines and a special link type to black solid lines, the special links will be more visible in the graph.</p>
+</div>
 <h3 id="graph-1" tabindex="-1">Graph</h3>
 <p>The graph parameters can be changed live in the cosmoscope. This allows you to test different values before transferring them to the configuration. The values set in the configuration are restored each time the cosmoscope is reloaded and each time a new one is generated.</p>
 <dl>
@@ -718,8 +722,8 @@ The graphic settings of the links affect their readability in the graph. For exa
 <dt>Custom CSS</dt>
 <dd>Load a custom CSS file which will apply to the cosmoscope. Re-generating a cosmoscope is required for the custom CSS to be taken into account.</dd>
 </dl>
-<p>::: tip<br>
-To find out which selectors to use for which declaration, you can:</p>
+<div class="tip">
+<p>To find out which selectors to use for which declaration, you can:</p>
 <ul>
 <li>click on View › Development Tools (if Show development tools is on);</li>
 <li>open the cosmoscope in a web browser and use the browser's development tools;</li>
@@ -733,7 +737,7 @@ To find out which selectors to use for which declaration, you can:</p>
   --condensed: 'Avenir Next Condensed', sans-serif;
 }
 </code></pre>
-<p>:::</p>
+</div>
 <h2 id="cosma-cli" tabindex="-1">Cosma CLI</h2>
 <h3 id="installing-(cli)" tabindex="-1">Installing (CLI)</h3>
 <p>The CLI version of Cosma is available on macOS, Windows and Linux.</p>
@@ -824,16 +828,16 @@ cosma m
 cosma m -c
 </code></pre>
 <h4 id="include-a-custom-css-stylesheet" tabindex="-1">Include a custom CSS stylesheet</h4>
-<pre><code>cosma modelize --custom_css
+<pre><code>cosma modelize --custom-css
 cosma m -css
 </code></pre>
 <p>This option applies the custom CSS stylesheet specified in the configuration.</p>
-<p>::: tip<br>
-You can combine the different export options as follows:</p>
-<pre><code>cosma modelize --citeproc --custom_css
+<div class="tip">
+<p>You can combine the different export options as follows:</p>
+<pre><code>cosma modelize --citeproc --custom-css
 cosma m -c -css
 </code></pre>
-<p>:::</p>
+</div>
 <h2 id="credits" tabindex="-1">Credits</h2>
 <h3 id="team" tabindex="-1">Team</h3>
 <ul>
@@ -855,12 +859,69 @@ cosma m -c -css
 <li><a href="https://fusejs.io/">Fuse.js</a> v6.4.6 (Apache License 2.0): Search engine</li>
 <li><a href="https://momentjs.com/">Moment</a> v2.29.1 (MIT License): Managing time and timestamps</li>
 </ul>
+<h2 id="changelog" tabindex="-1">Changelog</h2>
+<h3 id="gui" tabindex="-1">GUI</h3>
+<h4 id="gui-12" tabindex="-1">GUI 1.2</h4>
+<p>This update adds the following features:</p>
+<ul>
+<li>The records directory is now read recursively. This means all records are now taken into account, whatever their location in a possible subdirectory structure.</li>
+<li>HTML elements used in the text of records are now recognized and interpreted.</li>
+</ul>
+<p>Bugs have also been solved:</p>
+<ul>
+<li>Context tooltips for typed links are no longer empty (issue #15).</li>
+<li>Clicking on saved views displays them correctly (issue #16).</li>
+<li>Vertical and horizontal attraction settings are no longer switched (issue #18).</li>
+</ul>
+<h4 id="gui-11" tabindex="-1">GUI 1.1</h4>
+<p>This update introduces a full English translation of the application, as well as a few bug fixes and small interface improvements.</p>
+<ul>
+<li>The application is translated into English, visit Preferences › General to switch languages.</li>
+<li>Creating a record without first specifying a directory no longer causes an error but returns an informative message (issue #6).</li>
+<li>Creating a record with a title already in use no longer silently overwrites the existing record but asks for confirmation (issue #5).</li>
+<li>It is now possible to use <code>keywords</code> instead of <code>tags</code> in the records' YAML header (issue #3).</li>
+<li>It is no longer necessary to declare a record type in the configuration before assigning it to a new record.</li>
+<li>The Preferences window has been reorganised into sections.</li>
+<li>The readability of error reports has been improved.</li>
+<li>The <code>minify</code> option to reduce the size of exports, which was not functional in v1.0, has been removed.</li>
+<li>The application is now distributed with its documentation, accessible via Help › Manual or by clicking on the Help button at the bottom left of the cosmoscope.</li>
+<li>The source code has been reorganised to allow the simultaneous development of a command line version (<a href="https://github.com/graphlab-fr/cosma-cli">cosma-cli</a>) from the same code base (<a href="https://github.com/graphlab-fr/cosma-core">cosma-core</a>).</li>
+<li>Upgrade from Electron v13 to v15.</li>
+</ul>
+<h4 id="gui-10" tabindex="-1">GUI 1.0</h4>
+<p>Initial release of Cosma GUI (French only).</p>
+<h3 id="cli" tabindex="-1">CLI</h3>
+<h4 id="cli-11" tabindex="-1">CLI 1.1</h4>
+<p>This update adds the following features:</p>
+<ul>
+<li>New <code>modelize</code> option, <code>--config</code>, the value of which must be the absolute path of a config file. This makes Cosma CLI capable of working with multiple directories, without having to manually shuffle around config files in the support folder.</li>
+<li>If a config file includes YAML syntax mistakes, an error is thrown with a helpful message.</li>
+<li>Records directories are now read recursively. This means all records are now taken into account, whatever their location in a possible subdirectory structure.</li>
+<li>HTML elements used in the text of records are now recognized and interpreted.</li>
+</ul>
+<p>Bugs have also been solved:</p>
+<ul>
+<li>Context tooltips for typed links are no longer empty (issue #15).</li>
+<li>Clicking on saved views displays them again (issue #16).</li>
+<li>Vertical and horizontal attraction settings are no longer switched (issue #18).</li>
+<li>The <code>--custom-css</code> (or <code>-css</code>) option works again (issue #19).</li>
+</ul>
+<h4 id="cli-10" tabindex="-1">CLI 1.0</h4>
+<p>The following changes have been made since the alpha:</p>
+<ul>
+<li>The source code has been reorganised to allow the simultaneous development of the GUI and CLI versions from the same code base (<a href="https://github.com/graphlab-fr/cosma-core">cosma-core</a>).</li>
+<li>The configuration file <code>config.yml</code> has been reorganised. The software is not backwards compatible: if you had a <code>config.yml</code> file from the alpha, it will be necessary to re-create a compliant <code>config.yml</code> file via the <code>cosma config</code> command and then modify it. The location of the file now depends on the Cosma CLI installation path. On Windows: <code>%USERPROFILE%\AppData\Roaming\npm\node_modules\@graphlab-en\cosma\config.yml</code>. On macOS and Linux: <code>/usr/local/lib/node_modules/@graphlab-fr/cosma/config.yml</code>.</li>
+<li>A new <code>cosma batch</code> command allows you to create multiple records in one go. It is documented <a href="https://cosma.graphlab.fr/docs/manuel-utilisation/#creer-un-lot-de-fiches">here</a>.</li>
+<li>The <code>minify</code> option to reduce the size of exports, which was not functional in v1.0, has been removed.</li>
+</ul>
+<h4 id="cli-10-alpha" tabindex="-1">CLI 1.0-alpha</h4>
+<p>Alpha release of Cosma CLI (French only).</p>
 
     </main>
 
     <aside id="toc">
 	<nav class="toc" >
-        <ul><li><a href="#about-cosma">About Cosma</a><ul><li><a href="#a-unique-tool">A unique tool</a></li><li><a href="#a-high-degree-of-user-control">A high degree of user control</a></li><li><a href="#a-research-experiment">A research experiment</a></li></ul></li><li><a href="#installing">Installing</a></li><li><a href="#creating-content">Creating content</a><ul><li><a href="#creating-records">Creating records</a></li><li><a href="#data-format">Data format</a></li></ul></li><li><a href="#creating-a-cosmoscope">Creating a cosmoscope</a></li><li><a href="#citations-and-bibliographies">Citations and bibliographies</a><ul><li><a href="#required-files">Required files</a></li><li><a href="#citation-syntax">Citation syntax</a></li><li><a href="#creating-a-cosmoscope-with-citations">Creating a cosmoscope with citations</a></li></ul></li><li><a href="#history">History</a></li><li><a href="#using-the-cosmoscope">Using the cosmoscope</a><ul><li><a href="#layout">Layout</a></li><li><a href="#graph">Graph</a></li><li><a href="#records">Records</a></li><li><a href="#focus-mode">Focus mode</a></li><li><a href="#search-bar">Search bar</a></li><li><a href="#filtering-by-record-type">Filtering by record type</a></li><li><a href="#filtering-by-keywords">Filtering by keywords</a></li><li><a href="#index">Index</a></li><li><a href="#views">Views</a></li></ul></li><li><a href="#sharing-a-cosmoscope">Sharing a cosmoscope</a></li><li><a href="#configuration">Configuration</a><ul><li><a href="#general">General</a></li><li><a href="#record-types">Record types</a></li><li><a href="#link-types">Link types</a></li><li><a href="#graph-1">Graph</a></li><li><a href="#metadata-1">Metadata</a></li><li><a href="#bibliography">Bibliography</a></li><li><a href="#views-1">Views</a></li><li><a href="#advanced">Advanced</a></li></ul></li><li><a href="#cosma-cli">Cosma CLI</a><ul><li><a href="#installing-(cli)">Installing (CLI)</a></li><li><a href="#configuration-(cli)">Configuration (CLI)</a></li><li><a href="#commands">Commands</a></li><li><a href="#options">Options</a></li></ul></li><li><a href="#credits">Credits</a><ul><li><a href="#team">Team</a></li><li><a href="#dependencies">Dependencies</a></li></ul></li></ul>
+        <ul><li><a href="#about-cosma">About Cosma</a><ul><li><a href="#a-unique-tool">A unique tool</a></li><li><a href="#a-high-degree-of-user-control">A high degree of user control</a></li><li><a href="#a-research-experiment">A research experiment</a></li></ul></li><li><a href="#installing">Installing</a></li><li><a href="#creating-content">Creating content</a><ul><li><a href="#creating-records">Creating records</a></li><li><a href="#data-format">Data format</a></li></ul></li><li><a href="#creating-a-cosmoscope">Creating a cosmoscope</a></li><li><a href="#citations-and-bibliographies">Citations and bibliographies</a><ul><li><a href="#required-files">Required files</a></li><li><a href="#citation-syntax">Citation syntax</a></li><li><a href="#creating-a-cosmoscope-with-citations">Creating a cosmoscope with citations</a></li></ul></li><li><a href="#history">History</a></li><li><a href="#using-the-cosmoscope">Using the cosmoscope</a><ul><li><a href="#layout">Layout</a></li><li><a href="#graph">Graph</a></li><li><a href="#records">Records</a></li><li><a href="#focus-mode">Focus mode</a></li><li><a href="#search-bar">Search bar</a></li><li><a href="#filtering-by-record-type">Filtering by record type</a></li><li><a href="#filtering-by-keywords">Filtering by keywords</a></li><li><a href="#index">Index</a></li><li><a href="#views">Views</a></li></ul></li><li><a href="#sharing-a-cosmoscope">Sharing a cosmoscope</a></li><li><a href="#configuration">Configuration</a><ul><li><a href="#general">General</a></li><li><a href="#record-types">Record types</a></li><li><a href="#link-types">Link types</a></li><li><a href="#graph-1">Graph</a></li><li><a href="#metadata-1">Metadata</a></li><li><a href="#bibliography">Bibliography</a></li><li><a href="#views-1">Views</a></li><li><a href="#advanced">Advanced</a></li></ul></li><li><a href="#cosma-cli">Cosma CLI</a><ul><li><a href="#installing-(cli)">Installing (CLI)</a></li><li><a href="#configuration-(cli)">Configuration (CLI)</a></li><li><a href="#commands">Commands</a></li><li><a href="#options">Options</a></li></ul></li><li><a href="#credits">Credits</a><ul><li><a href="#team">Team</a></li><li><a href="#dependencies">Dependencies</a></li></ul></li><li><a href="#changelog">Changelog</a><ul><li><a href="#gui">GUI</a></li><li><a href="#cli">CLI</a></li></ul></li></ul>
       </nav>
 </aside>
 
