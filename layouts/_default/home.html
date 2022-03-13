@@ -5,8 +5,10 @@
 	<div id="home-buttons-text">
 		<p class="tagline-secondary">{{ .Site.Params.Tagline.Secondary }}</p>
 		<div id="home-buttons">
-			<a class="btn btn-primary" role="button" href="https://github.com/graphlab-fr/cosma/releases/latest">{{ i18n "download" }}</a>
-		  <a class="btn btn-secondary" role="button" href="/demo.html">{{ i18n "demo" }}</a></button>
+			<a class="btn btn-primary" data-os="Unknown" role="button" href="https://github.com/graphlab-fr/cosma/releases/latest">{{ i18n "downloadUnknown" }}</a>
+			<a class="btn btn-primary" data-os="MacOs" role="button" href="{{ (index (.Site.Data.versions) 0).downloadMac }}">{{ i18n "downloadMac" }}</a>
+			<a class="btn btn-primary" data-os="Windows" role="button" href="{{ (index (.Site.Data.versions) 0).downloadWin }}">{{ i18n "downloadWin" }}</a>
+		  	<a class="btn btn-secondary" role="button" href="/demo.html">{{ i18n "demo" }}</a></button>
 		</div>
 		<div id="availability">
 			<p>{{ i18n "availability" | markdownify }}</p>
@@ -47,10 +49,16 @@
  -->
 	</section>
 	<section id="cta">
-		<div id="home-buttons">
+		<div id="download-buttons">
+			<a class="btn btn-primary" data-os="Unknown" role="button" href="https://github.com/graphlab-fr/cosma/releases/latest">{{ i18n "downloadUnknown" }}</a>
+			<a class="btn btn-primary" data-os="MacOs" role="button" href="{{ (index (.Site.Data.versions) 0).downloadMac }}">{{ i18n "downloadMac" }}</a>
+			<a class="btn btn-primary" data-os="Windows" role="button" href="{{ (index (.Site.Data.versions) 0).downloadWin }}">{{ i18n "downloadWin" }}</a>
+			<a class="btn btn-secondary" role="button" href="../docs">Documentation</a></button>
+		</div>
+		<!-- <div id="home-buttons">
 			<a class="btn btn-primary" role="button" href="https://github.com/graphlab-fr/cosma/releases/latest">{{ i18n "download" }}</a>
 		  <a class="btn btn-secondary" role="button" href="docs">Documentation</a></button>
-		</div>
+		</div> -->
 		<div id="availability">
 			<p>{{ i18n "availability" | markdownify }}</p>
 		</div>

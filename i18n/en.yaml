@@ -1,5 +1,9 @@
-download:
+downloadUnknown:
   other: Download
+downloadMac:
+  other: Download (macOS)
+downloadWin:
+  other: Download (Windows)
 demo:
   other: Try the demo
 availability:

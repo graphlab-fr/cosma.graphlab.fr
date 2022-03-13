@@ -1,5 +1,9 @@
-download:
+downloadUnknown:
   other: Télécharger
+downloadMac:
+  other: Télécharger (macOS)
+downloadWin:
+  other: Télécharger (Windows)
 demo:
   other: Essayer la démo
 availability:

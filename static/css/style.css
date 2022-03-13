@@ -376,6 +376,9 @@ a.btn:visited {
 	background-color: #5a6268;
 	border-color: #545b62;
 }
+a.btn[data-os]:not(.active) {
+	display: none;
+}
 header .btn,
 .home .btn,
 .download .btn,
