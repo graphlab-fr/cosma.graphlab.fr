@@ -8,7 +8,7 @@
 			<a class="btn btn-primary" data-os="Unknown" role="button" href="https://github.com/graphlab-fr/cosma/releases/latest">{{ i18n "downloadUnknown" }}</a>
 			<a class="btn btn-primary" data-os="MacOs" role="button" href="{{ (index (.Site.Data.versions) 0).downloadMac }}">{{ i18n "downloadMac" }}</a>
 			<a class="btn btn-primary" data-os="Windows" role="button" href="{{ (index (.Site.Data.versions) 0).downloadWin }}">{{ i18n "downloadWin" }}</a>
-		  	<a class="btn btn-secondary" role="button" href="/demo.html">{{ i18n "demo" }}</a></button>
+		  	<a class="btn btn-secondary" role="button" href="demo.html">{{ i18n "demo" }}</a></button>
 		</div>
 		<div id="availability">
 			<p>{{ i18n "availability" | markdownify }}</p>
@@ -17,7 +17,7 @@
 </header>
 <main class="wrapper home">
 	<section id="first">
-		<img id="home-main-screenshot" src="/img/screenshot-cosma.png" alt="Screenshot Cosma">
+		<img id="home-main-screenshot" src="/img/screenshot-cosma.{{ .Site.Language.Lang }}.png" alt="Screenshot Cosma">
 	</section>
 	<section id="second">
 		<p>{{ i18n "pitch1" }}</p>
@@ -36,17 +36,6 @@
 			</div>
 		</div>
 		{{ end }}
-<!-- 
-		<div class="feature zettlr">
-			<div class="feature-text">
-				<h2>Zettlr + Cosma</h2>
-				<p><a href="https://zettlr.com">Zettlr</a> est un partenaire idéal pour Cosma. Rédigez avec l'un des meilleurs outils d'écriture académique, et utilisez Cosma pour franchir une nouvelle dimension.</p>
-				<p>Besoin d'un autre éditeur ? Cosma continue à fonctionner de manière autonome.</p>
-			</div>
-<!~~ 			<img src="/img/screenshot-cosma.png"> ~~>
-<!~~ 			<img src="/img/zettlr.png"> ~~>
-		</div>
- -->
 	</section>
 	<section id="cta">
 		<div id="download-buttons">
