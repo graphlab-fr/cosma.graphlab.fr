@@ -33,7 +33,7 @@ No. Using unique identifiers reduces the risk of dead links without requiring au
 
 ### But 14-digit links are so cumbersome…
 
-Cosma allows you to replace the 14-digit identifiers by an arbitrary string in the output (cosmoscope). In [the demo](/demo.html), we chose to replace them with a simple arrow (→) but you could use a pointing hand (☞) or any other Unicode string. In Cosma, click on Preferences and enter the substitute character(s) in Link Symbol.
+Cosma allows you to replace the 14-digit identifiers by an arbitrary string in the output (cosmoscope). In [the demo](/en/demo.html), we chose to replace them with a simple arrow (→) but you could use a pointing hand (☞) or any other Unicode string. In Cosma, click on Preferences and enter the substitute character(s) in Link Symbol.
 
 ## Is it possible to manage multiple directories?
 
