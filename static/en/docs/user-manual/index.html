@@ -6,33 +6,33 @@
 
 	<title>Cosma — User manual</title>
 
-	<meta name="description" content="Manual allowing to understand all the functionalities of the Cosma software Cosma software, for its graphic and command line interfaces. interfaces." />
+	<meta name="description" content="User manual for Cosma, with instructions for installing, using and updating both versions of the app (GUI, CLI)." />
 	<meta name="author" content="Arthur Perret,Guillaume Brioudes" />
 	<meta name="copyright" content="GPL-3.0-or-later"/>
-	<meta name="last_edit" content="2022-03-10" />
+	<meta name="last_edit" content="2022-06-06" />
 
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Cosma — User manual" />
-	<meta property="og:description" content="Manual allowing to understand all the functionalities of the Cosma software Cosma software, for its graphic and command line interfaces. interfaces." />
+	<meta property="og:description" content="User manual for Cosma, with instructions for installing, using and updating both versions of the app (GUI, CLI)." />
 	<meta property="og:site_name" content="cosma-docs" />
 
 	<meta itemprop="name" content="cosma-docs" />
-	<meta itemprop="description" content="Manual allowing to understand all the functionalities of the Cosma software Cosma software, for its graphic and command line interfaces. interfaces." />
+	<meta itemprop="description" content="User manual for Cosma, with instructions for installing, using and updating both versions of the app (GUI, CLI)." />
 
 	<link rel="schema.DC" href="https://purl.org/dc/elements/1.1/" />
 	<link rel="schema.DCTERMS" href="https://purl.org/dc/terms/" />  
 
 	<meta property="DC.title" content="Cosma — User manual" />
 	<meta property="DC.contributor" content="Arthur Perret,Guillaume Brioudes" />
-	<meta property="DC.date" content="2022-03-10" />
+	<meta property="DC.date" content="2022-06-06" />
 	<meta property="DC.language" content="en" />
-	<meta property="DC.description" lang="en" content="Manual allowing to understand all the functionalities of the Cosma software Cosma software, for its graphic and command line interfaces. interfaces." />
+	<meta property="DC.description" lang="en" content="User manual for Cosma, with instructions for installing, using and updating both versions of the app (GUI, CLI)." />
 	<meta property="DC.rights" content="GPL-3.0-or-later" />
 
 	<meta name="twitter:site" content="@arthurperret" />
 	<meta name="twitter:creator" content="@arthurperret" />
 	<meta name="twitter:title" content="Cosma — User manual" />
-	<meta name="twitter:description" content="Manual allowing to understand all the functionalities of the Cosma software Cosma software, for its graphic and command line interfaces. interfaces." />
+	<meta name="twitter:description" content="User manual for Cosma, with instructions for installing, using and updating both versions of the app (GUI, CLI)." />
 	<meta name="twitter:card"  content="summary" />
 	<meta name="twitter:image" content="https://cosma.graphlab.fr/img/cosma-icone.png" />
 
@@ -304,18 +304,18 @@ footer {
 <nav class="nav-lang">
 	<ul>
 		
-		<li><a href="">🇫🇷 FR</a></li>
+		<li><a href="https://cosma.graphlab.fr/docs/manuel-utilisation/">🇫🇷 FR</a></li>
 		
-		<li><a href="../../en/docs/user-manual/index.html">🇬🇧 EN</a></li>
-		
-		<li><a href="https://cosma.graphlab.fr">cosma.graphlab.fr ↦</a></li>
+		<li><a href="https://cosma.graphlab.fr/en/docs/user-manual/">🇬🇧 EN</a></li>
+
+		<li><a href="https://cosma.graphlab.fr/en/">cosma.graphlab.fr ↦</a></li>
 	</ul>
 </nav>
 
     <main>
         
         
-        <p>Last update : March 10, 2022</p>
+        <p>Last update : June 6, 2022</p>
         
 
         <h2 id="about-cosma" tabindex="-1">About Cosma</h2>
@@ -340,31 +340,33 @@ footer {
 <blockquote>
 <p>Arthur Perret, Guillaume Brioudes, Clément Borel, &amp; Olivier Le Deuff. (2021). Cosma (1.0). Zenodo. <a href="https://doi.org/10.5281/zenodo.5920615">https://doi.org/10.5281/zenodo.5920615</a></p>
 </blockquote>
-<h2 id="installing" tabindex="-1">Installing</h2>
+<h2 id="installing-and-updating" tabindex="-1">Installing and updating</h2>
 <p>Cosma is available in two versions: a graphical user interface (GUI) application and a command line interface (CLI) application. Information about the CLI version is detailed <a href="#cosma-cli">in the dedicated section</a>.</p>
-<p>The GUI version of Cosma is available for macOS and Windows. Visit the Releases page of the GitHub repository to get <a href="https://github.com/graphlab-fr/cosma/releases/latest">the latest version</a>. Please note that the application is not signed with a security certificate, so you must have administrator privileges on your session to run it.</p>
+<p>The GUI version of Cosma is available for macOS and Windows. The CLI version is available for macOS, Windows and Linux. Visit <a href="https://cosma.graphlab.fr/telecharger/">the Download page on Cosma’s website to get the latest version of the application</a>. Please note that the application is not signed with a security certificate, so you must have administrator privileges on your session to run it.</p>
 <dl>
 <dt>On macOS</dt>
 <dd>Download and unzip <code>Cosma.app.zip</code>, then place it in <code>~/Applications</code>. For the first launch, right click on the application then select Open to run it.</dd>
 <dt>On Windows</dt>
 <dd>Download and unzip <code>Cosma-win32-x64.zip</code>, then rename the folder <code>Cosma</code> and place it in <code>C:\Program Files</code> or <code>C:\Program Files (86)</code>.</dd>
 </dl>
-<!-- 
-Fiches de démo :
-
-CLI :
-
-- windows : `%USERPROFILE%\AppData\Roaming\npm\node_modules\@graphlab-fr\cosma\core\sample`
-- macOS, linux : `/usr/local/lib/node_modules/@graphlab-fr/cosma/core/sample`
-
-GUI ?
-
-Ancienne version :
-
-::: astuce
-Depuis le dépôt Cosma-help, [téléchargez un répertoire de fiches d'exemple](https://github.com/graphlab-fr/cosma-help/archive/refs/heads/main.zip). Après avoir décompressé `cosma-help-main.zip` vous pouvez utiliser ces fiches pour tester Cosma et les lire pour apprendre à utiliser le logiciel. Indiquez le chemin du répertoire dans Préférences (`Ctrl + o` ou `Cmd + ,`) › Général › Répertoire des fiches.
-:::
- -->
+<h3 id="support-folder" tabindex="-1">Support folder</h3>
+<p>Installing Cosma automatically creates a support folder at this location (where <code>*</code> stands for the username):</p>
+<dl>
+<dt>On macOS</dt>
+<dd><code>/Users/*/Library/Application Support/cosma</code></dd>
+<dt>On Windows</dt>
+<dd><code>C:\Utilisateurs\*\AppData\Roaming\cosma</code></dd>
+</dl>
+<p>Among other files needed to run the application, this is where you will find the <code>config.json</code> file in which Cosma automatically stores your configuration.</p>
+<h3 id="updating" tabindex="-1">Updating</h3>
+<p>Cosma is not updated automatically. You can be notified of an update by subscribing to either of these sources:</p>
+<ul>
+<li><a href="https://groupes.renater.fr/sympa/info/cosma-annonces">cosma-annonces</a> (email list dedicated exclusively to Cosma update announcements);</li>
+<li><a href="https://cosma.graphlab.fr/feed.xml">RSS feed of Cosma’s website</a> (contains release notes published on the site).</li>
+</ul>
+<div class="important">
+<p><strong>If Cosma does not work anymore after an update:</strong> the structure of the <a href="#support-folder">support folder</a> has probably been modified and is not compatible with the old version. Delete the user folder and restart the application. The support folder will be re-created and will work correctly. You may want to make a copy of the <code>config.json</code> file: this will allow you to restore it more quickly after the support folder is re-created.</p>
+</div>
 <h2 id="creating-content" tabindex="-1">Creating content</h2>
 <div class="important">
 <p>To create content in Cosma, you must first specify a directory in Preferences › General › Records directory. The directory can be empty or contain records. Cosma ignores subdirectories: only the records immediately present at the root of directory are taken into account.</p>
@@ -921,7 +923,7 @@ cosma m -c -css
 
     <aside id="toc">
 	<nav class="toc" >
-        <ul><li><a href="#about-cosma">About Cosma</a><ul><li><a href="#a-unique-tool">A unique tool</a></li><li><a href="#a-high-degree-of-user-control">A high degree of user control</a></li><li><a href="#a-research-experiment">A research experiment</a></li></ul></li><li><a href="#installing">Installing</a></li><li><a href="#creating-content">Creating content</a><ul><li><a href="#creating-records">Creating records</a></li><li><a href="#data-format">Data format</a></li></ul></li><li><a href="#creating-a-cosmoscope">Creating a cosmoscope</a></li><li><a href="#citations-and-bibliographies">Citations and bibliographies</a><ul><li><a href="#required-files">Required files</a></li><li><a href="#citation-syntax">Citation syntax</a></li><li><a href="#creating-a-cosmoscope-with-citations">Creating a cosmoscope with citations</a></li></ul></li><li><a href="#history">History</a></li><li><a href="#using-the-cosmoscope">Using the cosmoscope</a><ul><li><a href="#layout">Layout</a></li><li><a href="#graph">Graph</a></li><li><a href="#records">Records</a></li><li><a href="#focus-mode">Focus mode</a></li><li><a href="#search-bar">Search bar</a></li><li><a href="#filtering-by-record-type">Filtering by record type</a></li><li><a href="#filtering-by-keywords">Filtering by keywords</a></li><li><a href="#index">Index</a></li><li><a href="#views">Views</a></li></ul></li><li><a href="#sharing-a-cosmoscope">Sharing a cosmoscope</a></li><li><a href="#configuration">Configuration</a><ul><li><a href="#general">General</a></li><li><a href="#record-types">Record types</a></li><li><a href="#link-types">Link types</a></li><li><a href="#graph-1">Graph</a></li><li><a href="#metadata-1">Metadata</a></li><li><a href="#bibliography">Bibliography</a></li><li><a href="#views-1">Views</a></li><li><a href="#advanced">Advanced</a></li></ul></li><li><a href="#cosma-cli">Cosma CLI</a><ul><li><a href="#installing-(cli)">Installing (CLI)</a></li><li><a href="#configuration-(cli)">Configuration (CLI)</a></li><li><a href="#commands">Commands</a></li><li><a href="#options">Options</a></li></ul></li><li><a href="#credits">Credits</a><ul><li><a href="#team">Team</a></li><li><a href="#dependencies">Dependencies</a></li></ul></li><li><a href="#changelog">Changelog</a><ul><li><a href="#gui">GUI</a></li><li><a href="#cli">CLI</a></li></ul></li></ul>
+        <ul><li><a href="#about-cosma">About Cosma</a><ul><li><a href="#a-unique-tool">A unique tool</a></li><li><a href="#a-high-degree-of-user-control">A high degree of user control</a></li><li><a href="#a-research-experiment">A research experiment</a></li></ul></li><li><a href="#installing-and-updating">Installing and updating</a><ul><li><a href="#support-folder">Support folder</a></li><li><a href="#updating">Updating</a></li></ul></li><li><a href="#creating-content">Creating content</a><ul><li><a href="#creating-records">Creating records</a></li><li><a href="#data-format">Data format</a></li></ul></li><li><a href="#creating-a-cosmoscope">Creating a cosmoscope</a></li><li><a href="#citations-and-bibliographies">Citations and bibliographies</a><ul><li><a href="#required-files">Required files</a></li><li><a href="#citation-syntax">Citation syntax</a></li><li><a href="#creating-a-cosmoscope-with-citations">Creating a cosmoscope with citations</a></li></ul></li><li><a href="#history">History</a></li><li><a href="#using-the-cosmoscope">Using the cosmoscope</a><ul><li><a href="#layout">Layout</a></li><li><a href="#graph">Graph</a></li><li><a href="#records">Records</a></li><li><a href="#focus-mode">Focus mode</a></li><li><a href="#search-bar">Search bar</a></li><li><a href="#filtering-by-record-type">Filtering by record type</a></li><li><a href="#filtering-by-keywords">Filtering by keywords</a></li><li><a href="#index">Index</a></li><li><a href="#views">Views</a></li></ul></li><li><a href="#sharing-a-cosmoscope">Sharing a cosmoscope</a></li><li><a href="#configuration">Configuration</a><ul><li><a href="#general">General</a></li><li><a href="#record-types">Record types</a></li><li><a href="#link-types">Link types</a></li><li><a href="#graph-1">Graph</a></li><li><a href="#metadata-1">Metadata</a></li><li><a href="#bibliography">Bibliography</a></li><li><a href="#views-1">Views</a></li><li><a href="#advanced">Advanced</a></li></ul></li><li><a href="#cosma-cli">Cosma CLI</a><ul><li><a href="#installing-(cli)">Installing (CLI)</a></li><li><a href="#configuration-(cli)">Configuration (CLI)</a></li><li><a href="#commands">Commands</a></li><li><a href="#options">Options</a></li></ul></li><li><a href="#credits">Credits</a><ul><li><a href="#team">Team</a></li><li><a href="#dependencies">Dependencies</a></li></ul></li><li><a href="#changelog">Changelog</a><ul><li><a href="#gui">GUI</a></li><li><a href="#cli">CLI</a></li></ul></li></ul>
       </nav>
 </aside>
 

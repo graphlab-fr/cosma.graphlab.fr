@@ -9,12 +9,6 @@ You can ignore your operating system's warnings and run Cosma, provided you down
 
 Explanation: Windows and macOS require that the code of an application be “signed” in order to trust it automatically. This is done by obtaining a certificate. The process is technically trivial, but is not free, because there is a lot at stake. Indeed, if an application is not signed, the system displays an alert and asks the user to confirm his intentions. Faced with this, many users prefer caution and give up. It is therefore in the best interest of application providers to sign their application so that it can be used. But the case of Cosma is particular: it is experimental research software, only recently made public, and with no dedicated funding. The application is therefore not signed.
 
-## The alpha was available for Linux, what about version 1.0?
-
-A command line version is available for all platforms. More information [here](/en/blog/cosma-cli-1-0/).
-
-We do not currently provide the application for Linux but we hope to do so soon. Cosma is an Electron-based application, meaning it can be developed for several platforms simultaneously from a single code base. We recently got access to Linux machines to test Cosma on. If this is something you'd like to help us with, please get in touch!
-
 ## I tried creating a record but the application responds with a cryptic error.
 
 You probably did not set a records directory in Preferences. Cosma needs to know where to create records.
@@ -29,7 +23,7 @@ Don't forget to backup your data, either by making copies at regular intervals o
 
 ## Do I really need to use unique identifiers? Can't I link my records via their titles?
 
-No. Using unique identifiers reduces the risk of dead links without requiring automated maintenance. We feel very strongly about this choice.
+No. Using unique identifiers reduces the risk of dead links without requiring automated maintenance. We feel very strongly about this choice. We mention this in the [Unique identifiers](https://cosma.graphlab.fr/en/docs/user-manual/#unique-identifiers) section in the docs.
 
 ### But 14-digit links are so cumbersome…
 
@@ -67,3 +61,22 @@ Again, imagine you have two directories, `dir1` and `dir2`:
 - Back in Cosma, configure the application for the `dir2` directory, then do the same as before: locate the `config.json` file in the support directory and copy it elsewhere, for example into a `dir2` subdirectory of the same `Cosma Configurations`.
 
 You can now switch to a specific directory by copying the corresponding `config.json` file to the support directory. Update the Cosma display by clicking on New Cosmoscope.
+
+## Do you plan to release the GUI version for Linux?
+
+We do not currently provide the GUI version for Linux but we hope to do so soon. Cosma is an Electron-based application, meaning it can be developed for several platforms simultaneously from a single code base. We recently got access to Linux machines to test Cosma on. If this is something you'd like to help us with, please get in touch!
+
+In the meantime, the command line version is available for all platforms. More information [here](/en/blog/cosma-cli-1-0/).
+
+## Do you have a roadmap?
+
+Yes!
+
+- Release the GUI version for Linux.
+- Allow users to manage multiple record directories.
+- Improve the keyword-based filtering feature.
+- Add different visualisation modes, starting with a “Reading mode” which would make cosmoscopes useable on small screens.
+
+## Is the app still being developed/maintained?
+
+Currently, we are in maintenance mode: we keep track of [issues](https://github.com/graphlab-fr/cosma/issues) and release fixes; the development of new features is on hold. This is because Arthur is busy writing his PhD dissertation and Guillaume has professional engagements which take priority over Cosma. This section will be updated when we get back to active development.

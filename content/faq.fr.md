@@ -9,12 +9,6 @@ Vous pouvez ignorer les avertissements de votre système d'exploitation et lance
 
 Explication : Windows et macOS requièrent que le code d'une application soit « signé » afin de pouvoir lui faire confiance automatiquement. Ceci passe par l'obtention d'un certificat de signature de code. Le processus est techniquement trivial mais il est payant, car lourd d'enjeux. En effet, si une application n'est pas signée, le système fait obstacle à l'installation, en affichant une alerte et en demandant que l'utilisateur confirme son intention. Dans le doute, beaucoup d'utilisateurs renoncent à installer une application non signée. Les fournisseurs d'applications ont donc tout intérêt à signer leur application pour qu'elle soit utilisée. Mais le cas de Cosma est particulier : c'est un logiciel expérimental, créé dans le cadre d'une démarche de recherche-conception, le développement initial vient tout juste d'aboutir et n'est financé que ponctuellement. L'application n'est donc pas signée.
 
-## L'alpha était compatible avec Linux, est-ce que c'est le cas pour la nouvelle version ?
-
-Une version ligne de commande est disponible pour toutes les plateformes. Plus d'information [ici](/blog/cosma-cli-1-0/).
-
-Nous ne fournissons actuellement pas l'application GUI pour Linux mais nous espérons pouvoir le faire prochainement. Rien ne s'y oppose techniquement puisque Cosma est une application développée pour plusieurs plateformes simultanément à partir d'une seule base de code grâce au *framework* Electron. Nous avons depuis peu accès à des machines Linux pour réaliser des tests, qui n'étaient pas indispensables pour l'alpha et qui le sont désormais pour la nouvelle version.
-
 ## Quand j'essaie de créer une fiche, l'application me renvoie une erreur incompréhensible.
 
 Vous n'avez probablement pas renseigné de répertoire de fiches dans Préférences. Le répertoire peut être vide mais il faut en renseigner un pour que Cosma sache où créer des fiches.
@@ -65,3 +59,22 @@ Dans ce répertoire se trouve notamment un fichier `config.json`. C'est là que 
 - De retour dans Cosma, configurez l'application pour le répertoire `dossier2`, puis faites comme précédemment : localiser le fichier `config.json` dans le répertoire support et copiez-le ailleurs, par exemple dans un sous-répertoire `B` du même `Configurations Cosma`.
 
 Vous pouvez désormais basculer sur un répertoire spécifique en copiant le fichier `config.json` correspondant vers le répertoire support. Actualisez l'affichage de Cosma en cliquant sur Nouveau cosmoscope.
+
+## La version GUI sera-t-elle disponible sur Linux ?
+
+Nous ne fournissons actuellement pas la version GUI pour Linux mais nous espérons pouvoir le faire prochainement. Rien ne s'y oppose techniquement puisque Cosma est une application développée pour plusieurs plateformes simultanément à partir d'une seule base de code grâce au *framework* Electron. Nous avons depuis peu accès à des machines Linux pour réaliser des tests, qui n'étaient pas indispensables pour l'alpha et qui le sont désormais pour la nouvelle version.
+
+En attendant, une version ligne de commande est disponible pour toutes les plateformes. Plus d'information [ici](/blog/cosma-cli-1-0/).
+
+## Avez-vous une feuille de route ?
+
+Oui !
+
+- Mettre à disposition la version GUI pour Linux.
+- Permettre aux utilisateurs de gérer plusieurs répertoires de fiches.
+- Améliorer la fonction de filtrage par mot-clé.
+- Ajouter différents modes de visualisation, en commençant par un « mode lecture » qui rendrait les cosmoscopes utilisables sur les petits écrans.
+
+## L'application est-elle toujours développée ou maintenue ?
+
+Actuellement, nous sommes en mode maintenance : nous gardons un œil sur les [bugs signalés](https://github.com/graphlab-fr/cosma/issues) et nous publions périodiquement des correctifs ; le développement de nouvelles fonctionnalités est mis en pause. Arthur écrit sa thèse de doctorat et Guillaume a des engagements professionnels qui prennent le pas sur Cosma. Cette section sera mise à jour lorsque nous reprendrons le travail sur notre feuille de route.
