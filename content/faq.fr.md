@@ -78,3 +78,9 @@ Oui !
 ## L'application est-elle toujours développée ou maintenue ?
 
 Actuellement, nous sommes en mode maintenance : nous gardons un œil sur les [bugs signalés](https://github.com/graphlab-fr/cosma/issues) et nous publions périodiquement des correctifs ; le développement de nouvelles fonctionnalités est mis en pause. Arthur écrit sa thèse de doctorat et Guillaume a des engagements professionnels qui prennent le pas sur Cosma. Cette section sera mise à jour lorsque nous reprendrons le travail sur notre feuille de route.
+
+## Est-ce que Cosma permet de faire de l'analyse de données/réseaux/graphes ?
+
+Non, Cosma n'est pas pensé à l'analyse de données.
+
+Vous connaissez peut-être les [notes d'Andy Matuschak](https://notes.andymatuschak.org). C'est exactement le genre de « données » pour lesquelles Cosma est conçu : des notes de recherche élaborées avec attention, constamment revisitées, donc dont on connaît très bien le contenu (d'où le fait que l'analyse de données ait une utilité limitée) ; un graphe qui ne contient pas forcément beaucoup de nœuds (des dizaines ou des centaines plutôt que des milliers) mais qui contient en revanche beaucoup de liens – d'où l'importance de la représentation visuelle sous forme de graphe, et des rétroliens contextualisés.

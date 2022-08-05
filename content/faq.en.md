@@ -19,7 +19,7 @@ The issue is solved in version 1.1.
 
 This bug was reported to us after the release of version 1.0. [Download version 1.1](https://github.com/graphlab-fr/cosma/releases/latest), which solves the problem.
 
-Don't forget to backup your data, either by making copies at regular intervals or by using a version control system such as [git](https://git-scm.com).
+Don't forget to backup your data, either by making copies at regular intervals or by using a version control system such as [git](https://git-scm.com)!
 
 ## Do I really need to use unique identifiers? Can't I link my records via their titles?
 
@@ -80,3 +80,9 @@ Yes!
 ## Is the app still being developed/maintained?
 
 Currently, we are in maintenance mode: we keep track of [issues](https://github.com/graphlab-fr/cosma/issues) and release fixes; the development of new features is on hold. This is because Arthur is busy writing his PhD dissertation and Guillaume has professional engagements which take priority over Cosma. This section will be updated when we get back to active development.
+
+## Is this a tool for data/network/graph analysis?
+
+Cosma is not intended for data analysis, no.
+
+You may be familiar with [Andy Matuschak's notes](https://notes.andymatuschak.org). This is the kind of “data” Cosma is meant to help with: research notes that are carefully crafted and constantly revised, so you know what's in them (i.e. no need for data analysis), on a somewhat smaller scale (tens or hundreds of nodes rather than thousands) but densely linked, hence the emphasis on the graph view and contextualized backlinks.
