@@ -9,7 +9,7 @@
 	<meta name="description" content="Manuel d’utilisation de Cosma. Explique comment installer et utiliser les deux versions du logiciel (GUI, CLI)." />
 	<meta name="author" content="Arthur Perret,Guillaume Brioudes" />
 	<meta name="copyright" content="GPL-3.0-or-later"/>
-	<meta name="last_edit" content="2022-06-06" />
+	<meta name="last_edit" content="2022-08-25" />
 
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Cosma — Manuel d’utilisation" />
@@ -24,7 +24,7 @@
 
 	<meta property="DC.title" content="Cosma — Manuel d’utilisation" />
 	<meta property="DC.contributor" content="Arthur Perret,Guillaume Brioudes" />
-	<meta property="DC.date" content="2022-06-06" />
+	<meta property="DC.date" content="2022-08-25" />
 	<meta property="DC.language" content="fr" />
 	<meta property="DC.description" lang="fr" content="Manuel d’utilisation de Cosma. Explique comment installer et utiliser les deux versions du logiciel (GUI, CLI)." />
 	<meta property="DC.rights" content="GPL-3.0-or-later" />
@@ -304,9 +304,9 @@ footer {
 <nav class="nav-lang">
 	<ul>
 		
-		<li><a href="https://cosma.graphlab.fr/docs/manuel-utilisation/">🇫🇷 FR</a></li>
+		<li><a href="../cosma-manuel-d-utilisation.html">🇫🇷 FR</a></li>
 		
-		<li><a href="https://cosma.graphlab.fr/en/docs/user-manual/">🇬🇧 EN</a></li>
+		<li><a href="../cosma-user-manual.html">🇬🇧 EN</a></li>
 		
 		<li><a href="https://cosma.graphlab.fr">cosma.graphlab.fr ↦</a></li>
 	</ul>
@@ -314,7 +314,7 @@ footer {
 
     <main>
         
-        <p>Dernière mise à jour : 6 juin 2022</p>
+        <p>Dernière mise à jour : 25 août 2022</p>
         
         
 
@@ -469,7 +469,8 @@ La personne D a écrit contre [[opposant:20201209111625]] la personne C.
 </div>
 <h4 id="identifiants-uniques" tabindex="-1">Identifiants uniques</h4>
 <p>Pour être correctement interprétée par Cosma, chaque fiche doit avoir un identifiant unique. Cet identifiant sert de cible aux liens internes.</p>
-<p>Par défaut, Cosma génère des identifiants à 14 chiffres par horodatage (année, mois, jour, heures, minutes et secondes). Nous nous inspirons ici du fonctionnement de logiciels de prise de notes type Zettelkasten comme <a href="https://zettelkasten.de/the-archive/">The Archive</a> et <a href="https://www.zettlr.com">Zettlr</a>.</p>
+<p>L'identifiant doit être une suite de chiffres. Par défaut, Cosma génère des identifiants à 14 chiffres par horodatage (année, mois, jour, heures, minutes et secondes). Nous nous inspirons ici du fonctionnement de logiciels de prise de notes type Zettelkasten comme <a href="https://zettelkasten.de/the-archive/">The Archive</a> et <a href="https://www.zettlr.com">Zettlr</a>.</p>
+<p>À terme, nous souhaitons permettre à l'utilisateur de définir un motif d'identifiant de son choix, à la manière de Zettlr.</p>
 <div class="note">
 <p>De nombreux logiciels de prise de notes interreliées proposent d'établir les liens entre fichiers via leurs noms, et de gérer automatiquement la maintenance des liens lorsque les noms de fichiers sont modifiés. En choisissant plutôt d'utiliser des identifiants uniques, nous avons donné à Cosma un fonctionnement plus classique, plus strict, proche de celui du Web. Nous pensons qu'il s'agit de la manière la plus simple d'éviter les <a href="https://fr.wikipedia.org/wiki/Lien_mort">liens morts</a> de façon pérenne. Le fait de ne pas recourir à une maintenance automatique des liens notamment rend les données moins dépendantes d'une solution logicielle en particulier.</p>
 </div>
