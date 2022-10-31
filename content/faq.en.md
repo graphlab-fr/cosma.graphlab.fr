@@ -68,18 +68,9 @@ We do not currently provide the GUI version for Linux but we hope to do so soon.
 
 In the meantime, the command line version is available for all platforms. More information [here](/en/blog/cosma-cli-1-0/).
 
-## Do you have a roadmap?
-
-Yes!
-
-- Release the GUI version for Linux.
-- Allow users to manage multiple record directories.
-- Improve the keyword-based filtering feature.
-- Add different visualisation modes, starting with a “Reading mode” which would make cosmoscopes useable on small screens.
-
 ## Is the app still being developed/maintained?
 
-Currently, we are in maintenance mode: we keep track of [issues](https://github.com/graphlab-fr/cosma/issues) and release fixes; the development of new features is on hold. This is because Arthur is busy writing his PhD dissertation and Guillaume has professional engagements which take priority over Cosma. This section will be updated when we get back to active development.
+We are currently working on a major update, which will be deployed first for the CLI version. Check the [roadmap](/roadmap/) for more details.
 
 ## Is this a tool for data/network/graph analysis?
 

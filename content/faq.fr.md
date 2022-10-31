@@ -66,18 +66,9 @@ Nous ne fournissons actuellement pas la version GUI pour Linux mais nous espéro
 
 En attendant, une version ligne de commande est disponible pour toutes les plateformes. Plus d'information [ici](/blog/cosma-cli-1-0/).
 
-## Avez-vous une feuille de route ?
-
-Oui !
-
-- Mettre à disposition la version GUI pour Linux.
-- Permettre aux utilisateurs de gérer plusieurs répertoires de fiches.
-- Améliorer la fonction de filtrage par mot-clé.
-- Ajouter différents modes de visualisation, en commençant par un « mode lecture » qui rendrait les cosmoscopes utilisables sur les petits écrans.
-
 ## L'application est-elle toujours développée ou maintenue ?
 
-Actuellement, nous sommes en mode maintenance : nous gardons un œil sur les [bugs signalés](https://github.com/graphlab-fr/cosma/issues) et nous publions périodiquement des correctifs ; le développement de nouvelles fonctionnalités est mis en pause. Arthur écrit sa thèse de doctorat et Guillaume a des engagements professionnels qui prennent le pas sur Cosma. Cette section sera mise à jour lorsque nous reprendrons le travail sur notre feuille de route.
+Nous travaillons actuellement sur une mise à jour importante, qui sera déployée d'abord sur la version CLI. Consultez la [feuille de route](/feuille-de-route/) pour plus de précisions.
 
 ## Est-ce que Cosma permet de faire de l'analyse de données/réseaux/graphes ?
 
