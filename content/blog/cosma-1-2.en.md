@@ -1,7 +1,7 @@
 ---
 title: Cosma v1.2
 date: 2022-06-06
-draft: false
+draft: true
 github: "https://github.com/graphlab-fr/cosma/releases/tag/1.2"
 downloadMac: "https://github.com/graphlab-fr/cosma/releases/download/1.2/Cosma.app.zip"
 downloadWin: "https://github.com/graphlab-fr/cosma/releases/download/1.2/Cosma-win32-x64.zip"
