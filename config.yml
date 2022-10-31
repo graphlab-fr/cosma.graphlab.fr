@@ -46,14 +46,14 @@ languages:
         - name: Télécharger
           url: "telecharger/"
           weight: 2
-        - name: Blog
-          url: "blog/"
-          weight: 3
         - name: Documentation
           url: "docs/"
-          weight: 4
+          weight: 3
         - name: FAQ
           url: "faq/"
+          weight: 4
+        - name: Feuille de route
+          url: "feuille-de-route/"
           weight: 5
         - name: À propos
           url: "a-propos/"
@@ -102,14 +102,14 @@ languages:
         - name: Download
           url: "en/download/"
           weight: 2
-        - name: Blog
-          url: "en/blog/"
-          weight: 3
         - name: Documentation
           url: "en/docs/"
-          weight: 4
+          weight: 3
         - name: FAQ
           url: "en/faq/"
+          weight: 4
+        - name: Roadmap
+          url: "en/roadmap/"
           weight: 5
         - name: About
           url: "en/about/"
