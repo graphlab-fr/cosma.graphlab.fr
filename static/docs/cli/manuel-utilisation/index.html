@@ -290,6 +290,38 @@ footer {
   	background: #67f3f4;
   }
 }
+
+@media screen and (max-width: 1000px) {
+	body {
+		display: block;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+	header > *,
+	main {
+		margin-right: auto;
+		margin-left: auto;
+		width: 100%;
+	}
+	main {
+		padding-bottom: 3vh;
+	}
+	aside {
+		position: relative;
+		height: auto;
+		padding-left: 5vw;
+		top: 0;
+	}
+	aside h1 {
+		display: block
+	}
+	.nav-lang ul {
+		justify-content: flex-end;
+	}
+	.nav-lang ul li {
+		padding-left: 1em;
+	}
+}
     </style>
 </head>
 
@@ -316,9 +348,13 @@ footer {
 	</ul>
 </nav>
 
+    <aside id="toc">
+	<nav class="toc" >
+        <ul><li><a href="#installation-et-mise-a-jour">Installation et mise à jour</a><ul><li><a href="#installation">Installation</a></li><li><a href="#mise-a-jour">Mise à jour</a></li></ul></li><li><a href="#presentation">Présentation</a></li><li><a href="#la-commande-cosma">La commande cosma</a><ul><li><a href="#creer-le-repertoire-de-donnees-utilisateur">Créer le répertoire de données utilisateur</a></li><li><a href="#afficher-les-projets">Afficher les projets</a></li><li><a href="#afficher-le-numero-de-version">Afficher le numéro de version</a></li><li><a href="#afficher-laide">Afficher l'aide</a></li></ul></li><li><a href="#configuration">Configuration</a><ul><li><a href="#creer-un-fichier-de-configuration">Créer un fichier de configuration</a></li><li><a href="#creer-un-fichier-de-configuration-global-(projet)">Créer un fichier de configuration global (projet)</a></li><li><a href="#creer-un-fichier-de-configuration-par-defaut">Créer un fichier de configuration par défaut</a></li><li><a href="#parametres-de-configuration">Paramètres de configuration</a></li><li><a href="#modele-de-configuration">Modèle de configuration</a></li></ul></li><li><a href="#creer-du-contenu-donnees-tabulaires-(csv)">Créer du contenu : données tabulaires (CSV)</a></li><li><a href="#creer-du-contenu-fichiers-texte-(markdown)">Créer du contenu : fichiers texte (Markdown)</a><ul><li><a href="#metadonnees">Métadonnées</a></li><li><a href="#contenu">Contenu</a></li><li><a href="#liens">Liens</a></li><li><a href="#identifiants-uniques">Identifiants uniques</a></li></ul></li><li><a href="#creer-des-fiches">Créer des fiches</a><ul><li><a href="#record-creer-une-fiche-(mode-formulaire)">record : créer une fiche (mode formulaire)</a></li><li><a href="#autorecord-creer-une-fiche-(mode-one-liner)">autorecord : créer une fiche (mode one-liner)</a></li><li><a href="#batch-creer-un-lot-de-fiches">batch : créer un lot de fiches</a></li></ul></li><li><a href="#modelize-creer-un-cosmoscope">modelize : créer un cosmoscope</a><ul><li><a href="#generer-un-cosmoscope-dexemple">Générer un cosmoscope d'exemple</a></li><li><a href="#traiter-les-citations">Traiter les citations</a></li><li><a href="#appliquer-une-css-personnalisee">Appliquer une CSS personnalisée</a></li><li><a href="#utiliser-un-fichier-de-configuration-global">Utiliser un fichier de configuration global</a></li><li><a href="#exclure-certaines-fiches-du-cosmoscope">Exclure certaines fiches du cosmoscope</a></li><li><a href="#historique">Historique</a></li><li><a href="#rapport-derreurs">Rapport d'erreurs</a></li></ul></li><li><a href="#utilisation-du-cosmoscope">Utilisation du cosmoscope</a><ul><li><a href="#graphe">Graphe</a></li><li><a href="#fiches">Fiches</a></li><li><a href="#mode-focus">Mode focus</a></li><li><a href="#moteur-de-recherche">Moteur de recherche</a></li><li><a href="#filtrer-laffichage-par-types">Filtrer l'affichage par types</a></li><li><a href="#mots-cles">Mots-clés</a></li><li><a href="#index">Index</a></li><li><a href="#vues">Vues</a></li></ul></li><li><a href="#partage-et-publication-dun-cosmoscope">Partage et publication d'un cosmoscope</a></li><li><a href="#credits">Crédits</a><ul><li><a href="#equipe">Équipe</a></li><li><a href="#bibliotheques-utilisees">Bibliothèques utilisées</a></li></ul></li><li><a href="#changelog">Changelog</a></li></ul>
+      </nav>
+</aside>
+
     <main>
-        
-        <p>Dernière mise à jour : 8 novembre 2022</p>
         
         
 
@@ -1097,22 +1133,12 @@ fondateur de la documentation moderne…
 <li><a href="https://momentjs.com/">Moment</a> v2.29.1 (MIT License) : Gestion de l'horodatage</li>
 </ul>
 <h2 id="changelog" tabindex="-1">Changelog</h2>
+<p>🚧 En construction</p>
 
     </main>
 
-    <aside id="toc">
-	<nav class="toc" >
-        <ul><li><a href="#installation-et-mise-a-jour">Installation et mise à jour</a><ul><li><a href="#installation">Installation</a></li><li><a href="#mise-a-jour">Mise à jour</a></li></ul></li><li><a href="#presentation">Présentation</a></li><li><a href="#la-commande-cosma">La commande cosma</a><ul><li><a href="#creer-le-repertoire-de-donnees-utilisateur">Créer le répertoire de données utilisateur</a></li><li><a href="#afficher-les-projets">Afficher les projets</a></li><li><a href="#afficher-le-numero-de-version">Afficher le numéro de version</a></li><li><a href="#afficher-laide">Afficher l'aide</a></li></ul></li><li><a href="#configuration">Configuration</a><ul><li><a href="#creer-un-fichier-de-configuration">Créer un fichier de configuration</a></li><li><a href="#creer-un-fichier-de-configuration-global-(projet)">Créer un fichier de configuration global (projet)</a></li><li><a href="#creer-un-fichier-de-configuration-par-defaut">Créer un fichier de configuration par défaut</a></li><li><a href="#parametres-de-configuration">Paramètres de configuration</a></li><li><a href="#modele-de-configuration">Modèle de configuration</a></li></ul></li><li><a href="#creer-du-contenu-donnees-tabulaires-(csv)">Créer du contenu : données tabulaires (CSV)</a></li><li><a href="#creer-du-contenu-fichiers-texte-(markdown)">Créer du contenu : fichiers texte (Markdown)</a><ul><li><a href="#metadonnees">Métadonnées</a></li><li><a href="#contenu">Contenu</a></li><li><a href="#liens">Liens</a></li><li><a href="#identifiants-uniques">Identifiants uniques</a></li></ul></li><li><a href="#creer-des-fiches">Créer des fiches</a><ul><li><a href="#record-creer-une-fiche-(mode-formulaire)">record : créer une fiche (mode formulaire)</a></li><li><a href="#autorecord-creer-une-fiche-(mode-one-liner)">autorecord : créer une fiche (mode one-liner)</a></li><li><a href="#batch-creer-un-lot-de-fiches">batch : créer un lot de fiches</a></li></ul></li><li><a href="#modelize-creer-un-cosmoscope">modelize : créer un cosmoscope</a><ul><li><a href="#generer-un-cosmoscope-dexemple">Générer un cosmoscope d'exemple</a></li><li><a href="#traiter-les-citations">Traiter les citations</a></li><li><a href="#appliquer-une-css-personnalisee">Appliquer une CSS personnalisée</a></li><li><a href="#utiliser-un-fichier-de-configuration-global">Utiliser un fichier de configuration global</a></li><li><a href="#exclure-certaines-fiches-du-cosmoscope">Exclure certaines fiches du cosmoscope</a></li><li><a href="#historique">Historique</a></li><li><a href="#rapport-derreurs">Rapport d'erreurs</a></li></ul></li><li><a href="#utilisation-du-cosmoscope">Utilisation du cosmoscope</a><ul><li><a href="#graphe">Graphe</a></li><li><a href="#fiches">Fiches</a></li><li><a href="#mode-focus">Mode focus</a></li><li><a href="#moteur-de-recherche">Moteur de recherche</a></li><li><a href="#filtrer-laffichage-par-types">Filtrer l'affichage par types</a></li><li><a href="#mots-cles">Mots-clés</a></li><li><a href="#index">Index</a></li><li><a href="#vues">Vues</a></li></ul></li><li><a href="#partage-et-publication-dun-cosmoscope">Partage et publication d'un cosmoscope</a></li><li><a href="#credits">Crédits</a><ul><li><a href="#equipe">Équipe</a></li><li><a href="#bibliotheques-utilisees">Bibliothèques utilisées</a></li></ul></li><li><a href="#changelog">Changelog</a></li></ul>
-      </nav>
-</aside>
-
     <footer>
     
-    
-    <p>
-        Cosma est un logiciel libre, diffusé sous licence <a href="https://opensource.org/licenses/GPL-3.0">GPL-3.0-or-later</a>.<br/>
-        Cette documentation a été fabriquée avec <a href="https://www.11ty.dev/">11ty</a>.
-    </p>
     
 </footer>
 
