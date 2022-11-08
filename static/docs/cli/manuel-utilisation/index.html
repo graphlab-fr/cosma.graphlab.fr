@@ -1,0 +1,1147 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset=utf-8 />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="generator" content="">
+
+	<title>Cosma — Manuel d’utilisation — CLI</title>
+
+	<meta name="description" content="Manuel d’utilisation de Cosma CLI v2." />
+	<meta name="author" content="Arthur Perret,Guillaume Brioudes" />
+	<meta name="copyright" content="GPL-3.0-or-later"/>
+	<meta name="last_edit" content="2022-11-08" />
+
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Cosma — Manuel d’utilisation — CLI" />
+	<meta property="og:description" content="Manuel d’utilisation de Cosma CLI v2." />
+	<meta property="og:site_name" content="cosma-docs" />
+
+	<meta itemprop="name" content="cosma-docs" />
+	<meta itemprop="description" content="Manuel d’utilisation de Cosma CLI v2." />
+
+	<link rel="schema.DC" href="https://purl.org/dc/elements/1.1/" />
+	<link rel="schema.DCTERMS" href="https://purl.org/dc/terms/" />  
+
+	<meta property="DC.title" content="Cosma — Manuel d’utilisation — CLI" />
+	<meta property="DC.contributor" content="Arthur Perret,Guillaume Brioudes" />
+	<meta property="DC.date" content="2022-11-08" />
+	<meta property="DC.language" content="fr" />
+	<meta property="DC.description" lang="fr" content="Manuel d’utilisation de Cosma CLI v2." />
+	<meta property="DC.rights" content="GPL-3.0-or-later" />
+
+	<meta name="twitter:site" content="@arthurperret" />
+	<meta name="twitter:creator" content="@arthurperret" />
+	<meta name="twitter:title" content="Cosma — Manuel d’utilisation — CLI" />
+	<meta name="twitter:description" content="Manuel d’utilisation de Cosma CLI v2." />
+	<meta name="twitter:card"  content="summary" />
+	<meta name="twitter:image" content="https://cosma.graphlab.fr/img/cosma-icone.png" />
+
+	<style>
+        :root {
+	--sans: "Helvetica Neue", Helvetica, sans-serif;
+	--serif: "Georgia", 'Garamond', 'Time New Roman', 'Times', serif;
+	--mono: Menlo, Monaco, Consolas, "Courier New", monospace;
+	--code-background-color: #f5f5f5;
+	--code-border-color: #ccc;
+}
+
+/* LAYOUT */
+
+* {
+	box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0 1em;
+	line-height: 1.5;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: var(--serif);
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-gap: 0 1%;
+  grid-template-areas: "header headernav"
+                       "main   aside"
+                       "footer footer";
+}
+header {
+  grid-area: header;
+}
+nav.nav-lang {
+  grid-area: headernav;
+  font-family: var(--sans);
+}
+.nav-lang ul {
+  display: flex;
+  justify-content: space-between;
+  list-style:none;
+  padding: 0;
+  margin-top: 1.8em;
+}
+main {
+  grid-area: main;
+  padding-bottom: 5vh;
+}
+
+/* HEADINGS */
+
+header, h1, h2, h3, h4 {
+	font-family: var(--sans);
+}
+h2, h3, h4 {
+	line-height: 1.2;
+	padding-bottom: 0.2em;
+	border-bottom: 1px solid black;
+  font-size: 1.2em;
+}
+main h2 {
+	font-size: 1.3em;
+	margin: 3.5rem 0 0.5rem 0;
+}
+main > h2:first-child {
+	margin-top: 0;
+}
+main h3 {
+  font-size: 1.2em;
+  margin: 3rem 0 0.3rem 0;
+}
+main h4 {
+  font-size: 1em;
+  margin: 2rem 0 0 0;
+}
+
+/* LINKS */
+
+a {
+	color: #0056b3;
+	text-decoration: none;
+}
+a:hover {
+	color: #00448f;
+	text-decoration: underline;
+}
+:target { animation: highlight 3s ease; }
+@keyframes highlight {
+  0% { background-color: #ffa; }
+  100% { background-color: #ffffff; }
+}
+
+/* TABLES */
+
+table {
+	border-collapse: collapse;
+	margin: 2rem 0;
+	text-align: left;
+	width: 100%;
+}
+
+tr { border: 1px solid gray; }
+th, td { border: 1px solid gray; padding: 0.5rem; }
+
+/* LISTS */
+
+ul, ol {
+	padding-left: 1rem;
+}
+dt {
+  font-family: var(--sans);
+  font-weight: bold;
+  float: left;
+  padding: 0 0.5rem 0 0;
+  line-height: 1.4;
+}
+dd {
+  padding: 0;
+  margin: 1rem 0 1rem 2rem;
+}
+
+/* MEDIA */
+
+img {
+  max-width: 100%;
+}
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: var(--accent-color) 1px solid;
+  padding: 15px 10px;
+}
+figcaption {
+  font-size: 0.8rem;
+  font-style: italic;
+  padding: 1rem 0 0 0;
+}
+
+/* ADMONITIONS */
+
+.astuce, .tip, .note, .important {
+  position: relative;
+  background: rgb(225, 225, 225);
+  padding: 30px 10px 3px 10px;
+  border-radius: 5px;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+.astuce::before,
+.tip::before,
+.note::before,
+.important::before {
+  content: attr(class);
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 12px;
+  font-family: var(--mono);
+}
+.astuce, .tip, .note {
+	background: rgb(225, 225, 225);
+}
+.important {
+	background: rgb(239,178,178);
+}
+
+/* CODE */
+
+code, pre {
+	font-family: var(--mono);
+}
+code {
+  display: inline-block;
+  font-size: 90%;
+}
+p code,
+ul code,
+ol code,
+dl code,
+table code {
+  background-color: var(--code-background-color);
+  border-radius: 4px;
+  padding: 0 0.2em;
+}
+pre {
+  background-color: var(--code-background-color);
+  border: 1px solid var(--code-border-color);
+  border-radius: 4px;
+  padding-left: 0.5em;
+  margin: 1em 0;
+  overflow-x: auto;
+}
+
+/* ASIDE (TOC) */
+
+aside {
+  grid-area: aside;
+	position: sticky;
+	height: 80vh;
+	top: 2em;
+	padding-left: 3em;
+	font-size: 0.875em;
+  font-family: var(--sans);
+}
+aside ul {
+	list-style-type: none;
+}
+aside > nav > ul > li {
+	position: relative;
+	padding-bottom: 0.75em;
+}
+aside .toggle {
+	cursor: pointer;
+	position: absolute;
+	left: -28px;
+	top: -2px;
+	padding: 2px 10px;
+	color: #0056b3;
+}
+
+/* FOOTER */
+
+footer {
+  grid-area: footer;
+}
+
+/* DARK MODE */
+/* Inspiré par Bradley Taunt */
+/* https://tdarb.org/lazy-dev-dark-mode/ */
+
+@media (prefers-color-scheme: dark) {
+  body {
+  	background: #2d2d2d;
+  	filter:invert(1);
+  }
+  a,
+  img,
+  pre,
+  *:not(pre) > code {
+  	filter:invert(1);
+  }
+  aside .toggle {
+  	color: #5e421b;
+  }
+  a {
+  	color: #B2CCE8;
+  }
+  .astuce, .tip, .note {
+  	background: #b4b4b4;
+  }
+  .important {
+  	background: #67f3f4;
+  }
+}
+    </style>
+</head>
+
+<body>
+    <header>
+	<article>
+		<h1 class="title-site">Cosma — Manuel d’utilisation — CLI</h1>
+	</article>
+
+</header>
+
+<nav class="nav-lang">
+	<ul>
+		
+<!-- 
+		<li><a href="../cosma-user-manual.html">🇬🇧 EN</a></li>
+		
+		<li><a href="../cosma-manuel-d-utilisation.html">🇫🇷 FR</a></li>
+		
+		<li><a href="../cosma-manuel-d-utilisation-cli.html">🇫🇷 FR</a></li>
+ -->
+		
+		<li><a href="https://cosma.graphlab.fr">cosma.graphlab.fr ↦</a></li>
+	</ul>
+</nav>
+
+    <main>
+        
+        <p>Dernière mise à jour : 8 novembre 2022</p>
+        
+        
+
+        <div class="important">
+<p>Cette version du manuel correspond à la version 2.0.0-beta-1 de Cosma CLI uniquement.</p>
+</div>
+<h2 id="installation-et-mise-a-jour" tabindex="-1">Installation et mise à jour</h2>
+<h3 id="installation" tabindex="-1">Installation</h3>
+<p>Cosma CLI est disponible pour macOS, Windows et Linux.</p>
+<p>L'installation de <a href="https://nodejs.org/">NodeJS</a> version 16 minimum est requise.</p>
+<p>Le gestionnaire de paquets NPM est installé automatiquement avec NodeJS. NPM peut être utilisé pour gérer l'installation de Cosma CLI. Entrez la commande ci-dessous dans votre terminal pour installer Cosma CLI de manière globale. Le logiciel s'exécute alors en écrivant <code>cosma</code>.</p>
+<pre><code>npm install @graphlab-fr/cosma -g
+</code></pre>
+<p>Si vous souhaitez installer Cosma CLI comme dépendance d'un projet NodeJS, utilisez la commande ci-dessous. Le logiciel s'exécute alors depuis la racine du projet en écrivant <code>./node_modules/.bin/cosma</code>.</p>
+<pre><code>npm install @graphlab-fr/cosma
+</code></pre>
+<h3 id="mise-a-jour" tabindex="-1">Mise à jour</h3>
+<p>La commande suivante affiche la liste des paquets installés via NPM pour lesquels une mise à jour existe :</p>
+<pre><code>npm outdated
+</code></pre>
+<p>La commande suivante met à jour Cosma CLI si une mise à jour existe :</p>
+<pre><code>npm update cosma
+</code></pre>
+<h2 id="presentation" tabindex="-1">Présentation</h2>
+<p>Cosma CLI est la version ligne de commande (<em>command-line interface</em>, CLI) de Cosma, un logiciel qui permet de représenter des graphes documentaires sous forme de réseaux interactifs dans une interface web.</p>
+<p>Cosma CLI fonctionne sur la base de fichiers de configuration écrits en YAML. Chaque fichier de configuration indique une source des données à utiliser, ainsi que différents paramètres qui régissent le comportement de Cosma pour cette source de données.</p>
+<p>Deux approches peuvent être adoptées en fonction des besoins :</p>
+<p>La première consiste à exécuter la commande <code>cosma</code> dans un répertoire où se trouve un fichier de configuration. On parle dans ce cas de fichier de configuration local. Les fichiers de configuration locaux doivent toujours être nommés <code>config.yml</code>.</p>
+<p>L'autre approche consiste à exécuter la commande <code>cosma</code> en ajoutant l'option <code>--config &lt;nom&gt;</code>, où <code>&lt;nom&gt;</code> correspond au nom d'un fichier de configuration présent dans un dossier spécial, le répertoire de données utilisateur. On parle dans ce cas de fichier de configuration global, ou <strong>projet</strong>. Celui-ci peut être nommé librement (ex : <code>toto.yml</code>). Cette seconde approche permet d'exécuter la commande <code>cosma</code> depuis n'importe quel emplacement.</p>
+<div class="astuce">
+<p>La méthode locale favorise l'automatisation et la reproductibilité dans un contexte de travail partagé ou distribué sur plusieurs machines. Elle permet en effet de transmettre simultanément données, configuration et instructions d'utilisation (commandes) sous une forme utilisable telle quelle, sans aucun paramétrage supplémentaire requis de la part du destinataire (humain ou machine).</p>
+<p>À l'inverse, la méthode globale facilite l'utilisation prolongée du logiciel par un individu sur une seule machine.</p>
+</div>
+<h2 id="la-commande-cosma" tabindex="-1">La commande <code>cosma</code></h2>
+<p>La commande <code>cosma</code> s'utilise de trois manières :</p>
+<ol>
+<li><code>cosma</code> affiche l'aide ;</li>
+<li><code>cosma &lt;option&gt;</code> exécute une option globale ;</li>
+<li><code>cosma &lt;commande&gt; &lt;options&gt;</code> exécute l'une des cinq commandes de Cosma (<code>config</code>, <code>record</code>, <code>autorecord</code>, <code>batch</code> et <code>modelize</code>), avec une ou plusieurs options facultatives.</li>
+</ol>
+<p>Les cinq commandes existent en version longue et en version courte (ex : <code>cosma config</code> ou <code>cosma c</code>). Certaines options disposent également d'une version courte (ex : <code>cosma config --global</code> ou <code>cosma config -g</code>). Dans les deux cas, version longue et version courte sont fonctionnellement identiques ; la version courte sert simplement à gagner du temps lors d'une utilisation répétée et prolongée.</p>
+<p>Les sous-sections qui suivent détaillent les options globales.</p>
+<h3 id="creer-le-repertoire-de-donnees-utilisateur" tabindex="-1">Créer le répertoire de données utilisateur</h3>
+<pre><code>cosma --create-user-data-dir
+</code></pre>
+<p>Cette commande crée un répertoire de données utilisateur intitulé <code>cosma-cli</code> à un emplacement qui respecte la spécification <a href="https://xdgbasedirectoryspecification.com">XDG Base Directory</a>. L'emplacement exact dépend de chaque système d'exploitation et peut varier d'une version à l'autre d'un même système.</p>
+<p>Si le répertoire de données utilisateur existe déjà, la commande affiche simplement son emplacement.</p>
+<h3 id="afficher-les-projets" tabindex="-1">Afficher les projets</h3>
+<pre><code>cosma --list-projects
+</code></pre>
+<p>Cette commande liste les fichiers de configuration présents dans le répertoire de données utilisateur, aussi appelés projets.</p>
+<h3 id="afficher-le-numero-de-version" tabindex="-1">Afficher le numéro de version</h3>
+<pre><code>cosma --version
+cosma -V
+</code></pre>
+<h3 id="afficher-laide" tabindex="-1">Afficher l'aide</h3>
+<p>Cosma dispose d'une aide générale :</p>
+<pre><code>cosma --help
+cosma -h
+</code></pre>
+<p>Une aide contextuelle est également disponible pour les cinq commandes de Cosma. Ajoutez l'option <code>-h/--help</code> à l'une de ces commandes pour afficher l'aide contextuelle.</p>
+<p>Exemple :</p>
+<pre><code>cosma config --help
+</code></pre>
+<h2 id="configuration" tabindex="-1">Configuration</h2>
+<h3 id="creer-un-fichier-de-configuration" tabindex="-1">Créer un fichier de configuration</h3>
+<pre><code>cosma config
+cosma c
+</code></pre>
+<p>Cette commande crée un fichier <code>config.yml</code> dans le répertoire actuel.</p>
+<h3 id="creer-un-fichier-de-configuration-global-(projet)" tabindex="-1">Créer un fichier de configuration global (projet)</h3>
+<pre><code>cosma config --global &lt;nom&gt;
+cosma c -g &lt;nom&gt;
+</code></pre>
+<p>L'option <code>-g/--global</code> suivie d'un nom crée un fichier <code>nom.yml</code> dans le répertoire de données utilisateur.</p>
+<h3 id="creer-un-fichier-de-configuration-par-defaut" tabindex="-1">Créer un fichier de configuration par défaut</h3>
+<pre><code>cosma config --global
+cosma c -g
+</code></pre>
+<p>Lorsqu'elle n'est pas suivie d'un nom, l'option <code>-g/--global</code> crée un fichier <code>defaults.yml</code> dans le répertoire de données utilisateur. Ce fichier peut être ensuite modifié pour définir les valeur par défaut des différents paramètres de configuration de Cosma. Ces valeurs par défaut seront appliquées aux fichiers de configuration créés par la suite.</p>
+<h3 id="parametres-de-configuration" tabindex="-1">Paramètres de configuration</h3>
+<p>Vous trouverez ci-dessous la liste des paramètres utilisés par Cosma. Si un paramètre est absent d'un fichier de configuration, Cosma considère qu'il a sa valeur par défaut.</p>
+<div class="important">
+<p>Les types de fiches et de liens « undefined » sont requis pour le fonctionnement de l'application. Si vous les supprimez d'un fichier de configuration, Cosma les ré-insèrera automatiquement lors de la prochaine utilisation de ce fichier.</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>nom</th>
+<th>description</th>
+<th>valeurs possibles</th>
+<th>valeur par défaut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>select_origin</code></td>
+<td>Type de la source de données</td>
+<td><code>directory</code> (répertoire de fiches), <code>csv</code> (fichier de données tabulaires local) ou <code>online</code> (fichier de données tabulaires en ligne)</td>
+<td><code>directory</code></td>
+</tr>
+<tr>
+<td><code>files_origin</code></td>
+<td>Emplacement des fiches pour <code>directory</code></td>
+<td>chemin (répertoire)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>nodes_origin</code></td>
+<td>Emplacement des nœuds pour <code>csv</code></td>
+<td>chemin (fichier CSV)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>links_origin</code></td>
+<td>Emplacement des liens pour <code>csv</code></td>
+<td>chemin (fichier CSV)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>nodes_online</code></td>
+<td>Emplacement des nœuds pour <code>online</code></td>
+<td>URL (fichier CSV)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>links_online</code></td>
+<td>Emplacement des liens pour <code>online</code></td>
+<td>URL (fichier CSV)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>images_origin</code></td>
+<td>Emplacement des images utilisées dans le cosmoscope</td>
+<td>chemin (répertoire)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>export_target</code></td>
+<td>Emplacement des exports</td>
+<td>chemin (répertoire)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>history</code></td>
+<td>Copie de chaque cosmoscope généré via Cosma dans le répertoire <code>history</code></td>
+<td><code>true</code> ou <code>false</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>focus_max</code></td>
+<td>Distance maximale au nœud sélectionné en mode focus</td>
+<td>nombre entier</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>record_types</code></td>
+<td>Liste des types d'entités</td>
+<td>liste</td>
+<td></td>
+</tr>
+<tr>
+<td>type d'entité</td>
+<td></td>
+<td>chaîne de caractères</td>
+<td></td>
+</tr>
+<tr>
+<td><code>fill</code></td>
+<td>Couleur de remplissage du type de nœud</td>
+<td>couleur HTML</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stroke</code></td>
+<td>Couleur du contour du type de nœud (utilisée lorsque le nœud est rempli par une image)</td>
+<td>couleur HTML</td>
+<td></td>
+</tr>
+<tr>
+<td><code>link_types</code></td>
+<td>Liste des types de liens</td>
+<td>liste</td>
+<td></td>
+</tr>
+<tr>
+<td>type de lien</td>
+<td></td>
+<td>chaîne de caractères</td>
+<td></td>
+</tr>
+<tr>
+<td><code>stroke</code></td>
+<td>Style de tracé du type de lien</td>
+<td><code>simple</code> (trait plein), <code>dash</code> (tirets), <code>dash</code> (pointillés), <code>double</code> (deux traits parallèles)</td>
+<td><code>simple</code></td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td>Couleur du type de lien</td>
+<td>couleur HTML</td>
+<td></td>
+</tr>
+<tr>
+<td><code>record_filters</code></td>
+<td>Liste de métadonnées filtres</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>métadonnée filtre</td>
+<td>Les fiches incluant cette métadonnée seront exclues lors de la création d'un cosmoscope</td>
+<td>type, mot-clé, métadonnée déclarée dans <code>record_metas</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>graph_background_color</code></td>
+<td>Couleur de fond du graphe</td>
+<td>couleur HTML</td>
+<td></td>
+</tr>
+<tr>
+<td><code>graph_highlight_color</code></td>
+<td>Couleur de surbrillance</td>
+<td>couleur HTML</td>
+<td></td>
+</tr>
+<tr>
+<td><code>graph_highlight_on_hover</code></td>
+<td>Application de la surbrillance au survol et à la sélection des nœuds</td>
+<td><code>true</code> ou <code>false</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>graph_text_size</code></td>
+<td>Taille des étiquettes des nœuds</td>
+<td>nombre entier compris entre 5 et 15</td>
+<td>10</td>
+</tr>
+<tr>
+<td><code>graph_arrows</code></td>
+<td>Ajout de flèches directionnelles aux extrémités des liens</td>
+<td><code>true</code> ou <code>false</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>node_size_method</code></td>
+<td>Méthode de dimensionnement des nœuds</td>
+<td><code>degree</code> (taille proportionnelle au degré) ou <code>unique</code> (taille fixe)</td>
+<td><code>degree</code></td>
+</tr>
+<tr>
+<td><code>node_size</code></td>
+<td>Taille des nœuds (taille fixe)</td>
+<td>nombre entier compris entre 2 et 20</td>
+<td>10</td>
+</tr>
+<tr>
+<td><code>node_size_max</code></td>
+<td>Taille maximale des nœuds (taille proportionnelle)</td>
+<td>nombre entier compris entre 2 et 20</td>
+<td>20</td>
+</tr>
+<tr>
+<td><code>node_size_min</code></td>
+<td>Taille minimale des nœuds (taille proportionnelle)</td>
+<td>nombre entier compris entre 2 et 20</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>attraction_force</code></td>
+<td>Force d'attraction</td>
+<td>nombre compris entre 50 et 600</td>
+<td>200</td>
+</tr>
+<tr>
+<td><code>attraction_distance_max</code></td>
+<td>Distance maximum entre les nœuds</td>
+<td>nombre compris entre 200 et 800</td>
+<td>250</td>
+</tr>
+<tr>
+<td><code>attraction_vertical</code></td>
+<td>Force d'attraction vers l'axe vertical</td>
+<td>nombre compris entre 0 (désactivé) et 1</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>attraction_horizontal</code></td>
+<td>Force d'attraction vers l'axe horizontal</td>
+<td>nombre compris entre 0 (désactivé) et 1</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>views</code></td>
+<td>Liste des vues enregistrées (GUI)</td>
+<td>liste</td>
+<td></td>
+</tr>
+<tr>
+<td><code>chronological_record_meta</code></td>
+<td>Métadonnée utilisée pour le mode chronologique</td>
+<td>métadonnée déclarée dans <code>record_metas</code></td>
+<td><code>last_edit</code></td>
+</tr>
+<tr>
+<td><code>record_metas</code></td>
+<td>Liste de métadonnées (présentes dans la source de données) à inclure dans le cosmoscope</td>
+<td>liste</td>
+<td></td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td>Titre du cosmoscope</td>
+<td>chaîne de caractères</td>
+<td></td>
+</tr>
+<tr>
+<td><code>author</code></td>
+<td>Auteur du cosmoscope</td>
+<td>chaîne de caractères</td>
+<td></td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td>Decription du cosmoscope</td>
+<td>chaîne de caractères</td>
+<td></td>
+</tr>
+<tr>
+<td><code>keywords</code></td>
+<td>Liste de mots-clés du cosmoscope</td>
+<td>liste</td>
+<td></td>
+</tr>
+<tr>
+<td>mot-clé</td>
+<td></td>
+<td>chaîne de caractères</td>
+<td></td>
+</tr>
+<tr>
+<td><code>link_symbol</code></td>
+<td>Symbole à afficher en remplacement des identifiants comme texte des liens internes dans le cosmoscope</td>
+<td>chaîne de caractères</td>
+<td></td>
+</tr>
+<tr>
+<td><code>csl</code></td>
+<td>Style bibliographique</td>
+<td>chemin (fichier XML)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>bibliography</code></td>
+<td>Données bibliographiques</td>
+<td>chemin (fichier JSON)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>csl_locale</code></td>
+<td>Localisation bibliographique</td>
+<td>chemin (fichier XML)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>css_custom</code></td>
+<td>Feuille de styles CSS pour la personnalisation du cosmoscope</td>
+<td>chemin (fichier CSS)</td>
+<td></td>
+</tr>
+<tr>
+<td><code>devtools</code></td>
+<td>Affichage des outils de développement (GUI)</td>
+<td><code>true</code> ou <code>false</code></td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>lang</code></td>
+<td>Langue du cosmoscope</td>
+<td><code>en</code> (anglais) ou <code>fr</code> (français)</td>
+<td><code>en</code></td>
+</tr>
+</tbody>
+</table>
+<div class="astuce">
+<p>La couleur de fond du graphe et la couleur de surbrillance sont modifiables directement via le fichier de configuration mais toutes les couleurs de l'interface peuvent être modifiées en utilisant une feuille de style CSS personnalisée.</p>
+<p>Appliquer une force verticale/horizontale resserre le graphe et permet de ramener plus près du centre les nœuds isolés.</p>
+</div>
+<h3 id="modele-de-configuration" tabindex="-1">Modèle de configuration</h3>
+<p>Voici le modèle utilisé par Cosma pour générer un fichier de configuration :</p>
+<pre><code>select_origin: directory
+files_origin: ''
+nodes_origin: ''
+links_origin: ''
+nodes_online: ''
+links_online: ''
+images_origin: ''
+export_target: ''
+history: true
+focus_max: 2
+record_types:
+  undefined:
+    fill: '#858585'
+    stroke: '#858585'
+link_types:
+  undefined:
+    stroke: simple
+    color: '#e1e1e1'
+record_filters: []
+graph_background_color: '#ffffff'
+graph_highlight_color: '#ff6a6a'
+graph_highlight_on_hover: true
+graph_text_size: 10
+graph_arrows: true
+node_size_method: degree
+node_size: 10
+node_size_max: 20
+node_size_min: 2
+attraction_force: 200
+attraction_distance_max: 250
+attraction_vertical: 0
+attraction_horizontal: 0
+views: {}
+chronological_record_meta: last_edit
+record_metas: []
+title: ''
+author: ''
+description: ''
+keywords: []
+link_symbol: ''
+csl: ''
+bibliography: ''
+csl_locale: ''
+css_custom: ''
+devtools: false
+lang: en
+</code></pre>
+<h2 id="creer-du-contenu-donnees-tabulaires-(csv)" tabindex="-1">Créer du contenu : données tabulaires (CSV)</h2>
+<h2 id="creer-du-contenu-fichiers-texte-(markdown)" tabindex="-1">Créer du contenu : fichiers texte (Markdown)</h2>
+<p>Lorsque la source de données est de type <code>directory</code> (répertoire de fichiers Markdown), les données doivent respecter les règles suivantes :</p>
+<ul>
+<li>contenu rédigé en Markdown, extension de fichier <code>.md</code> ;</li>
+<li>métadonnées exprimées en YAML, dans un en-tête présent en début de fichier ;</li>
+<li>liens internes exprimés avec une syntaxe de type wiki (doubles crochets <code>[[ ]]</code>) et basés sur des identifiants uniques numériques (suite unique de chiffres).</li>
+</ul>
+<p>Les sous-sections qui suivent expliquent ces règles en détail.</p>
+<div class="note">
+<p>Cette combinaison de normes d'écriture correspond au croisement de plusieurs cultures textuelles : la documentation (enrichir et indexer le contenu avec des métadonnées) ; les wikis (interrelier des connaissances) ; la méthode Zettelkasten (organiser ses notes) ; l'écriture académique avec Pandoc (utiliser le format texte comme source pour plusieurs autres formats).</p>
+<p>Cosma fonctionne donc particulièrement bien lorsqu'il est utilisé en tandem avec des environnements d'écriture qui adoptent également cette approche, comme <a href="https://zettlr.com">Zettlr</a> ou l'extension <a href="https://foambubble.github.io/foam/">Foam</a> pour Visual Studio Code et VSCodium.</p>
+</div>
+<h3 id="metadonnees" tabindex="-1">Métadonnées</h3>
+<p>Pour être correctement interprétés par Cosma, les fichiers Markdown (<code>.md</code>) doivent respecter une certaine structure, et notamment la présence d'un en-tête en <a href="http://yaml.org">YAML</a> au début du fichier. Cet en-tête est créé automatiquement lorsque la fiche est créée via Cosma.</p>
+<p>Exemple :</p>
+<pre><code>---
+title: Titre du document
+id: 20201209111625
+type:
+- undefined
+tags:
+- mot-clé 1
+- mot-clé 2
+---
+</code></pre>
+<p>L'en-tête YAML est délimité par deux séries de trois tirets seuls sur une ligne (<code>---</code>). Un champ en YAML est composé d'un nom et d'une valeur séparés par un double-points.</p>
+<p>Conformément à la spécification YAML, les listes peuvent être inscrite en mode <em>block</em> :</p>
+<pre><code class="language-yaml">tags:
+- mot-clé 1
+- mot-clé 2
+</code></pre>
+<p>Ou bien en mode <em>flow</em> :</p>
+<pre><code class="language-yaml">tags: [mot-clé 1, mot-clé 2]
+</code></pre>
+<div class="note">
+<p><strong>Pourquoi un en-tête en YAML ?</strong></p>
+<p>Certains logiciels identifier les métadonnées d'un fichier de manière heuristique. Par exemple, si la première ligne du fichier est un titre de niveau 1, alors il sera interprété comme le titre du fichier ; si la seconde ligne contient des mots préfixés par un croisillon <code>#</code>, alors ils seront interprétés comme des mots-clés.</p>
+<p>L'inconvénient de ce fonctionnement est qu'il n'est pas interopérable : chaque logiciel a ses propres conventions, ce qui limite la capacité de l'utilisateur à changer d'outil.</p>
+<p>Utiliser un en-tête en YAML permet de déclarer des métadonnées comme le titre et l'identifiant unique d'une fiche de manière explicite. Ceci présente l'avantage de rendre triviale la détection et la manipulation de ces métadonnées, aussi bien par une machine que par un humain. L'utilisation d'un format commun (comme YAML) augmente le nombre d'outils compatibles avec un même ensemble de fichiers. Et des outils informatiques très répandus comme les expressions régulières et les scripts <em>shell</em> permettent aux utilisateurs de convertir eux-mêmes leurs données de manière relativement simple si besoin.</p>
+</div>
+<h4 id="metadonnees-reconnues" tabindex="-1">Métadonnées reconnues</h4>
+<p>Cosma reconnaît et utilise les champs suivants :</p>
+<dl>
+<dt><code>title</code></dt>
+<dd>Obligatoire.</dd>
+<dd>Titre de la fiche.</dd>
+<dt><code>id</code></dt>
+<dd>Obligatoire.</dd>
+<dd>Identifiant unique de la fiche (série unique de chiffres). Par défaut, Cosma génère des identifiants à 14 chiffres par horodatage (année, mois, jour, heures, minutes et secondes) sur le modèle de certains logiciels de prise de notes type Zettelkasten comme <a href="https://zettelkasten.de/the-archive/">The Archive</a> ou <a href="https://www.zettlr.com">Zettlr</a>.</dd>
+<dt><code>type</code></dt>
+<dd>Types de la fiche. Facultatif. Une fiche peut avoir un ou plusieurs types. Si le champ n'est pas renseigné ou bien que ses valeurs ne correspondent pas à l'un des types renseignés dans la configuration, Cosma interprètera le type de la fiche comme non défini (<code>undefined</code>).</dd>
+<dt><code>tags</code> (ou <code>keywords</code>)</dt>
+<dd>Mots-clés de la fiche. Facultatif. La valeur doit être une liste. Il est possible d'utiliser <code>keywords</code> au lieu de <code>tags</code>, dans une logique de compatibilité avec Pandoc. Si une fiche comporte un champ <code>tags</code> et un champ <code>keywords</code>, seuls les mots-clés déclarés dans le champ <code>tags</code> sont interprétés par Cosma.</dd>
+</dl>
+<!-- Compléter : thumbnail, begin, end… ? -->
+<h4 id="ajouter-dautres-metadonnees" tabindex="-1">Ajouter d'autres métadonnées</h4>
+<p>Il est possible d'ajouter librement d'autres métadonnées dans l'en-tête YAML. Par défaut, Cosma ignore ces métadonnées au moment de créer un cosmoscope : elles ne sont pas incluses dans le rendu HTML des fiches. Pour que ces métadonnées soient prises en compte, inscrivez-les dans le fichier de configuration au niveau du champ <code>record_metas</code>.</p>
+<p>Exemple :</p>
+<pre><code>record_metas: [author, date, lang]
+</code></pre>
+<h3 id="contenu" tabindex="-1">Contenu</h3>
+<p>Cosma interprète les fichiers comme étant rédigés en <a href="https://spec.commonmark.org/0.30/">CommonMark</a>, une version strictement définie du langage de balisage léger Markdown.</p>
+<div class="astuce">
+<p>Le <a href="https://www.arthurperret.fr/tutomd/">tutoriel CommonMark traduit en français</a> permet d'apprendre les bases de Markdown en 10 minutes.</p>
+<p>Si vous souhaitez découvrir l'utilisation conjointe de Markdown et Pandoc, vous pouvez consulter le cours en ligne <a href="https://infolit.be/md/">Markdown et vous</a>.</p>
+</div>
+<p>Cosma génère un rendu des fichiers Markdown en HTML. Par conséquent, les fichiers Markdown peuvent également inclure du code HTML, ainsi que des images vectorielles en SVG. Cosma supporte également l'<a href="https://www.npmjs.com/package/markdown-it-attrs">ajout d'attributs via des accolades</a>, comme présenté ci-dessous.</p>
+<pre><code class="language-markdown">Ce paragraphe sera en rouge{.red}
+</code></pre>
+<pre><code class="language-html">&lt;div class=&quot;red&quot;&gt;Ce paragraphe sera en rouge&lt;/div&gt;
+</code></pre>
+<p>Les images au format JPG ou PNG peuvent être incluses dans le cosmoscope via la syntaxe Markdown. Exemple :</p>
+<pre><code class="language-markdown">![Texte alternatif](image.jpg)
+</code></pre>
+<p>Pour réduire la taille du cosmoscope, privilégiez les images hébergées sur le Web et incluses via une URL. Exemple :</p>
+<pre><code class="language-markdown">![Texte alternatif](http://domaine.fr/image.jpg)
+</code></pre>
+<h3 id="liens" tabindex="-1">Liens</h3>
+<p>À l'intérieur des fiches, vous pouvez créer des liens avec l'identifiant de la fiche cible entre double crochets.</p>
+<p>Exemple :</p>
+<pre><code>Un lien vers [[20201209111625]] une fiche.
+</code></pre>
+<p>Cosma permet de définir des types de liens. Chaque type de lien est caractérisé par un nom, une couleur et un tracé. Pour qualifier un lien dans une fiche, préfixez l'identifiant par le nom d'un type de lien suivi d'un deux-points.</p>
+<p>Exemple :</p>
+<pre><code>Le concept B dérive du [[générique:20201209111625]] concept A.
+
+La personne D a écrit contre [[opposant:20201209111625]] la personne C.
+</code></pre>
+<div class="astuce">
+<p>Pour améliorer la lisibilité des fiches dans le cosmoscope, utilisez le paramètre <code>link_symbol</code>. Il accepte comme valeur une chaîne de caractères Unicode arbitraire, qui remplacera les identifiants entre les crochets dans le rendu HTML des fiches. Ceci permet d'alléger visuellement le texte des fiches en remplaçant les longs identifiants numériques par une convention personnelle. Cela peut être par exemple un symbole comme une manicule ☞, une flèche →, une étoile ⟡, etc.</p>
+</div>
+<h3 id="identifiants-uniques" tabindex="-1">Identifiants uniques</h3>
+<p>Pour être correctement interprétée par Cosma, chaque fiche doit avoir un identifiant unique. Cet identifiant sert de cible aux liens internes.</p>
+<p><strong>L'identifiant doit être une suite de chiffres.</strong></p>
+<p>Par défaut, Cosma génère des identifiants à 14 chiffres par horodatage (année, mois, jour, heures, minutes et secondes). Nous nous inspirons ici du fonctionnement de logiciels de prise de notes type Zettelkasten comme <a href="https://zettelkasten.de/the-archive/">The Archive</a> et <a href="https://www.zettlr.com">Zettlr</a>.</p>
+<p>À terme, nous souhaitons permettre à l'utilisateur de définir un motif d'identifiant de son choix, à la manière de Zettlr.</p>
+<div class="note">
+<p>De nombreux logiciels de prise de notes interreliées proposent d'établir les liens entre fichiers via leurs noms, et de gérer automatiquement la maintenance des liens lorsque les noms de fichiers sont modifiés. En choisissant plutôt d'utiliser des identifiants uniques, nous avons donné à Cosma un fonctionnement plus classique, plus strict, proche de celui du Web. Nous pensons qu'il s'agit de la manière la plus simple d'éviter les <a href="https://fr.wikipedia.org/wiki/Lien_mort">liens morts</a> de façon pérenne. Le fait de ne pas recourir à une maintenance automatique des liens notamment rend les données moins dépendantes d'une solution logicielle en particulier.</p>
+</div>
+<h2 id="creer-des-fiches" tabindex="-1">Créer des fiches</h2>
+<div class="important">
+<p>Pour créer des fiches, il faut un fichier de configuration avec le paramètre <code>files_origin</code> correctement renseigné.</p>
+</div>
+<h3 id="record-creer-une-fiche-(mode-formulaire)" tabindex="-1"><code>record</code> : créer une fiche (mode formulaire)</h3>
+<pre><code>cosma record
+cosma r
+</code></pre>
+<p>Cette commande permet de créer une fiche à la manière d'un formulaire. Une fois la commande lancée, le logiciel demande successivement de saisir un titre, un ou plusieurs types, et un ou plusieurs mots clés. Seul le titre est obligatoire.</p>
+<h3 id="autorecord-creer-une-fiche-(mode-one-liner)" tabindex="-1"><code>autorecord</code> : créer une fiche (mode <em>one-liner</em>)</h3>
+<pre><code>cosma autorecord &lt;titre&gt; &lt;type&gt; &lt;mots-clés&gt;
+cosma a &lt;titre&gt; &lt;type&gt; &lt;mots-clés&gt;
+</code></pre>
+<p>Cette commande permet de créer une fiche en une seule saisie. Seul le titre est obligatoire. Si vous saisissez plusieurs types ou plusieurs mots-clés, séparez-les par des virgules (les espaces suivant la virgule sont ignorés). Exemple : <code>type A, type B</code>, <code>mot-clé1, mot-clé2</code>.</p>
+<h3 id="batch-creer-un-lot-de-fiches" tabindex="-1"><code>batch</code> : créer un lot de fiches</h3>
+<pre><code>cosma batch &lt;chemin&gt;
+cosma b &lt;chemin&gt;
+</code></pre>
+<p>Cette commande permet de créer plusieurs fiches d'un coup. <code>&lt;chemin&gt;</code> correspond à l'emplacement d'un fichier au format JSON ou CSV décrivant les fiches à créer. Comme pour tous les autres modes de création de fiches, le titre (<code>title</code>) est obligatoire et les autres champs sont facultatifs.</p>
+<p>Exemple de fichier JSON contenant deux fiches :</p>
+<pre><code class="language-json">[
+  {
+    &quot;title&quot;: &quot;Titre de la fiche&quot;
+  },
+  {
+    &quot;title&quot;: &quot;Paul Otlet&quot;,
+    &quot;type&quot; : [&quot;Personne&quot;, &quot;Histoire&quot;],
+    &quot;metas&quot;: {
+        &quot;prenom&quot; : &quot;Paul&quot;,
+        &quot;nom&quot; : &quot;Otlet&quot;
+    },
+    &quot;tags&quot; : [&quot;documentation&quot;],
+    &quot;begin&quot; : &quot;1868&quot;,
+    &quot;end&quot; : &quot;1944&quot;,
+    &quot;content&quot; : &quot;Lorem...&quot;,
+    &quot;thumbnail&quot; : &quot;image.jpg&quot;,
+    &quot;references&quot; : [&quot;otlet1934&quot;]
+  }
+]
+</code></pre>
+<p>Exemple de fichier CSV contenant ces mêmes fiches :</p>
+<pre><code class="language-csv">title,content,type:nature,type:field,meta:prenom,meta:nom,tag:genre,time:begin,time:end,thumbnail,references
+Titre de la fiche,,,,,,,,,,,
+Paul Otlet,Lorem...,Personne,Histoire,Paul,Otlet,homme,1868,1944,image.png,otlet1934
+</code></pre>
+<div class="note">
+<p><strong>Identifiants des fiches créées par lot</strong></p>
+<p>Cosma génère des identifiants à 14 chiffres par horodatage : année, mois, jour, heures, minutes et secondes. Par conséquent, il est possible de créer manuellement une fiche par seconde, soit 86 400 fiches par jour. Ceci signifie qu'il existe une plage de 86 400 identifiants « réservés » à la création manuelle de fiches. Pour le 15 janvier 2022 par exemple, ces identifiants vont de 20220115000000 à 20220115235959.</p>
+<p>Pour conserver ce fonctionnement sans risquer de générer des identifiants en double, le mode de création par lots génère des identifiants par pseudo-horodatage. Les 8 premiers chiffres, correspondant à la date (année, mois, jour), sont réels. Exemple : 20220115 (15 janvier 2022). En revanche, ceux correspondant aux heures, minutes et secondes sont générés en dehors des plages horaires réelles. Exemple : 256495. Comme il est impossible de créer une fiche manuellement à 25h 64min et 95s, il n'y a pas de risque de générer des identifiants en double en utilisant simultanément les deux méthodes.</p>
+<p>Du fait de ce fonctionnement, il est possible de créer par lot jusqu'à 913 599 fiches par jour et par répertoire avant d'être à cours d'identifiants.</p>
+</div>
+<h2 id="modelize-creer-un-cosmoscope" tabindex="-1"><code>modelize</code> : créer un cosmoscope</h2>
+<pre><code>cosma modelize
+cosma m
+</code></pre>
+<h3 id="generer-un-cosmoscope-dexemple" tabindex="-1">Générer un cosmoscope d'exemple</h3>
+<pre><code>cosma modelize --sample
+</code></pre>
+<p>Cette commande permet de générer un cosmoscope d'exemple. Ceci ne requiert pas de fichier de configuration. Le cosmoscope contient un extrait du manuel d'utilisation de Cosma sous forme hypertextuelle.</p>
+<h3 id="traiter-les-citations" tabindex="-1">Traiter les citations</h3>
+<pre><code>cosma modelize --citeproc
+</code></pre>
+<p>Cosma intègre une fonctionnalité de traitement des citations. Elle repose sur le même écosystème que <a href="https://www.zettlr.com">Zettlr</a> : les données et styles bibliographiques utilisent la norme <a href="https://citationstyles.org">Citation Style Language (CSL)</a>, tandis que l'insertion des citations dans le texte se fait avec la <a href="https://pandoc.org/MANUAL.html#citation-syntax">syntaxe de citation de Pandoc</a>.</p>
+<h4 id="fichiers-requis" tabindex="-1">Fichiers requis</h4>
+<p>Pour traiter automatiquement les citations, Cosma requiert trois fichiers :</p>
+<dl>
+<dt>Données bibliographiques</dt>
+<dd>Fichier contenant les métadonnées décrivant des références bibliographiques. Le format requis est CSL JSON (extension <code>.json</code>).</dd>
+<dt>Style bibliographique</dt>
+<dd>Fichier contenant les règles de mise en forme des citations et bibliographies. Le format requis est CSL (extension <code>.csl</code>). Vous pouvez télécharger des fichiers de style depuis le <a href="https://www.zotero.org/styles">répertoire de styles CSL de Zotero</a>.</dd>
+<dt>Localisation bibliographique</dt>
+<dd>Fichier contenant les traductions dans une certaine langue des termes employés en bibliographie (ex : éditeur, numéro…). Le format requis est XML (extension <code>.xml</code>). Vous pouvez télécharger des fichiers de localisation depuis le <a href="https://github.com/citation-style-language/locales/tree/6b0cb4689127a69852f48608b6d1a879900f418b">dépôt GitHub du projet CSL</a>.</dd>
+</dl>
+<p>Dans le fichier de données, chaque référence doit posséder un identifiant unique (<code>id</code>) qui sert de clé de citation. Exemple :</p>
+<pre><code class="language-json">[
+  {
+    &quot;id&quot;:&quot;goody1979&quot;,
+    &quot;author&quot;:[{&quot;family&quot;:&quot;Goody&quot;,&quot;given&quot;:&quot;Jack&quot;}],
+    &quot;citation-key&quot;:&quot;goody1979&quot;,
+    &quot;event-place&quot;:&quot;Paris&quot;,
+    &quot;ISBN&quot;:&quot;978-2-7073-0240-3&quot;,
+    &quot;issued&quot;:{&quot;date-parts&quot;:[[1979]]},
+    &quot;language&quot;:&quot;fr&quot;,
+    &quot;publisher&quot;:&quot;Les Editions de Minuit&quot;,
+    &quot;publisher-place&quot;:&quot;Paris&quot;,
+    &quot;title&quot;:&quot;La Raison graphique : la domestication de la pensée sauvage&quot;,
+    &quot;title-short&quot;:&quot;La Raison graphique&quot;,
+    &quot;type&quot;:&quot;book&quot;
+  }
+]
+</code></pre>
+<div class="astuce">
+<p>Vous pouvez utiliser le gestionnaire de références bibliographiques <a href="https://www.zotero.org/">Zotero</a> avec l'extension <a href="https://retorque.re/zotero-better-bibtex/">Better BibTeX</a> afin de créer des clés de citation uniques pour chaque référence ainsi que des exports automatiquement mis à jour.</p>
+</div>
+<h4 id="syntaxe-de-citation" tabindex="-1">Syntaxe de citation</h4>
+<p>Pour citer une référence dans une fiche, intégrez la clé de citation de cette référence en utilisant la <a href="https://pandoc.org/MANUAL.html#citation-syntax">syntaxe de citation de Pandoc</a>.</p>
+<p>Exemple :</p>
+<pre><code>À propos de raison graphique [@goody1979, 46-52]…
+</code></pre>
+<h4 id="rendu-des-citations-et-bibliographies" tabindex="-1">Rendu des citations et bibliographies</h4>
+<p>Lors du traitement des citations, chaque clé de citation est remplacée par du texte formaté et une bibliographie est générée en-dessous du corps de chaque fiche contenant des références.</p>
+<p>Exemple :</p>
+<pre><code>À propos de raison graphique (Goody 1979, p. 46-52)…
+
+Bibliographie
+-------------
+
+GOODY, Jack, 1979. La Raison graphique : la domestication de la pensée sauvage.
+  Paris : Les Editions de Minuit. ISBN 978-2-7073-0240-3.
+</code></pre>
+<p>Les données CSL JSON correspondant aux références citées sont également incluses dans le cosmoscope au format JSON. Vous pouvez consulter et télécharger ces données dans le cosmoscope en cliquant sur le bouton « Données » en bas du menu latéral gauche. Vous pouvez également y accéder en consultant le code source du cosmoscope au niveau de la balise <code>&lt;article id=&quot;citation-references&quot;&gt;</code>.</p>
+<h3 id="appliquer-une-css-personnalisee" tabindex="-1">Appliquer une CSS personnalisée</h3>
+<pre><code>cosma modelize --custom-css
+</code></pre>
+<p>Il est possible de personnaliser l'apparence d'un cosmoscope via une feuille de styles CSS. Pour cela, renseignez son emplacement au niveau du paramètre <code>css_custom</code> dans le fichier de configuration et appliquez l'option <code>--custom-css</code> au moment de générer le cosmoscope.</p>
+<p>Pour élaborer votre CSS, ouvrez le cosmoscope dans un navigateur web et utiliser les outils de développement du navigateur pour inspecter le code, ou bien consultez le code source de Cosma, spécifiquement <code>/cosma-core/template.njk</code> (pour connaître la structure HTML du cosmoscope), <code>/cosma-core/styles.css</code> et <code>/cosma-core/print.css</code> (pour les styles d'impression activés lors de l'impression d'une fiche). Ceci vous permettra de connaître les sélecteurs à utiliser pour telle ou telle déclaration CSS.</p>
+<p>Les feuilles de style du cosmoscope utilisent des variables CSS pour définir les couleurs et les polices utilisées. Vous pouvez redéfinir uniquement ces variables pour modifier tous les éléments d'interface auxquels elles s'appliquent. Dans l'exemple ci-dessous, le fichier <code>custom.css</code> contient des déclarations qui modifient les polices utilisées dans le cosmoscope :</p>
+<pre><code class="language-css">:root {
+  --sans: &quot;IBM Plex Sans&quot;, sans-serif;
+  --serif: &quot;IBM Plex Serif&quot;, serif;
+  --mono: &quot;IBM Plex Mono&quot;, monospace;
+  --condensed: 'Avenir Next Condensed', sans-serif;
+}
+</code></pre>
+<div class="astuce">
+<p>Les options peuvent être utilisées simultanément :</p>
+<pre><code>cosma modelize --citeproc --custom-css
+</code></pre>
+</div>
+<h3 id="utiliser-un-fichier-de-configuration-global" tabindex="-1">Utiliser un fichier de configuration global</h3>
+<pre><code>cosma modelize --config &lt;nom&gt;
+</code></pre>
+<p>L'option <code>--config</code> applique les paramètres du projet <code>nom</code>.</p>
+<h3 id="exclure-certaines-fiches-du-cosmoscope" tabindex="-1">Exclure certaines fiches du cosmoscope</h3>
+<p>Il est possible d'exclure certaines fiches du cosmoscope sur la base du paramètre <code>record_filters</code>. Celui-ci prend pour valeur une liste dont les éléments peuvent être des types, des mots-clés ou des valeurs prises par les métadonnées déclarées dans <code>record_metas</code>. Les fiches dont l'en-tête contient au moins un élément de la liste sont exclues au moment de générer le cosmoscope.</p>
+<p>Voici un exemple d'en-tête d'une fiche :</p>
+<pre><code>---
+title: Paul Otlet
+type: personne
+groupe: auteurs
+tags: [documentation, pacifisme]
+---
+
+Paul Otlet (1868-1944) est un avocat, bibliographe
+et militant pacifiste belge considéré comme le
+fondateur de la documentation moderne…
+</code></pre>
+<p>La métadonnée <code>groupe</code> peut être déclarée via <code>record_metas</code> :</p>
+<pre><code>record_metas: [groupe]
+</code></pre>
+<p>Ceci permet de l'utiliser pour exclure certaines fiches via <code>record_filters</code>. Ici, toutes les fiches contenant <code>groupe: auteurs</code> et/ou le mot-clé <code>pacifisme</code> seront exclues :</p>
+<pre><code>record_filters: [auteurs, pacifisme]
+</code></pre>
+<h3 id="historique" tabindex="-1">Historique</h3>
+<p>Par défaut, Cosma exporte automatiquement une copie de chaque cosmoscope dans un répertoire <code>history</code>. Ceci peut être désactivé en renseignant <code>history: false</code> dans le fichier de configuration.</p>
+<!-- Emplacement ? -->
+<h3 id="rapport-derreurs" tabindex="-1">Rapport d'erreurs</h3>
+<p>Si Cosma rencontre des problèmes durant la génération d'un cosmoscope, il crée un rapport d'erreurs dans un sous-répertoire <code>reports</code> du répertoire de données utilisateur. Si ce dernier n'existe pas, <code>reports</code> est placé dans le répertoire d'installation de Cosma.</p>
+<h2 id="utilisation-du-cosmoscope" tabindex="-1">Utilisation du cosmoscope</h2>
+<p>Le cosmoscope est un fichier HTML. Pour l'utiliser, ouvrez-le dans un navigateur web.</p>
+<p>Le cosmoscope est organisé en trois colonnes :</p>
+<dl>
+<dt>Panneau latéral gauche (Menu)</dt>
+<dd>Regroupe les fonctionnalités permettant de chercher de l'information et de modifier l'affichage de manière globale.</dd>
+<dt>Zone centrale (Graphe)</dt>
+<dd>Affiche le graphe et les contrôles associés (zoom, focus).</dd>
+<dt>Panneau latéral droit (Fiche)</dt>
+<dd>Affiche les fiches (métadonnées et contenu) ainsi qu'une liste des liens sortants (Liens) et entrants (Rétroliens).</dd>
+</dl>
+<h3 id="graphe" tabindex="-1">Graphe</h3>
+<p>Le graphe situé dans la zone centrale de l'interface affiche des nœuds étiquetés et interreliés. Chaque nœud correspond à une fiche ; l'étiquette correspond au titre de la fiche. Les liens correspondent aux liens établis entre les fiches via leur identifiant.</p>
+<p>Survoler un nœud le met temporairement en surbrillance, lui et ses connexions. Cliquer sur un nœud le met en surbrillance, ainsi que ses connexions, et ouvre la fiche correspondante.</p>
+<p>Vous pouvez zoomer librement dans le graphe à la souris, au pavé tactile, en double cliquant sur le fond du graphe ou bien avec les boutons dédiés situés en bas à gauche. Appuyez sur la touche <code>C</code> pour zoomer sur un nœud sélectionné (dont la fiche est ouverte). Le bouton Recentrer (raccourci : touche <code>R</code>) réinitialise le zoom.</p>
+<p>Les nœuds sont organisés dans l'espace par un algorithme de simulation de forces. Une barre colorée située au sommet du panneau latéral gauche témoigne de l'état de la simulation (en cours ou bien terminée). Cliquez sur cette barre (raccourci : touche <code>Espace</code>) pour lancer un cycle de simulation supplémentaire.</p>
+<div class="astuce">
+<p>Quelques pressions successives de la touche <code>Espace</code> permettent de « déplier » progressivement un graphe emmêlé.</p>
+</div>
+<p>Le graphe n'est pas figé, les nœuds peuvent donc être déplacés par cliquer-glisser. Cependant, les nœuds et liens restent soumis en permanence à la simulation, donc il n'est pas possible de les disposer manuellement de manière arbitraire. Chaque modification du cosmoscope est susceptible de modifier la disposition des nœuds dans l'espace.</p>
+<p>L'affichage du graphe peut être modifié de manière temporaire via les contrôles placés sous Paramètres du graphe dans le panneau latéral gauche. Pour modifier l'affichage de manière permanente, modifiez les valeurs par défaut des paramètres correspondants dans le fichier de configuration.</p>
+<div class="astuce">
+<p>Modifiez la force et la distance maximale entre les nœuds pour adapter l'affichage à la résolution et la taille de votre écran. Ajoutez une force d'attraction vers l'axe vertical/horizontal pour resserrer le graphe et ramener les nœuds isolés plus près du centre.</p>
+</div>
+<p>L'affichage est possible sur tous types d'écrans mais n'est pas optimisé pour les terminaux mobiles : le tactile ne donne pas accès à certaines interactions comme le survol, et les petits écrans restreignent l'utilité du graphe.</p>
+<h3 id="fiches" tabindex="-1">Fiches</h3>
+<p>Les fiches peuvent être ouvertes en cliquant sur un nœud, une entrée de l'index, une suggestion du moteur de recherche, ou un lien dans le corps ou le pied d'une fiche. Ouvrir une fiche affiche son contenu dans le panneau latéral droit.</p>
+<p>Ouvrir une fiche met à jour l'URL de la page dans le navigateur. Ceci permet de naviguer entre les fiches visitées via les fonctionnalités Précédent / Suivant du navigateur, mais aussi de les retrouver dans l'historique du navigateur ou encore d'obtenir un lien direct vers la fiche à partager.</p>
+<p>Cliquer sur le bouton « Fermer » referme le panneau latéral droit de lecture et désélectionne le nœud correspondant dans le graphe.</p>
+<p>Les liens présents dans les fiches sont cliquables. Dans un navigateur où est ouvert un cosmoscope, vous pouvez ouvrir ces liens dans un nouvel onglet via un clic droit. Le titre du lien (affiché en infobulle après 1-2 secondes de survol) est celui de la fiche correspondante.</p>
+<p>En bas de chaque fiche se trouve une liste des liens sortants et des liens entrants (ou rétroliens). Les liens et rétroliens sont contextualisés : au survol, une infobulle s'affiche, montrant le paragraphe qui entoure ce lien dans la fiche correspondante.</p>
+<div class="note">
+<p>Les liens et rétroliens contextualisés font partie des fonctionnalités les plus utiles des systèmes hypertextuels. C'est une fonctionnalité notoirement absente du Web. En revanche, de nombreuses applications de prise de notes interreliées traitent les liens comme un élément de première importance, et cela inclut les rétroliens contextualisés. Cependant, lorsque ces notes sont partagées sur le Web, cette fonctionnalité n'est pas toujours incluse, ou alors elle fait partie d'un service de publication payant. Avec Cosma, les rétroliens contextualisés font partie du logiciel, que vous soyez l'auteur d'un cosmoscope travaillant sur sa machine, ou quelqu'un qui explore un cosmoscope sur le Web.</p>
+</div>
+<h3 id="mode-focus" tabindex="-1">Mode focus</h3>
+<p>Le bouton Activer le focus (raccourci : touche <code>F</code>) situé en bas à gauche du graphe permet de restreindre l'affichage au nœud sélectionné : en mode focus, seules les connexions directes à la fiche sélectionnée sont affichées dans l'interface. Le mode focus ne fonctionne que si vous avez sélectionné une fiche.</p>
+<p>Le curseur qui apparaît sous le bouton Activer le focus permet de faire varier la distance d'affichage, jusqu'au maximum indiqué dans Préférences › Niveau maximum de focus. Une valeur de 1 signifie que seules les connexions immédiates seront affichées en mode Focus. Une valeur de 2 signifie que vous pouvez étendre le focus aux connexions des connexions, et ainsi de suite.</p>
+<div class="astuce">
+<p>Le curseur du niveau de focus est contrôlable via les flèches du clavier. Vous pouvez enchaîner les raccourcis : <code>F</code> pour activer le focus, puis les flèches pour augmenter le niveau de focus.</p>
+</div>
+<h3 id="moteur-de-recherche" tabindex="-1">Moteur de recherche</h3>
+<p>Le champ de texte situé en haut du panneau latéral gauche est un moteur de recherche qui fonctionne sur les titres de fiches. Il suggère une liste de fiches dont le titre est le plus proche de ce que vous saisissez dans la barre de recherche (<em>fuzzy search</em>). Cliquer sur une suggestion sélectionne le nœud correspondant dans le graphe et ouvre la fiche correspondante dans le panneau latéral de droite.</p>
+<div class="important">
+<p>Les suggestions disponibles sont contraintes par les <a href="#filtrer-laffichage-par-types">filtres</a> et le <a href="#mode-focus">mode focus</a> : une fiche masquée par l'une ou l'autre de ces fonctionnalités ne sera pas accessible via le moteur de recherche. Lorsque vous voulez repartir de zéro pour une nouvelle requête, vous pouvez cliquer sur Réinitialiser l'affichage (raccourci : <code>Alt</code> + <code>R</code>).</p>
+</div>
+<h3 id="filtrer-laffichage-par-types" tabindex="-1">Filtrer l'affichage par types</h3>
+<p>La liste des types de fiches située en haut du panneau latéral gauche permet de filtrer l'affichage. Cliquer sur un type permet de masquer et réafficher les fiches du type correspondant dans le graphe, l'index et les suggestions du moteur de recherche. Cliquer sur un type en maintenant la touche <code>Alt</code> enfoncée permet de masquer et réafficher les fiches des autres types.</p>
+<p>Pour qu'un type apparaisse, il doit être déclaré dans le fichier de configuration et être attribué à au moins une fiche.</p>
+<h3 id="mots-cles" tabindex="-1">Mots-clés</h3>
+<p>La liste des mots-clés située dans le panneau latéral gauche permet de mettre en évidence les fiches qui utilisent chaque mot-clé sélectionné. Sélectionner un mot-clé met en surbrillance l'étiquette des nœuds correspondants dans le graphe et restreint l'index aux fiches correspondantes. Vous pouvez activer simultanément plusieurs mots-clés. Pour désactiver un mot-clé, cliquez à nouveau sur le bouton correspondant.</p>
+<p>Pour qu'un mot-clé apparaisse, il suffit qu'il ait été déclaré dans l'en-tête YAML d'au moins une fiche avec le champ <code>tags</code> (ou <code>keywords</code>).</p>
+<h3 id="index" tabindex="-1">Index</h3>
+<p>L'index alphabétique des fiches situé dans le panneau latéral gauche permet d'accéder directement à une fiche sans passer par le graphe. Cliquer sur un titre sélectionne le nœud correspondant dans le graphe et ouvre la fiche correspondante. L'index peut être trié par ordre alphabétique croissant ou décroissant. Les filtres, les mots-clés et le mode focus modifient l'affichage de l'index.</p>
+<h3 id="vues" tabindex="-1">Vues</h3>
+<p>Les Vues sont une fonctionnalité de la version GUI de Cosma, qui consiste à sauvegarder l'état du graphe (fiche sélectionnée, filtres actifs, mode focus) pour un accès ultérieur, via l'ajout d'un bouton dans la section Vues du panneau latéral gauche. Cliquer sur ce bouton applique tous les paramètres qui étaient actifs au moment de l'enregistrement de la vue. Cliquer à nouveau sur le bouton rétablit l'affichage normal. Il n'est pas possible de créer de vue depuis un cosmoscope en dehors de la version GUI.</p>
+<h2 id="partage-et-publication-dun-cosmoscope" tabindex="-1">Partage et publication d'un cosmoscope</h2>
+<p>Les cosmoscopes intègrent les métadonnées titre, auteur, description et mots-clés si elles ont été renseignées dans le fichier de configuration. Ces métadonnées sont affichées dans le panneau « À propos ». Elles sont également incluses dans le code source du cosmoscope sous la forme de balises <code>meta</code>, afin d'améliorer la description d'un cosmoscope destiné à être publié sur le Web.</p>
+<p>Un cosmoscope peut être partagé comme n'importe quel fichier informatique : email, transfert de fichiers, messagerie, mise en ligne sur un serveur…</p>
+<p>Dans le cas d'un cosmoscope publié sur le Web, il est possible de créer un lien directement vers une fiche en ajoutant son identifiant précédé d'un croisillon <code>#</code> en fin d'URL. Exemple :</p>
+<p><code>https://domaine.fr/cosmoscope.html#20210427185546</code></p>
+<h2 id="credits" tabindex="-1">Crédits</h2>
+<h3 id="equipe" tabindex="-1">Équipe</h3>
+<ul>
+<li><a href="https://www.arthurperret.fr/">Arthur Perret</a> (porteur du projet)</li>
+<li><a href="https://myllaume.fr/">Guillaume Brioudes</a> (développeur)</li>
+<li><a href="https://mica.u-bordeaux-montaigne.fr/borel-clement/">Clément Borel</a> (chercheur)</li>
+<li><a href="http://www.guidedesegares.info/">Olivier Le Deuff</a> (chercheur)</li>
+</ul>
+<h3 id="bibliotheques-utilisees" tabindex="-1">Bibliothèques utilisées</h3>
+<p>Pour améliorer la maintenabilité et la lisibilité du code source, l’équipe de développement a recouru aux bibliothèques suivantes :</p>
+<ul>
+<li><a href="https://d3js.org/">D3.js</a> v4.13.0 (BSD 3-Clause) : Génération du graphe</li>
+<li><a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> v3.2.3 (BSD 2-Clause) : Génération du template du cosmoscope</li>
+<li><a href="https://github.com/nodeca/js-yaml">Js-yaml</a> v4.1.0 (MIT License) : Lecture du fichier de configuration et écriture de l'en-tête YAML</li>
+<li><a href="https://github.com/dworthen/js-yaml-front-matter">Js-yaml-front-matter</a> v4.1.1 (MIT License) : Lecture de l'en-tête YAML des fichiers Markdown</li>
+<li><a href="https://github.com/markdown-it/markdown-it">Markdown-it</a> v12.3.0 (MIT License) : Conversion Markdown → HTML</li>
+<li><a href="https://www.npmjs.com/package/markdown-it-attrs">Markdown-it-attrs</a> v4.0.0  (MIT License) : Traitement des hyperliens Markdown au sein des fiches</li>
+<li><a href="https://github.com/Juris-M/citeproc-js">Citeproc-js</a> v2.4.62 (CPAL et AGPL) : Conversion des clés de citation</li>
+<li><a href="https://fusejs.io/">Fuse.js</a> v6.4.6 (Apache License 2.0) : Moteur de recherche</li>
+<li><a href="https://momentjs.com/">Moment</a> v2.29.1 (MIT License) : Gestion de l'horodatage</li>
+</ul>
+<h2 id="changelog" tabindex="-1">Changelog</h2>
+
+    </main>
+
+    <aside id="toc">
+	<nav class="toc" >
+        <ul><li><a href="#installation-et-mise-a-jour">Installation et mise à jour</a><ul><li><a href="#installation">Installation</a></li><li><a href="#mise-a-jour">Mise à jour</a></li></ul></li><li><a href="#presentation">Présentation</a></li><li><a href="#la-commande-cosma">La commande cosma</a><ul><li><a href="#creer-le-repertoire-de-donnees-utilisateur">Créer le répertoire de données utilisateur</a></li><li><a href="#afficher-les-projets">Afficher les projets</a></li><li><a href="#afficher-le-numero-de-version">Afficher le numéro de version</a></li><li><a href="#afficher-laide">Afficher l'aide</a></li></ul></li><li><a href="#configuration">Configuration</a><ul><li><a href="#creer-un-fichier-de-configuration">Créer un fichier de configuration</a></li><li><a href="#creer-un-fichier-de-configuration-global-(projet)">Créer un fichier de configuration global (projet)</a></li><li><a href="#creer-un-fichier-de-configuration-par-defaut">Créer un fichier de configuration par défaut</a></li><li><a href="#parametres-de-configuration">Paramètres de configuration</a></li><li><a href="#modele-de-configuration">Modèle de configuration</a></li></ul></li><li><a href="#creer-du-contenu-donnees-tabulaires-(csv)">Créer du contenu : données tabulaires (CSV)</a></li><li><a href="#creer-du-contenu-fichiers-texte-(markdown)">Créer du contenu : fichiers texte (Markdown)</a><ul><li><a href="#metadonnees">Métadonnées</a></li><li><a href="#contenu">Contenu</a></li><li><a href="#liens">Liens</a></li><li><a href="#identifiants-uniques">Identifiants uniques</a></li></ul></li><li><a href="#creer-des-fiches">Créer des fiches</a><ul><li><a href="#record-creer-une-fiche-(mode-formulaire)">record : créer une fiche (mode formulaire)</a></li><li><a href="#autorecord-creer-une-fiche-(mode-one-liner)">autorecord : créer une fiche (mode one-liner)</a></li><li><a href="#batch-creer-un-lot-de-fiches">batch : créer un lot de fiches</a></li></ul></li><li><a href="#modelize-creer-un-cosmoscope">modelize : créer un cosmoscope</a><ul><li><a href="#generer-un-cosmoscope-dexemple">Générer un cosmoscope d'exemple</a></li><li><a href="#traiter-les-citations">Traiter les citations</a></li><li><a href="#appliquer-une-css-personnalisee">Appliquer une CSS personnalisée</a></li><li><a href="#utiliser-un-fichier-de-configuration-global">Utiliser un fichier de configuration global</a></li><li><a href="#exclure-certaines-fiches-du-cosmoscope">Exclure certaines fiches du cosmoscope</a></li><li><a href="#historique">Historique</a></li><li><a href="#rapport-derreurs">Rapport d'erreurs</a></li></ul></li><li><a href="#utilisation-du-cosmoscope">Utilisation du cosmoscope</a><ul><li><a href="#graphe">Graphe</a></li><li><a href="#fiches">Fiches</a></li><li><a href="#mode-focus">Mode focus</a></li><li><a href="#moteur-de-recherche">Moteur de recherche</a></li><li><a href="#filtrer-laffichage-par-types">Filtrer l'affichage par types</a></li><li><a href="#mots-cles">Mots-clés</a></li><li><a href="#index">Index</a></li><li><a href="#vues">Vues</a></li></ul></li><li><a href="#partage-et-publication-dun-cosmoscope">Partage et publication d'un cosmoscope</a></li><li><a href="#credits">Crédits</a><ul><li><a href="#equipe">Équipe</a></li><li><a href="#bibliotheques-utilisees">Bibliothèques utilisées</a></li></ul></li><li><a href="#changelog">Changelog</a></li></ul>
+      </nav>
+</aside>
+
+    <footer>
+    
+    
+    <p>
+        Cosma est un logiciel libre, diffusé sous licence <a href="https://opensource.org/licenses/GPL-3.0">GPL-3.0-or-later</a>.<br/>
+        Cette documentation a été fabriquée avec <a href="https://www.11ty.dev/">11ty</a>.
+    </p>
+    
+</footer>
+
+    <script>    
+(function() {
+  document.querySelectorAll('#toc > nav > ul > li').forEach( function(li) {
+    if (li.children.length > 1) {
+      var toggle = document.createElement('span');
+      toggle.className = 'toggle';
+      toggle.innerHTML = '▸';
+      toggle.onclick = function() {
+        var sublist = li.getElementsByTagName('ul')[0];
+        if (sublist) {
+          if (sublist.style.display === 'none') {
+            sublist.style.display = 'block'
+            toggle.innerHTML = '▾';
+          } else {
+            sublist.style.display = 'none';
+            toggle.innerHTML = '▸';
+          }
+        }
+      };
+      li.appendChild(toggle);
+      toggle.click();
+    }
+  });
+})();
+</script>
+
+</body>
+
+</html>
