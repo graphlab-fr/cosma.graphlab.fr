@@ -5,15 +5,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="generator" content="">
 
-	<title>Cosma — Manuel d’utilisation — CLI</title>
+	<title>Manuel d’utilisation (CLI) | Cosma</title>
 
 	<meta name="description" content="Manuel d’utilisation de Cosma CLI v2." />
 	<meta name="author" content="Arthur Perret,Guillaume Brioudes" />
 	<meta name="copyright" content="GPL-3.0-or-later"/>
-	<meta name="last_edit" content="2022-11-08" />
+	<meta name="last_edit" content="2022-11-09" />
 
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Cosma — Manuel d’utilisation — CLI" />
+	<meta property="og:title" content="Manuel d’utilisation (CLI)" />
 	<meta property="og:description" content="Manuel d’utilisation de Cosma CLI v2." />
 	<meta property="og:site_name" content="cosma-docs" />
 
@@ -23,22 +23,22 @@
 	<link rel="schema.DC" href="https://purl.org/dc/elements/1.1/" />
 	<link rel="schema.DCTERMS" href="https://purl.org/dc/terms/" />  
 
-	<meta property="DC.title" content="Cosma — Manuel d’utilisation — CLI" />
+	<meta property="DC.title" content="Manuel d’utilisation (CLI)" />
 	<meta property="DC.contributor" content="Arthur Perret,Guillaume Brioudes" />
-	<meta property="DC.date" content="2022-11-08" />
+	<meta property="DC.date" content="2022-11-09" />
 	<meta property="DC.language" content="fr" />
 	<meta property="DC.description" lang="fr" content="Manuel d’utilisation de Cosma CLI v2." />
 	<meta property="DC.rights" content="GPL-3.0-or-later" />
 
 	<meta name="twitter:site" content="@arthurperret" />
 	<meta name="twitter:creator" content="@arthurperret" />
-	<meta name="twitter:title" content="Cosma — Manuel d’utilisation — CLI" />
+	<meta name="twitter:title" content="Manuel d’utilisation (CLI)" />
 	<meta name="twitter:description" content="Manuel d’utilisation de Cosma CLI v2." />
 	<meta name="twitter:card"  content="summary" />
 	<meta name="twitter:image" content="https://cosma.graphlab.fr/img/cosma-icone.png" />
 
 	<style>
-        :root {
+			:root {
 	--sans: "Helvetica Neue", Helvetica, sans-serif;
 	--serif: "Georgia", 'Garamond', 'Time New Roman', 'Times', serif;
 	--mono: Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -61,7 +61,7 @@ body {
   display: grid;
   grid-template-columns: 70% 30%;
   grid-gap: 0 1%;
-  grid-template-areas: "header headernav"
+  grid-template-areas: "header header"
                        "main   aside"
                        "footer footer";
 }
@@ -322,49 +322,34 @@ footer {
 		padding-left: 1em;
 	}
 }
-    </style>
+	</style>
 </head>
 
 <body>
     <header>
 	<article>
-		<h1 class="title-site">Cosma — Manuel d’utilisation — CLI</h1>
+		<h1 class="title-site">Cosma — Manuel d’utilisation (CLI)</h1>
 	</article>
-
 </header>
 
-<nav class="nav-lang">
-	<ul>
-		
-<!-- 
-		<li><a href="../cosma-user-manual.html">🇬🇧 EN</a></li>
-		
-		<li><a href="../cosma-manuel-d-utilisation.html">🇫🇷 FR</a></li>
-		
-		<li><a href="../cosma-manuel-d-utilisation-cli.html">🇫🇷 FR</a></li>
- -->
-		
-		<li><a href="https://cosma.graphlab.fr">cosma.graphlab.fr ↦</a></li>
-	</ul>
-</nav>
 
     <aside id="toc">
 	<nav class="toc" >
-        <ul><li><a href="#installation-et-mise-a-jour">Installation et mise à jour</a><ul><li><a href="#installation">Installation</a></li><li><a href="#mise-a-jour">Mise à jour</a></li></ul></li><li><a href="#presentation">Présentation</a></li><li><a href="#la-commande-cosma">La commande cosma</a><ul><li><a href="#creer-le-repertoire-de-donnees-utilisateur">Créer le répertoire de données utilisateur</a></li><li><a href="#afficher-les-projets">Afficher les projets</a></li><li><a href="#afficher-le-numero-de-version">Afficher le numéro de version</a></li><li><a href="#afficher-laide">Afficher l'aide</a></li></ul></li><li><a href="#configuration">Configuration</a><ul><li><a href="#creer-un-fichier-de-configuration">Créer un fichier de configuration</a></li><li><a href="#creer-un-fichier-de-configuration-global-(projet)">Créer un fichier de configuration global (projet)</a></li><li><a href="#creer-un-fichier-de-configuration-par-defaut">Créer un fichier de configuration par défaut</a></li><li><a href="#parametres-de-configuration">Paramètres de configuration</a></li><li><a href="#modele-de-configuration">Modèle de configuration</a></li></ul></li><li><a href="#creer-du-contenu-donnees-tabulaires-(csv)">Créer du contenu : données tabulaires (CSV)</a></li><li><a href="#creer-du-contenu-fichiers-texte-(markdown)">Créer du contenu : fichiers texte (Markdown)</a><ul><li><a href="#metadonnees">Métadonnées</a></li><li><a href="#contenu">Contenu</a></li><li><a href="#liens">Liens</a></li><li><a href="#identifiants-uniques">Identifiants uniques</a></li></ul></li><li><a href="#creer-des-fiches">Créer des fiches</a><ul><li><a href="#record-creer-une-fiche-(mode-formulaire)">record : créer une fiche (mode formulaire)</a></li><li><a href="#autorecord-creer-une-fiche-(mode-one-liner)">autorecord : créer une fiche (mode one-liner)</a></li><li><a href="#batch-creer-un-lot-de-fiches">batch : créer un lot de fiches</a></li></ul></li><li><a href="#modelize-creer-un-cosmoscope">modelize : créer un cosmoscope</a><ul><li><a href="#generer-un-cosmoscope-dexemple">Générer un cosmoscope d'exemple</a></li><li><a href="#traiter-les-citations">Traiter les citations</a></li><li><a href="#appliquer-une-css-personnalisee">Appliquer une CSS personnalisée</a></li><li><a href="#utiliser-un-fichier-de-configuration-global">Utiliser un fichier de configuration global</a></li><li><a href="#exclure-certaines-fiches-du-cosmoscope">Exclure certaines fiches du cosmoscope</a></li><li><a href="#historique">Historique</a></li><li><a href="#rapport-derreurs">Rapport d'erreurs</a></li></ul></li><li><a href="#utilisation-du-cosmoscope">Utilisation du cosmoscope</a><ul><li><a href="#graphe">Graphe</a></li><li><a href="#fiches">Fiches</a></li><li><a href="#mode-focus">Mode focus</a></li><li><a href="#moteur-de-recherche">Moteur de recherche</a></li><li><a href="#filtrer-laffichage-par-types">Filtrer l'affichage par types</a></li><li><a href="#mots-cles">Mots-clés</a></li><li><a href="#index">Index</a></li><li><a href="#vues">Vues</a></li></ul></li><li><a href="#partage-et-publication-dun-cosmoscope">Partage et publication d'un cosmoscope</a></li><li><a href="#credits">Crédits</a><ul><li><a href="#equipe">Équipe</a></li><li><a href="#bibliotheques-utilisees">Bibliothèques utilisées</a></li></ul></li><li><a href="#changelog">Changelog</a></li></ul>
+        <ul><li><a href="#installation-et-mise-a-jour">Installation et mise à jour</a><ul><li><a href="#installation">Installation</a></li><li><a href="#mise-a-jour">Mise à jour</a></li></ul></li><li><a href="#presentation">Présentation</a></li><li><a href="#la-commande-cosma">La commande cosma</a><ul><li><a href="#creer-le-repertoire-de-donnees-utilisateur">Créer le répertoire de données utilisateur</a></li><li><a href="#afficher-les-projets">Afficher les projets</a></li><li><a href="#afficher-le-numero-de-version">Afficher le numéro de version</a></li><li><a href="#afficher-laide">Afficher l'aide</a></li></ul></li><li><a href="#configuration">Configuration</a><ul><li><a href="#creer-un-fichier-de-configuration">Créer un fichier de configuration</a></li><li><a href="#creer-un-fichier-de-configuration-global-(projet)">Créer un fichier de configuration global (projet)</a></li><li><a href="#creer-un-fichier-de-configuration-par-defaut">Créer un fichier de configuration par défaut</a></li><li><a href="#parametres-de-configuration">Paramètres de configuration</a></li><li><a href="#modele-de-configuration">Modèle de configuration</a></li></ul></li><li><a href="#creer-du-contenu-donnees-tabulaires-(csv)">Créer du contenu : données tabulaires (CSV)</a><ul><li><a href="#fichiers-de-donnees-noeuds-et-liens">Fichiers de données : nœuds et liens</a></li><li><a href="#metadonnees-(en-tetes-de-colonnes)">Métadonnées (en-têtes de colonnes)</a></li></ul></li><li><a href="#creer-du-contenu-fichiers-texte-(markdown)">Créer du contenu : fichiers texte (Markdown)</a><ul><li><a href="#metadonnees">Métadonnées</a></li><li><a href="#contenu">Contenu</a></li><li><a href="#liens">Liens</a></li><li><a href="#identifiants-uniques">Identifiants uniques</a></li></ul></li><li><a href="#creer-des-fiches">Créer des fiches</a><ul><li><a href="#record-creer-une-fiche-(mode-formulaire)">record : créer une fiche (mode formulaire)</a></li><li><a href="#autorecord-creer-une-fiche-(mode-one-liner)">autorecord : créer une fiche (mode one-liner)</a></li><li><a href="#batch-creer-un-lot-de-fiches">batch : créer un lot de fiches</a></li></ul></li><li><a href="#modelize-creer-un-cosmoscope">modelize : créer un cosmoscope</a><ul><li><a href="#generer-un-cosmoscope-dexemple">Générer un cosmoscope d'exemple</a></li><li><a href="#traiter-les-citations">Traiter les citations</a></li><li><a href="#appliquer-une-css-personnalisee">Appliquer une CSS personnalisée</a></li><li><a href="#utiliser-un-fichier-de-configuration-global">Utiliser un fichier de configuration global</a></li><li><a href="#exclure-certaines-fiches-du-cosmoscope">Exclure certaines fiches du cosmoscope</a></li><li><a href="#historique">Historique</a></li><li><a href="#rapport-derreurs">Rapport d'erreurs</a></li></ul></li><li><a href="#utilisation-du-cosmoscope">Utilisation du cosmoscope</a><ul><li><a href="#graphe">Graphe</a></li><li><a href="#fiches">Fiches</a></li><li><a href="#mode-focus">Mode focus</a></li><li><a href="#moteur-de-recherche">Moteur de recherche</a></li><li><a href="#filtrer-laffichage-par-types">Filtrer l'affichage par types</a></li><li><a href="#mots-cles">Mots-clés</a></li><li><a href="#index">Index</a></li><li><a href="#vues">Vues</a></li></ul></li><li><a href="#partage-et-publication-dun-cosmoscope">Partage et publication d'un cosmoscope</a></li><li><a href="#credits">Crédits</a><ul><li><a href="#equipe">Équipe</a></li><li><a href="#bibliotheques-utilisees">Bibliothèques utilisées</a></li></ul></li><li><a href="#changelog">Changelog</a><ul><li><a href="#ajouts">Ajouts</a></li><li><a href="#ameliorations">Améliorations</a></li><li><a href="#bugs-resolus">Bugs résolus</a></li></ul></li></ul>
       </nav>
 </aside>
 
     <main>
         
+        <p><strong>Version :</strong> CLI v.2.0.0-beta-1</p>
+        <p><strong>Dernière mise à jour :</strong> 9 novembre 2022</p>
+        
         
 
-        <div class="important">
-<p>Cette version du manuel correspond à la version 2.0.0-beta-1 de Cosma CLI uniquement.</p>
-</div>
-<h2 id="installation-et-mise-a-jour" tabindex="-1">Installation et mise à jour</h2>
+        <h2 id="installation-et-mise-a-jour" tabindex="-1">Installation et mise à jour</h2>
 <h3 id="installation" tabindex="-1">Installation</h3>
 <p>Cosma CLI est disponible pour macOS, Windows et Linux.</p>
-<p>L'installation de <a href="https://nodejs.org/">NodeJS</a> version 16 minimum est requise.</p>
+<p>L'installation de <a href="https://nodejs.org/">NodeJS</a> version 12 minimum est requise.</p>
 <p>Le gestionnaire de paquets NPM est installé automatiquement avec NodeJS. NPM peut être utilisé pour gérer l'installation de Cosma CLI. Entrez la commande ci-dessous dans votre terminal pour installer Cosma CLI de manière globale. Le logiciel s'exécute alors en écrivant <code>cosma</code>.</p>
 <pre><code>npm install @graphlab-fr/cosma -g
 </code></pre>
@@ -794,6 +779,112 @@ devtools: false
 lang: en
 </code></pre>
 <h2 id="creer-du-contenu-donnees-tabulaires-(csv)" tabindex="-1">Créer du contenu : données tabulaires (CSV)</h2>
+<p>Lorsque la source de données est de type <code>csv</code> ou <code>online</code> (données tabulaires situées dans un fichier local ou en ligne), les données doivent respecter les règles suivantes.</p>
+<h3 id="fichiers-de-donnees-noeuds-et-liens" tabindex="-1">Fichiers de données : nœuds et liens</h3>
+<p>Les données tabulaires destinées à Cosma doivent être contenues dans deux fichiers : un pour les nœuds et un autre pour les liens. Les noms de ces fichiers doivent être renseignés dans le fichier de configuration.</p>
+<table>
+<thead>
+<tr>
+<th>type de source de données</th>
+<th>paramètre à configurer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>nœuds (fichier CSV local)</td>
+<td><code>nodes_origin</code></td>
+</tr>
+<tr>
+<td>liens (fichier CSV local)</td>
+<td><code>links_origin</code></td>
+</tr>
+<tr>
+<td>nœuds (fichier CSV en ligne)</td>
+<td><code>nodes_online</code></td>
+</tr>
+<tr>
+<td>liens (fichier CSV en ligne)</td>
+<td><code>links_online</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="metadonnees-(en-tetes-de-colonnes)" tabindex="-1">Métadonnées (en-têtes de colonnes)</h3>
+<p>Les fichiers de données doivent contenir des en-têtes de colonnes correspondant aux métadonnées utilisées par Cosma.</p>
+<h4 id="metadonnees-pour-les-noeuds" tabindex="-1">Métadonnées pour les nœuds</h4>
+<p>Pour les nœuds, seule la métadonnée <code>title</code> (titre) est requise.</p>
+<table>
+<thead>
+<tr>
+<th>nom</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>Titre de la fiche (requis)</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>Identifiant unique</td>
+</tr>
+<tr>
+<td><code>type:&lt;nom&gt;</code></td>
+<td>Typologie de fiches. Chaque typologie contient un ou plusieurs types. Ex : une colonne peut être appelée <code>type:primaire</code> et contenir des types comme <code>personne</code>, <code>œuvre</code>, <code>institution</code> ; une autre colonne peut être appelée <code>type:secondaire</code>, avec d'autres types.</td>
+</tr>
+<tr>
+<td><code>tag:&lt;nom&gt;</code></td>
+<td>Liste de mots-clés</td>
+</tr>
+<tr>
+<td><code>meta:&lt;nom&gt;</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>time:begin</code>, <code>time:end</code></td>
+<td>Métadonnées utilisées par le mode chronologique</td>
+</tr>
+<tr>
+<td><code>content</code></td>
+<td>Contenu textuel de la fiche</td>
+</tr>
+<tr>
+<td><code>thumbnail</code></td>
+<td>Nom de fichier d'une image à inclure sous forme de vignette dans la fiche. Formats pris en charge : JPG, PNG. L'emplacement des fichiers images doit être renseigné via le paramètre <code>images_origin</code> dans le fichier de configuration.</td>
+</tr>
+<tr>
+<td><code>reference</code></td>
+<td>Liste de clés de citation à inclure en bibliographie dans la fiche.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="metadonnees-pour-les-liens" tabindex="-1">Métadonnées pour les liens</h4>
+<table>
+<thead>
+<tr>
+<th>nom</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Identifiant du lien (requis)</td>
+</tr>
+<tr>
+<td><code>source</code></td>
+<td>Identifiant de la fiche d'où part le lien (requis)</td>
+</tr>
+<tr>
+<td><code>target</code></td>
+<td>Identifiant de la fiche que cible le lien (requis)</td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>Description du lien (optionnelle). Cette description s'affiche dans les infobulles de contexte des liens/rétroliens.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="creer-du-contenu-fichiers-texte-(markdown)" tabindex="-1">Créer du contenu : fichiers texte (Markdown)</h2>
 <p>Lorsque la source de données est de type <code>directory</code> (répertoire de fichiers Markdown), les données doivent respecter les règles suivantes :</p>
 <ul>
@@ -1133,12 +1224,44 @@ fondateur de la documentation moderne…
 <li><a href="https://momentjs.com/">Moment</a> v2.29.1 (MIT License) : Gestion de l'horodatage</li>
 </ul>
 <h2 id="changelog" tabindex="-1">Changelog</h2>
-<p>🚧 En construction</p>
+<p>Liste des modifications effectuées par rapport à la version précédente.</p>
+<h3 id="ajouts" tabindex="-1">Ajouts</h3>
+<ul>
+<li>Gérer plusieurs configurations (globales et locales)</li>
+<li>Utiliser une syntaxe alternative pour les liens</li>
+<li>Inclure des métadonnées supplémentaires lors de la création par lots (batch)</li>
+<li>Afficher des métadonnées supplémentaires dans les fiches dans le cosmoscope</li>
+<li>Exclure certaines fiches lors de la génération du cosmoscope, sur la base des types, mots-clés et métadonnées supplémentaires</li>
+<li>Afficher les nœuds en mode chronologique</li>
+<li>Embarquer des images dans le cosmoscope (en base64). Formats pris en charge : JPG, PNG</li>
+<li>Associer une image à un type de fiche</li>
+<li>Associer une image à une fiche (affichée sur le nœud et dans la fiche)</li>
+<li>Définir une couleur de contour pour les types de nœuds</li>
+<li>Choisir entre nœuds de taille fixe et de taille proportionnelle à leur degré</li>
+</ul>
+<h3 id="ameliorations" tabindex="-1">Améliorations</h3>
+<ul>
+<li>Les liens en bibliographie sont désormais cliquables</li>
+<li>Les messages affichés à l'exécution des commandes sont plus informatifs</li>
+<li>Le rapport d'erreurs et d'avertissements est plus informatif</li>
+<li>Les mots-clés au sommet des fiches dans le cosmoscope ne débordent plus de la mise en page</li>
+<li>Cosma lit désormais les répertoires de fiches de manière récursive (ticket <a href="https://github.com/graphlab-fr/cosma/issues/4">#4</a>)</li>
+</ul>
+<h3 id="bugs-resolus" tabindex="-1">Bugs résolus</h3>
+<ul>
+<li>Les infobulles de contexte des liens/rétroliens mettent correctement en évidence la fiche cible (ticket <a href="https://github.com/graphlab-fr/cosma/issues/23">#23</a>)</li>
+<li>Les espaces dans les noms de fichiers générés par Cosma sont correctement remplacés par des tirets</li>
+</ul>
 
     </main>
 
     <footer>
     
+    
+    <p>
+        Cosma est un logiciel libre, diffusé sous licence <a href="https://opensource.org/licenses/GPL-3.0">GPL-3.0-or-later</a>.<br/>
+        Cette documentation a été fabriquée avec <a href="https://www.11ty.dev/">11ty</a>.
+    </p>
     
 </footer>
 

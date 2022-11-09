@@ -3,16 +3,17 @@
 <head>
 	<meta charset=utf-8 />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="generator" content="">
 
-	<title>Cosma — Manuel d’utilisation</title>
+	<title>Manuel d’utilisation | Cosma</title>
 
 	<meta name="description" content="Manuel d’utilisation de Cosma. Explique comment installer et utiliser les deux versions du logiciel (GUI, CLI)." />
 	<meta name="author" content="Arthur Perret,Guillaume Brioudes" />
 	<meta name="copyright" content="GPL-3.0-or-later"/>
-	<meta name="last_edit" content="2022-08-25" />
+	<meta name="last_edit" content="2022-11-09" />
 
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Cosma — Manuel d’utilisation" />
+	<meta property="og:title" content="Manuel d’utilisation" />
 	<meta property="og:description" content="Manuel d’utilisation de Cosma. Explique comment installer et utiliser les deux versions du logiciel (GUI, CLI)." />
 	<meta property="og:site_name" content="cosma-docs" />
 
@@ -22,22 +23,22 @@
 	<link rel="schema.DC" href="https://purl.org/dc/elements/1.1/" />
 	<link rel="schema.DCTERMS" href="https://purl.org/dc/terms/" />  
 
-	<meta property="DC.title" content="Cosma — Manuel d’utilisation" />
+	<meta property="DC.title" content="Manuel d’utilisation" />
 	<meta property="DC.contributor" content="Arthur Perret,Guillaume Brioudes" />
-	<meta property="DC.date" content="2022-08-25" />
+	<meta property="DC.date" content="2022-11-09" />
 	<meta property="DC.language" content="fr" />
 	<meta property="DC.description" lang="fr" content="Manuel d’utilisation de Cosma. Explique comment installer et utiliser les deux versions du logiciel (GUI, CLI)." />
 	<meta property="DC.rights" content="GPL-3.0-or-later" />
 
 	<meta name="twitter:site" content="@arthurperret" />
 	<meta name="twitter:creator" content="@arthurperret" />
-	<meta name="twitter:title" content="Cosma — Manuel d’utilisation" />
+	<meta name="twitter:title" content="Manuel d’utilisation" />
 	<meta name="twitter:description" content="Manuel d’utilisation de Cosma. Explique comment installer et utiliser les deux versions du logiciel (GUI, CLI)." />
 	<meta name="twitter:card"  content="summary" />
 	<meta name="twitter:image" content="https://cosma.graphlab.fr/img/cosma-icone.png" />
 
 	<style>
-        :root {
+			:root {
 	--sans: "Helvetica Neue", Helvetica, sans-serif;
 	--serif: "Georgia", 'Garamond', 'Time New Roman', 'Times', serif;
 	--mono: Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -60,7 +61,7 @@ body {
   display: grid;
   grid-template-columns: 70% 30%;
   grid-gap: 0 1%;
-  grid-template-areas: "header headernav"
+  grid-template-areas: "header header"
                        "main   aside"
                        "footer footer";
 }
@@ -216,7 +217,6 @@ ol code,
 dl code,
 table code {
   background-color: var(--code-background-color);
-  border: 1px solid var(--code-border-color);
   border-radius: 4px;
   padding: 0 0.2em;
 }
@@ -290,7 +290,39 @@ footer {
   	background: #67f3f4;
   }
 }
-    </style>
+
+@media screen and (max-width: 1000px) {
+	body {
+		display: block;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+	header > *,
+	main {
+		margin-right: auto;
+		margin-left: auto;
+		width: 100%;
+	}
+	main {
+		padding-bottom: 3vh;
+	}
+	aside {
+		position: relative;
+		height: auto;
+		padding-left: 5vw;
+		top: 0;
+	}
+	aside h1 {
+		display: block
+	}
+	.nav-lang ul {
+		justify-content: flex-end;
+	}
+	.nav-lang ul li {
+		padding-left: 1em;
+	}
+}
+	</style>
 </head>
 
 <body>
@@ -298,23 +330,19 @@ footer {
 	<article>
 		<h1 class="title-site">Cosma — Manuel d’utilisation</h1>
 	</article>
-
 </header>
 
-<nav class="nav-lang">
-	<ul>
-		
-		<li><a href="../cosma-manuel-d-utilisation.html">🇫🇷 FR</a></li>
-		
-		<li><a href="../cosma-user-manual.html">🇬🇧 EN</a></li>
-		
-		<li><a href="https://cosma.graphlab.fr">cosma.graphlab.fr ↦</a></li>
-	</ul>
-</nav>
+
+    <aside id="toc">
+	<nav class="toc" >
+        <ul><li><a href="#presentation">Présentation</a><ul><li><a href="#specificites-de-cosma">Spécificités de Cosma</a></li><li><a href="#un-degre-eleve-de-controle-utilisateur">Un degré élevé de contrôle utilisateur</a></li><li><a href="#un-logiciel-experimental">Un logiciel expérimental</a></li></ul></li><li><a href="#installation-et-mise-a-jour">Installation et mise à jour</a><ul><li><a href="#dossier-support">Dossier support</a></li><li><a href="#mises-a-jour">Mises à jour</a></li></ul></li><li><a href="#creer-du-contenu">Créer du contenu</a><ul><li><a href="#creer-une-fiche">Créer une fiche</a></li><li><a href="#format-de-donnees">Format de données</a></li></ul></li><li><a href="#creer-un-cosmoscope">Créer un cosmoscope</a></li><li><a href="#citations-et-bibliographies">Citations et bibliographies</a><ul><li><a href="#fichiers-requis">Fichiers requis</a></li><li><a href="#syntaxe-de-citation">Syntaxe de citation</a></li><li><a href="#creer-un-cosmoscope-avec-citations">Créer un cosmoscope avec citations</a></li></ul></li><li><a href="#historique">Historique</a></li><li><a href="#utilisation-du-cosmoscope">Utilisation du cosmoscope</a><ul><li><a href="#description-generale-de-linterface">Description générale de l'interface</a></li><li><a href="#graphe">Graphe</a></li><li><a href="#fiches">Fiches</a></li><li><a href="#mode-focus">Mode focus</a></li><li><a href="#moteur-de-recherche">Moteur de recherche</a></li><li><a href="#filtrer-laffichage-par-types">Filtrer l'affichage par types</a></li><li><a href="#mots-cles">Mots-clés</a></li><li><a href="#index">Index</a></li><li><a href="#vues">Vues</a></li></ul></li><li><a href="#partager-un-cosmoscope">Partager un cosmoscope</a></li><li><a href="#configuration">Configuration</a><ul><li><a href="#general">Général</a></li><li><a href="#types-de-fiches">Types de fiches</a></li><li><a href="#types-de-liens">Types de liens</a></li><li><a href="#graphe-1">Graphe</a></li><li><a href="#metadonnees-1">Métadonnées</a></li><li><a href="#bibliographie">Bibliographie</a></li><li><a href="#vues-1">Vues</a></li><li><a href="#avance">Avancé</a></li></ul></li><li><a href="#cosma-cli">Cosma CLI</a><ul><li><a href="#installation-(cli)">Installation (CLI)</a></li><li><a href="#configuration-(cli)">Configuration (CLI)</a></li><li><a href="#commandes">Commandes</a></li><li><a href="#options">Options</a></li></ul></li><li><a href="#credits">Crédits</a><ul><li><a href="#equipe">Équipe</a></li><li><a href="#bibliotheques-utilisees">Bibliothèques utilisées</a></li></ul></li><li><a href="#versions">Versions</a><ul><li><a href="#gui">GUI</a></li></ul></li></ul>
+      </nav>
+</aside>
 
     <main>
         
-        <p>Dernière mise à jour : 25 août 2022</p>
+        
+        <p><strong>Dernière mise à jour :</strong> 9 novembre 2022</p>
         
         
 
@@ -401,7 +429,8 @@ footer {
 <pre><code>---
 title: Titre du document
 id: 20201209111625
-type: undefined
+type:
+- undefined
 tags:
 - mot-clé 1
 - mot-clé 2
@@ -417,7 +446,7 @@ tags:
 <dd>Obligatoire.</dd>
 <dd>Identifiant unique de la fiche. Par défaut, Cosma génère des identifiants à 14 chiffres par horodatage (année, mois, jour, heures, minutes et secondes) sur le modèle de certains logiciels de prise de notes type Zettelkasten comme <a href="https://zettelkasten.de/the-archive/">The Archive</a> ou <a href="https://www.zettlr.com">Zettlr</a>.</dd>
 <dt><code>type</code></dt>
-<dd>Type de la fiche. Facultatif. Un seul type peut être assigné à une fiche. Si le champ <code>type</code> n'est pas spécifié ou bien que sa valeur ne correspond à l'un des types enregistrés dans la configuration, Cosma interprètera le type de la fiche comme non défini (<code>undefined</code>).</dd>
+<dd>Types de la fiche. Facultatif. Si le champ <code>type</code> n'est pas spécifié ou bien que ses valeurs ne correspondnt pas l'un des types enregistrés dans la configuration, Cosma interprètera le type de la fiche comme non défini (<code>undefined</code>).</dd>
 <dt><code>tags</code> (ou <code>keywords</code>)</dt>
 <dd>Mots-clés de la fiche. Facultatif. La valeur doit être une liste. Une fiche peut disposer d'autant de mot-clés que vous souhaitez. Vous pouvez utiliser <code>keywords</code> au lieu de <code>tags</code>, dans une logique de compatibilité avec Pandoc. Si une fiche comporte un champ <code>tags</code> et un champ <code>keywords</code>, seuls les mots-clés déclarés dans le champ <code>tags</code> sont interprétés par Cosma.</dd>
 </dl>
@@ -740,10 +769,15 @@ GOODY, Jack, 1979. La Raison graphique : la domestication de la pensée sauvag
 </div>
 <h2 id="cosma-cli" tabindex="-1">Cosma CLI</h2>
 <h3 id="installation-(cli)" tabindex="-1">Installation (CLI)</h3>
-<p>La version CLI de Cosma est disponible sur macOS, Windows et Linux.</p>
-<p>L'installation de <a href="https://nodejs.org/">NodeJS</a> version 15 minimum est requise.</p>
-<p>Entrez la commande suivante dans votre terminal pour installer Cosma CLI :</p>
+<p>La version CLI de Cosma est disponible pour macOS, Windows et Linux.</p>
+<p>L'installation de <a href="https://nodejs.org/">NodeJS</a> version 12 minimum est requise.</p>
+<p>Entrez la commande suivante dans votre terminal pour installer Cosma CLI de manière globale. Vous pouvez alors utiliser les commandes du logiciel depuis tout emplacement avec le préfixe <code>cosma</code>.</p>
 <pre><code>npm i @graphlab-fr/cosma -g
+cosma --help
+</code></pre>
+<p>Vous pouvez également l'installer comme dépendance d'un projet NodeJS avec la commande ci-dessous. Vous pouvez alors utiliser les commandes du logiciel depuis la racine du projet avec le préfixe <code>./node_modules/.bin/cosma</code>.</p>
+<pre><code>npm i @graphlab-fr/cosma
+./node_modules/.bin/cosma --help
 </code></pre>
 <h3 id="configuration-(cli)" tabindex="-1">Configuration (CLI)</h3>
 <p>La configuration de la version CLI s'effectue dans un fichier YAML <code>config.yml</code>. Ce fichier est généré par l'application lors de la première exécution, à la racine du répertoire de l'application :</p>
@@ -793,18 +827,39 @@ cosma b &lt;path&gt;
 <p>Cette commande permet de créer plusieurs fiches d'un coup.</p>
 <dl>
 <dt><code>&lt;path&gt;</code></dt>
-<dd>Emplacement d'un fichier au format JSON décrivant les fiches à créer. Le fichier doit être structuré de la manière suivante :</dd>
+<dd>Emplacement d'un fichier au format JSON ou CSV décrivant les fiches à créer. Le fichier doit être structuré de la manière suivante :</dd>
 </dl>
-<pre><code class="language-json">[
+<details>
+<summary>Exemple de fichier JSON</summary>
+```json
+[
   {
-    &quot;title&quot;: &quot;Titre de la fiche&quot;,
-    &quot;type&quot;: &quot;type de fiche&quot;,
-    &quot;tags&quot;: &quot;mot-clé 1,mot-clé 2&quot;,
-    &quot;content&quot;: &quot;Texte de la fiche, [[20210704100343]] liens inclus.&quot;
+    "title": "Titre de la fiche"
   },
-  ...
+  {
+    "title": "Paul Otlet",
+    "type" : ["Personne", "Histoire"],
+    "metas": {
+        "prenom" : "Paul",
+        "nom" : "Otlet"
+    },
+    "tags" : ["documentation"],
+    "begin" : "1868",
+    "end" : "1944",
+    "content" : "Lorem...",
+    "thumbnail" : "image.jpg",
+    "references" : ["otlet1934"]
+  }
 ]
-</code></pre>
+```
+</details>
+<details>
+<summary>Exemple de fichier CSV</summary>
+```csv
+title,content,type:nature,type:field,meta:prenom,meta:nom,tag:genre,time:begin,time:end,thumbnail,references
+Paul Otlet,Lorem...,Personne,Histoire,Paul,Otlet,homme,1868,1944,image.png,otlet1934
+```
+</details>
 <p>Comme pour tous les autres modes de création de fiches, le titre (<code>title</code>) est obligatoire et les autres champs sont facultatifs.</p>
 <div class="note">
 <p><strong>Identifiants des fiches créées par lot</strong></p>
@@ -823,7 +878,7 @@ cosma m
 <p>Différentes options peuvent être ajoutées à la commande <code>modelize</code>.</p>
 <p>Comme les commandes, les options existent en version longue et version courte, qui sont fonctionnellement identiques, la version courte servant simplement à gagner du temps en raccourcissant la commande.</p>
 <p>Les options servent également à réécrire à la volée les paramètres de la configuration pour une commande précise.</p>
-<h4 id="creer-un-cosmoscope-avec-citations-(cli)" tabindex="-1">Créer un cosmoscope avec citations (CLI)</h4>
+<h4 id="creer-un-cosmoscope-avec-citations-1" tabindex="-1">Créer un cosmoscope avec citations</h4>
 <pre><code>cosma modelize --citeproc
 cosma m -c
 </code></pre>
@@ -837,6 +892,15 @@ cosma m -css
 cosma m -c -css
 </code></pre>
 </div>
+<h4 id="appliquer-un-autre-fichier-de-configuration" tabindex="-1">Appliquer un autre fichier de configuration</h4>
+<p>Les options de ce fichier de configuration écrasent les valeurs définies dans la configuration globale.</p>
+<pre><code>cosma modelize --config &lt;path&gt;
+</code></pre>
+<dl>
+<dt><code>&lt;path&gt;</code></dt>
+<dd>Obligatoire.</dd>
+<dd>Chemin vers le fichier de configuration</dd>
+</dl>
 <h2 id="credits" tabindex="-1">Crédits</h2>
 <h3 id="equipe" tabindex="-1">Équipe</h3>
 <ul>
@@ -916,12 +980,6 @@ cosma m -c -css
 <p>Prototype initial.</p>
 
     </main>
-
-    <aside id="toc">
-	<nav class="toc" >
-        <ul><li><a href="#presentation">Présentation</a><ul><li><a href="#specificites-de-cosma">Spécificités de Cosma</a></li><li><a href="#un-degre-eleve-de-controle-utilisateur">Un degré élevé de contrôle utilisateur</a></li><li><a href="#un-logiciel-experimental">Un logiciel expérimental</a></li></ul></li><li><a href="#installation-et-mise-a-jour">Installation et mise à jour</a><ul><li><a href="#dossier-support">Dossier support</a></li><li><a href="#mises-a-jour">Mises à jour</a></li></ul></li><li><a href="#creer-du-contenu">Créer du contenu</a><ul><li><a href="#creer-une-fiche">Créer une fiche</a></li><li><a href="#format-de-donnees">Format de données</a></li></ul></li><li><a href="#creer-un-cosmoscope">Créer un cosmoscope</a></li><li><a href="#citations-et-bibliographies">Citations et bibliographies</a><ul><li><a href="#fichiers-requis">Fichiers requis</a></li><li><a href="#syntaxe-de-citation">Syntaxe de citation</a></li><li><a href="#creer-un-cosmoscope-avec-citations">Créer un cosmoscope avec citations</a></li></ul></li><li><a href="#historique">Historique</a></li><li><a href="#utilisation-du-cosmoscope">Utilisation du cosmoscope</a><ul><li><a href="#description-generale-de-linterface">Description générale de l'interface</a></li><li><a href="#graphe">Graphe</a></li><li><a href="#fiches">Fiches</a></li><li><a href="#mode-focus">Mode focus</a></li><li><a href="#moteur-de-recherche">Moteur de recherche</a></li><li><a href="#filtrer-laffichage-par-types">Filtrer l'affichage par types</a></li><li><a href="#mots-cles">Mots-clés</a></li><li><a href="#index">Index</a></li><li><a href="#vues">Vues</a></li></ul></li><li><a href="#partager-un-cosmoscope">Partager un cosmoscope</a></li><li><a href="#configuration">Configuration</a><ul><li><a href="#general">Général</a></li><li><a href="#types-de-fiches">Types de fiches</a></li><li><a href="#types-de-liens">Types de liens</a></li><li><a href="#graphe-1">Graphe</a></li><li><a href="#metadonnees-1">Métadonnées</a></li><li><a href="#bibliographie">Bibliographie</a></li><li><a href="#vues-1">Vues</a></li><li><a href="#avance">Avancé</a></li></ul></li><li><a href="#cosma-cli">Cosma CLI</a><ul><li><a href="#installation-(cli)">Installation (CLI)</a></li><li><a href="#configuration-(cli)">Configuration (CLI)</a></li><li><a href="#commandes">Commandes</a></li><li><a href="#options">Options</a></li></ul></li><li><a href="#credits">Crédits</a><ul><li><a href="#equipe">Équipe</a></li><li><a href="#bibliotheques-utilisees">Bibliothèques utilisées</a></li></ul></li><li><a href="#versions">Versions</a><ul><li><a href="#gui">GUI</a></li></ul></li></ul>
-      </nav>
-</aside>
 
     <footer>
     

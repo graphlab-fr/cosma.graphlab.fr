@@ -3,16 +3,17 @@
 <head>
 	<meta charset=utf-8 />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="generator" content="">
 
-	<title>Cosma — User manual</title>
+	<title>User manual | Cosma</title>
 
 	<meta name="description" content="User manual for Cosma, with instructions for installing, using and updating both versions of the app (GUI, CLI)." />
 	<meta name="author" content="Arthur Perret,Guillaume Brioudes" />
 	<meta name="copyright" content="GPL-3.0-or-later"/>
-	<meta name="last_edit" content="2022-06-06" />
+	<meta name="last_edit" content="2022-11-09" />
 
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Cosma — User manual" />
+	<meta property="og:title" content="User manual" />
 	<meta property="og:description" content="User manual for Cosma, with instructions for installing, using and updating both versions of the app (GUI, CLI)." />
 	<meta property="og:site_name" content="cosma-docs" />
 
@@ -22,22 +23,22 @@
 	<link rel="schema.DC" href="https://purl.org/dc/elements/1.1/" />
 	<link rel="schema.DCTERMS" href="https://purl.org/dc/terms/" />  
 
-	<meta property="DC.title" content="Cosma — User manual" />
+	<meta property="DC.title" content="User manual" />
 	<meta property="DC.contributor" content="Arthur Perret,Guillaume Brioudes" />
-	<meta property="DC.date" content="2022-06-06" />
+	<meta property="DC.date" content="2022-11-09" />
 	<meta property="DC.language" content="en" />
 	<meta property="DC.description" lang="en" content="User manual for Cosma, with instructions for installing, using and updating both versions of the app (GUI, CLI)." />
 	<meta property="DC.rights" content="GPL-3.0-or-later" />
 
 	<meta name="twitter:site" content="@arthurperret" />
 	<meta name="twitter:creator" content="@arthurperret" />
-	<meta name="twitter:title" content="Cosma — User manual" />
+	<meta name="twitter:title" content="User manual" />
 	<meta name="twitter:description" content="User manual for Cosma, with instructions for installing, using and updating both versions of the app (GUI, CLI)." />
 	<meta name="twitter:card"  content="summary" />
 	<meta name="twitter:image" content="https://cosma.graphlab.fr/img/cosma-icone.png" />
 
 	<style>
-        :root {
+			:root {
 	--sans: "Helvetica Neue", Helvetica, sans-serif;
 	--serif: "Georgia", 'Garamond', 'Time New Roman', 'Times', serif;
 	--mono: Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -60,7 +61,7 @@ body {
   display: grid;
   grid-template-columns: 70% 30%;
   grid-gap: 0 1%;
-  grid-template-areas: "header headernav"
+  grid-template-areas: "header header"
                        "main   aside"
                        "footer footer";
 }
@@ -216,7 +217,6 @@ ol code,
 dl code,
 table code {
   background-color: var(--code-background-color);
-  border: 1px solid var(--code-border-color);
   border-radius: 4px;
   padding: 0 0.2em;
 }
@@ -290,7 +290,39 @@ footer {
   	background: #67f3f4;
   }
 }
-    </style>
+
+@media screen and (max-width: 1000px) {
+	body {
+		display: block;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+	header > *,
+	main {
+		margin-right: auto;
+		margin-left: auto;
+		width: 100%;
+	}
+	main {
+		padding-bottom: 3vh;
+	}
+	aside {
+		position: relative;
+		height: auto;
+		padding-left: 5vw;
+		top: 0;
+	}
+	aside h1 {
+		display: block
+	}
+	.nav-lang ul {
+		justify-content: flex-end;
+	}
+	.nav-lang ul li {
+		padding-left: 1em;
+	}
+}
+	</style>
 </head>
 
 <body>
@@ -298,24 +330,19 @@ footer {
 	<article>
 		<h1 class="title-site">Cosma — User manual</h1>
 	</article>
-
 </header>
 
-<nav class="nav-lang">
-	<ul>
-		
-		<li><a href="https://cosma.graphlab.fr/docs/manuel-utilisation/">🇫🇷 FR</a></li>
-		
-		<li><a href="https://cosma.graphlab.fr/en/docs/user-manual/">🇬🇧 EN</a></li>
 
-		<li><a href="https://cosma.graphlab.fr/en/">cosma.graphlab.fr ↦</a></li>
-	</ul>
-</nav>
+    <aside id="toc">
+	<nav class="toc" >
+        <ul><li><a href="#about-cosma">About Cosma</a><ul><li><a href="#a-unique-tool">A unique tool</a></li><li><a href="#a-high-degree-of-user-control">A high degree of user control</a></li><li><a href="#a-research-experiment">A research experiment</a></li></ul></li><li><a href="#installing-and-updating">Installing and updating</a><ul><li><a href="#support-folder">Support folder</a></li><li><a href="#updating">Updating</a></li></ul></li><li><a href="#creating-content">Creating content</a><ul><li><a href="#creating-records">Creating records</a></li><li><a href="#data-format">Data format</a></li></ul></li><li><a href="#creating-a-cosmoscope">Creating a cosmoscope</a></li><li><a href="#citations-and-bibliographies">Citations and bibliographies</a><ul><li><a href="#required-files">Required files</a></li><li><a href="#citation-syntax">Citation syntax</a></li><li><a href="#creating-a-cosmoscope-with-citations">Creating a cosmoscope with citations</a></li></ul></li><li><a href="#history">History</a></li><li><a href="#using-the-cosmoscope">Using the cosmoscope</a><ul><li><a href="#layout">Layout</a></li><li><a href="#graph">Graph</a></li><li><a href="#records">Records</a></li><li><a href="#focus-mode">Focus mode</a></li><li><a href="#search-bar">Search bar</a></li><li><a href="#filtering-by-record-type">Filtering by record type</a></li><li><a href="#filtering-by-keywords">Filtering by keywords</a></li><li><a href="#index">Index</a></li><li><a href="#views">Views</a></li></ul></li><li><a href="#sharing-a-cosmoscope">Sharing a cosmoscope</a></li><li><a href="#configuration">Configuration</a><ul><li><a href="#general">General</a></li><li><a href="#record-types">Record types</a></li><li><a href="#link-types">Link types</a></li><li><a href="#graph-1">Graph</a></li><li><a href="#metadata-1">Metadata</a></li><li><a href="#bibliography">Bibliography</a></li><li><a href="#views-1">Views</a></li><li><a href="#advanced">Advanced</a></li></ul></li><li><a href="#cosma-cli">Cosma CLI</a><ul><li><a href="#installing-(cli)">Installing (CLI)</a></li><li><a href="#configuration-(cli)">Configuration (CLI)</a></li><li><a href="#commands">Commands</a></li><li><a href="#options">Options</a></li></ul></li><li><a href="#credits">Credits</a><ul><li><a href="#team">Team</a></li><li><a href="#dependencies">Dependencies</a></li></ul></li><li><a href="#changelog">Changelog</a><ul><li><a href="#gui">GUI</a></li><li><a href="#cli">CLI</a></li></ul></li></ul>
+      </nav>
+</aside>
 
     <main>
         
         
-        <p>Last update : June 6, 2022</p>
+        <p>Last updated: November 9, 2022</p>
         
 
         <h2 id="about-cosma" tabindex="-1">About Cosma</h2>
@@ -471,7 +498,8 @@ Person D wrote against [[opponent:20201209111625]] person C.
 </div>
 <h4 id="unique-identifiers" tabindex="-1">Unique identifiers</h4>
 <p>To be correctly interpreted by Cosma, each record must have a unique identifier. This identifier serves as a target for links between records.</p>
-<p>By default, Cosma generates 14-digit identifiers in the form of a timestamp (year, month, day, hours, minutes and seconds). This is inspired by Zettelkasten note-taking applications such as <a href="https://zettelkasten.de/the-archive/">The Archive</a> and <a href="https://www.zettlr.com">Zettlr</a>.</p>
+<p>The identifier must contain only numbers. By default, Cosma generates 14-digit identifiers in the form of a timestamp (year, month, day, hours, minutes and seconds). This is inspired by Zettelkasten note-taking applications such as <a href="https://zettelkasten.de/the-archive/">The Archive</a> and <a href="https://www.zettlr.com">Zettlr</a>.</p>
+<p>We plan to eventually allow the user to define an identifier pattern of their choice, like in Zettlr.</p>
 <div class="note">
 <p>Many interrelated note-taking applications use file names as targets for links between files. They maintain links automatically when file names are changed. By choosing to use unique identifiers instead, we have designed Cosma with a more traditional, stricter, WWW-like approach. We believe this is the easiest way to avoid <a href="https://en.wikipedia.org/wiki/Link_rot">link rot</a> in a sustainable way. Avoiding the reliance on automatic link maintenance is especially important if you wish to make your data less dependent on specific applications.</p>
 </div>
@@ -920,12 +948,6 @@ cosma m -c -css
 <p>Alpha release of Cosma CLI (French only).</p>
 
     </main>
-
-    <aside id="toc">
-	<nav class="toc" >
-        <ul><li><a href="#about-cosma">About Cosma</a><ul><li><a href="#a-unique-tool">A unique tool</a></li><li><a href="#a-high-degree-of-user-control">A high degree of user control</a></li><li><a href="#a-research-experiment">A research experiment</a></li></ul></li><li><a href="#installing-and-updating">Installing and updating</a><ul><li><a href="#support-folder">Support folder</a></li><li><a href="#updating">Updating</a></li></ul></li><li><a href="#creating-content">Creating content</a><ul><li><a href="#creating-records">Creating records</a></li><li><a href="#data-format">Data format</a></li></ul></li><li><a href="#creating-a-cosmoscope">Creating a cosmoscope</a></li><li><a href="#citations-and-bibliographies">Citations and bibliographies</a><ul><li><a href="#required-files">Required files</a></li><li><a href="#citation-syntax">Citation syntax</a></li><li><a href="#creating-a-cosmoscope-with-citations">Creating a cosmoscope with citations</a></li></ul></li><li><a href="#history">History</a></li><li><a href="#using-the-cosmoscope">Using the cosmoscope</a><ul><li><a href="#layout">Layout</a></li><li><a href="#graph">Graph</a></li><li><a href="#records">Records</a></li><li><a href="#focus-mode">Focus mode</a></li><li><a href="#search-bar">Search bar</a></li><li><a href="#filtering-by-record-type">Filtering by record type</a></li><li><a href="#filtering-by-keywords">Filtering by keywords</a></li><li><a href="#index">Index</a></li><li><a href="#views">Views</a></li></ul></li><li><a href="#sharing-a-cosmoscope">Sharing a cosmoscope</a></li><li><a href="#configuration">Configuration</a><ul><li><a href="#general">General</a></li><li><a href="#record-types">Record types</a></li><li><a href="#link-types">Link types</a></li><li><a href="#graph-1">Graph</a></li><li><a href="#metadata-1">Metadata</a></li><li><a href="#bibliography">Bibliography</a></li><li><a href="#views-1">Views</a></li><li><a href="#advanced">Advanced</a></li></ul></li><li><a href="#cosma-cli">Cosma CLI</a><ul><li><a href="#installing-(cli)">Installing (CLI)</a></li><li><a href="#configuration-(cli)">Configuration (CLI)</a></li><li><a href="#commands">Commands</a></li><li><a href="#options">Options</a></li></ul></li><li><a href="#credits">Credits</a><ul><li><a href="#team">Team</a></li><li><a href="#dependencies">Dependencies</a></li></ul></li><li><a href="#changelog">Changelog</a><ul><li><a href="#gui">GUI</a></li><li><a href="#cli">CLI</a></li></ul></li></ul>
-      </nav>
-</aside>
 
     <footer>
     

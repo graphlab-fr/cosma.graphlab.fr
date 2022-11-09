@@ -3,16 +3,17 @@
 <head>
 	<meta charset=utf-8 />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="generator" content="">
 
-	<title>Cosma — Developer manual</title>
+	<title>Developer manual | Cosma</title>
 
 	<meta name="description" content="Manual to help developers who want to contribute or reuse Cosma&#39;s source code to create their own tool." />
 	<meta name="author" content="Arthur Perret,Guillaume Brioudes" />
 	<meta name="copyright" content="GPL-3.0-or-later"/>
-	<meta name="last_edit" content="2022-01-26" />
+	<meta name="last_edit" content="2022-11-09" />
 
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Cosma — Developer manual" />
+	<meta property="og:title" content="Developer manual" />
 	<meta property="og:description" content="Manual to help developers who want to contribute or reuse Cosma&#39;s source code to create their own tool." />
 	<meta property="og:site_name" content="cosma-docs" />
 
@@ -22,22 +23,22 @@
 	<link rel="schema.DC" href="https://purl.org/dc/elements/1.1/" />
 	<link rel="schema.DCTERMS" href="https://purl.org/dc/terms/" />  
 
-	<meta property="DC.title" content="Cosma — Developer manual" />
+	<meta property="DC.title" content="Developer manual" />
 	<meta property="DC.contributor" content="Arthur Perret,Guillaume Brioudes" />
-	<meta property="DC.date" content="2022-01-26" />
+	<meta property="DC.date" content="2022-11-09" />
 	<meta property="DC.language" content="en" />
 	<meta property="DC.description" lang="en" content="Manual to help developers who want to contribute or reuse Cosma&#39;s source code to create their own tool." />
 	<meta property="DC.rights" content="GPL-3.0-or-later" />
 
 	<meta name="twitter:site" content="@arthurperret" />
 	<meta name="twitter:creator" content="@arthurperret" />
-	<meta name="twitter:title" content="Cosma — Developer manual" />
+	<meta name="twitter:title" content="Developer manual" />
 	<meta name="twitter:description" content="Manual to help developers who want to contribute or reuse Cosma&#39;s source code to create their own tool." />
 	<meta name="twitter:card"  content="summary" />
 	<meta name="twitter:image" content="https://cosma.graphlab.fr/img/cosma-icone.png" />
 
 	<style>
-        :root {
+			:root {
 	--sans: "Helvetica Neue", Helvetica, sans-serif;
 	--serif: "Georgia", 'Garamond', 'Time New Roman', 'Times', serif;
 	--mono: Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -60,7 +61,7 @@ body {
   display: grid;
   grid-template-columns: 70% 30%;
   grid-gap: 0 1%;
-  grid-template-areas: "header headernav"
+  grid-template-areas: "header header"
                        "main   aside"
                        "footer footer";
 }
@@ -216,7 +217,6 @@ ol code,
 dl code,
 table code {
   background-color: var(--code-background-color);
-  border: 1px solid var(--code-border-color);
   border-radius: 4px;
   padding: 0 0.2em;
 }
@@ -290,7 +290,39 @@ footer {
   	background: #67f3f4;
   }
 }
-    </style>
+
+@media screen and (max-width: 1000px) {
+	body {
+		display: block;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+	header > *,
+	main {
+		margin-right: auto;
+		margin-left: auto;
+		width: 100%;
+	}
+	main {
+		padding-bottom: 3vh;
+	}
+	aside {
+		position: relative;
+		height: auto;
+		padding-left: 5vw;
+		top: 0;
+	}
+	aside h1 {
+		display: block
+	}
+	.nav-lang ul {
+		justify-content: flex-end;
+	}
+	.nav-lang ul li {
+		padding-left: 1em;
+	}
+}
+	</style>
 </head>
 
 <body>
@@ -298,33 +330,22 @@ footer {
 	<article>
 		<h1 class="title-site">Cosma — Developer manual</h1>
 	</article>
-
 </header>
 
-<nav class="nav-lang">
-	<ul>
-		
-		<li><a href="../cosma-developer-manual.html">🇬🇧 EN</a></li>
-		
-		<li><a href="../cosma-manuel-de-developpement.html">🇫🇷 FR</a></li>
-		
-		<li><a href="https://cosma.graphlab.fr">cosma.graphlab.fr ↦</a></li>
-	</ul>
-</nav>
+
+    <aside id="toc">
+	
+</aside>
 
     <main>
         
         
-        <p>Last update : January 26, 2022</p>
+        <p>Last updated: November 9, 2022</p>
         
 
         <p>🚧 Under construction 🚧</p>
 
     </main>
-
-    <aside id="toc">
-	
-</aside>
 
     <footer>
     
