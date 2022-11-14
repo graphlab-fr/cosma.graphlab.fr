@@ -10,7 +10,7 @@
 	<meta name="description" content="Manuel d’utilisation de Cosma CLI v2." />
 	<meta name="author" content="Arthur Perret,Guillaume Brioudes" />
 	<meta name="copyright" content="GPL-3.0-or-later"/>
-	<meta name="last_edit" content="2022-11-09" />
+	<meta name="last_edit" content="2022-11-14" />
 
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Manuel d’utilisation (CLI)" />
@@ -25,7 +25,7 @@
 
 	<meta property="DC.title" content="Manuel d’utilisation (CLI)" />
 	<meta property="DC.contributor" content="Arthur Perret,Guillaume Brioudes" />
-	<meta property="DC.date" content="2022-11-09" />
+	<meta property="DC.date" content="2022-11-14" />
 	<meta property="DC.language" content="fr" />
 	<meta property="DC.description" lang="fr" content="Manuel d’utilisation de Cosma CLI v2." />
 	<meta property="DC.rights" content="GPL-3.0-or-later" />
@@ -342,7 +342,7 @@ footer {
     <main>
         
         <p><strong>Version :</strong> CLI v.2.0.0-beta-1</p>
-        <p><strong>Dernière mise à jour :</strong> 9 novembre 2022</p>
+        <p><strong>Dernière mise à jour :</strong> 14 novembre 2022</p>
         
         
 
@@ -368,7 +368,7 @@ footer {
 <p>Cosma CLI fonctionne sur la base de fichiers de configuration écrits en YAML. Chaque fichier de configuration indique une source des données à utiliser, ainsi que différents paramètres qui régissent le comportement de Cosma pour cette source de données.</p>
 <p>Deux approches peuvent être adoptées en fonction des besoins :</p>
 <p>La première consiste à exécuter la commande <code>cosma</code> dans un répertoire où se trouve un fichier de configuration. On parle dans ce cas de fichier de configuration local. Les fichiers de configuration locaux doivent toujours être nommés <code>config.yml</code>.</p>
-<p>L'autre approche consiste à exécuter la commande <code>cosma</code> en ajoutant l'option <code>--config &lt;nom&gt;</code>, où <code>&lt;nom&gt;</code> correspond au nom d'un fichier de configuration présent dans un dossier spécial, le répertoire de données utilisateur. On parle dans ce cas de fichier de configuration global, ou <strong>projet</strong>. Celui-ci peut être nommé librement (ex : <code>toto.yml</code>). Cette seconde approche permet d'exécuter la commande <code>cosma</code> depuis n'importe quel emplacement.</p>
+<p>L'autre approche consiste à exécuter la commande <code>cosma</code> en ajoutant l'option <code>--project &lt;nom&gt;</code>, où <code>&lt;nom&gt;</code> correspond au nom d'un fichier de configuration présent dans un dossier spécial, le répertoire de données utilisateur. On parle dans ce cas de fichier de configuration global, ou <strong>projet</strong>. Celui-ci peut être nommé librement (ex : <code>toto.yml</code>). Cette seconde approche permet d'exécuter la commande <code>cosma</code> depuis n'importe quel emplacement.</p>
 <div class="astuce">
 <p>La méthode locale favorise l'automatisation et la reproductibilité dans un contexte de travail partagé ou distribué sur plusieurs machines. Elle permet en effet de transmettre simultanément données, configuration et instructions d'utilisation (commandes) sous une forme utilisable telle quelle, sans aucun paramétrage supplémentaire requis de la part du destinataire (humain ou machine).</p>
 <p>À l'inverse, la méthode globale facilite l'utilisation prolongée du logiciel par un individu sur une seule machine.</p>
@@ -1114,12 +1114,18 @@ GOODY, Jack, 1979. La Raison graphique : la domestication de la pensée sauvag
 </code></pre>
 </div>
 <h3 id="utiliser-un-fichier-de-configuration-global" tabindex="-1">Utiliser un fichier de configuration global</h3>
-<pre><code>cosma modelize --config &lt;nom&gt;
+<pre><code>cosma modelize --project &lt;nom&gt;
+cosma m -p &lt;nom&gt;
 </code></pre>
-<p>L'option <code>--config</code> applique les paramètres du projet <code>nom</code>.</p>
+<p>L'option <code>-p/--project</code> applique les paramètres du projet <code>nom</code>.</p>
 <h3 id="exclure-certaines-fiches-du-cosmoscope" tabindex="-1">Exclure certaines fiches du cosmoscope</h3>
 <p>Il est possible d'exclure certaines fiches du cosmoscope sur la base du paramètre <code>record_filters</code>. Celui-ci prend pour valeur une liste dont les éléments peuvent être des types, des mots-clés ou des valeurs prises par les métadonnées déclarées dans <code>record_metas</code>. Les fiches dont l'en-tête contient au moins un élément de la liste sont exclues au moment de générer le cosmoscope.</p>
-<p>Voici un exemple d'en-tête d'une fiche :</p>
+<pre><code>record_filters:
+  - meta: &lt;type/tag/nom de métadonnée&gt;
+    value: &lt;valeur du type/tag/de la métadonnée&gt;
+</code></pre>
+<p>Pour chaque filtre, le paramètre <code>meta</code> prend pour valeur soit <code>type</code> (type de fiche), soit <code>tag</code> (mot-clé), soit le nom d'une métadonnée déclarée dans <code>record_metas</code>. Le paramètre <code>value</code> prend pour valeur le type, le mot-clé ou la valeur de métadonnée sur laquelle exclure les fiches.</p>
+<p>Voici un exemple. Considérez la fiche suivante :</p>
 <pre><code>---
 title: Paul Otlet
 type: personne
@@ -1131,11 +1137,15 @@ Paul Otlet (1868-1944) est un avocat, bibliographe
 et militant pacifiste belge considéré comme le
 fondateur de la documentation moderne…
 </code></pre>
-<p>La métadonnée <code>groupe</code> peut être déclarée via <code>record_metas</code> :</p>
+<p>La métadonnée <code>groupe</code> peut être déclarée via <code>record_metas</code> dans le fichier de configuration :</p>
 <pre><code>record_metas: [groupe]
 </code></pre>
-<p>Ceci permet de l'utiliser pour exclure certaines fiches via <code>record_filters</code>. Ici, toutes les fiches contenant <code>groupe: auteurs</code> et/ou le mot-clé <code>pacifisme</code> seront exclues :</p>
-<pre><code>record_filters: [auteurs, pacifisme]
+<p>Ceci permet d'utiliser la métadonnée <code>groupe</code> (en plus du titre et des mots-clés) comme critère pour exclure certaines fiches via <code>record_filters</code>. Dans l'exemple ci-dessous, toutes les fiches contenant <code>groupe: auteurs</code> et/ou le mot-clé <code>pacifisme</code> sont exclues :</p>
+<pre><code>record_filters:
+  - meta: groupe
+    value: auteurs
+  - meta: tag
+    value: pacifisme
 </code></pre>
 <h3 id="historique" tabindex="-1">Historique</h3>
 <p>Par défaut, Cosma exporte automatiquement une copie de chaque cosmoscope dans un répertoire <code>history</code>. Ceci peut être désactivé en renseignant <code>history: false</code> dans le fichier de configuration.</p>
