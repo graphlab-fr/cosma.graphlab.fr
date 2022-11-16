@@ -10,7 +10,7 @@
 	<meta name="description" content="User manual for Cosma, with instructions for installing, using and updating both versions of the app (GUI, CLI)." />
 	<meta name="author" content="Arthur Perret,Guillaume Brioudes" />
 	<meta name="copyright" content="GPL-3.0-or-later"/>
-	<meta name="last_edit" content="2022-11-09" />
+	<meta name="last_edit" content="2022-11-16" />
 
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="User manual" />
@@ -25,7 +25,7 @@
 
 	<meta property="DC.title" content="User manual" />
 	<meta property="DC.contributor" content="Arthur Perret,Guillaume Brioudes" />
-	<meta property="DC.date" content="2022-11-09" />
+	<meta property="DC.date" content="2022-11-16" />
 	<meta property="DC.language" content="en" />
 	<meta property="DC.description" lang="en" content="User manual for Cosma, with instructions for installing, using and updating both versions of the app (GUI, CLI)." />
 	<meta property="DC.rights" content="GPL-3.0-or-later" />
@@ -342,7 +342,8 @@ footer {
     <main>
         
         
-        <p>Last updated: November 9, 2022</p>
+        
+        <p>Last updated: November 16, 2022</p>
         
 
         <h2 id="about-cosma" tabindex="-1">About Cosma</h2>
@@ -442,7 +443,7 @@ tags:
 <dd>Title of the record.</dd>
 <dt><code>id</code></dt>
 <dd>Mandatory.</dd>
-<dd>Unique identifier of the record. By default, Cosma generates 14-digit identifiers in the form of a timestamp (year, month, day, hours, minutes and seconds). This is inspired by Zettelkasten note-taking applications such as <a href="https://zettelkasten.de/the-archive/">The Archive</a> and <a href="https://www.zettlr.com">Zettlr</a>.</dd>
+<dd>Unique identifier of the record. Must be a unique number. By default, Cosma generates 14-digit identifiers in the form of a timestamp (year, month, day, hours, minutes and seconds). This is inspired by Zettelkasten note-taking applications such as <a href="https://zettelkasten.de/the-archive/">The Archive</a> and <a href="https://www.zettlr.com">Zettlr</a>.</dd>
 <dt><code>type</code></dt>
 <dd>Optional.</dd>
 <dd>Record type. Only one type can be assigned to a record. If the <code>type</code> field is not specified or its value does not match one of the types declared in the configuration, Cosma will interpret the type of the record as <code>undefined</code>.</dd>
@@ -463,7 +464,7 @@ tags:
 <p><strong>Why a YAML header?</strong></p>
 <p>Some applications opt to recognize file metadata heuristically. For example, if the first line of the file is a level 1 heading, then it will be interpreted as the title of the file; if the second line contains words prefixed with a <code>#</code> pound sign, then they will be interpreted as keywords.</p>
 <p>This method is not interoperable: each program has its own conventions, which limits the user's ability to change tools.</p>
-<p>Using a YAML header allows writers to declare different metadata explicitly and separately. This has the advantage of making the detection and manipulation of this metadata trivial, both by machines and humans. The use of a common format (such as YAML) increases the number of tools that can be used seamlessly with the same set of files. And widely used computer tools such as regular expressions and <em>shell</em> scripts allow people to convert their data themselves in a relatively simple way if needed.</p>
+<p>Using a YAML header allows writers to declare different metadata explicitly and separately. This has the advantage of making the detection and manipulation of this metadata trivial, both by machines and humans. The use of a common format (such as YAML) increases the number of tools that can be used seamlessly with the same set of files. And widely used computer tools such as regular expressions and shell scripts allow people to convert their data themselves in a relatively simple way if needed.</p>
 </div>
 <h4 id="content" tabindex="-1">Content</h4>
 <p>Cosma interprets files as being written in <a href="https://spec.commonmark.org/0.30/">CommonMark</a>, a strictly defined version of Markdown, a popular lightweight markup language.</p>
@@ -471,7 +472,7 @@ tags:
 <p>The <a href="https://commonmark.org/help/">CommonMark tutorial</a> teaches you the basics of Markdown in 10 minutes.</p>
 <p>If you want to learn how to use Markdown and Pandoc together, check out this online lesson: <a href="https://programminghistorian.org/en/lessons/sustainable-authorship-in-plain-text-using-pandoc-and-markdown">Sustainable Authorship in Plain Text using Pandoc and Markdown</a>.</p>
 </div>
-<p>Cosma renders Markdown files into HTML. Therefore, Markdown files can also include HTML code, as well as vector images in SVG. Cosma also supports <a href="https://www.npmjs.com/package/markdown-it-attrs">adding attributes by brackets</a>, as shown below.</p>
+<p>Cosma renders Markdown files into HTML. Therefore, Markdown files can also include HTML code. Cosma also supports <a href="https://www.npmjs.com/package/markdown-it-attrs">adding attributes by brackets</a>, as shown below.</p>
 <pre><code class="language-markdown">&lt;div class=&quot;red&quot;&gt;This paragraph will be red&lt;/div&gt;
 
 This paragraph will be red{.red}
@@ -550,7 +551,7 @@ Person D wrote against [[opponent:20201209111625]] person C.
 <h3 id="creating-a-cosmoscope-with-citations" tabindex="-1">Creating a cosmoscope with citations</h3>
 <p>Click on File › New cosmoscope with citations (<code>Cmd/Ctrl + Shift + R</code>) to generate a cosmoscope with citation processing enabled. Citation processing is also available when <a href="#sharing">exporting</a>. Each citation key is then replaced with formatted text, and a bibliography is generated below the body of each record containing references.</p>
 <p>Example:</p>
-<pre><code>On writing as a technology of the intellect [@goody1977, 46-52]...
+<pre><code>On writing as a technology of the intellect (Goody 1977, 46-52)…
 
 Bibliography
 ------------
@@ -887,7 +888,6 @@ cosma m -c -css
 <li><a href="https://www.npmjs.com/package/markdown-it-attrs">Markdown-it-attrs</a> v4.0.0 (MIT License): Handling Markdown hyperlinks within records</li>
 <li><a href="https://github.com/Juris-M/citeproc-js">Citeproc-js</a> v2.4.62 (CPAL and AGPL): Converting citation keys</li>
 <li><a href="https://fusejs.io/">Fuse.js</a> v6.4.6 (Apache License 2.0): Search engine</li>
-<li><a href="https://momentjs.com/">Moment</a> v2.29.1 (MIT License): Managing time and timestamps</li>
 </ul>
 <h2 id="changelog" tabindex="-1">Changelog</h2>
 <h3 id="gui" tabindex="-1">GUI</h3>
