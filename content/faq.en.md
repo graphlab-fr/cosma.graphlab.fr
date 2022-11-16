@@ -31,7 +31,9 @@ Cosma allows you to replace the 14-digit identifiers by an arbitrary string in t
 
 ## Is it possible to manage multiple directories?
 
-We plan to make this easily possible via a dedicated menu in a future update. In the meantime, it is *technically possible* to do it by following the suggestions below.
+This is possible with Cosma CLI v2-beta.
+
+For previous versions, it is *technically possible* to do it by following the suggestions below.
 
 ### Method 1: History
 

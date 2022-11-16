@@ -33,7 +33,9 @@ Cosma inclut la possibilité d'alléger visuellement les liens tels qu'ils se pr
 
 ## Est-ce qu'il est possible de gérer plusieurs répertoires avec différents cosmoscopes ?
 
-Nous prévoyons de rendre la chose faisable de manière simple via un menu dédié dans une prochaine mise à jour. En attendant, il est techniquement possible de mettre en œuvre les suggestions ci-dessous. Nous prenons l'exemple de deux répertoires de fiches, `dossier1` et `dossier2`, entre lesquels on voudrait passer sans avoir à reconfigurer le logiciel.
+Oui, avec Cosma CLI v2-bêta.
+
+Pour les versions antérieures, il est techniquement possible de mettre en œuvre les suggestions ci-dessous. Nous prenons l'exemple de deux répertoires de fiches, `dossier1` et `dossier2`, entre lesquels on voudrait passer sans avoir à reconfigurer le logiciel.
 
 ### Méthode 1 : l'historique
 
