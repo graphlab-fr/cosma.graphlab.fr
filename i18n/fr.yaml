@@ -27,5 +27,7 @@ projectHistory:
   other: Historique du projet
 userManual:
   other: Manuel d’utilisation
+userManualCLI:
+  other: Manuel d’utilisation Cosma-CLI
 developerManual:
   other: Manuel de développement

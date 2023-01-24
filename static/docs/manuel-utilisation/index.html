@@ -10,7 +10,7 @@
 	<meta name="description" content="Manuel d’utilisation de Cosma. Explique comment installer et utiliser les deux versions du logiciel (GUI, CLI)." />
 	<meta name="author" content="Arthur Perret,Guillaume Brioudes" />
 	<meta name="copyright" content="GPL-3.0-or-later"/>
-	<meta name="last_edit" content="2022-11-16" />
+	<meta name="last_edit" content="2022-12-19" />
 
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Manuel d’utilisation" />
@@ -25,7 +25,7 @@
 
 	<meta property="DC.title" content="Manuel d’utilisation" />
 	<meta property="DC.contributor" content="Arthur Perret,Guillaume Brioudes" />
-	<meta property="DC.date" content="2022-11-16" />
+	<meta property="DC.date" content="2022-12-19" />
 	<meta property="DC.language" content="fr" />
 	<meta property="DC.description" lang="fr" content="Manuel d’utilisation de Cosma. Explique comment installer et utiliser les deux versions du logiciel (GUI, CLI)." />
 	<meta property="DC.rights" content="GPL-3.0-or-later" />
@@ -342,7 +342,7 @@ footer {
     <main>
         
         
-        <p><strong>Dernière mise à jour :</strong> 16 novembre 2022</p>
+        <p><strong>Dernière mise à jour :</strong> 19 décembre 2022</p>
         
         
 
@@ -446,7 +446,7 @@ tags:
 <dd>Obligatoire.</dd>
 <dd>Identifiant unique de la fiche. Par défaut, Cosma génère des identifiants à 14 chiffres par horodatage (année, mois, jour, heures, minutes et secondes) sur le modèle de certains logiciels de prise de notes type Zettelkasten comme <a href="https://zettelkasten.de/the-archive/">The Archive</a> ou <a href="https://www.zettlr.com">Zettlr</a>.</dd>
 <dt><code>type</code></dt>
-<dd>Types de la fiche. Facultatif. Si le champ <code>type</code> n'est pas spécifié ou bien que ses valeurs ne correspondnt pas l'un des types enregistrés dans la configuration, Cosma interprètera le type de la fiche comme non défini (<code>undefined</code>).</dd>
+<dd>Types de la fiche. Facultatif. Si le champ <code>type</code> n'est pas spécifié ou bien que ses valeurs ne correspondent pas à l'un des types enregistrés dans la configuration, Cosma interprètera le type de la fiche comme non défini (<code>undefined</code>).</dd>
 <dt><code>tags</code> (ou <code>keywords</code>)</dt>
 <dd>Mots-clés de la fiche. Facultatif. La valeur doit être une liste. Une fiche peut disposer d'autant de mot-clés que vous souhaitez. Vous pouvez utiliser <code>keywords</code> au lieu de <code>tags</code>, dans une logique de compatibilité avec Pandoc. Si une fiche comporte un champ <code>tags</code> et un champ <code>keywords</code>, seuls les mots-clés déclarés dans le champ <code>tags</code> sont interprétés par Cosma.</dd>
 </dl>
@@ -461,7 +461,7 @@ tags:
 <p>Vous pouvez ajouter des champs supplémentaires de manière arbitraire, par exemple ceux reconnus par Pandoc.</p>
 <div class="note">
 <p><strong>Pourquoi un en-tête en YAML ?</strong></p>
-<p>Certains logiciels identifier les métadonnées d'un fichier de manière heuristique. Par exemple, si la première ligne du fichier est un titre de niveau 1, alors il sera interprété comme le titre du fichier ; si la seconde ligne contient des mots préfixés par un croisillon <code>#</code>, alors ils seront interprétés comme des mots-clés.</p>
+<p>Certains logiciels identifient les métadonnées d'un fichier de manière heuristique. Par exemple, si la première ligne du fichier est un titre de niveau 1, alors il sera interprété comme le titre du fichier ; si la seconde ligne contient des mots préfixés par un croisillon <code>#</code>, alors ils seront interprétés comme des mots-clés.</p>
 <p>L'inconvénient de ce fonctionnement est qu'il n'est pas interopérable : chaque logiciel a ses propres conventions, ce qui limite la capacité de l'utilisateur à changer d'outil.</p>
 <p>Utiliser un en-tête en YAML permet de déclarer des métadonnées comme le titre et l'identifiant unique d'une fiche de manière explicite. Ceci présente l'avantage de rendre triviale la détection et la manipulation de ces métadonnées, aussi bien par une machine que par un humain. L'utilisation d'un format commun (comme YAML) augmente le nombre d'outils compatibles avec un même ensemble de fichiers. Et des outils informatiques très répandus comme les expressions régulières et les scripts <em>shell</em> permettent aux utilisateurs de convertir eux-mêmes leurs données de manière relativement simple si besoin.</p>
 </div>
