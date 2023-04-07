@@ -1,6 +1,7 @@
 baseURL: https://cosma.graphlab.fr/
 title: Cosma
 theme: xmin
+enableGitInfo: true
 outputs:
   home:
   - HTML

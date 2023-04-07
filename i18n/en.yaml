@@ -4,13 +4,15 @@ downloadMac:
   other: Download (macOS)
 downloadWin:
   other: Download (Windows)
+downloadLin:
+  other: Download (Linux)
 demo:
   other: Try the demo
 availability:
   other: |
     Available for macOS and Windows.
     
-    On Linux? Download [the command line version](https://cosma.graphlab.fr/en/docs/user-manual/#cosma-cli).
+    On Linux? Check [the v2 beta](https://cosma.graphlab.fr/en/docs/v2/user-manual/) or [the command line version](https://cosma.graphlab.fr/en/docs/cli/user-manual/).
 pitch1:
   other: "Take notes with your favorite Markdown editor, and explore them with Cosma."
 pitch2:
@@ -27,5 +29,7 @@ projectHistory:
   other: Project history
 userManual:
   other: User manual
+userManualCLI:
+  other: User manual (CLI version)
 developerManual:
   other: Developer manual

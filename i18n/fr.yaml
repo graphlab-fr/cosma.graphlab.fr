@@ -4,13 +4,15 @@ downloadMac:
   other: Télécharger (macOS)
 downloadWin:
   other: Télécharger (Windows)
+downloadLin:
+  other: Télécharger (Linux)
 demo:
   other: Essayer la démo
 availability:
   other: |
-    Disponible pour macOS et Windows.
+    Version 1.1 disponible pour macOS et Windows.
     
-    Vous êtes sur Linux ? Téléchargez [la version ligne de commande](https://cosma.graphlab.fr/docs/manuel-utilisation/#cosma-cli).
+    Vous êtes sur Linux ? Essayez [la v2 bêta](https://cosma.graphlab.fr/telecharger/) ou [la version ligne de commande](https://cosma.graphlab.fr/docs/cli/manuel-utilisation/).
 pitch1:
   other: "Notez vos idées avec votre éditeur Markdown préféré, et explorez-les dans Cosma."
 pitch2:

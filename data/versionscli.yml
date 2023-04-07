@@ -1,3 +1,18 @@
+- tag: "2.0-beta-4"
+  date: 2023-02-18
+  github: "https://github.com/graphlab-fr/cosma-cli/releases/tag/2.0-beta-4"
+  zenodo: "https://zenodo.org/record/5920616"
+  notes: cosma-cli-2-beta-4
+- tag: "2.0-beta-3"
+  date: 2023-01-27
+  github: "https://github.com/graphlab-fr/cosma-cli/releases/tag/2.0-beta-3"
+  zenodo: "https://zenodo.org/record/5920616"
+  notes: cosma-cli-2-beta-3
+- tag: "2.0-beta-2"
+  date: 2023-01-24
+  github: "https://github.com/graphlab-fr/cosma-cli/releases/tag/2.0-beta-2"
+  zenodo: "https://zenodo.org/record/5920616"
+  notes: cosma-cli-2-beta-2
 - tag: "2.0-beta-1"
   date: 2022-11-16
   github: "https://github.com/graphlab-fr/cosma-cli/releases/tag/2.0-beta-1"

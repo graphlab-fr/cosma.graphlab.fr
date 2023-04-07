@@ -10,7 +10,7 @@
 	<meta name="description" content="User manual for Cosma CLI v2 beta." />
 	<meta name="author" content="Arthur Perret,Guillaume Brioudes" />
 	<meta name="copyright" content="GPL-3.0-or-later"/>
-	<meta name="last_edit" content="2022-11-16" />
+	<meta name="last_edit" content="2023-04-03" />
 
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="User Manual (CLI)" />
@@ -25,7 +25,7 @@
 
 	<meta property="DC.title" content="User Manual (CLI)" />
 	<meta property="DC.contributor" content="Arthur Perret,Guillaume Brioudes" />
-	<meta property="DC.date" content="2022-11-16" />
+	<meta property="DC.date" content="2023-04-03" />
 	<meta property="DC.language" content="en" />
 	<meta property="DC.description" lang="en" content="User manual for Cosma CLI v2 beta." />
 	<meta property="DC.rights" content="GPL-3.0-or-later" />
@@ -335,21 +335,22 @@ footer {
 
     <aside id="toc">
 	<nav class="toc" >
-        <ul><li><a href="#installing-and-updating">Installing and updating</a><ul><li><a href="#installing">Installing</a></li><li><a href="#upgrading">Upgrading</a></li></ul></li><li><a href="#description">Description</a></li><li><a href="#the-cosma-command">The cosma command</a><ul><li><a href="#create-the-user-data-directory">Create the user data directory</a></li><li><a href="#show-projects">Show projects</a></li><li><a href="#show-version-number">Show version number</a></li><li><a href="#show-help">Show help</a></li></ul></li><li><a href="#configuration">Configuration</a><ul><li><a href="#create-a-configuration-file">Create a configuration file</a></li><li><a href="#create-a-global-configuration-file-(project)">Create a global configuration file (project)</a></li><li><a href="#create-a-default-configuration-file">Create a default configuration file</a></li><li><a href="#configuration-parameters">Configuration parameters</a></li><li><a href="#configuration-template">Configuration template</a></li></ul></li><li><a href="#create-content-tabular-data-(csv)">Create content: tabular data (CSV)</a><ul><li><a href="#data-files-nodes-and-links">Data files: nodes and links</a></li><li><a href="#metadata-(column-headers)">Metadata (column headers)</a></li></ul></li><li><a href="#creating-content-text-files-(markdown)">Creating content: text files (Markdown)</a><ul><li><a href="#metadata">Metadata</a></li><li><a href="#content">Content</a></li><li><a href="#links">Links</a></li><li><a href="#unique-identifiers">Unique identifiers</a></li></ul></li><li><a href="#creating-records">Creating records</a><ul><li><a href="#record-create-a-record-(form-mode)">record : create a record (“form” mode)</a></li><li><a href="#autorecord-create-a-record-(one-liner-mode)">autorecord : create a record (“one-liner” mode)</a></li><li><a href="#batch-create-a-batch-of-records">batch : create a batch of records</a></li></ul></li><li><a href="#modelize-creating-a-cosmoscope">modelize: creating a cosmoscope</a><ul><li><a href="#generating-a-sample-cosmoscope">Generating a sample cosmoscope</a></li><li><a href="#processing-citations">Processing citations</a></li><li><a href="#citation-syntax">Citation syntax</a></li><li><a href="#applying-custom-css">Applying custom CSS</a></li><li><a href="#using-a-global-configuration-file">Using a global configuration file</a></li><li><a href="#excluding-records-from-the-cosmoscope">Excluding records from the cosmoscope</a></li><li><a href="#history">History</a></li><li><a href="#errors-and-warnings">Errors and warnings</a></li></ul></li><li><a href="#using-the-cosmoscope">Using the cosmoscope</a><ul><li><a href="#layout">Layout</a></li><li><a href="#graph">Graph</a></li><li><a href="#records">Records</a></li><li><a href="#focus-mode">Focus mode</a></li><li><a href="#search-bar">Search bar</a></li><li><a href="#filtering-by-record-type">Filtering by record type</a></li><li><a href="#filtering-by-keywords">Filtering by keywords</a></li><li><a href="#index">Index</a></li><li><a href="#views">Views</a></li></ul></li><li><a href="#sharing-and-publishing-a-cosmoscope">Sharing and publishing a cosmoscope</a></li><li><a href="#credits">Credits</a><ul><li><a href="#team">Team</a></li><li><a href="#dependencies">Dependencies</a></li></ul></li><li><a href="#changelog">Changelog</a><ul><li><a href="#additions">Additions</a></li><li><a href="#improvements">Improvements</a></li><li><a href="#fixed-bugs">Fixed bugs</a></li><li><a href="#known-bugs">Known bugs</a></li></ul></li></ul>
+        <ul><li><a href="#installing-and-updating">Installing and updating</a><ul><li><a href="#installing">Installing</a></li><li><a href="#upgrading">Upgrading</a></li></ul></li><li><a href="#description">Description</a></li><li><a href="#the-cosma-command">The cosma command</a><ul><li><a href="#create-the-user-data-directory">Create the user data directory</a></li><li><a href="#show-projects">Show projects</a></li><li><a href="#show-version-number">Show version number</a></li><li><a href="#show-help">Show help</a></li></ul></li><li><a href="#configuration">Configuration</a><ul><li><a href="#create-a-configuration-file">Create a configuration file</a></li><li><a href="#create-a-global-configuration-file-(project)">Create a global configuration file (project)</a></li><li><a href="#create-a-default-configuration-file">Create a default configuration file</a></li><li><a href="#configuration-parameters">Configuration parameters</a></li><li><a href="#configuration-template">Configuration template</a></li></ul></li><li><a href="#create-content-tabular-data-(csv)">Create content: tabular data (CSV)</a><ul><li><a href="#data-files-nodes-and-links">Data files: nodes and links</a></li><li><a href="#metadata-(column-headers)">Metadata (column headers)</a></li></ul></li><li><a href="#creating-content-text-files-(markdown)">Creating content: text files (Markdown)</a><ul><li><a href="#metadata">Metadata</a></li><li><a href="#content">Content</a></li><li><a href="#links">Links</a></li><li><a href="#unique-identifiers">Unique identifiers</a></li></ul></li><li><a href="#creating-records">Creating records</a><ul><li><a href="#record-create-a-record-(form-mode)">record : create a record (“form” mode)</a></li><li><a href="#autorecord-create-a-record-(one-liner-mode)">autorecord : create a record (“one-liner” mode)</a></li><li><a href="#batch-create-a-batch-of-records">batch : create a batch of records</a></li></ul></li><li><a href="#modelize-creating-a-cosmoscope">modelize: creating a cosmoscope</a><ul><li><a href="#generating-a-sample-cosmoscope">Generating a sample cosmoscope</a></li><li><a href="#processing-citations">Processing citations</a></li><li><a href="#citation-syntax">Citation syntax</a></li><li><a href="#applying-custom-css">Applying custom CSS</a></li><li><a href="#using-a-global-configuration-file">Using a global configuration file</a></li><li><a href="#excluding-records-from-the-cosmoscope">Excluding records from the cosmoscope</a></li><li><a href="#history">History</a></li><li><a href="#errors-and-warnings">Errors and warnings</a></li></ul></li><li><a href="#using-the-cosmoscope">Using the cosmoscope</a><ul><li><a href="#layout">Layout</a></li><li><a href="#graph">Graph</a></li><li><a href="#records">Records</a></li><li><a href="#focus-mode">Focus mode</a></li><li><a href="#search-bar">Search bar</a></li><li><a href="#filtering-by-record-type">Filtering by record type</a></li><li><a href="#filtering-by-keywords">Filtering by keywords</a></li><li><a href="#index">Index</a></li><li><a href="#views">Views</a></li></ul></li><li><a href="#sharing-and-publishing-a-cosmoscope">Sharing and publishing a cosmoscope</a></li><li><a href="#credits">Credits</a><ul><li><a href="#team">Team</a></li><li><a href="#dependencies">Dependencies</a></li></ul></li><li><a href="#changelog">Changelog</a><ul><li><a href="#v2-beta-4">v2-beta-4</a></li><li><a href="#v2-beta-3">v2-beta-3</a></li><li><a href="#v2-beta-2">v2-beta-2</a></li><li><a href="#v2-beta-1">v2-beta-1</a></li></ul></li></ul>
       </nav>
 </aside>
 
     <main>
         
         
-        <p><strong>Version:</strong> CLI v.2.0.0-beta-1</p>
-        <p>Last updated: November 16, 2022</p>
+        <p><strong>Version:</strong> CLI v2.0.0-beta-4</p>
+        <p>Last updated: April 3, 2023</p>
         
 
         <h2 id="installing-and-updating" tabindex="-1">Installing and updating</h2>
 <h3 id="installing" tabindex="-1">Installing</h3>
-<p>The CLI version of Cosma is available on macOS, Windows and Linux.</p>
-<p>The installation of <a href="https://nodejs.org/">NodeJS</a> version 12 or higher is required.</p>
+<p>Cosma is available in two versions: a graphical user interface (GUI) application and a command line interface (CLI) application. Information about the CLI version is detailed <a href="https://cosma.graphlab.fr/en/docs/cli/user-manual/">on a dedicated page</a>.</p>
+<p>From v2 onwards, both versions of Cosma are available for macOS, Windows and Linux.</p>
+<p>For Cosma CLI, the installation of <a href="https://nodejs.org/">NodeJS</a> version 12 or higher is required.</p>
 <p>NPM (the NodeJS package manager) is installed automatically with NodeJS. NPM can be used to manage the installation of Cosma CLI. Enter the command below in your terminal to install Cosma CLI globally. The software can then be used by running <code>cosma</code>.</p>
 <pre><code>npm install @graphlab-fr/cosma -g
 </code></pre>
@@ -577,7 +578,7 @@ cosma c -g
 <tr>
 <td><code>graph_text_size</code></td>
 <td>Node label size</td>
-<td>Integer betwen 5-15</td>
+<td>Integer betwen 2-15</td>
 <td>10</td>
 </tr>
 <tr>
@@ -643,8 +644,8 @@ cosma c -g
 <tr>
 <td><code>chronological_record_meta</code></td>
 <td>Metadata to be used for chronological mode</td>
-<td>metadata declared in <code>record_metas</code></td>
-<td><code>last_edit</code></td>
+<td><code>created</code>, <code>last_edit</code>, <code>last_open</code>, <code>timestamp</code>, metadata declared in <code>record_metas</code></td>
+<td><code>created</code></td>
 </tr>
 <tr>
 <td><code>record_metas</code></td>
@@ -1246,8 +1247,34 @@ modern documentation...
 <li><a href="https://fusejs.io/">Fuse.js</a> v6.4.6 (Apache License 2.0): Search engine</li>
 </ul>
 <h2 id="changelog" tabindex="-1">Changelog</h2>
-<p>List of changes made from the previous CLI version.</p>
-<h3 id="additions" tabindex="-1">Additions</h3>
+<h3 id="v2-beta-4" tabindex="-1">v2-beta-4</h3>
+<h4 id="bugs-solved" tabindex="-1">Bugs solved</h4>
+<ul>
+<li>Alternative syntax for links should now truly work with all characters (v2-beta-3 did not fix this completely).</li>
+</ul>
+<h4 id="improvements" tabindex="-1">Improvements</h4>
+<ul>
+<li>Issues with parsing CSV data are logged in an informative way.</li>
+</ul>
+<h3 id="v2-beta-3" tabindex="-1">v2-beta-3</h3>
+<h4 id="fixed-bugs" tabindex="-1">Fixed bugs</h4>
+<ul>
+<li>Alternative syntax for links works with all characters (e.g. accented letters).</li>
+</ul>
+<h3 id="v2-beta-2" tabindex="-1">v2-beta-2</h3>
+<h4 id="improvements-1" tabindex="-1">Improvements</h4>
+<ul>
+<li>When <code>history: true</code>, cosmoscopes are saved in a <code>history</code> subdirectory, either in the user data directory for global configurations, or in the same directory as the local configuration.</li>
+</ul>
+<h4 id="fixed-bugs-1" tabindex="-1">Fixed bugs</h4>
+<ul>
+<li>Windows: The execution path is located correctly.</li>
+<li>Windows: The user data directory is created correctly.</li>
+<li>The <code>logs</code> directory is created correctly.</li>
+<li>Record titles containing only a date in the YYYY-MM-DD format are interpreted correctly.</li>
+</ul>
+<h3 id="v2-beta-1" tabindex="-1">v2-beta-1</h3>
+<h4 id="additions" tabindex="-1">Additions</h4>
 <ul>
 <li>Manage multiple configurations (global and local)</li>
 <li>Use alternative syntax for links</li>
@@ -1261,7 +1288,7 @@ modern documentation...
 <li>Define an outline color for node types</li>
 <li>Choose between fixed size nodes and nodes proportional to their degree</li>
 </ul>
-<h3 id="improvements" tabindex="-1">Improvements</h3>
+<h4 id="improvements-2" tabindex="-1">Improvements</h4>
 <ul>
 <li>Links in bibliography are now clickable</li>
 <li>Messages displayed at command execution are more informative</li>
@@ -1269,12 +1296,12 @@ modern documentation...
 <li>Keywords at the top of cards in the cosmoscope no longer overflow the layout</li>
 <li>Cosma now reads directories recursively (issue <a href="https://github.com/graphlab-fr/cosma/issues/4">#4</a>)</li>
 </ul>
-<h3 id="fixed-bugs" tabindex="-1">Fixed bugs</h3>
+<h4 id="fixed-bugs-2" tabindex="-1">Fixed bugs</h4>
 <ul>
 <li>Link/backlink context tooltips now correctly highlight the target record (issue <a href="https://github.com/graphlab-fr/cosma/issues/23">#23</a>)</li>
 <li>Spaces in file names generated by Cosma are correctly replaced by dashes</li>
 </ul>
-<h3 id="known-bugs" tabindex="-1">Known bugs</h3>
+<h4 id="known-bugs" tabindex="-1">Known bugs</h4>
 <ul>
 <li>Backlink context tooltips may fail to render citations properly</li>
 </ul>

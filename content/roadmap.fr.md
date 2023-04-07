@@ -4,15 +4,28 @@ slug: feuille-de-route
 layout: faq
 ---
 
-Cette page présente nos intentions pour le développement de Cosma, par ordre de priorité. Les lignes en gras correspondent à des projets en cours de réalisation.
+Dernière modification de cette page : 03 avril 2023
 
-Dernière modification : 31/10/2022
+## Travail en cours
 
-- **Cosma 2.0**
-	- Ajouter la gestion simultanée de plusieurs projets
-	- Ajouter des fonctionnalités inspirées de l’[Otletosphère](https://hyperotlet.huma-num.fr/otletosphere/) (données tabulaires, catégorisation multiple, images…)
-	- Ajouter un mode chronologique
-	- Améliorer l'expérience utilisateur relative aux mises à jour (GUI)
-- **Améliorer l'affichage du graphe**
-- Retravailler les mots-clés et réparer les vues
-- Déployer la version GUI sur Linux
+Nous travaillons sur une version 2.0, [disponible actuellement en bêta](https://cosma.graphlab.fr/docs/v2/manuel-utilisation/). Elle apporte les nouveautés suivantes :
+
+- Version GUI disponible sur Linux (Debian).
+- Gestion de plusieurs projets, chacun avec sa source de données et sa configuration.
+- Lecture récursive du répertoire indiqué comme emplacement des données (= prise en compte des sous-répertoires éventuels).
+- Fonctionnalités inspirées par l’[Otletosphère](https://hyperotlet.huma-num.fr/otletosphere/) : travailler à partir de données tabulaires ; attribuer plusieurs types à une fiche ; utiliser des images en vignette dans les fiches et dans le graphe.
+- Filtrage chronologique du graphe.
+- Filtrage du graphe via les mots-clés.
+- Génération sélective du cosmoscope (possibilité d'exclure des fiches suivant différents critères).
+
+## Chantiers prévus
+
+- Améliorer l'expérience utilisateur relative aux mises à jour pour la version GUI.
+- Améliorer la vue graphe (notamment le fait de rendre l'affichage du graphe moins dépendant de la taille de l'écran).
+- Améliorer les Vues.
+- Ajouter la création de fiches par lots à la version GUI.
+
+## Idées envisagées
+
+- Option permettant de traiter les références bibliographiques comme des nœuds du graphe.
+- Mode d'affichage alternatif pour le cosmoscope, centré sur la fiche plutôt que le graphe, et une mise en page adaptative facilitant la consultation sur petits écrans.

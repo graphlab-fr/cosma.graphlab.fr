@@ -5,8 +5,12 @@
 		{{ range $.Site.Data.versions }}
         <tr>
             <td>Cosma {{ .tag }}</td>
-            <td><a href="{{ .downloadMac }}">macOS</a></td>
-            <td><a href="{{ .downloadWin }}">Windows</a></td>
+            <td>{{ if .downloadMac }}<a href="{{ .downloadMac }}">Mac (Intel)</a>{{ end }}</td>
+            <td>{{ if .downloadMacArm }}<a href="{{ .downloadMacArm }}">Mac (Apple Silicon)</a>{{ end }}</td>
+            <td>{{ if .downloadWin }}<a href="{{ .downloadWin }}">Windows (Intel)</a>{{ end }}</td>
+            <td>{{ if .downloadWinArm }}<a href="{{ .downloadWinArm }}">Windows (ARM)</a>{{ end }}</td>
+            <td>{{ if .downloadLin }}<a href="{{ .downloadLin }}">Linux (Intel)</a>{{ end }}</td>
+            <td>{{ if .downloadLinArm }}<a href="{{ .downloadLinArm }}">Linux (ARM)</a>{{ end }}</td>
             <td><a href="../blog/{{ .notes }}">{{ i18n "releaseNotes" }}</a></td>
         </tr>
         {{ end }}
