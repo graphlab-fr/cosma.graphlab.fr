@@ -1,5 +1,16 @@
+- tag: "2.0-beta-2"
+  date: 2023-04-09
+  github: "https://github.com/graphlab-fr/cosma/releases/tag/2.0-beta-2"
+  downloadMac: "https://github.com/graphlab-fr/cosma/releases/download/2.0-beta-2/Cosma-2.0.0-beta-2-x64.dmg"
+  downloadMacArm: "https://github.com/graphlab-fr/cosma/releases/download/2.0-beta-2/Cosma-2.0.0-beta-2-arm64.dmg"
+  downloadWin: "https://github.com/graphlab-fr/cosma/releases/download/2.0-beta-2/Cosma-win32-x64-2.0.0-beta-2.zip"
+  downloadWinArm: "https://github.com/graphlab-fr/cosma/releases/download/2.0-beta-2/Cosma-win32-arm64-2.0.0-beta-2.zip"
+  downloadLin: "https://github.com/graphlab-fr/cosma/releases/download/2.0-beta-2/cosma_2.0.0-beta-2_amd64.deb"
+  downloadLinArm: "https://github.com/graphlab-fr/cosma/releases/download/2.0-beta-2/cosma_2.0.0-beta-2_arm64.deb"
+  zenodo: "https://zenodo.org/record/5920616"
+  notes: cosma-2-beta-2
 - tag: "2.0-beta-1"
-  date: 2023-04-03
+  date: 2023-04-08
   github: "https://github.com/graphlab-fr/cosma/releases/tag/2.0-beta-1"
   downloadMac: "https://github.com/graphlab-fr/cosma/releases/download/2.0-beta-1/Cosma-2.0.0-beta-1-x64.dmg"
   downloadMacArm: "https://github.com/graphlab-fr/cosma/releases/download/2.0-beta-1/Cosma-2.0.0-beta-1-arm64.dmg"
