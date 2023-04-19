@@ -7,33 +7,33 @@
 
 	<title>User Manual (CLI) | Cosma</title>
 
-	<meta name="description" content="User manual for Cosma CLI v2 beta." />
+	<meta name="description" content="User manual for Cosma CLI." />
 	<meta name="author" content="Arthur Perret,Guillaume Brioudes" />
 	<meta name="copyright" content="GPL-3.0-or-later"/>
-	<meta name="last_edit" content="2023-04-03" />
+	<meta name="last_edit" content="2023-04-19" />
 
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="User Manual (CLI)" />
-	<meta property="og:description" content="User manual for Cosma CLI v2 beta." />
+	<meta property="og:description" content="User manual for Cosma CLI." />
 	<meta property="og:site_name" content="cosma-docs" />
 
 	<meta itemprop="name" content="cosma-docs" />
-	<meta itemprop="description" content="User manual for Cosma CLI v2 beta." />
+	<meta itemprop="description" content="User manual for Cosma CLI." />
 
 	<link rel="schema.DC" href="https://purl.org/dc/elements/1.1/" />
 	<link rel="schema.DCTERMS" href="https://purl.org/dc/terms/" />  
 
 	<meta property="DC.title" content="User Manual (CLI)" />
 	<meta property="DC.contributor" content="Arthur Perret,Guillaume Brioudes" />
-	<meta property="DC.date" content="2023-04-03" />
+	<meta property="DC.date" content="2023-04-19" />
 	<meta property="DC.language" content="en" />
-	<meta property="DC.description" lang="en" content="User manual for Cosma CLI v2 beta." />
+	<meta property="DC.description" lang="en" content="User manual for Cosma CLI." />
 	<meta property="DC.rights" content="GPL-3.0-or-later" />
 
 	<meta name="twitter:site" content="@arthurperret" />
 	<meta name="twitter:creator" content="@arthurperret" />
 	<meta name="twitter:title" content="User Manual (CLI)" />
-	<meta name="twitter:description" content="User manual for Cosma CLI v2 beta." />
+	<meta name="twitter:description" content="User manual for Cosma CLI." />
 	<meta name="twitter:card"  content="summary" />
 	<meta name="twitter:image" content="https://cosma.graphlab.fr/img/cosma-icone.png" />
 
@@ -92,8 +92,13 @@ header, h1, h2, h3, h4 {
 h2, h3, h4 {
 	line-height: 1.2;
 	padding-bottom: 0.2em;
-	border-bottom: 1px solid black;
   font-size: 1.2em;
+}
+h2 {
+	border-bottom: 2px solid black;
+}
+h3 {
+	border-bottom: 1px solid #111;
 }
 main h2 {
 	font-size: 1.3em;
@@ -335,15 +340,15 @@ footer {
 
     <aside id="toc">
 	<nav class="toc" >
-        <ul><li><a href="#installing-and-updating">Installing and updating</a><ul><li><a href="#installing">Installing</a></li><li><a href="#upgrading">Upgrading</a></li></ul></li><li><a href="#description">Description</a></li><li><a href="#the-cosma-command">The cosma command</a><ul><li><a href="#create-the-user-data-directory">Create the user data directory</a></li><li><a href="#show-projects">Show projects</a></li><li><a href="#show-version-number">Show version number</a></li><li><a href="#show-help">Show help</a></li></ul></li><li><a href="#configuration">Configuration</a><ul><li><a href="#create-a-configuration-file">Create a configuration file</a></li><li><a href="#create-a-global-configuration-file-(project)">Create a global configuration file (project)</a></li><li><a href="#create-a-default-configuration-file">Create a default configuration file</a></li><li><a href="#configuration-parameters">Configuration parameters</a></li><li><a href="#configuration-template">Configuration template</a></li></ul></li><li><a href="#create-content-tabular-data-(csv)">Create content: tabular data (CSV)</a><ul><li><a href="#data-files-nodes-and-links">Data files: nodes and links</a></li><li><a href="#metadata-(column-headers)">Metadata (column headers)</a></li></ul></li><li><a href="#creating-content-text-files-(markdown)">Creating content: text files (Markdown)</a><ul><li><a href="#metadata">Metadata</a></li><li><a href="#content">Content</a></li><li><a href="#links">Links</a></li><li><a href="#unique-identifiers">Unique identifiers</a></li></ul></li><li><a href="#creating-records">Creating records</a><ul><li><a href="#record-create-a-record-(form-mode)">record : create a record (“form” mode)</a></li><li><a href="#autorecord-create-a-record-(one-liner-mode)">autorecord : create a record (“one-liner” mode)</a></li><li><a href="#batch-create-a-batch-of-records">batch : create a batch of records</a></li></ul></li><li><a href="#modelize-creating-a-cosmoscope">modelize: creating a cosmoscope</a><ul><li><a href="#generating-a-sample-cosmoscope">Generating a sample cosmoscope</a></li><li><a href="#processing-citations">Processing citations</a></li><li><a href="#citation-syntax">Citation syntax</a></li><li><a href="#applying-custom-css">Applying custom CSS</a></li><li><a href="#using-a-global-configuration-file">Using a global configuration file</a></li><li><a href="#excluding-records-from-the-cosmoscope">Excluding records from the cosmoscope</a></li><li><a href="#history">History</a></li><li><a href="#errors-and-warnings">Errors and warnings</a></li></ul></li><li><a href="#using-the-cosmoscope">Using the cosmoscope</a><ul><li><a href="#layout">Layout</a></li><li><a href="#graph">Graph</a></li><li><a href="#records">Records</a></li><li><a href="#focus-mode">Focus mode</a></li><li><a href="#search-bar">Search bar</a></li><li><a href="#filtering-by-record-type">Filtering by record type</a></li><li><a href="#filtering-by-keywords">Filtering by keywords</a></li><li><a href="#index">Index</a></li><li><a href="#views">Views</a></li></ul></li><li><a href="#sharing-and-publishing-a-cosmoscope">Sharing and publishing a cosmoscope</a></li><li><a href="#credits">Credits</a><ul><li><a href="#team">Team</a></li><li><a href="#dependencies">Dependencies</a></li></ul></li><li><a href="#changelog">Changelog</a><ul><li><a href="#v2-beta-4">v2-beta-4</a></li><li><a href="#v2-beta-3">v2-beta-3</a></li><li><a href="#v2-beta-2">v2-beta-2</a></li><li><a href="#v2-beta-1">v2-beta-1</a></li></ul></li></ul>
+        <ul><li><a href="#installing-and-updating">Installing and updating</a><ul><li><a href="#installing">Installing</a></li><li><a href="#upgrading">Upgrading</a></li></ul></li><li><a href="#description">Description</a></li><li><a href="#the-cosma-command">The cosma command</a><ul><li><a href="#create-the-user-data-directory">Create the user data directory</a></li><li><a href="#show-projects">Show projects</a></li><li><a href="#show-version-number">Show version number</a></li><li><a href="#show-help">Show help</a></li></ul></li><li><a href="#configuration">Configuration</a><ul><li><a href="#create-a-configuration-file">Create a configuration file</a></li><li><a href="#create-a-global-configuration-file-(project)">Create a global configuration file (project)</a></li><li><a href="#create-a-default-configuration-file">Create a default configuration file</a></li><li><a href="#configuration-parameters">Configuration parameters</a></li><li><a href="#configuration-template">Configuration template</a></li></ul></li><li><a href="#creating-content-text-files-(markdown)">Creating content: text files (Markdown)</a><ul><li><a href="#metadata">Metadata</a></li><li><a href="#content">Content</a></li><li><a href="#links">Links</a></li><li><a href="#unique-identifiers">Unique identifiers</a></li><li><a href="#creating-records-with-cosma">Creating records with Cosma</a></li><li><a href="#record-create-a-record-(form-mode)">record : create a record (“form” mode)</a></li><li><a href="#autorecord-create-a-record-(one-liner-mode)">autorecord : create a record (“one-liner” mode)</a></li><li><a href="#batch-create-a-batch-of-records">batch : create a batch of records</a></li></ul></li><li><a href="#creating-content-tabular-data-(csv)">Creating content: tabular data (CSV)</a><ul><li><a href="#metadata-for-nodes">Metadata for nodes</a></li><li><a href="#metadata-for-links">Metadata for links</a></li></ul></li><li><a href="#modelize-creating-a-cosmoscope">modelize: creating a cosmoscope</a><ul><li><a href="#generating-a-sample-cosmoscope">Generating a sample cosmoscope</a></li><li><a href="#processing-citations">Processing citations</a></li><li><a href="#citation-syntax">Citation syntax</a></li><li><a href="#applying-custom-css">Applying custom CSS</a></li><li><a href="#using-a-global-configuration-file">Using a global configuration file</a></li><li><a href="#excluding-records-from-the-cosmoscope">Excluding records from the cosmoscope</a></li><li><a href="#history">History</a></li><li><a href="#errors-and-warnings">Errors and warnings</a></li></ul></li><li><a href="#using-the-cosmoscope">Using the cosmoscope</a><ul><li><a href="#layout">Layout</a></li><li><a href="#graph">Graph</a></li><li><a href="#records">Records</a></li><li><a href="#focus-mode">Focus mode</a></li><li><a href="#search-bar">Search bar</a></li><li><a href="#filtering-by-record-type">Filtering by record type</a></li><li><a href="#filtering-by-keywords">Filtering by keywords</a></li><li><a href="#index">Index</a></li><li><a href="#views">Views</a></li></ul></li><li><a href="#sharing-and-publishing-a-cosmoscope">Sharing and publishing a cosmoscope</a></li><li><a href="#credits">Credits</a><ul><li><a href="#team">Team</a></li><li><a href="#dependencies">Dependencies</a></li></ul></li><li><a href="#changelog">Changelog</a><ul><li><a href="#v200">v2.0.0</a></li></ul></li></ul>
       </nav>
 </aside>
 
     <main>
         
         
-        <p><strong>Version:</strong> CLI v2.0.0-beta-4</p>
-        <p>Last updated: April 3, 2023</p>
+        <p><strong>Version:</strong> CLI v2.0.0</p>
+        <p>Last updated: April 19, 2023</p>
         
 
         <h2 id="installing-and-updating" tabindex="-1">Installing and updating</h2>
@@ -780,113 +785,6 @@ css_custom: ''
 devtools: false
 lang: en
 </code></pre>
-<h2 id="create-content-tabular-data-(csv)" tabindex="-1">Create content: tabular data (CSV)</h2>
-<p>When the data source is of type <code>csv</code> or <code>online</code> (tabular data located in local or online files), the data must comply with the following rules.</p>
-<h3 id="data-files-nodes-and-links" tabindex="-1">Data files: nodes and links</h3>
-<p>Tabular data for Cosma must be contained in two files: one for nodes and one for links. The names of these files must be specified in the configuration file.</p>
-<table>
-<thead>
-<tr>
-<th>type of data source</th>
-<th>corresponding parameter</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>nodes (local CSV file)</td>
-<td><code>nodes_origin</code></td>
-</tr>
-<tr>
-<td>links (local CSV file)</td>
-<td><code>links_origin</code></td>
-</tr>
-<tr>
-<td>nodes (online CSV file)</td>
-<td><code>nodes_online</code></td>
-</tr>
-<tr>
-<td>links (online CSV file)</td>
-<td><code>links_online</code></td>
-</tr>
-</tbody>
-</table>
-<h3 id="metadata-(column-headers)" tabindex="-1">Metadata (column headers)</h3>
-<p>Data files must contain column headers that correspond to the metadata used by Cosma.</p>
-<h4 id="metadata-for-nodes" tabindex="-1">Metadata for nodes</h4>
-<p>For nodes, only the <code>title</code> metadata is required.</p>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>title</code></td>
-<td>Title (required)</td>
-</tr>
-<tr>
-<td><code>id</code></td>
-<td>Unique identifier</td>
-</tr>
-<tr>
-<td><code>type:&lt;name&gt;</code></td>
-<td>Record typology. Each typology contains one or more types. For example, one column may be called <code>type:primary</code> and contain types like <code>person</code>, <code>work</code>, <code>institution</code>; another column may be called <code>type:secondary</code>, with other types.</td>
-</tr>
-<tr>
-<td><code>tag:&lt;name&gt;</code></td>
-<td>Keyword list</td>
-</tr>
-<tr>
-<td><code>meta:&lt;name&gt;</code></td>
-<td>User-defined metadata</td>
-</tr>
-<tr>
-<td><code>time:begin</code>, <code>time:end</code></td>
-<td>Metadata used by the chronological mode</td>
-</tr>
-<tr>
-<td><code>content</code></td>
-<td>Textual content of the record</td>
-</tr>
-<tr>
-<td><code>thumbnail</code></td>
-<td>File name of an image to include as a thumbnail in the record. Supported formats: JPG, PNG. The location of the image files must be specified via the <code>images_origin</code> parameter in the configuration file.</td>
-</tr>
-<tr>
-<td><code>reference</code></td>
-<td>List of citation keys to include in the bibliography of the record.</td>
-</tr>
-</tbody>
-</table>
-<h4 id="metadata-for-links" tabindex="-1">Metadata for links</h4>
-<table>
-<thead>
-<tr>
-<th>name</th>
-<th>description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>id</code></td>
-<td>Link identifier (required)</td>
-</tr>
-<tr>
-<td><code>source</code></td>
-<td>Identifier of the record from which the link originates (required)</td>
-</tr>
-<tr>
-<td><code>target</code></td>
-<td>Identifier of the record that the link targets (required)</td>
-</tr>
-<tr>
-<td><code>label</code></td>
-<td>Description of the link (optional). This description is displayed in the context tooltips of the links.</td>
-</tr>
-</tbody>
-</table>
 <h2 id="creating-content-text-files-(markdown)" tabindex="-1">Creating content: text files (Markdown)</h2>
 <p>When the data source is set on <code>directory</code> (Markdown file directory), the data must comply with the following rules:</p>
 <ul>
@@ -896,7 +794,7 @@ lang: en
 </ul>
 <p>The following subsections explain these rules in detail.</p>
 <div class="note">
-<p>This combination of writing standards combines several textual cultures: documentation (enriching and indexing content with metadata); wikis (interrelating documents); the Zettelkasten method (organising one's notes); academic writing with Pandoc (using plain text as a source for exporting in various formats).</p>
+<p>This combination of writing standards combines several textual cultures: documentation (enriching and indexing content with metadata); wikis (interrelating documents); index cards, Zettelkasten (organising one's notes); academic writing with Pandoc (using plain text as a source for exporting in various formats).</p>
 <p>Therefore, Cosma works particularly well when used in tandem with writing environments that also adopt this approach, such as <a href="https://zettlr.com">Zettlr</a> or the <a href="https://foambubble.github.io/foam/">Foam</a> extension for Visual Studio Code and VSCodium.</p>
 </div>
 <h3 id="metadata" tabindex="-1">Metadata</h3>
@@ -905,7 +803,7 @@ lang: en
 <pre><code>---
 title: Title of the record
 id: 20201209111625
-type:
+types:
 - undefined
 tags:
 - mot-clé 1
@@ -936,7 +834,7 @@ tags:
 <dt><code>id</code></dt>
 <dd>Mandatory.</dd>
 <dd>Unique identifier of the record. Must be a unique number. By default, Cosma generates 14-digit identifiers in the form of a timestamp (year, month, day, hours, minutes and seconds). This is inspired by Zettelkasten note-taking applications such as <a href="https://zettelkasten.de/the-archive/">The Archive</a> and <a href="https://www.zettlr.com">Zettlr</a>.</dd>
-<dt><code>type</code></dt>
+<dt><code>type</code> or <code>types</code></dt>
 <dd>Optional.</dd>
 <dd>Record types. A record can have more than one type. If the <code>type</code> field is not specified or its value does not match one of the types declared in the configuration, Cosma will interpret the type of the record as <code>undefined</code>.</dd>
 <dt><code>tags</code></dt>
@@ -994,29 +892,34 @@ Person D wrote against [[opponent:20201209111625]] person C.
 </div>
 <h3 id="unique-identifiers" tabindex="-1">Unique identifiers</h3>
 <p>To be correctly interpreted by Cosma, each record must have a unique identifier. This identifier serves as a target for links between records.</p>
-<p><strong>The identifier must be a unique number.</strong></p>
+<p><strong>The identifier must be a unique string.</strong></p>
 <p>By default, Cosma generates 14-digit identifiers in the form of a timestamp (year, month, day, hours, minutes and seconds). This is inspired by Zettelkasten note-taking applications such as <a href="https://zettelkasten.de/the-archive/">The Archive</a> and <a href="https://www.zettlr.com">Zettlr</a>.</p>
 <p>We plan to eventually allow the user to define an identifier pattern of their choice, like in Zettlr.</p>
 <div class="note">
 <p>Many interrelated note-taking applications use file names as targets for links between files. They maintain links automatically when file names are changed. By choosing to use unique identifiers instead, we have designed Cosma with a more traditional, stricter, WWW-like approach. We believe this is the easiest way to avoid <a href="https://en.wikipedia.org/wiki/Link_rot">link rot</a> in a sustainable way. Avoiding the reliance on automatic link maintenance is especially important if you wish to make your data less dependent on specific applications.</p>
 </div>
-<h2 id="creating-records" tabindex="-1">Creating records</h2>
+<h3 id="creating-records-with-cosma" tabindex="-1">Creating records with Cosma</h3>
+<p>Cosma includes several commands that allow you to quickly create records with automatically generated YAML headers.</p>
 <div class="important">
-<p>Creating files requires a configuration file with <code>files_origin</code> set to a valid path.</p>
+<p>These commands only work when <code>select_origin</code> is set to <code>directory</code> (i.e. for Markdown files).</p>
+<p>Creating files requires a configuration file with <code>files_origin</code> set to a valid path. This can either be a <code>config.yml</code> file in the current working directory, or a project indicated by adding the <code>-p/--projects</code> option.</p>
 </div>
 <h3 id="record-create-a-record-(form-mode)" tabindex="-1"><code>record</code> : create a record (“form” mode)</h3>
 <pre><code>cosma record
 cosma r
+cosma record --project &lt;name&gt;
 </code></pre>
 <p>This command allows you to create a record in the manner of a form. Once the command is launched, the software prompts you for a title, one or several types, and one or several keywords. Only the title is required.</p>
 <h3 id="autorecord-create-a-record-(one-liner-mode)" tabindex="-1"><code>autorecord</code> : create a record (“one-liner” mode)</h3>
 <pre><code>cosma autorecord &lt;title&gt; &lt;type&gt; &lt;keywords&gt;
 cosma a &lt;title&gt; &lt;type&gt; &lt;keywords&gt;
+cosma autorecord &lt;title&gt; &lt;type&gt; &lt;keywords&gt; --project &lt;name&gt;
 </code></pre>
 <p>This command allows you to create a record with a single input. Only the title is required. If you enter multiple types or multiple keywords, separate them with commas (spaces after the comma are ignored). Example: <code>type A, type B</code>, <code>keyword1, keyword2</code>.</p>
 <h3 id="batch-create-a-batch-of-records" tabindex="-1"><code>batch</code> : create a batch of records</h3>
 <pre><code>cosma batch &lt;path&gt;
 cosma b &lt;path&gt;
+cosma batch &lt;path&gt; --project &lt;name&gt;
 </code></pre>
 <p>This command allows you to create several records at once. <code>&lt;path&gt;</code> corresponds to the location of a file in JSON or CSV format describing the records to be created. As with all other record creation modes, the title is mandatory and the other fields are optional.</p>
 <p>Example of a JSON file containing two records:</p>
@@ -1051,6 +954,89 @@ Paul Otlet,Lorem...,Person,History,Paul,Otlet,man,1868,1944,image.png,otlet1934
 <p>To prevent generating duplicate identifiers, the batch creation mode generates identifiers by pseudo-timestamp. The first 8 digits, corresponding to the date (year, month, day), are real. Example: 20220115 (15 January 2022). On the other hand, those corresponding to the hours, minutes and seconds are false, generated outside of real time ranges. Example: 256495. As it is impossible to create a record manually at 25h 64min and 95s, there is no risk of generating duplicate identifiers by using both methods simultaneously.</p>
 <p>Because of this operation, it is possible to create up to 913,599 records per day and per directory in batch mode before running out of identifiers.</p>
 </div>
+<h2 id="creating-content-tabular-data-(csv)" tabindex="-1">Creating content: tabular data (CSV)</h2>
+<p>Cosma can interpret tabular data contained in local or online CSV files. This is an alternative to using Markdown files.</p>
+<p>Tabular data for Cosma must be contained in two files: one for nodes and one for links. The locations of these files must be specified in the configuration file.</p>
+<div class="note">
+<p>You can generate CSV files with a spreadsheet program. In fact, it is precisely because online collaborative spreadsheet programs such as Google Sheets exist that we have added CSV support to Cosma: they provide a cheap and efficient way to set up collective knowledge work.</p>
+<p>We offer <a href="https://docs.google.com/spreadsheets/d/1Wxm3lxgSnHaqsIVQVyuMR4TmiJwjDSr-KJWaKqNjz_o/">a Google Sheets template</a> for you to use as a guide. One sheet should be dedicated to nodes and another to links. Click on File › Share › Publish to Web. Select the sheet containing the nodes, then change the format from &quot;Web Page&quot; to &quot;Comma Separated Values (.csv)&quot;. Click &quot;Publish&quot; and copy the share link. Repeat the operation for the sheet containing the links (in our template, this is the &quot;Extraction&quot; sheet and not the &quot;Links&quot; sheet). Paste each link in the corresponding field of the project configuration.</p>
+</div>
+<p>The column headers of the CSV files must comply with the following rules.</p>
+<h3 id="metadata-for-nodes" tabindex="-1">Metadata for nodes</h3>
+<p>For nodes, only the <code>title</code> metadata is required.</p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>title</code></td>
+<td>Title (required)</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td>Unique identifier</td>
+</tr>
+<tr>
+<td><code>type:&lt;name&gt;</code></td>
+<td>Record typology. Each typology contains one or more types. For example, one column may be called <code>type:primary</code> and contain types like <code>person</code>, <code>work</code>, <code>institution</code>; another column may be called <code>type:secondary</code>, with other types.</td>
+</tr>
+<tr>
+<td><code>tag:&lt;name&gt;</code></td>
+<td>Keyword list</td>
+</tr>
+<tr>
+<td><code>meta:&lt;name&gt;</code></td>
+<td>User-defined metadata</td>
+</tr>
+<tr>
+<td><code>time:begin</code>, <code>time:end</code></td>
+<td>Metadata used by the chronological mode</td>
+</tr>
+<tr>
+<td><code>content</code></td>
+<td>Textual content of the record</td>
+</tr>
+<tr>
+<td><code>thumbnail</code></td>
+<td>File name of an image to include as a thumbnail in the record. Supported formats: JPG, PNG. The location of the image files must be specified via the <code>images_origin</code> parameter in the configuration file.</td>
+</tr>
+<tr>
+<td><code>reference</code></td>
+<td>List of citation keys to include in the bibliography of the record.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="metadata-for-links" tabindex="-1">Metadata for links</h3>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>Link identifier (required)</td>
+</tr>
+<tr>
+<td><code>source</code></td>
+<td>Identifier of the record from which the link originates (required)</td>
+</tr>
+<tr>
+<td><code>target</code></td>
+<td>Identifier of the record that the link targets (required)</td>
+</tr>
+<tr>
+<td><code>label</code></td>
+<td>Description of the link (optional). This description is displayed in the context tooltips of the links.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="modelize-creating-a-cosmoscope" tabindex="-1"><code>modelize</code>: creating a cosmoscope</h2>
 <pre><code>cosma modelize
 cosma m
@@ -1212,8 +1198,8 @@ modern documentation...
 <p>The list of record types in the Menu allows you to filter the display. Deselecting a type hides the corresponding records in the graph, index and search engine suggestions. Deselecting a type while holding down the <code>Alt</code> key hides the records of all the other types.</p>
 <p>For a type to appear in this list, it must be declared in the configuration file and be assigned to at least one record.</p>
 <h3 id="filtering-by-keywords" tabindex="-1">Filtering by keywords</h3>
-<p>The list of keywords in Menu allows you to highlight records that use the selected keywords. Selecting a keyword highlights the label of the corresponding nodes in the graph and restricts the index to the corresponding records. You can activate several keywords simultaneously. To deactivate a keyword, click the corresponding button again.</p>
-<p>For a keyword to appear, it must have been declared in the <code>tags</code> field of the YAML header of at least one record.</p>
+<p>The list of keywords located in the left side panel allows you to filter the graph. Selecting a keyword filters the graph and the index to display only the records that contain this keyword. You can activate several keywords simultaneously. To deactivate a keyword, click again on the corresponding button.</p>
+<p>For a keyword to appear, it must have been declared in the <code>tags</code> (or <code>keywords</code>) field of the YAML header of at least one record.</p>
 <h3 id="index" tabindex="-1">Index</h3>
 <p>The alphabetical index of records in the Menu allows you to select a record from a list rather than through the graph. Clicking on a title selects the corresponding node in the graph and opens the corresponding record. The index can be sorted in ascending or descending alphabetical order.</p>
 <div class="important">
@@ -1235,46 +1221,40 @@ modern documentation...
 <li><a href="http://www.guidedesegares.info/">Olivier Le Deuff</a> (researcher)</li>
 </ul>
 <h3 id="dependencies" tabindex="-1">Dependencies</h3>
-<p>To improve the maintainability and readability of the source code, the development team resorted to the following libraries:</p>
+<p>To improve the maintainability and readability of the source code, the development team uses the following libraries:</p>
 <ul>
-<li><a href="https://d3js.org/">D3.js</a> v4.13.0 (BSD 3-Clause) : Generating the graph</li>
-<li><a href="https://mozilla.github.io/nunjucks/">Nunjucks</a> v3.2.3 (BSD 2-Clause) : Generating the cosmoscope template</li>
-<li><a href="https://github.com/nodeca/js-yaml">Js-yaml</a> v4.1.0 (MIT License) : Reading the configuration file and writing the YAML header</li>
-<li><a href="https://github.com/dworthen/js-yaml-front-matter">Js-yaml-front-matter</a> v4.1.1 (MIT License): Reading the YAML header of Markdown files</li>
-<li><a href="https://github.com/markdown-it/markdown-it">Markdown-it</a> v12.3.0 (MIT License): Converting Markdown to HTML</li>
-<li><a href="https://www.npmjs.com/package/markdown-it-attrs">Markdown-it-attrs</a> v4.0.0 (MIT License): Handling Markdown hyperlinks within records</li>
-<li><a href="https://github.com/Juris-M/citeproc-js">Citeproc-js</a> v2.4.62 (CPAL and AGPL): Converting citation keys</li>
-<li><a href="https://fusejs.io/">Fuse.js</a> v6.4.6 (Apache License 2.0): Search engine</li>
+<li>Zettlr/citr : 1.2.2</li>
+<li>Axios : 0.27.2</li>
+<li>Citeproc : 2.4.62</li>
+<li>Csv-parse : 5.3.0</li>
+<li>D3 : 4.13.0</li>
+<li>D3-array : 2.12.1</li>
+<li>D3-scale : 3.3.0</li>
+<li>Fuse.js : 6.6.2</li>
+<li>Glob : 7.2.0</li>
+<li>Graphology : 0.25.1</li>
+<li>Graphology-traversal : 0.3.1</li>
+<li>Hotkeys-js : 3.10.0</li>
+<li>Markdown-it : 13.0.1</li>
+<li>Markdown-it-attrs : 4.1.4</li>
+<li>Nunjucks : 3.2.3</li>
+<li>Slugify : 1.6.5</li>
+<li>Yaml : 2.2.1</li>
+<li>Babel/core : 7.20.5</li>
+<li>Babel/preset-env : 7.20.2</li>
+<li>Faker-js/faker : 7.5.0</li>
+<li>Babel-loader : 9.1.0</li>
+<li>Chai : 4.3.6</li>
+<li>Chai-fs : 2.0.0</li>
+<li>Cypress : 10.9.0</li>
+<li>Mocha : 10.0.0</li>
+<li>Prettier : 2.8.0</li>
+<li>Webpack : 5.74.0</li>
+<li>Webpack-cli : 4.10.0</li>
+<li>Webpack-dev-server : 4.11.1</li>
 </ul>
 <h2 id="changelog" tabindex="-1">Changelog</h2>
-<h3 id="v2-beta-4" tabindex="-1">v2-beta-4</h3>
-<h4 id="bugs-solved" tabindex="-1">Bugs solved</h4>
-<ul>
-<li>Alternative syntax for links should now truly work with all characters (v2-beta-3 did not fix this completely).</li>
-</ul>
-<h4 id="improvements" tabindex="-1">Improvements</h4>
-<ul>
-<li>Issues with parsing CSV data are logged in an informative way.</li>
-</ul>
-<h3 id="v2-beta-3" tabindex="-1">v2-beta-3</h3>
-<h4 id="fixed-bugs" tabindex="-1">Fixed bugs</h4>
-<ul>
-<li>Alternative syntax for links works with all characters (e.g. accented letters).</li>
-</ul>
-<h3 id="v2-beta-2" tabindex="-1">v2-beta-2</h3>
-<h4 id="improvements-1" tabindex="-1">Improvements</h4>
-<ul>
-<li>When <code>history: true</code>, cosmoscopes are saved in a <code>history</code> subdirectory, either in the user data directory for global configurations, or in the same directory as the local configuration.</li>
-</ul>
-<h4 id="fixed-bugs-1" tabindex="-1">Fixed bugs</h4>
-<ul>
-<li>Windows: The execution path is located correctly.</li>
-<li>Windows: The user data directory is created correctly.</li>
-<li>The <code>logs</code> directory is created correctly.</li>
-<li>Record titles containing only a date in the YYYY-MM-DD format are interpreted correctly.</li>
-</ul>
-<h3 id="v2-beta-1" tabindex="-1">v2-beta-1</h3>
-<h4 id="additions" tabindex="-1">Additions</h4>
+<h3 id="v200" tabindex="-1">v2.0.0</h3>
 <ul>
 <li>Manage multiple configurations (global and local)</li>
 <li>Use alternative syntax for links</li>
@@ -1288,22 +1268,26 @@ modern documentation...
 <li>Define an outline color for node types</li>
 <li>Choose between fixed size nodes and nodes proportional to their degree</li>
 </ul>
-<h4 id="improvements-2" tabindex="-1">Improvements</h4>
+<h4 id="improvements" tabindex="-1">Improvements</h4>
 <ul>
 <li>Links in bibliography are now clickable</li>
 <li>Messages displayed at command execution are more informative</li>
 <li>The error and warning report is more informative</li>
 <li>Keywords at the top of cards in the cosmoscope no longer overflow the layout</li>
 <li>Cosma now reads directories recursively (issue <a href="https://github.com/graphlab-fr/cosma/issues/4">#4</a>)</li>
+<li>When <code>history: true</code>, cosmoscopes are saved in a <code>history</code> subdirectory, either in the user data directory for global configurations, or in the same directory as the local configuration.</li>
 </ul>
-<h4 id="fixed-bugs-2" tabindex="-1">Fixed bugs</h4>
+<h4 id="fixed-bugs" tabindex="-1">Fixed bugs</h4>
 <ul>
 <li>Link/backlink context tooltips now correctly highlight the target record (issue <a href="https://github.com/graphlab-fr/cosma/issues/23">#23</a>)</li>
-<li>Spaces in file names generated by Cosma are correctly replaced by dashes</li>
 </ul>
 <h4 id="known-bugs" tabindex="-1">Known bugs</h4>
 <ul>
-<li>Backlink context tooltips may fail to render citations properly</li>
+<li>Citations are processed in link context tooltips but not in backlink context tooltips</li>
+<li>Windows style carriage return and line feeds hidden characters (CR LF) are not parsed correctly</li>
+<li>When the data comes from online CSV files, the <code>modelize</code> command does not terminate after generating the cosmoscope</li>
+<li>If a record's identifier is not a string of numbers, links to that record do not work</li>
+<li>Links to records with spaces in their identifier are not rendered correctly in the record's body</li>
 </ul>
 
     </main>

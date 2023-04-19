@@ -10,7 +10,7 @@
 	<meta name="description" content="Manuel d’utilisation de Cosma GUI v2." />
 	<meta name="author" content="Arthur Perret,Guillaume Brioudes" />
 	<meta name="copyright" content="GPL-3.0-or-later"/>
-	<meta name="last_edit" content="2023-04-08" />
+	<meta name="last_edit" content="2023-04-19" />
 
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Manuel d’utilisation (GUI)" />
@@ -25,7 +25,7 @@
 
 	<meta property="DC.title" content="Manuel d’utilisation (GUI)" />
 	<meta property="DC.contributor" content="Arthur Perret,Guillaume Brioudes" />
-	<meta property="DC.date" content="2023-04-08" />
+	<meta property="DC.date" content="2023-04-19" />
 	<meta property="DC.language" content="fr" />
 	<meta property="DC.description" lang="fr" content="Manuel d’utilisation de Cosma GUI v2." />
 	<meta property="DC.rights" content="GPL-3.0-or-later" />
@@ -92,8 +92,13 @@ header, h1, h2, h3, h4 {
 h2, h3, h4 {
 	line-height: 1.2;
 	padding-bottom: 0.2em;
-	border-bottom: 1px solid black;
   font-size: 1.2em;
+}
+h2 {
+	border-bottom: 2px solid black;
+}
+h3 {
+	border-bottom: 1px solid #111;
 }
 main h2 {
 	font-size: 1.3em;
@@ -335,14 +340,14 @@ footer {
 
     <aside id="toc">
 	<nav class="toc" >
-        <ul><li><a href="#installation-et-mise-a-jour">Installation et mise à jour</a><ul><li><a href="#installation">Installation</a></li><li><a href="#mise-a-jour">Mise à jour</a></li></ul></li><li><a href="#parametrer-le-logiciel">Paramétrer le logiciel</a><ul><li><a href="#langue-de-lapplication">Langue de l'application</a></li><li><a href="#outils-de-developpement">Outils de développement</a></li></ul></li><li><a href="#creer-un-projet">Créer un projet</a></li><li><a href="#creer-du-contenu-fichiers-texte-(markdown)">Créer du contenu : fichiers texte (Markdown)</a><ul><li><a href="#metadonnees">Métadonnées</a></li><li><a href="#contenu">Contenu</a></li><li><a href="#liens">Liens</a></li><li><a href="#identifiants-uniques">Identifiants uniques</a></li><li><a href="#creer-une-fiche-via-cosma">Créer une fiche via Cosma</a></li></ul></li><li><a href="#creer-du-contenu-donnees-tabulaires-(csv)">Créer du contenu : données tabulaires (CSV)</a><ul><li><a href="#fichiers-de-donnees-noeuds-et-liens">Fichiers de données : nœuds et liens</a></li><li><a href="#metadonnees-(en-tetes-de-colonnes)">Métadonnées (en-têtes de colonnes)</a></li></ul></li><li><a href="#creer-un-cosmoscope">Créer un cosmoscope</a><ul><li><a href="#traiter-les-citations">Traiter les citations</a></li><li><a href="#appliquer-une-css-personnalisee">Appliquer une CSS personnalisée</a></li><li><a href="#exclure-certaines-fiches-du-cosmoscope">Exclure certaines fiches du cosmoscope</a></li><li><a href="#rapport-derreurs">Rapport d'erreurs</a></li></ul></li><li><a href="#historique">Historique</a></li><li><a href="#utilisation-du-cosmoscope">Utilisation du cosmoscope</a><ul><li><a href="#description-generale-de-linterface">Description générale de l'interface</a></li><li><a href="#graphe">Graphe</a></li><li><a href="#fiches">Fiches</a></li><li><a href="#mode-focus">Mode focus</a></li><li><a href="#mode-chronologique">Mode chronologique</a></li><li><a href="#moteur-de-recherche">Moteur de recherche</a></li><li><a href="#filtrer-laffichage-par-types">Filtrer l'affichage par types</a></li><li><a href="#mots-cles">Mots-clés</a></li><li><a href="#index">Index</a></li><li><a href="#vues">Vues</a></li></ul></li><li><a href="#partager-un-cosmoscope">Partager un cosmoscope</a></li><li><a href="#configuration">Configuration</a><ul><li><a href="#general">Général</a></li><li><a href="#types-de-fiches">Types de fiches</a></li><li><a href="#types-de-liens">Types de liens</a></li><li><a href="#graphe-1">Graphe</a></li><li><a href="#metadonnees-1">Métadonnées</a></li><li><a href="#bibliographie">Bibliographie</a></li><li><a href="#vues-1">Vues</a></li><li><a href="#filtrage-des-fiches">Filtrage des fiches</a></li><li><a href="#avance">Avancé</a></li></ul></li><li><a href="#credits">Crédits</a><ul><li><a href="#equipe">Équipe</a></li><li><a href="#bibliotheques-utilisees">Bibliothèques utilisées</a></li></ul></li><li><a href="#changelog">Changelog</a><ul><li><a href="#v2-beta-2">v2-beta-2</a></li><li><a href="#v2-beta-1">v2-beta-1</a></li><li><a href="#v12">v1.2</a></li><li><a href="#v11">v1.1</a></li></ul></li></ul>
+        <ul><li><a href="#installation-et-mise-a-jour">Installation et mise à jour</a><ul><li><a href="#installation">Installation</a></li><li><a href="#mise-a-jour">Mise à jour</a></li></ul></li><li><a href="#parametrer-le-logiciel">Paramétrer le logiciel</a><ul><li><a href="#langue-de-lapplication">Langue de l'application</a></li><li><a href="#outils-de-developpement">Outils de développement</a></li></ul></li><li><a href="#creer-un-projet">Créer un projet</a></li><li><a href="#creer-du-contenu-fichiers-texte-(markdown)">Créer du contenu : fichiers texte (Markdown)</a><ul><li><a href="#metadonnees">Métadonnées</a></li><li><a href="#contenu">Contenu</a></li><li><a href="#liens">Liens</a></li><li><a href="#identifiants-uniques">Identifiants uniques</a></li><li><a href="#creer-une-fiche-via-cosma">Créer une fiche via Cosma</a></li></ul></li><li><a href="#creer-du-contenu-donnees-tabulaires-(csv)">Créer du contenu : données tabulaires (CSV)</a><ul><li><a href="#metadonnees-(en-tetes-de-colonnes)">Métadonnées (en-têtes de colonnes)</a></li></ul></li><li><a href="#creer-un-cosmoscope">Créer un cosmoscope</a><ul><li><a href="#traiter-les-citations">Traiter les citations</a></li><li><a href="#appliquer-une-css-personnalisee">Appliquer une CSS personnalisée</a></li><li><a href="#exclure-certaines-fiches-du-cosmoscope">Exclure certaines fiches du cosmoscope</a></li><li><a href="#rapport-derreurs">Rapport d'erreurs</a></li></ul></li><li><a href="#historique">Historique</a></li><li><a href="#utilisation-du-cosmoscope">Utilisation du cosmoscope</a><ul><li><a href="#description-generale-de-linterface">Description générale de l'interface</a></li><li><a href="#graphe">Graphe</a></li><li><a href="#fiches">Fiches</a></li><li><a href="#mode-focus">Mode focus</a></li><li><a href="#mode-chronologique">Mode chronologique</a></li><li><a href="#moteur-de-recherche">Moteur de recherche</a></li><li><a href="#filtrer-laffichage-par-types">Filtrer l'affichage par types</a></li><li><a href="#mots-cles">Mots-clés</a></li><li><a href="#index">Index</a></li><li><a href="#vues">Vues</a></li></ul></li><li><a href="#partager-un-cosmoscope">Partager un cosmoscope</a></li><li><a href="#configuration">Configuration</a><ul><li><a href="#general">Général</a></li><li><a href="#types-de-fiches">Types de fiches</a></li><li><a href="#types-de-liens">Types de liens</a></li><li><a href="#graphe-1">Graphe</a></li><li><a href="#metadonnees-1">Métadonnées</a></li><li><a href="#bibliographie">Bibliographie</a></li><li><a href="#vues-1">Vues</a></li><li><a href="#filtrage-des-fiches">Filtrage des fiches</a></li><li><a href="#avance">Avancé</a></li></ul></li><li><a href="#credits">Crédits</a><ul><li><a href="#equipe">Équipe</a></li><li><a href="#bibliotheques-utilisees">Bibliothèques utilisées</a></li></ul></li><li><a href="#changelog">Changelog</a><ul><li><a href="#v2-beta-2">v2-beta-2</a></li><li><a href="#v2-beta-1">v2-beta-1</a></li><li><a href="#v12">v1.2</a></li><li><a href="#v11">v1.1</a></li></ul></li></ul>
       </nav>
 </aside>
 
     <main>
         
         <p><strong>Version :</strong> GUI v2.0-beta-2</p>
-        <p><strong>Dernière mise à jour :</strong> 8 avril 2023</p>
+        <p><strong>Dernière mise à jour :</strong> 19 avril 2023</p>
         
         
 
@@ -424,7 +429,7 @@ footer {
 <pre><code>---
 title: Titre du document
 id: 20201209111625
-type:
+types:
 - undefined
 tags:
 - mot-clé 1
@@ -454,8 +459,8 @@ tags:
 <dd>Titre de la fiche.</dd>
 <dt><code>id</code></dt>
 <dd>Obligatoire.</dd>
-<dd>Identifiant unique de la fiche (série unique de chiffres). Par défaut, Cosma génère des identifiants à 14 chiffres par horodatage (année, mois, jour, heures, minutes et secondes) sur le modèle de certains logiciels de prise de notes type Zettelkasten comme <a href="https://zettelkasten.de/the-archive/">The Archive</a> ou <a href="https://www.zettlr.com">Zettlr</a>.</dd>
-<dt><code>type</code></dt>
+<dd>Identifiant unique de la fiche. Par défaut, Cosma génère des identifiants à 14 chiffres par horodatage (année, mois, jour, heures, minutes et secondes) sur le modèle de certains logiciels de prise de notes type Zettelkasten comme <a href="https://zettelkasten.de/the-archive/">The Archive</a> ou <a href="https://www.zettlr.com">Zettlr</a>.</dd>
+<dt><code>type</code> ou <code>types</code></dt>
 <dd>Types de la fiche. Facultatif. Une fiche peut avoir un ou plusieurs types. Si le champ n'est pas renseigné ou bien que ses valeurs ne correspondent pas à l'un des types renseignés dans la configuration, Cosma interprètera le type de la fiche comme non défini (<code>undefined</code>).</dd>
 <dt><code>tags</code> (ou <code>keywords</code>)</dt>
 <dd>Mots-clés de la fiche. Facultatif. La valeur doit être une liste. Il est possible d'utiliser <code>keywords</code> au lieu de <code>tags</code>, dans une logique de compatibilité avec Pandoc. Si une fiche comporte un champ <code>tags</code> et un champ <code>keywords</code>, seuls les mots-clés déclarés dans le champ <code>tags</code> sont interprétés par Cosma.</dd>
@@ -514,7 +519,7 @@ Dupont a été critiqué par [[opposant:20201209111625|Smith]].
 </code></pre>
 <h3 id="identifiants-uniques" tabindex="-1">Identifiants uniques</h3>
 <p>Pour être correctement interprétée par Cosma, chaque fiche doit avoir un identifiant unique. Cet identifiant sert de cible aux liens internes.</p>
-<p><strong>L'identifiant doit être une suite de chiffres.</strong></p>
+<p><strong>L'identifiant doit être une suite unique de caractères.</strong></p>
 <p>Par défaut, Cosma génère des identifiants à 14 chiffres par horodatage (année, mois, jour, heures, minutes et secondes). Nous nous inspirons ici du fonctionnement de logiciels de prise de notes type Zettelkasten comme <a href="https://zettelkasten.de/the-archive/">The Archive</a> et <a href="https://www.zettlr.com">Zettlr</a>.</p>
 <p>À terme, nous souhaitons permettre à l'utilisateur de définir un motif d'identifiant de son choix, à la manière de Zettlr.</p>
 <div class="note">
@@ -531,11 +536,11 @@ Dupont a été critiqué par [[opposant:20201209111625|Smith]].
 <p>Exemple : une fiche intitulée « Métadonnées web sémantique » sera enregistrée comme <code>metadonnees-web-semantique.md</code>.</p>
 </div>
 <h2 id="creer-du-contenu-donnees-tabulaires-(csv)" tabindex="-1">Créer du contenu : données tabulaires (CSV)</h2>
-<p>Cosma peut interpréter des données tabulaires contenues dans des fichiers CSV locaux ou en ligne. Ces données doivent respecter les règles suivantes.</p>
-<h3 id="fichiers-de-donnees-noeuds-et-liens" tabindex="-1">Fichiers de données : nœuds et liens</h3>
-<p>Les données tabulaires destinées à Cosma doivent être contenues dans deux fichiers : un pour les nœuds et un autre pour les liens. Les emplacements de ces fichiers doivent être renseignés dans la configuration.</p>
+<p>Cosma peut interpréter des données tabulaires contenues dans des fichiers CSV locaux ou en ligne. Les données tabulaires destinées à Cosma doivent être contenues dans deux fichiers : un pour les nœuds et un autre pour les liens. Les emplacements de ces fichiers doivent être renseignés dans la configuration.</p>
+<p>Pour créer un projet à partir de fichiers CSV locaux, sélectionnez le type de données « Fichiers CSV (locaux) » et indiquez l'emplacement de fichiers CSV sur votre machine.</p>
+<p>Pour créer un projet à partir de fichiers CSV en ligne, sélectionnez le type de données « Fichiers CSV (en ligne) » et indiquez les URL des fichiers CSV.</p>
 <div class="note">
-<p>Ce fonctionnement est similaire à celui de Gephi : les nœuds sont listés dans une table et les liens dans une autre table.</p>
+<p>Vous pouvez générer les fichiers CSV depuis Google Sheets. Vous pouvez consulter notre tableur modèle pour vous en inspirer. Une feuille doit être consacrée aux nœuds et une autre aux liens. Cliquez sur Fichier › Partager › Publier sur le Web. Sélectionnez la feuille contenant les nœuds, puis changez le format « Page Web » en « Valeurs séparées par des virgules (.csv) ». Cliquez sur « Publier » puis copiez le lien de partage. Répétez l'opération pour la feuille contenant les liens. Collez chaque lien dans le champ correspondant au moment de créer le projet ou de le configurer.</p>
 </div>
 <h3 id="metadonnees-(en-tetes-de-colonnes)" tabindex="-1">Métadonnées (en-têtes de colonnes)</h3>
 <p>Les fichiers de données doivent contenir des en-têtes de colonnes correspondant aux métadonnées utilisées par Cosma.</p>

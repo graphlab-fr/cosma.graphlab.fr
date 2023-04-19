@@ -10,7 +10,7 @@
 	<meta name="description" content="User manual for Cosma GUI v2 beta." />
 	<meta name="author" content="Arthur Perret,Guillaume Brioudes" />
 	<meta name="copyright" content="GPL-3.0-or-later"/>
-	<meta name="last_edit" content="2023-04-08" />
+	<meta name="last_edit" content="2023-04-19" />
 
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="User manual (GUI)" />
@@ -25,7 +25,7 @@
 
 	<meta property="DC.title" content="User manual (GUI)" />
 	<meta property="DC.contributor" content="Arthur Perret,Guillaume Brioudes" />
-	<meta property="DC.date" content="2023-04-08" />
+	<meta property="DC.date" content="2023-04-19" />
 	<meta property="DC.language" content="en" />
 	<meta property="DC.description" lang="en" content="User manual for Cosma GUI v2 beta." />
 	<meta property="DC.rights" content="GPL-3.0-or-later" />
@@ -92,8 +92,13 @@ header, h1, h2, h3, h4 {
 h2, h3, h4 {
 	line-height: 1.2;
 	padding-bottom: 0.2em;
-	border-bottom: 1px solid black;
   font-size: 1.2em;
+}
+h2 {
+	border-bottom: 2px solid black;
+}
+h3 {
+	border-bottom: 1px solid #111;
 }
 main h2 {
 	font-size: 1.3em;
@@ -343,7 +348,7 @@ footer {
         
         
         <p><strong>Version:</strong> GUI v2.0-beta-2</p>
-        <p>Last updated: April 8, 2023</p>
+        <p>Last updated: April 19, 2023</p>
         
 
         <h2 id="installing-and-updating" tabindex="-1">Installing and updating</h2>
@@ -447,8 +452,8 @@ tags:
 <dd>Title of the record.</dd>
 <dt><code>id</code></dt>
 <dd>Mandatory.</dd>
-<dd>Unique identifier of the record. Must be a unique number. By default, Cosma generates 14-digit identifiers in the form of a timestamp (year, month, day, hours, minutes and seconds). This is inspired by Zettelkasten note-taking applications such as <a href="https://zettelkasten.de/the-archive/">The Archive</a> and <a href="https://www.zettlr.com">Zettlr</a>.</dd>
-<dt><code>type</code></dt>
+<dd>Unique identifier of the record. Must be a unique string. By default, Cosma generates 14-digit identifiers in the form of a timestamp (year, month, day, hours, minutes and seconds). This is inspired by Zettelkasten note-taking applications such as <a href="https://zettelkasten.de/the-archive/">The Archive</a> and <a href="https://www.zettlr.com">Zettlr</a>.</dd>
+<dt><code>type</code> or <code>types</code></dt>
 <dd>Optional.</dd>
 <dd>Record type. A record can have one or more types. If the <code>type</code> field is not specified or its value does not match one of the types declared in the configuration, Cosma will interpret the type of the record as <code>undefined</code>.</dd>
 <dt><code>tags</code></dt>
@@ -508,7 +513,7 @@ Person D wrote against [[opponent:20201209111625|person C]].
 </code></pre>
 <h4 id="unique-identifiers" tabindex="-1">Unique identifiers</h4>
 <p>To be correctly interpreted by Cosma, each record must have a unique identifier. This identifier serves as a target for links between records.</p>
-<p><strong>The identifier must contain only numbers.</strong></p>
+<p><strong>The identifier must be a unique string.</strong></p>
 <p>By default, Cosma generates 14-digit identifiers in the form of a timestamp (year, month, day, hours, minutes and seconds). This is inspired by Zettelkasten note-taking applications such as <a href="https://zettelkasten.de/the-archive/">The Archive</a> and <a href="https://www.zettlr.com">Zettlr</a>.</p>
 <p>We plan to eventually allow the user to define an identifier pattern of their choice, like in Zettlr.</p>
 <div class="note">

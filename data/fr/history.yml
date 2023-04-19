@@ -6,3 +6,5 @@
   description: "Publication d'une première version de Cosma utilisable en ligne de commande."
 - date: Septembre 2021
   description: "Publication d'une version de Cosma avec interface graphique, labellisée 1.0."
+- date: Avril 2023
+  description: "Cosma passe en version 2.0."
