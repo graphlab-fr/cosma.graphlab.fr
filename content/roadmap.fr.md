@@ -4,28 +4,15 @@ slug: feuille-de-route
 layout: faq
 ---
 
-Dernière modification de cette page : 03 avril 2023
+Dernière modification de cette page : 19 avril 2023
 
-## Travail en cours
+Cosma évolue par cycles de recherche et de développement. Actuellement, après une période de développement intensif qui a conduit à la version 2.0, nous repartons dans un cycle de recherche.
 
-Nous travaillons sur une version 2.0, [disponible actuellement en bêta](https://cosma.graphlab.fr/docs/v2/manuel-utilisation/). Elle apporte les nouveautés suivantes :
-
-- Version GUI disponible sur Linux (Debian).
-- Gestion de plusieurs projets, chacun avec sa source de données et sa configuration.
-- Lecture récursive du répertoire indiqué comme emplacement des données (= prise en compte des sous-répertoires éventuels).
-- Fonctionnalités inspirées par l’[Otletosphère](https://hyperotlet.huma-num.fr/otletosphere/) : travailler à partir de données tabulaires ; attribuer plusieurs types à une fiche ; utiliser des images en vignette dans les fiches et dans le graphe.
-- Filtrage chronologique du graphe.
-- Filtrage du graphe via les mots-clés.
-- Génération sélective du cosmoscope (possibilité d'exclure des fiches suivant différents critères).
+Nous avons décidé de suspendre notre travail sur la version GUI. Son développement a été instructif mais son maintien n'est pas soutenable avec nos moyens actuels. Elle restera disponible en version 1.1 (stable) et 2.0 (bêta) mais actuellement nous n'envisageons pas de lui apporter de mises à jour (ni maintenance, ni ajouts). Notre focus va désormais se porter sur la version CLI, ainsi que sur une API permettant d'intégrer Cosma à des environnements tiers. Le site va être mis à jour prochainement pour refléter ces changements.
 
 ## Chantiers prévus
 
-- Améliorer l'expérience utilisateur relative aux mises à jour pour la version GUI.
-- Améliorer la vue graphe (notamment le fait de rendre l'affichage du graphe moins dépendant de la taille de l'écran).
-- Améliorer les Vues.
-- Ajouter la création de fiches par lots à la version GUI.
+1. Améliorer l’affichage du graphe
+2. Ajouter de nouvelles fonctionnalités (intégration plus grande des données bibliographiques ; nouveaux modes d'affichage pour le cosmoscope)
+3. Développer une API et prototyper une version serveur
 
-## Idées envisagées
-
-- Option permettant de traiter les références bibliographiques comme des nœuds du graphe.
-- Mode d'affichage alternatif pour le cosmoscope, centré sur la fiche plutôt que le graphe, et une mise en page adaptative facilitant la consultation sur petits écrans.
