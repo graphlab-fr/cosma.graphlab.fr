@@ -3,7 +3,15 @@ title: Frequently Asked Questions
 layout: faq
 ---
 
-## I tried to launch the application but my operating system won't let me.
+## Is the app still being developed/maintained?
+
+Currently (May 2023), after a period of development that led to version 2.0, we are back in a research cycle. Check the [roadmap](/roadmap/) for more details.
+
+## Is this a tool for data/network/graph analysis?
+
+Cosma is not intended for data analysis, no.
+
+You may be familiar with [Andy Matuschak's notes](https://notes.andymatuschak.org). This is the kind of “data” Cosma is meant to help with: research notes that are carefully crafted and constantly revised, so you know what's in them (i.e. no need for data analysis), on a somewhat smaller scale (tens or hundreds of nodes rather than thousands) but densely linked, hence the emphasis on the graph view and contextualized backlinks.## I tried to launch the application but my operating system won't let me.
 
 You can ignore your operating system's warnings and run Cosma, provided you download the application from our GitHub repository, the only official source. To override system warnings, you must have administrator privileges on your session. On macOS, right-click the application then select Open (you may have to do it twice).
 
@@ -33,7 +41,7 @@ Cosma allows you to replace the 14-digit identifiers by an arbitrary string in t
 
 This is possible with Cosma CLI v2-beta.
 
-For previous versions, it is *technically possible* to do it by following the suggestions below.
+For the GUI, is *technically possible* to do it by following the suggestions below.
 
 ### Method 1: History
 
@@ -64,18 +72,3 @@ Again, imagine you have two directories, `dir1` and `dir2`:
 
 You can now switch to a specific directory by copying the corresponding `config.json` file to the support directory. Update the Cosma display by clicking on New Cosmoscope.
 
-## Do you plan to release the GUI version for Linux?
-
-We do not currently provide the GUI version for Linux but we hope to do so soon. Cosma is an Electron-based application, meaning it can be developed for several platforms simultaneously from a single code base. We recently got access to Linux machines to test Cosma on. If this is something you'd like to help us with, please get in touch!
-
-In the meantime, the command line version is available for all platforms. More information [here](/en/blog/cosma-cli-1-0/).
-
-## Is the app still being developed/maintained?
-
-We are currently working on a major update, which will be deployed first for the CLI version. Check the [roadmap](/roadmap/) for more details.
-
-## Is this a tool for data/network/graph analysis?
-
-Cosma is not intended for data analysis, no.
-
-You may be familiar with [Andy Matuschak's notes](https://notes.andymatuschak.org). This is the kind of “data” Cosma is meant to help with: research notes that are carefully crafted and constantly revised, so you know what's in them (i.e. no need for data analysis), on a somewhat smaller scale (tens or hundreds of nodes rather than thousands) but densely linked, hence the emphasis on the graph view and contextualized backlinks.

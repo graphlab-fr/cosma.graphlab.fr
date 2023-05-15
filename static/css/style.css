@@ -85,6 +85,17 @@ footer a {
 	text-align: center;
   max-width: 100vw;
 }
+.callout {
+	max-width: 500px;
+	border-radius: 15px;
+	padding: 15px;
+	font-size: 1.7rem;
+	background: #eee;
+	margin: 5rem 0;
+}
+.callout p {
+	margin: 0.2em 0;
+}
 #home-logo { /* Logo */
 	width: 600px;
 }

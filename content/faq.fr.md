@@ -3,6 +3,16 @@ title: Foire aux questions
 layout: faq
 ---
 
+## L'application est-elle toujours développée ou maintenue ?
+
+Cosma évolue par cycles de recherche et de développement. Actuellement (mai 2023), après une période de développement intensif qui a conduit à la version 2.0, nous repartons dans un cycle de recherche. Consultez la [feuille de route](/feuille-de-route/) pour plus de précisions.
+
+## Est-ce que Cosma permet de faire de l'analyse de données/réseaux/graphes ?
+
+Non, Cosma n'est pas pensé à l'analyse de données.
+
+Vous connaissez peut-être les [notes d'Andy Matuschak](https://notes.andymatuschak.org). C'est exactement le genre de « données » pour lesquelles Cosma est conçu : des notes de recherche élaborées avec attention, constamment revisitées, donc dont on connaît très bien le contenu (d'où le fait que l'analyse de données ait une utilité limitée) ; un graphe qui ne contient pas forcément beaucoup de nœuds (des dizaines ou des centaines plutôt que des milliers) mais qui contient en revanche beaucoup de liens – d'où l'importance de la représentation visuelle sous forme de graphe, et des rétroliens contextualisés.
+
 ## J'ai essayé de lancer l'application mais mon système d'exploitation m'en empêche.
 
 Vous pouvez ignorer les avertissements de votre système d'exploitation et lancer Cosma sans crainte, à condition de télécharger l'application depuis notre dépôt GitHub, seule source officielle. Pour outrepasser les alertes du système, vous devez avoir les privilèges administrateur sur votre session. Sur macOS, faites un clic droit puis Ouvrir sur l'application (vous aurez peut-être à le faire deux fois).
@@ -33,9 +43,9 @@ Cosma inclut la possibilité d'alléger visuellement les liens tels qu'ils se pr
 
 ## Est-ce qu'il est possible de gérer plusieurs répertoires avec différents cosmoscopes ?
 
-Oui, avec Cosma CLI v2-bêta.
+Oui, avec Cosma CLI.
 
-Pour les versions antérieures, il est techniquement possible de mettre en œuvre les suggestions ci-dessous. Nous prenons l'exemple de deux répertoires de fiches, `dossier1` et `dossier2`, entre lesquels on voudrait passer sans avoir à reconfigurer le logiciel.
+Pour la GUI, il est techniquement possible de mettre en œuvre les suggestions ci-dessous. Nous prenons l'exemple de deux répertoires de fiches, `dossier1` et `dossier2`, entre lesquels on voudrait passer sans avoir à reconfigurer le logiciel.
 
 ### Méthode 1 : l'historique
 
@@ -62,18 +72,3 @@ Dans ce répertoire se trouve notamment un fichier `config.json`. C'est là que 
 
 Vous pouvez désormais basculer sur un répertoire spécifique en copiant le fichier `config.json` correspondant vers le répertoire support. Actualisez l'affichage de Cosma en cliquant sur Nouveau cosmoscope.
 
-## La version GUI sera-t-elle disponible sur Linux ?
-
-Nous ne fournissons actuellement pas la version GUI pour Linux mais nous espérons pouvoir le faire prochainement. Rien ne s'y oppose techniquement puisque Cosma est une application développée pour plusieurs plateformes simultanément à partir d'une seule base de code grâce au *framework* Electron. Nous avons depuis peu accès à des machines Linux pour réaliser des tests, qui n'étaient pas indispensables pour l'alpha et qui le sont désormais pour la nouvelle version.
-
-En attendant, une version ligne de commande est disponible pour toutes les plateformes. Plus d'information [ici](/blog/cosma-cli-1-0/).
-
-## L'application est-elle toujours développée ou maintenue ?
-
-Nous travaillons actuellement sur une mise à jour importante, qui sera déployée d'abord sur la version CLI. Consultez la [feuille de route](/feuille-de-route/) pour plus de précisions.
-
-## Est-ce que Cosma permet de faire de l'analyse de données/réseaux/graphes ?
-
-Non, Cosma n'est pas pensé à l'analyse de données.
-
-Vous connaissez peut-être les [notes d'Andy Matuschak](https://notes.andymatuschak.org). C'est exactement le genre de « données » pour lesquelles Cosma est conçu : des notes de recherche élaborées avec attention, constamment revisitées, donc dont on connaît très bien le contenu (d'où le fait que l'analyse de données ait une utilité limitée) ; un graphe qui ne contient pas forcément beaucoup de nœuds (des dizaines ou des centaines plutôt que des milliers) mais qui contient en revanche beaucoup de liens – d'où l'importance de la représentation visuelle sous forme de graphe, et des rétroliens contextualisés.

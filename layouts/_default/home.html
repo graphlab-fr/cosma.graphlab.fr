@@ -1,6 +1,10 @@
 {{ partial "head.html" . }}
 <header>
 	<img id="home-logo" src="/img/logo-cosma.svg">
+	<div class="callout">{{ i18n "callout" | markdownify }}</div>
+</header>
+
+<!-- 
 	<p id="tagline-primary">{{ .Site.Params.Tagline.Primary }}</p>
 	<div id="home-buttons-text">
 		<p class="tagline-secondary">{{ .Site.Params.Tagline.Secondary }}</p>
@@ -45,15 +49,16 @@
 			<a class="btn btn-primary" data-os="Linux" role="button" href="{{ (index (.Site.Data.versions) 1).downloadLin }}">{{ i18n "downloadLin" }}</a>
 			<a class="btn btn-secondary" role="button" href="../docs">Documentation</a></button>
 		</div>
-		<!-- <div id="home-buttons">
+		<!~~ <div id="home-buttons">
 			<a class="btn btn-primary" role="button" href="https://github.com/graphlab-fr/cosma/releases/latest">{{ i18n "download" }}</a>
 		  <a class="btn btn-secondary" role="button" href="docs">Documentation</a></button>
-		</div> -->
+		</div> ~~>
 		<div id="availability">
 			<p>{{ i18n "availability" | markdownify }}</p>
 		</div>
 	</section>
 	{{ .Content }}
 </main>
+ -->
 
 {{ partial "footer.html" . }}
