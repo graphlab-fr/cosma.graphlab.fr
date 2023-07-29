@@ -1,9 +1,0 @@
-{
-    "release": "1.1",
-    "darwin-x64": "https://github.com/graphlab-fr/cosma/releases/download/2.0-beta-1/Cosma-2.0.0-beta-1-x64.dmg",
-    "darwin-arm64 (silicon)": "https://github.com/graphlab-fr/cosma/releases/download/2.0-beta-1/Cosma-2.0.0-beta-1-arm64.dmg",
-    "win32-x64": "https://github.com/graphlab-fr/cosma/releases/download/2.0-beta-1/Cosma-win32-x64-2.0.0-beta-1.zip",
-    "win32-arm64": "https://github.com/graphlab-fr/cosma/releases/download/2.0-beta-1/Cosma-win32-arm64-2.0.0-beta-1.zip"
-    "linux-x64": "https://github.com/graphlab-fr/cosma/releases/download/2.0-beta-1/cosma_2.0.0-beta-1_amd64.deb",
-    "linux-arm64": "https://github.com/graphlab-fr/cosma/releases/download/2.0-beta-1/cosma_2.0.0-beta-1_arm64.deb",
-}

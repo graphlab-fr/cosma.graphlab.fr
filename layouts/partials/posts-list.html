@@ -1,7 +1,0 @@
-{{ $pages := .Pages }}
-{{ $pages = .Site.RegularPages }}
-{{ range (where $pages "Section" "blog") }}
-<hr/>
-<h2><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a> <span class="release-links"><a href="{{ .Params.Github }}">GitHub</a>{{ if .Params.Zenodo }} — <a href="{{ .Params.Zenodo }}">Zenodo</a>{{ end }}</span></h2>
-{{ .Content }}
-{{ end }}

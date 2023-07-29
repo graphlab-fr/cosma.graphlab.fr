@@ -1,0 +1,7 @@
+ErrorDocument 410 /index.html
+
+RewriteEngine On
+
+# Trigger a 410 Gone for all user requests
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^ - [G]
