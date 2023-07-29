@@ -1,4 +1,2 @@
 ErrorDocument 410 /index.html
-RewriteEngine On
-RewriteCond %{ENV:REDIRECT_STATUS} ^$
-RewriteRule ^ - [G]
+* index.html 410
